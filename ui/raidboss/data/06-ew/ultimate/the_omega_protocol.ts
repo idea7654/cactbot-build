@@ -34,12 +34,29 @@ type PrsMember = {
   imn?: number; // p3 모니터 산개
   idyn?: number; // p5 다이너미스
 };
+
+const CACTBOT_USER_NAME = 'Edea Primal';
+const members : PrsMember[] = [
+    { r: 'MT', j: 'PLD', t: 1, pp: 1, pk: 9, sm: 7, oc: 0, n: 'Raia Yomut', i:0},
+    { r: 'ST', j: 'DRK', t: 1, pp: 2, pk: 9, sm: 2, oc: 0, n: 'Yone Nanaya', i:0 },
+    { r: 'H1', j: 'AST', t: 1, pp: 1, pk: 0, sm: 1, oc: 0, n: 'Thgara Asvetlana', i:0 },
+    { r: 'H2', j: 'SGE', t: 1, pp: 2, pk: 1, sm: 8, oc: 0, n: 'Suzaku Phalaenopsis', i:0 },
+    { r: 'D1', j: 'MNK', t: 1, pp: 1, pk: 2, sm: 6, oc: 0, n: 'Totoi Toi', i:0 },
+    { r: 'D2', j: 'RPR', t: 1, pp: 2, pk: 3, sm: 3, oc: 0, n: 'Flan Annuel', i:0 },
+    { r: 'D3', j: 'BRD', t: 1, pp: 1, pk: 4, sm: 4, oc: 0, n: 'Ari Rynn', i:0 },
+    { r: 'D4', j: 'BLM', t: 1, pp: 2, pk: 5, sm: 5, oc: 0, n: 'Edea Primal', i:0 },
+  ];
+
 export const getMemberByName = (data: Data, name: string) =>
   data.members?.find((e) => e.n === name);
 export const getMemberRole = (data: Data, name: string) => {
   const m = getMemberByName(data, name);
   return m ? m.r : data.party.member(name);
 };
+export const getMemberJob = (data: Data, name: string) => {
+  const m = getMemberByName(data, name);
+  return m ? m.j : data.party.member(name);
+}
 export const testSynergyMarkerMove = (my: PrsMember, ot: PrsMember) => {
   if (my.sm < 5)
     return my.sm > ot.sm;
@@ -303,7 +320,12 @@ const triggerSet: TriggerSet<Data> = {
       delaySeconds: 1,
       infoText: (data, _matches, output) => {
         if (!data.members)
-          return output.nodata!();
+        {
+          console.log(data);
+          data.members = members;
+          data.me = CACTBOT_USER_NAME;
+        }
+        //return output.nodata!();
         for (let i = 0; i < data.members.length; i++) {
           const m = data.members[i];
           if (m)
@@ -857,7 +879,7 @@ const triggerSet: TriggerSet<Data> = {
           en: 'Out Out',
           de: 'Raus Raus',
           fr: 'Extérieur Extérieur',
-          ja: '外 外',
+          ja: '둘 다 밖',
           cn: '远离男女',
           ko: '남자 바깥 (밖 + 밖)',
         },
@@ -865,7 +887,7 @@ const triggerSet: TriggerSet<Data> = {
           en: 'In In on M',
           de: 'Rein Rein auf M',
           fr: 'Intérieur Intérieur sur M',
-          ja: '内 内(男)',
+          ja: '남자 안쪽',
           cn: '靠近男人',
           ko: '남자 밑 (안 + 안)',
         },
@@ -873,7 +895,7 @@ const triggerSet: TriggerSet<Data> = {
           en: 'Under F',
           de: 'Unter W',
           fr: 'Sous F',
-          ja: '女の下',
+          ja: '여자 안쪽',
           cn: '靠近女人',
           ko: '언니 밑',
         },
@@ -881,7 +903,7 @@ const triggerSet: TriggerSet<Data> = {
           en: 'M Sides',
           de: 'Seitlich von M',
           fr: 'Côtés de M',
-          ja: '男の横',
+          ja: '남자 옆',
           cn: '男人两侧',
           ko: '남자 바로 옆 (언니 발차기)',
         },
@@ -927,21 +949,26 @@ const triggerSet: TriggerSet<Data> = {
             const left = data.my.sm < data.my.ip.sm;
             // 왼쪽
             if (left) {
-              const num = output[`num${index}`]!();
+              //const num = output[`num${index}`]!();
+              let num = index;
               return output.left!({ glitch: glitch, mark: mark, num: num, player: data.my.ip.r });
             }
             // 오른쪽
-            if (data.glitch === 'mid') {
-              const num = output[`num${index}`]!();
-              return output.right!({ glitch: glitch, mark: mark, num: num, player: data.my.ip.r });
+            let num = index;
+            if (data.glitch != 'mid')
+            {
+              num = Math.abs(num - 5)
             }
-            const num = output[`num${5 - index}`]!();
+
             return output.right!({ glitch: glitch, mark: mark, num: num, player: data.my.ip.r });
+            //const num = output[`num${5 - index}`]!();
           } else if (data.phase === 'sigma') {
             // 시그마 일때
             return output.text!({ glitch: glitch, mark: mark, player: data.my.ip.r });
           }
         }
+
+        // if (getMemberRole(data, partner) === '')
 
         // 기본
         return output.text!({ glitch: glitch, mark: mark, player: getMemberRole(data, partner) });
@@ -993,13 +1020,15 @@ const triggerSet: TriggerSet<Data> = {
           ko: '${glitch} ${mark} (${player})',
         },
         left: {
-          en: 'Left ${glitch} ${num}${mark} (${player})',
-          ja: '❰❰❰❰❰ ${glitch} ${num}${mark} (${player})',
+          en: 'LEFT ${num}번째 ${glitch}',
+          //ja: '❰❰❰❰❰ ${glitch} ${num}${mark} (${player})',
+          ja: 'LEFT ${num}번째 ${glitch}',
           ko: '❰❰❰❰❰ ${glitch} ${num}${mark} (${player})',
         },
         right: {
-          en: 'Right ${glitch} ${num}${mark} (${player})',
-          ja: '${glitch} ${num}${mark} (${player}) ❱❱❱❱❱',
+          en: 'RIGHT ${num}번째 ${glitch}',
+          //ja: '${glitch} ${num}${mark} (${player}) ❱❱❱❱❱',
+          ja: 'RIGHT ${num}번째 ${glitch}',
           ko: '${glitch} ${num}${mark} (${player}) ❱❱❱❱❱',
         },
         unknown: Outputs.unknown,

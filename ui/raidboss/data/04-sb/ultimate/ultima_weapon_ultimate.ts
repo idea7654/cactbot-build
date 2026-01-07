@@ -1193,11 +1193,37 @@ const triggerSet: TriggerSet<Data> = {
         // We can identify the correct site by comparing Titan's heading to the heading of the
         // jump site (toward Titan) where the difference is +/-pi -- in other words, a
         // 180-degree angle deviation indicative of an identical ray.
+        let outputText = "";
         for (const site of jumpSites) {
           const hdgToTitan = getRelativeHdg(titanX, titanY, site.x, site.y);
           const ray = Math.abs(titanHdg - hdgToTitan);
+
           if (ray >= 3 && ray <= 3.28) // should be pi, but allow for rounding errors etc.
-            return output.safe!({ dir: output[site.safe]!() });
+          {
+            //outputText = output[site.safe]!();
+            if(output[site.safe]!() === "北")
+            {
+              outputText = "A";
+            }
+            else if(output[site.safe]!() === "東")
+            {
+              outputText = "B";
+            }
+            else if(output[site.safe]!() === "南")
+            {
+              outputText = "C";
+            }
+            else if(output[site.safe]!() === "西")
+            {
+              outputText = "D";
+            }
+            // else if(output.safe!({ dir: output[site.safe]!() })=== '北')
+            // {
+            //   out
+            // }
+            //return output.safe!({ dir: output[site.safe]!() });
+            return output.safe!({dir: outputText})
+          }
         }
         return unknownStr;
       },
