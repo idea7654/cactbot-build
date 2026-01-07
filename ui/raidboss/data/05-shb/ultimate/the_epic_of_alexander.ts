@@ -105,38 +105,43 @@ const ordainedOutputStrings = {
     ja: '${action1}, ${action2}',
     cn: '${action1}, ${action2}',
     ko: '${action1}, ${action2}',
+    tc: '${action1}, ${action2}',
   },
   motionFirst: {
     en: 'Motion first',
     de: 'Bewegungsbefehl zuerst',
     fr: 'Mouvement en premier',
     ja: '最初は動く',
-    cn: '首先移动',
-    ko: '우선 움직여요',
+    cn: '先行动',
+    ko: '우선 움직이기',
+    tc: '先行動',
   },
   stillnessFirst: {
     en: 'Stillness first',
     de: 'Stillstandsbefehl zuerst',
     fr: 'Immobilité en premier',
     ja: '最初は止まる',
-    cn: '首先静止',
-    ko: '우선 멈춰요',
+    cn: '先静止',
+    ko: '우선 멈추기',
+    tc: '先靜止',
   },
   motionSecond: {
     en: 'Motion second',
     de: 'Bewegungsbefehl als Zweites',
     fr: 'Mouvement en deuxième',
     ja: '最後は動く',
-    cn: '最后移动',
-    ko: '마지막엔 움직여요',
+    cn: '后行动',
+    ko: '마지막엔 움직이기',
+    tc: '後行動',
   },
   stillnessSecond: {
     en: 'Stillness second',
     de: 'Stillstandsbefehl als Zweites',
     fr: 'Immobilité en deuxième',
     ja: '最後は止まる',
-    cn: '最后静止',
-    ko: '마지막엔 멈춰요',
+    cn: '后静止',
+    ko: '마지막엔 멈추기',
+    tc: '後靜止',
   },
   unknown: Outputs.unknown,
 };
@@ -147,32 +152,36 @@ const radiantOutputStrings = {
     de: 'Sacrement Norden',
     fr: 'Sacrement Nord',
     ja: '拝火は北',
-    cn: '月环上（北）',
+    cn: '月环上',
     ko: '성례: 북',
+    tc: '月環上',
   },
   east: {
     en: 'Sacrament East',
     de: 'Sacrement Osten',
     fr: 'Sacrement Est',
     ja: '拝火は東',
-    cn: '月环右（东）',
+    cn: '月环右',
     ko: '성례: 동',
+    tc: '月環右',
   },
   south: {
     en: 'Sacrament South',
     de: 'Sacrement Süden',
     fr: 'Sacrement Sud',
     ja: '拝火は南',
-    cn: '月环下（南）',
+    cn: '月环下',
     ko: '성례: 남',
+    tc: '月環下',
   },
   west: {
     en: 'Sacrament West',
     de: 'Sacrement Westen',
     fr: 'Sacrement Ouest',
     ja: '拝火は西',
-    cn: '月环左（西）',
+    cn: '月环左',
     ko: '성례: 서',
+    tc: '月環左',
   },
   unknown: Outputs.unknown,
 };
@@ -185,6 +194,7 @@ const nisiTypes = {
     ja: '青 α',
     cn: '蓝 α',
     ko: '파랑 α',
+    tc: '藍 α',
   },
   orangeBeta: {
     en: 'Orange β',
@@ -193,6 +203,7 @@ const nisiTypes = {
     ja: 'オレンジ β',
     cn: '橙 β',
     ko: '노랑 β',
+    tc: '橙 β',
   },
   purpleGamma: {
     en: 'Purple γ',
@@ -201,6 +212,7 @@ const nisiTypes = {
     ja: '紫 γ',
     cn: '紫 γ',
     ko: '보라 γ',
+    tc: '紫 γ',
   },
   greenDelta: {
     en: 'Green δ',
@@ -209,6 +221,7 @@ const nisiTypes = {
     ja: '緑 δ',
     cn: '绿 δ',
     ko: '녹색 δ',
+    tc: '綠 δ',
   },
 };
 
@@ -219,16 +232,18 @@ const nisiPassOutputStrings = {
     de: 'Nehme letzten Nisi (?)',
     fr: 'Prenez Peine finale (?)',
     ja: '最後のナイサイを取得 (?)',
-    cn: '取得最后审判 (?)',
-    ko: '마지막 나이사이 받아요 (?)',
+    cn: '接毒 (?)',
+    ko: '마지막 나이사이 받기 (?)',
+    tc: '接毒 (?)',
   },
   passNisi: {
     en: 'Pass ${type} Nisi',
     de: 'Gebe ${type} Nisi',
     fr: 'Passez ${type} Peine',
     ja: '${type} を渡す',
-    cn: '传递 ${type}审判',
-    ko: '나이사이 건네요: ${type}',
+    cn: '传 ${type}',
+    ko: '나이사이 건네기: ${type}',
+    tc: '傳 ${type}',
   },
   passNisiTo: {
     en: 'Pass ${type} to ${players}',
@@ -236,23 +251,26 @@ const nisiPassOutputStrings = {
     fr: 'Passez ${type} à ${players}',
     ja: '${type} を ${players} に渡す',
     cn: '将 ${type} 传给 ${players}',
-    ko: '나이사이 건네요: ${type} → ${players}',
+    ko: '나이사이 건네기: ${type} → ${players}',
+    tc: '將 ${type} 傳給 ${players}',
   },
   getNisi: {
     en: 'Get ${type}',
     de: 'Nimm ${type}',
     fr: 'Prenez ${type}',
     ja: '${type} を取る',
-    cn: '获得 ${type}',
-    ko: '나이사이 가져와요: ${type}',
+    cn: '接 ${type}',
+    ko: '나이사이 가져오기: ${type}',
+    tc: '接 ${type}',
   },
   getNisiFrom: {
     en: 'Get ${type} from ${player}',
     de: 'Nimm ${type} von ${player}',
     fr: 'Prenez ${type} de ${player}',
     ja: '${player} から ${type} を取る',
-    cn: '从 ${player}获得${type}',
-    ko: '나이사이 가져와요: ${type} ← ${player}',
+    cn: '从 ${player} 接 ${type}',
+    ko: '나이사이 가져오기: ${type} ← ${player}',
+    tc: '從 ${player} 接 ${type}',
   },
 };
 
@@ -361,8 +379,9 @@ const triggerSet: TriggerSet<Data> = {
         fr:
           'Activer cactbot pour la strat Wormhole : https://ff14.toolboxgaming.space/?id=17050133675751&preview=1',
         ja: '絶アレキサンダー討滅戦：cactbot「次元断絶のマーチ」ギミック', // FIXME
-        cn: '启用 cactbot 灵泉策略: https://ff14.toolboxgaming.space/?id=17050133675751&preview=1',
+        cn: '启用 cactbot 次元断绝策略: https://ff14.toolboxgaming.space/?id=17050133675751&preview=1',
         ko: 'cactbot 웜홀 공략방식 사용: https://ff14.toolboxgaming.space/?id=17050133675751&preview=1',
+        tc: '啟用 cactbot 次元斷絕策略: https://ff14.toolboxgaming.space/?id=17050133675751&preview=1',
       },
       type: 'checkbox',
       default: (options) => {
@@ -430,10 +449,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Move Bosses',
-          de: 'Bosse bewegen',
-          fr: 'Déplacez les Boss',
           ja: 'ボス動かして',
-          cn: '移动Boss',
           ko: '보스 이동 주차',
         },
       },
@@ -453,10 +469,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Water/Thunder in 3',
-          de: 'Wasser/Blitz in 3',
-          fr: 'Eau/Foudre dans 3s',
           ja: '水/雷まで3秒',
-          cn: '3秒后水/雷',
           ko: '물/번개까지 3초',
         },
       },
@@ -471,11 +484,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Face Brute Towards Water',
-          de: 'Drehe Brute zum Wasser',
-          fr: 'Tournez Justicier vers l\'eau',
           ja: 'ジャスを竜巻に向ける',
-          cn: '残暴正义号拉向水龙卷',
-          ko: '심판자가 물을 바라보게해요',
+          ko: '심판자가 물을 바라보게 유도',
         },
       },
     },
@@ -487,11 +497,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Hide Behind Ice',
-          de: 'Hinter dem Eis verstecken',
-          fr: 'Cachez-vous derrière la glace',
           ja: '氷の後ろへ',
-          cn: '冰块后躲避',
-          ko: '얼음 뒤로 피해요',
+          ko: '얼음 뒤로 피하기',
         },
       },
     },
@@ -525,27 +532,18 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         puddle: {
           en: 'Puddle #${num}',
-          de: 'Fläche #${num}',
-          fr: 'Zone au sol #${num}',
           ja: '懺悔 #${num}',
-          cn: '水圈 #${num}',
           ko: '참회 #${num}',
         },
         soakThisPuddle: {
           en: 'Soak This Puddle (#${num})',
-          de: 'Fläche nehmen (#${num})',
-          fr: 'Absorbez cette zone au sol (#${num})',
           ja: '懺悔踏む (#${num})',
-          cn: '踩水圈 (#${num})',
-          ko: '참회 밟아요 (#${num})',
+          ko: '참회 밟기 (#${num})',
         },
         soakThisPuddleTTS: {
           en: 'Soak This Puddle',
-          de: 'Fläche nehmen',
-          fr: 'Absorbez cette zone au sol',
           ja: '沼踏んで',
-          cn: '踩水圈',
-          ko: '웅덩이 밟아요',
+          ko: '웅덩이 밟기',
         },
       },
     },
@@ -559,7 +557,11 @@ const triggerSet: TriggerSet<Data> = {
       condition: (data) => data.role === 'tank' || data.role === 'healer',
       alertText: (_data, _matches, output) => output.text!(),
       outputStrings: {
-        text: Outputs.sharedTankbuster,
+        text: {
+          en: 'Shared Tankbuster',
+          ja: 'タンクシェア',
+          ko: '쉐어 탱크버스터',
+        },
       },
     },
   ],
@@ -647,10 +649,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Protean Wave',
-          de: 'Proteische Welle',
-          fr: 'Vague inconstante',
           ja: 'プロティアン',
-          cn: '万变水波',
           ko: '변화의 물결',
         },
       },
@@ -666,10 +665,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Drainage tether on YOU',
-          de: 'Entwässerungsverbindung auf DIR',
-          fr: 'Lien Drainage sur VOUS',
           ja: '自分にドレナージ',
-          cn: '连线点名',
           ko: '나에게 물줄기',
         },
       },
@@ -688,11 +684,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Focus Living Liquid',
-          de: 'belebtes Wasser fokussieren',
-          fr: 'Focus sur Membre liquide',
           ja: 'リビングリキッドを攻撃',
-          cn: '攻击水基佬',
-          ko: '리빙 리퀴드 집중 공격',
+          ko: '인간형 집중 공격',
         },
       },
     },
@@ -706,10 +699,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Cleanse Throttle',
-          de: 'Erstickung entfernen',
-          fr: 'Purifiez Suffocation',
           ja: '窒息',
-          cn: '窒息',
           ko: '질식',
         },
       },
@@ -770,10 +760,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '#${num}',
-          de: '#${num}',
-          fr: '#${num}',
           ja: '${num}番',
-          cn: '#${num}',
           ko: '${num}번째',
         },
       },
@@ -804,27 +791,18 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         knockbackCleaveFaceOutside: {
           en: 'Knockback Cleave; Face Outside',
-          de: 'Rückstoß Cleave; nach Außen schauen',
-          fr: 'Poussée Cleave; Regardez à l\'extérieur',
           ja: 'ノックバック ソード; 外向く',
-          cn: '击退顺劈; 面向外侧',
-          ko: '넉백 소드; 바깥쪽 봐요',
+          ko: '넉백 소드; 바깥쪽 바라보기',
         },
         knockbackChargeFaceMiddle: {
           en: 'Knockback Charge; Face Middle',
-          de: 'Rückstoß Charge; zur Mitte schauen',
-          fr: 'Poussée Charge; Regardez à l\'intérieur',
           ja: 'ノックバック チャージ; 中央向く',
-          cn: '击退冲锋; 面向中间',
-          ko: '넉백 차지; 안쪽 봐요',
+          ko: '넉백 차지; 안쪽 바라보기',
         },
         knockbackCleaveOnYou: {
           en: 'Knockback Cleave on YOU',
-          de: 'Rückstoß Cleave auf DIR',
-          fr: 'Poussée Cleave sur VOUS',
           ja: '自分にクリーブ',
-          cn: '击退顺劈点名',
-          ko: '나에게 넉백 쪼개기',
+          ko: '나에게 넉백 공격',
         },
         knockback: Outputs.knockback,
       },
@@ -839,11 +817,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Out, Dodge Chakrams',
-          de: 'Raus, Chakrams ausweichen',
-          fr: 'À l\'extérieur, évitez les Chakrams',
           ja: '外へ',
-          cn: '远离，躲避轮轮',
-          ko: '바깥으로, 차크람 피해요',
+          ko: '바깥으로 차크람 피하기',
         },
       },
     },
@@ -857,11 +832,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Run In',
-          de: 'Rein',
-          fr: 'Courez à l\'intérieur',
           ja: '中へ',
-          cn: '靠近',
-          ko: '한가운데로',
+          ko: '가운데로',
         },
       },
     },
@@ -882,11 +854,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Dodge Spin Crusher',
-          de: 'Rotorbrecher ausweichen',
-          fr: 'Esquivez Écrasement tournoyant',
           ja: 'スピンクラッシャー避けて',
-          cn: '躲避回旋碎踢',
-          ko: '회전 분쇄 피해요',
+          ko: '회전 분쇄 피하기',
         },
       },
     },
@@ -900,11 +869,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Freeze Tornado',
-          de: 'Tornado einfrieren',
-          fr: 'Gèlez la tornade',
           ja: '竜巻凍らせる',
-          cn: '冰冻龙卷风',
-          ko: '물 회오리 얼려요',
+          ko: '물 회오리 얼리기',
         },
       },
     },
@@ -918,10 +884,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Mines',
-          de: 'Minen',
-          fr: 'Mines',
           ja: '地雷',
-          cn: '地雷',
           ko: '지뢰',
         },
       },
@@ -936,11 +899,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Enumeration on YOU',
-          de: 'Enumeration auf DIR',
-          fr: 'Énumeration sur VOUS',
           ja: '自分にカウント',
-          cn: '计数点名',
-          ko: '나에게 인원 카운트',
+          ko: '나에게 인원수',
         },
       },
     },
@@ -962,11 +922,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Enumeration: ${players}',
-          de: 'Enumeration: ${players}',
-          fr: 'Énumeration: ${players}',
           ja: 'カウント: ${players}',
-          cn: '计数${players}',
-          ko: '인원 카운트: ${players}',
+          ko: '인원수 대상: ${players}',
         },
       },
     },
@@ -979,11 +936,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Break Shield From Front',
-          de: 'Schild von Vorne zerstören',
-          fr: 'Brisez le bouclier par devant',
           ja: '正面からシールド壊して',
-          cn: '从前面击破盾牌',
-          ko: '정면에서 실드 부셔요',
+          ko: '정면에서 실드를 부수기',
         },
       },
     },
@@ -996,10 +950,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Water on YOU',
-          de: 'Wasser auf DIR',
-          fr: 'Eau sur VOUS',
           ja: '自分に水',
-          cn: '水点名',
           ko: '나에게 물',
         },
       },
@@ -1018,11 +969,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Drop Water Soon',
-          de: 'Gleich Wasser ablegen',
-          fr: 'Déposez l\'eau bientôt',
           ja: '水来るよ',
-          cn: '马上放水',
-          ko: '물이 곧 와요',
+          ko: '물이 곧 옵니다',
         },
       },
     },
@@ -1035,10 +983,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Lightning on YOU',
-          de: 'Blitz auf DIR',
-          fr: 'Foudre sur VOUS',
           ja: '自分に雷',
-          cn: '雷点名',
           ko: '나에게 번개',
         },
       },
@@ -1057,11 +1002,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Drop Lightning Soon',
-          de: 'Gleich Blitz ablegen',
-          fr: 'Déposez la foudre bientôt',
           ja: '雷来るよ',
-          cn: '马上放雷',
-          ko: '번개가 곧 와요',
+          ko: '번개가 곧 옵니다',
         },
       },
     },
@@ -1076,11 +1018,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Pass Nisi',
-          de: 'Nisi weitergeben',
-          fr: 'Passez la Peine',
           ja: 'ナイサイ渡して',
-          cn: '传递审判',
-          ko: '나이사이 건네요',
+          ko: '나이사이 건네기',
         },
       },
     },
@@ -1098,11 +1037,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Pass Nisi',
-          de: 'Nisi weitergeben',
-          fr: 'Passez la Peine',
           ja: 'ナイサイ渡して',
-          cn: '传递审判',
-          ko: '나이사이 건네요',
+          ko: '나이사이 건네기',
         },
       },
     },
@@ -1160,10 +1096,7 @@ const triggerSet: TriggerSet<Data> = {
         ...nisiTypes,
         verdict: {
           en: 'Verdict: ${type} Nisi',
-          de: 'Prozesseröffnung: ${type} Nisi',
-          fr: 'Ouverture de procès: ${type} Nisi',
           ja: '最終: ${type}',
-          cn: '最终: ${type}',
           ko: '최종: ${type}',
         },
       },
@@ -1193,14 +1126,19 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         baitSuperJump: {
           en: 'Bait Super Jump?',
-          de: 'Supersprung anlocken?',
-          fr: 'Attirez le Super saut ?',
           ja: 'スパジャン誘導',
-          cn: '引导超级跳跃',
           ko: '슈퍼 점프 유도',
         },
-        sharedTankbusterOnYou: Outputs.sharedTankbusterOnYou,
-        sharedTankbusterOn: Outputs.sharedTankbusterOnPlayer,
+        sharedTankbusterOnYou: {
+          en: 'Shared Tankbuster on YOU',
+          ja: '自分にタンクシェア',
+          ko: '나에게 쉐어 탱크버스터',
+        },
+        sharedTankbusterOn: {
+          en: 'Shared Tankbuster on ${player}',
+          ja: '${player} にタンクシェア',
+          ko: '쉐어 탱크버스터 대상: ${player}',
+        },
       },
     },
     {
@@ -1212,11 +1150,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'avoid ray',
-          de: 'Strahl ausweichen',
-          fr: 'Évitez le rayon',
           ja: 'アポカリ避けて',
-          cn: '躲避激光',
-          ko: '파멸 계시 피해요',
+          ko: '파멸 계시 피하기',
         },
       },
     },
@@ -1252,10 +1187,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'No Debuff',
-          de: 'Kein Debuff',
-          fr: 'Pas de Debuff',
           ja: 'デバフ無し',
-          cn: '无 Debuff',
           ko: '디버프 없음',
         },
       },
@@ -1270,11 +1202,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Far Tethers',
-          de: 'Entfernte Verbindungen',
-          fr: 'Liens éloignés',
           ja: 'ファー',
-          cn: '远离连线',
-          ko: '접근금지: 상대와 떨어져요',
+          ko: '접근금지: 상대와 떨어지기',
         },
       },
     },
@@ -1288,11 +1217,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Close Tethers',
-          de: 'Nahe Verbindungen',
-          fr: 'Liens proches',
           ja: 'ニアー',
-          cn: '靠近连线',
-          ko: '강제접근: 상대와 붙어요',
+          ko: '강제접근: 상대와 가까이 붙기',
         },
       },
     },
@@ -1306,11 +1232,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Shared Sentence',
-          de: 'Urteil: Kollektivstrafe',
-          fr: 'Peine collective',
           ja: '集団罰',
-          cn: '集团罪',
-          ko: '단체형: 무징과 함께',
+          ko: '단체형: 무징과 함께 맞기',
         },
       },
     },
@@ -1325,11 +1248,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Shared Sentence on ${player}',
-          de: 'Urteil: Kollektivstrafe auf ${player}',
-          fr: 'Peine collective sur ${player}',
           ja: '${player} に集団罰',
-          cn: '集团罪 点${player}',
-          ko: '단체형: ${player}',
+          ko: '${player} 에게 단체형',
         },
       },
     },
@@ -1343,11 +1263,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Thunder',
-          de: 'Blitz',
-          fr: 'Peine Sévère',
           ja: '加重罰',
-          cn: '加重罪',
-          ko: '가중형: 가중형끼리 모여요',
+          ko: '가중형: 가중형끼리 모이기',
         },
       },
     },
@@ -1387,10 +1304,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Crystal on YOU',
-          de: 'Kristall auf DIR',
-          fr: 'Cristal sur VOUS',
           ja: '自分に結晶',
-          cn: '结晶点名',
           ko: '나에게 결정체',
         },
       },
@@ -1404,11 +1318,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Away From Crystals',
-          de: 'Geh weg vom Kristall',
-          fr: 'Éloignez-vous des Cristaux',
           ja: '結晶から離れ',
-          cn: '远离结晶',
-          ko: '결정체에게서 먼곳으로',
+          ko: '결정체로부터 멀어질 것',
         },
       },
     },
@@ -1422,10 +1333,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bait Brute\'s Flarethrower',
-          de: 'Locke Brute\'s Großflammenwerfer',
-          fr: 'Attirez le Lance-brasiers de Justicier',
           ja: '火炎放射を誘導',
-          cn: '引导火炎放射',
           ko: '화염 방사 유도',
         },
       },
@@ -1484,34 +1392,22 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         vulnAvoidCleavesAndJump: {
           en: 'Vuln: Avoid cleaves and jump',
-          de: 'Vuln: Cleaves und Sprung ausweichen',
-          fr: 'Vuln: évitez les cleaves et saut',
           ja: '被ダメ増加',
-          cn: '易伤：躲避顺劈和跳',
-          ko: '받는 데미지 증가: 공격과 점프 피해요',
+          ko: '받는 데미지 증가: 공격과 점프 피할것',
         },
         baitSword: {
           en: 'Bait Sword',
-          de: 'Locke Chaser-Mecha Schwert',
-          fr: 'Attirez l\'Épée',
           ja: 'ソード誘導',
-          cn: '引导剑',
-          ko: '칼 유도',
+          ko: '검 유도',
         },
         baitSwordOrJump: {
           en: 'Bait Sword or Jump?',
-          de: 'Köder Schwert oder Sprung?',
-          fr: 'Attirez l\'Épée ou le Saut ?',
           ja: 'ソードかジャンプ誘導?',
-          cn: '引导剑或跳?',
-          ko: '칼 또는 슈퍼 점프 유도?',
+          ko: '검 또는 슈퍼 점프 유도?',
         },
         baitJumpWithCooldowns: {
           en: 'Bait Jump With Cooldowns',
-          de: 'Köder Sprung mit Cooldowns',
-          fr: 'Attirez le Saut avec des Cooldowns',
           ja: 'スパジャン誘導',
-          cn: '减伤引导跳跃',
           ko: '슈퍼 점프 유도',
         },
       },
@@ -1529,18 +1425,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         baitChakramsWormholeStrat: {
           en: 'Bait Chakrams mid; Look opposite Alex',
-          de: 'Locke Chakrams mittig; schau weg von Alex',
-          fr: 'Attirez les Chakrams au milieu; Regardez à l\'opposé d\'Alex',
           ja: '中央にチャクラム誘導; アレキの反対見て',
-          cn: '中间引导轮轮，背对亚历山大',
           ko: '가운데로 차크람 유도; 알렉 반대쪽이 북쪽',
         },
         baitChakrams: {
           en: 'Bait Chakrams',
-          de: 'Köder Chakrams',
-          fr: 'Attirez les Chakrams',
           ja: 'チャクラム誘導',
-          cn: '引导轮轮',
           ko: '차크람 유도',
         },
       },
@@ -1589,57 +1479,41 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         marker1: {
           en: 'Left To Robot; Look Outside; 3rd Puddle',
-          de: 'Links vom Robot; Nach Außen schauen; 3. Fläche',
-          fr: 'À gauche du Robot; Regardez à l\'extérieur; 3rd zone au sol',
           ja: '右上 外向き 懺悔3回目',
           ko: '왼쪽 위 / 참회 #3',
         },
         marker2: {
           en: 'Back Right Opposite Robot; Look Middle; 3rd Puddle',
-          de: 'Hinten Rechts gegenüber vom Robot; zur Mitte schauen; 3. Fläche',
-          fr: 'Revenez à l\'opposé droite du Robot; Regardez au milieu; 3rd zone au sol',
           ja: '左下 内向き 懺悔3回目',
           ko: '오른쪽 위 / 참회 #3',
         },
         marker3: {
           en: 'Back Left Opposite Robot; No Puddle',
-          de: 'Hinten Links gegenüber vom Robot; keine Fläche',
-          fr: 'Revenez à l\'opposé gauche du Robot; Pas de zone au sol',
           ja: '左上',
           ko: '왼쪽 아래',
         },
         marker4: {
           en: 'Right To Robot; No puddle',
-          de: 'Rechts vom Robot; keine Fläche',
-          fr: 'À droite du Robot; Pas de zone au sol',
           ja: '右下',
           ko: '오른쪽 아래',
         },
         marker5: {
           en: 'Left Robot Side -> 1st Puddle',
-          de: 'Linke Robot Seite -> 1. Fläche',
-          fr: 'Côté gauche du Robot-> 1st zone au sol',
           ja: '右ちょい上 懺悔1回目',
           ko: '왼쪽 / 참회 #1',
         },
         marker6: {
           en: 'Right Robot Side -> 1st Puddle',
-          de: 'Rechte Robot Seite -> 1. Fläche',
-          fr: 'Côté droit du Robot-> 1st zone au sol',
           ja: '左ちょい上 懺悔1回目',
           ko: '오른쪽 / 참회 #1',
         },
         marker7: {
           en: 'Left Robot Side -> cardinal; 2nd Puddle',
-          de: 'Linke Robot Seite -> cardinal; 2. Fläche',
-          fr: 'Côté gauche du Robot -> cardinal; 2nd zone au sol',
           ja: '右ちょい上 懺悔2回目',
           ko: '왼쪽 / 참회 #2',
         },
         marker8: {
           en: 'Right Robot Side -> cardinal; 2nd Puddle',
-          de: 'Rechte Robot Seite -> cardinal; 2. Fläche',
-          fr: 'Côté droit du Robot -> cardinal; 2nd zone au sol',
           ja: '左ちょい上 懺悔2回目',
           ko: '오른쪽 / 참회 #2',
         },
@@ -1660,10 +1534,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Move Behind Brute Justice?',
-          de: 'Geh hinter Brutalus?',
-          fr: 'Déplacez-vous derière Justicier ?',
           ja: 'ジャスティスの背面へ',
-          cn: '残暴正义号背后躲避?',
           ko: '심판자 등 뒤로 이동?',
         },
       },
@@ -1677,11 +1548,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack Middle',
-          de: 'mittig sammeln',
-          fr: 'Packez-vous au milieu',
           ja: '中央へ',
-          cn: '中间集合',
-          ko: '한가운데서 뭉쳐요',
+          ko: '가운데로 모이기',
         },
       },
     },
@@ -1693,10 +1561,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'big aoe',
-          de: 'große AoE',
-          fr: 'Grosse AoE',
           ja: '大ダメージAoE',
-          cn: '高伤AOE',
           ko: '거대 전체 공격',
         },
       },
@@ -1710,11 +1575,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Kill Cruise Chaser First',
-          de: 'Chaser-Mecha zuerst besiegen',
-          fr: 'Tuez Croiseur-chasseur en premier',
           ja: 'チェイサーから倒す',
-          cn: '先杀巡航驱逐者',
-          ko: '순항추격기부터 처치해요',
+          ko: '순항추격기부터 처치하기',
         },
       },
     },
@@ -1728,11 +1590,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'TANK LB!!',
-          de: 'TANK LB!!',
-          fr: 'LB TANK !!',
           ja: 'タンクLB!!',
-          cn: '坦克LB!!',
-          ko: '탱크 LB!!',
+          ko: '탱리밋!!',
         },
       },
     },
@@ -1768,10 +1627,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         opticalStackPlayers: {
           en: 'Optical Stack (${players})',
-          de: 'Optischer Stack (${players})',
-          fr: 'Package optique (${players})',
           ja: 'シェア (${players})',
-          cn: '照准集合 (${players})',
           ko: '조준 대상: ${players}',
         },
         stackOnYou: Outputs.stackOnYou,
@@ -1786,11 +1642,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Keep Moving',
-          de: 'weiter bewegen',
-          fr: 'Continuez à bouger',
           ja: '動く',
-          cn: '保持移动',
-          ko: '움직여욧!!!',
+          ko: '움직여!!!',
         },
       },
     },
@@ -1802,11 +1655,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'STOP LITERALLY EVERYTHING',
-          de: 'STOP WIRKLICH ALLES',
-          fr: 'ARRÊTEZ TOUT',
           ja: '止まる',
-          cn: '停止一切动作',
-          ko: '멈춰욧!!!',
+          ko: '멈춰!!!',
         },
       },
     },
@@ -1823,14 +1673,12 @@ const triggerSet: TriggerSet<Data> = {
         ja: '接触禁止',
         cn: '小光',
         ko: '접촉금지',
+        tc: '小光',
       },
       outputStrings: {
         text: {
           en: 'Orange (Attract)',
-          de: 'Orange (Anziehen)',
-          fr: 'Orange (Attraction)',
           ja: '接触禁止',
-          cn: '小光',
           ko: '노랑/접촉금지',
         },
       },
@@ -1844,11 +1692,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Orange Bait: Get Away',
-          de: 'Orange locken: Geh Weg',
-          fr: 'Attirez l\'orange : Éloignez-vous',
           ja: '接触保護',
-          cn: '大光: 远离人群',
-          ko: '노랑/접촉보호; 유도역할/혼자 멀리',
+          ko: '노랑/접촉보호; 유도역할/혼자 멀리 있기',
         },
       },
     },
@@ -1865,14 +1710,12 @@ const triggerSet: TriggerSet<Data> = {
         ja: '逃亡禁止',
         cn: '小暗',
         ko: '도망금지',
+        tc: '小暗',
       },
       outputStrings: {
         text: {
           en: 'Purple (Repel)',
-          de: 'Lila (Abstoßen)',
-          fr: 'Violet (Répulsion)',
           ja: '逃亡禁止',
-          cn: '小暗',
           ko: '보라/도망금지',
         },
       },
@@ -1886,11 +1729,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Purple Bait: Be In Back Of Group',
-          de: 'Lila locken: Hinter der Gruppe sein',
-          fr: 'Attirez le violet : Placez-vous derrière le groupe',
           ja: '逃亡監察',
-          cn: '大暗: 去人群后面',
-          ko: '보라/도망감찰; 유도역할/사람들 뒤로',
+          ko: '보라/도망감찰; 유도역할/사람들 뒤에 있기',
         },
       },
     },
@@ -1967,51 +1807,33 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         unknownMaybeStack: {
           en: 'No clone: probably stack?',
-          de: 'keine Klone: warscheinlich kein debuff + stack?',
-          fr: 'Pas de clone : package ?',
           ja: 'クローン無し: 多分シェア?',
-          cn: '没有分身: 或许要集合?',
           ko: '분신 없음: 아마도 오른쪽/함께 맞기?',
         },
         unknown: {
           en: 'No clone: ???',
-          de: 'keine Klone: ???',
-          fr: 'Pas de clone : ???',
           ja: 'クローン無し: ???',
-          cn: '没有分身: ¿¿¿',
           ko: '분신 없음: ???',
         },
         defamation: {
           en: 'Defamation on YOU',
-          de: 'Ehrenstrafe aud DIR',
-          fr: 'Diffamation sur VOUS',
           ja: '名誉罰',
-          cn: '大圈点名',
           ko: '명예형: 큰 광역공격',
         },
         solidarity: {
           en: 'Shared Sentence: stack',
-          de: 'Urteil Kollektivstrafe: stack',
-          fr: 'Peine collective : packez-vous',
           ja: '集団罰: ',
-          cn: '分摊点名',
-          ko: '집단형: 오른쪽/함께 맞아요',
+          ko: '집단형: 오른쪽/함께 맞기',
         },
         severity: {
           en: 'Severity: avoid shared stack',
-          de: 'Erschwertes: geteilter stack ausweichen',
-          fr: 'Sévérité : éloignez-vous du package',
           ja: '加重罰',
-          cn: '电点名：远离分摊',
-          ko: '가중형; 왼쪽/가중형끼리 모여요',
+          ko: '가중형; 왼쪽/가중형끼리 모이기',
         },
         noDebuff: {
           en: 'No debuff: shared stack',
-          de: 'Kein debuff: geteilter stack',
-          fr: 'Pas de debuff : package partagé',
           ja: 'デバフ無し',
-          cn: '无Debuff：分组分摊',
-          ko: '디버프 없음; 오른쪽/함께 맞아요',
+          ko: '디버프 없음; 오른쪽/함께 맞기',
         },
       },
     },
@@ -2123,34 +1945,22 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         defamationFrontLeft: {
           en: 'Defamation: front left',
-          de: 'Ehrenstrafe: vorne links',
-          fr: 'Diffamation : devant à gauche',
           ja: '名誉: 左前',
-          cn: '名誉罪: 左前',
           ko: '명예: 왼쪽 앞!!!',
         },
         defamationFrontRight: {
           en: 'Defamation: front right',
-          de: 'Ehrenstrafe: vorne rechts',
-          fr: 'Diffamation : devant à droite',
           ja: '名誉: 右前',
-          cn: '名誉罪: 右前',
           ko: '명예: 오른쪽 앞!!!',
         },
         partyBackRight: {
           en: 'Party: back right',
-          de: 'Gruppe: hinten rechts',
-          fr: 'Groupe : derrière à droite',
           ja: '右後ろ',
-          cn: '右后',
           ko: '오른쪽 뒤!!!',
         },
         partyBackLeft: {
           en: 'Party: back left',
-          de: 'Gruppe: hinten links',
-          fr: 'Groupe : derrière à gauche',
           ja: '左後ろ',
-          cn: '左后',
           ko: '왼쪽 뒤!!!',
         },
       },
@@ -2170,19 +1980,13 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         moveFirst: {
           en: 'Move First',
-          de: 'Zuerst bewegen',
-          fr: 'Bougez en premier',
           ja: '最初は動く',
-          cn: '首先移动',
-          ko: '우선 움직여요',
+          ko: '우선 움직이기',
         },
         stillnessFirst: {
           en: 'Stillness First',
-          de: 'Zuerst Stillstehen',
-          fr: 'Restez immobile en premier',
           ja: '最初は止まる',
-          cn: '首先静止',
-          ko: '우선 멈춰요',
+          ko: '우선 멈추기',
         },
       },
     },
@@ -2201,19 +2005,13 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         keepMoving: {
           en: 'Keep Moving',
-          de: 'weiter bewegen',
-          fr: 'Continuez à bouger',
           ja: '最後は動く',
-          cn: '保持移动',
-          ko: '마지막엔 움직여요',
+          ko: '마지막엔 움직이기',
         },
         stopEverything: {
           en: 'Stop Everything',
-          de: 'Alles stoppen',
-          fr: 'Arrêtez tout',
           ja: '最後は止まる',
-          cn: '保持静止',
-          ko: '마지막엔 멈춰요',
+          ko: '마지막엔 멈추기',
         },
       },
     },
@@ -2271,75 +2069,48 @@ const triggerSet: TriggerSet<Data> = {
           // you're running E->S so that there's a jump there and you
           // don't kill your friends stacking north.
           en: 'No Clone: maybe purple E->S ???',
-          de: 'Keine Klone: vielleicht Lila O->S ???',
-          fr: 'Pas de Clone : peut-être E->S ???',
           ja: 'クローン無し: 多分東から南???',
-          cn: '没有分身: 可能紫色 东->南 ???',
           ko: '분신 없음: 아마도 동→남 ???',
         },
         purpleBait: {
           en: 'Purple Bait: bait E',
-          de: 'Lila Köder: locke O',
-          fr: 'Attirez le Violet : attirez à l\'E',
           ja: '逃亡監察: 東へ',
-          cn: '大暗: 东',
           ko: '보라/도망감찰: 유도역할/동쪽',
         },
         orangeBait: {
           en: 'Orange Bait: bait N',
-          de: 'Orange Köder: locke N',
-          fr: 'Attirez l\'Orange : attirez au N',
           ja: '接触保護: 北へ',
-          cn: '大光: 北',
           ko: '노랑/접촉보호: 유도역할/북쪽',
         },
         purpleNoTether: {
           en: 'Purple, no tether: E->W',
-          de: 'Lila, keine Verbindung: O->W',
-          fr: 'Violet, pas de lien : E->O',
           ja: '逃亡禁止, 線無し: 東から西へ',
-          cn: '小暗, 无连线: 东->西',
           ko: '보라/접촉금지/선없음: 동→서',
         },
         orangeNoTether: {
           // This person also has the shared sentence.
           en: 'Orange, no tether: E->N',
-          de: 'Orange, keine Verbindung: O->N',
-          fr: 'Orange, pas de lien : E->N',
           ja: '接触禁止, 線無し: 東から北へ',
-          cn: '小光, 无连线: 东->北',
           ko: '노랑/접촉금지/선없음: 동→북',
         },
         purpleCloseTether: {
           en: 'Purple, close tether: E->N',
-          de: 'Lila, nahe Verbindungr: O->N',
-          fr: 'Violet, lien rapproché : E->N',
           ja: '逃亡禁止, 接近強制: 東から北へ',
-          cn: '小暗, 接近连线: 东->北',
           ko: '보라/도망금지/강제접근: 동→북',
         },
         orangeCloseTether: {
           en: 'Orange, close tether: E->N',
-          de: 'Orange, nahe Verbindung: O->N',
-          fr: 'Orange, lien rapproché : E->N',
           ja: '接触禁止, 接近強制: 東から北へ',
-          cn: '小光, 接近连线: 东->北',
           ko: '노랑/접촉금지/강제접근: 동→북',
         },
         purpleFarTether: {
           en: 'Purple, far tether: E->S',
-          de: 'Lila, entfernte Verbindung: O->S',
-          fr: 'Violet, lien éloigné : E->S',
           ja: '逃亡禁止, 接近禁止: 東から南へ',
-          cn: '小暗, 远离连线: 东->南',
           ko: '보라/도망금지/접근금지: 동→남',
         },
         orangeFarTether: {
           en: 'Orange, far tether: E->N',
-          de: 'Orange, entfernte Verbindung: O->N',
-          fr: 'Orange, lien éloigné : E->N',
           ja: '接触禁止, 接近禁止: 東から北へ',
-          cn: '小光, 远离连线: 东->北',
           ko: '노랑/접촉금지/접근금지: 동→북',
         },
       },
@@ -2385,11 +2156,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Optical Spread',
-          de: 'Visier verteilen',
-          fr: 'Dispersion optique',
           ja: '散開',
-          cn: '分散',
-          ko: '옵티컬: 흩어져요',
+          ko: '옵티컬: 산개',
         },
       },
     },
@@ -2402,11 +2170,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Optical Stack',
-          de: 'Visier sammeln',
-          fr: 'Package optique',
           ja: 'シェア',
-          cn: '分摊',
-          ko: '옵티컬: 뭉쳐요',
+          ko: '옵티컬: 모이기',
         },
       },
     },
@@ -2439,35 +2204,23 @@ const triggerSet: TriggerSet<Data> = {
         unknown: Outputs.unknown,
         opticalStack: {
           en: 'Optical Stack',
-          de: 'Visier sammeln',
-          fr: 'Package optique',
           ja: 'オプチカル 集合',
-          cn: '集合',
-          ko: '옵티컬: 뭉쳐요',
+          ko: '옵티컬: 모이기',
         },
         opticalStackPlayers: {
           en: 'Optical Stack (${players})',
-          de: 'Visier sammeln (${players})',
-          fr: 'Package optique (${players})',
           ja: 'オプチカル 集合 (${players})',
-          cn: '集合 (${players})',
-          ko: '옵티컬: 뭉쳐요 (${players})',
+          ko: '옵티컬: 모이기 (${players})',
         },
         opticalSpread: {
           en: 'Optical Spread',
-          de: 'Visier verteilen',
-          fr: 'Dispersion optique',
           ja: '散開',
-          cn: '分散',
-          ko: '옵티컬: 흩어져요',
+          ko: '옵티컬: 산개',
         },
         opticalStackOnYou: {
           en: 'Optical Stack on YOU',
-          de: 'Visier sammeln auf DIR',
-          fr: 'Package optique sur VOUS',
           ja: '自分にシェア',
-          cn: '集合点名',
-          ko: '옵티컬: 낵게 뭉쳐요',
+          ko: '옵티컬: 나에게 모이기',
         },
       },
     },
@@ -2495,11 +2248,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack Middle for Trine',
-          de: 'Mittig sammeln für Trine',
-          fr: 'Packez-vous au milieu pour Trine',
           ja: '大審判来るよ',
-          cn: '大审判 中间集合',
-          ko: '대심판이 옵니다, 한가운데로',
+          ko: '대심판이 옵니다, 가운데로',
         },
       },
     },
@@ -2615,50 +2365,32 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         waitMiddleDodgeNorth: {
           en: 'Wait Middle, Dodge North',
-          de: 'Warte in der Mitte, ausweichen nach Norden',
-          fr: 'Attendez au milieu, esquivez au Nord',
           ja: '中央から北へ',
-          cn: '中间 -> 北',
           ko: '가운데서 북쪽으로',
         },
         goNorthDodgeSouth: {
           en: 'Go 1 North, Dodge South',
-          de: 'Geh nach Norden, ausweichen nach Süden',
-          fr: 'Allez 1 au Nord, esquivez au Sud',
           ja: '北から中央へ',
-          cn: '北 -> 中间',
           ko: '북쪽에서 가운데로',
         },
         goNorthDodgeWest: {
           en: 'Go 1 North, Dodge West',
-          de: 'Geh nach Norden, ausweichen nach Westen',
-          fr: 'Allez 1 au Nord, esquivez à l\'Ouest',
           ja: '北から西へ',
-          cn: '北 -> 西',
           ko: '북쪽에서 서쪽으로',
         },
         goSouthDodgeEast: {
           en: 'Go 1 South, Dodge East',
-          de: 'Geh nach Süden, ausweichen nach Osten',
-          fr: 'Allez 1 au Sud, esquivez à l\'Est',
           ja: '南から東へ',
-          cn: '南 -> 东',
           ko: '남쪽에서 동쪽으로',
         },
         waitMiddleDodgeSouth: {
           en: 'Wait Middle, Dodge South',
-          de: 'Warte in der Mitte, ausweichen nach Süden',
-          fr: 'Attendez au milieu, esquivez au Sud',
           ja: '中央から南へ',
-          cn: '中间 -> 南',
           ko: '가운데서 남쪽으로',
         },
         goSouthDodgeNorth: {
           en: 'Go 1 South, Dodge North',
-          de: 'Geh nach Süden, ausweichen nach Norden',
-          fr: 'Allez 1 au Sud, esquivez au Nord',
           ja: '南から北へ',
-          cn: '南 -> 北',
           ko: '남쪽에서 북쪽으로',
         },
       },
@@ -2676,11 +2408,8 @@ const triggerSet: TriggerSet<Data> = {
           // It is a bit different in JA/CN that players should go middle instead of south,
           // so leave it alone.
           en: 'South',
-          de: 'Süden',
-          fr: 'Sud',
           ja: '中央へ',
-          cn: '中间',
-          ko: '한가운데로',
+          ko: '가운데로',
         },
         west: Outputs.west,
       },
@@ -3084,6 +2813,109 @@ const triggerSet: TriggerSet<Data> = {
         'Thunder': '雷',
         'Whirlwind': '龙卷风',
         'Wormhole Formation': '次元断绝阵列',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        '(?<! )Alexander(?! )': '亞歷山大',
+        'Alexander Prime': '至尊亞歷山大',
+        'Brute Justice': '殘暴正義號',
+        'Cruise Chaser': '巡航驅逐者',
+        'Jagd Doll': '狩獵人偶',
+        'Judgment Crystal': '審判結晶',
+        'Liquid Hand': '活水之手',
+        'Liquid Rage': '活水之怒',
+        'Living Liquid': '有生命活水',
+        'Perfect Alexander': '完美亞歷山大',
+        'Steam Chakram': '蒸氣戰輪',
+      },
+      'replaceText': {
+        // '--Cruise Chaser Invincible--': '', // FIXME '--巡航驱逐者无敌--'
+        // '--alex untargetable--': '', // FIXME '--亚历山大无法选中--'
+        'True Heart': '真心',
+        // 'Waves': '', // FIXME '水波'
+        // '/Parting': '', // FIXME '/离别之手'
+        // '/Stillness': '', // FIXME '/静止命令'
+        // 'Individual/': '', // FIXME '单体/'
+        // 'Reveal': '', // FIXME '生效'
+        // ' and': '', // FIXME
+        // 'Fate: ': '', // FIXME '未来: '
+        'Almighty Judgment': '神聖大審判',
+        'Alpha Sword': '阿爾法之劍',
+        'Apocalyptic Ray': '末世宣言',
+        'Cascade': '傾瀉',
+        'Chakrams': '雷射戰輪',
+        'Chastening Heat': '神罰射線',
+        'Collective Reprobation': '群體斷罪',
+        'Divine Judgment': '神聖審判',
+        'Divine Spear': '神聖火焰',
+        'Double Rocket Punch': '雙重火箭拳擊',
+        'Down for the Count': '擊倒',
+        'Drainage': '排水',
+        'Earth Missile': '大地導彈',
+        'Embolus': '填充水壓',
+        'Enumeration': '計數',
+        'Eternal Darkness': '黑暗命運',
+        'Exhaust': '污染蒸氣',
+        // 'Fate Calibration': '', // FIXME '未来确定'
+        // 'Fate Projection': '', // FIXME '未来观测'
+        'Final Sentence': '死刑判決',
+        'Flarethrower': '大火炎放射',
+        'Fluid Strike': '流體強襲',
+        'Fluid Swing': '流體擺動',
+        'Gavel': '終審閉庭',
+        'Hand of Pain': '苦痛之手',
+        'Hand of Prayer': '祈禱之手',
+        'Hawk Blaster': '鷹式破壞砲',
+        'Hidden Minefield': '隱形地雷散佈',
+        'Inception(?! )': '時空潛行',
+        'Inception Formation': '時空潛行陣列',
+        'Incinerating Heat': '淨化射線',
+        'Irresistible Grace': '株連',
+        'J Jump': '正義之躍',
+        'J Kick': '正義飛踢',
+        'J Storm': '正義旋風',
+        'Judgment Crystal': '審判結晶',
+        'Judgment Nisi': '非最終審判',
+        'Limit Cut': '限制器減檔',
+        'Link-Up': '系統連接',
+        'Mega Holy': '百萬神聖',
+        // 'Middle Blaster': '', // FIXME '中间冲击波'
+        'Missile Command': '導彈齊發',
+        // 'Obloquy': '', // FIXME '污名神判'
+        'Optical Sight': '制導',
+        'Ordained Capital Punishment': '加重誅罰',
+        'Ordained Motion': '行動命令',
+        'Ordained Punishment': '誅罰',
+        'Photon': '光子砲',
+        // 'Players Remaining': '', // FIXME '剩余玩家'
+        'Propeller Wind': '螺旋槳強風',
+        'Protean Wave': '萬變水波',
+        // 'Rage Wave': '', // FIXME '活水之怒'
+        '(?<! )Repentance': '罪惡感',
+        // 'Radiant ': '', // FIXME '拜火'
+        'Sacrament': '十字聖禮',
+        // 'Severity': '', // FIXME '重罚神判'
+        'Sluice': '沖洗',
+        // 'Solidarity': '', // FIXME '连带神判'
+        'Spin Crusher': '迴旋碎踢',
+        'Splash': '濺開',
+        'Summon Alexander': '召喚亞歷山大',
+        'Super Blassty Charge': '超級摧毀者衝擊',
+        'Super Jump': '超級跳躍',
+        // 'Surety': '', // FIXME '誓约神判'
+        'Temporal Interference': '時空干涉',
+        'Temporal Prison': '時間牢獄',
+        'Temporal Stasis': '時間停止',
+        'The Final Word': '終審判決',
+        'Throttles': '液體監獄',
+        'Void Of Repentance': '懺悔區',
+        // 'Water': '', // FIXME '水'
+        // 'Thunder': '', // FIXME '雷'
+        'Whirlwind': '龍捲風',
+        'Wormhole Formation': '次元斷絕陣列',
       },
     },
     {

@@ -63,8 +63,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Behind x4',
-          de: 'Geh hinter x4',
-          cn: '去背后4次',
+          ja: 'Get Behind x4',
           ko: '엉댕이로x4',
         },
       },
@@ -102,10 +101,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         breakLOS: {
           en: 'Break line-of-sight to ${name}',
-          de: 'Unterbreche Sichtlinie zu ${name}',
-          fr: 'Masquez le champ de vision vers ${name}',
           ja: '${name}の視線から隠れる',
-          cn: '利用掩体卡 ${name} 的视线',
           ko: '시선 잘라요: ${name}',
         },
       },
@@ -131,8 +127,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid AoE',
-          de: 'Vermeide AoE',
-          cn: '避开AoE',
+          ja: 'Avoid AoE',
           ko: '장판 피해요!',
         },
       },
@@ -180,8 +175,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${in} + ${backFront}',
-          de: '${in} + ${backFront}',
-          cn: '${in} + ${backFront}',
+          ja: '${in} + ${backFront}',
           ko: '${backFront}+${in}',
         },
         back: Outputs.back,
@@ -208,8 +202,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${out} + ${backFront}',
-          de: '${out} + ${backFront}',
-          cn: '${out} + ${backFront}',
+          ja: '${out} + ${backFront}',
           ko: '${backFront}+${out}',
         },
         back: Outputs.back,
@@ -226,8 +219,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid final AoE',
-          de: 'Vermeide finale AoE',
-          cn: '躲避终点AoE',
+          ja: 'Avoid final AoE',
           ko: '마지막 장판 피해요!',
         },
       },
@@ -304,6 +296,23 @@ const triggerSet: TriggerSet<Data> = {
         'Traverse Huldu': 'トラバース・フルドゥ',
         'Traverse Scissorjaws': 'トラバース・シザージョウ',
         'Traverse Worm': 'トラバース・ウォーム',
+      },
+    },
+    {
+      'locale': 'ko',
+      'replaceSync': {
+        'Forgiven Arrogance': '면죄된 오만',
+        'Forgiven Corruption': '면죄된 부패',
+        'Forgiven Dissention': '면죄된 분쟁',
+        'Forgiven Profanity': '면죄된 모독',
+        'Forgiven Slander': '면죄된 폄훼',
+        'Forgiven Spite': '면죄된 앙심',
+        'Forgiven Unbelief': '면죄된 불신',
+        'Forgiven Vanity': '면죄된 허영심',
+        'Traverse Amemet': '순례길 아메메트',
+        'Traverse Huldu': '순례길 훌두',
+        'Traverse Scissorjaws': '순례길 가위턱',
+        'Traverse Worm': '순례길 지렁이',
       },
     },
   ],

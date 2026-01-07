@@ -35,26 +35,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         akhRhaiSpreadAndMove: {
           en: 'Akh Rhai: spread and move',
-          de: 'Akh Rhai: Verteilen und bewegen',
-          fr: 'Akh Rhai : Dispersion et bougez',
           ja: 'アク・ラーイ: 散開 動け',
-          cn: '天光轮回：散开和移动',
           ko: '아크 라이: 흩어지면서 움직여요',
         },
         akhMornOnYou: {
           en: 'Akh Morn on YOU',
-          de: 'Akh Morn auf DIR',
-          fr: 'Akh Morn sur VOUS',
           ja: '自分にアク・モーン',
-          cn: '死亡轮回点名',
           ko: '내게 아크몬',
         },
         akhMornOn: {
           en: 'Akh Morn on ${player}',
-          de: 'Akh Morn auf ${player}',
-          fr: 'Akh Morn sur ${player}',
           ja: '${player}にアク・モーン',
-          cn: '死亡轮回点${player}',
           ko: '아크몬: ${player}',
         },
       },
@@ -76,10 +67,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Out of middle',
-          de: 'Raus aus der Mitte',
-          fr: 'Sortez du milieu',
           ja: '中央から離れる',
-          cn: '离开中间',
           ko: '한가운데 피해요',
         },
       },
@@ -93,10 +81,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get in water',
-          de: 'In\'s Wasser',
-          fr: 'Allez dans l\'eau',
           ja: '水に入る',
-          cn: '进水圈',
           ko: '물로 들어가요',
         },
       },
@@ -110,10 +95,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack in water',
-          de: 'In Wasser stacken',
-          fr: 'Packez-vous dans l\'eau',
           ja: '水に集合',
-          cn: '水圈集合',
           ko: '물에서 뭉쳐요',
         },
       },
@@ -127,10 +109,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'out of water',
-          de: 'Raus aus dem Wasser',
-          fr: 'Sortez de l\'eau',
           ja: '水から離れる',
-          cn: '离开水圈',
           ko: '물 밖으로',
         },
       },
@@ -144,10 +123,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Spread out, no water',
-          de: 'Verteilen und nicht in\'s Wasser',
-          fr: 'Dispersez-vous en dehors de l\'eau',
           ja: '散開、水に入らない',
-          cn: '散开，离开水圈',
           ko: '흩어져요, 물에는 들어가지 말고',
         },
       },
@@ -162,10 +138,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Knockback, look for water',
-          de: 'Rückstoß, nach Wasser schauen',
-          fr: 'Poussée, cherchez l\'eau',
           ja: 'ノックバック、水を探せ',
-          cn: '击退，找水圈',
           ko: '넉백, 바깥 물 기둥은 어디에!',
         },
       },
@@ -186,10 +159,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Tail: Switch targets',
-          de: 'Schweif: Zielwechsel',
-          fr: 'Queue : Changez de cible',
           ja: '尾: タゲチェンジ',
-          cn: '打尾巴',
           ko: '꼬리부터 잡아요',
         },
       },
@@ -210,10 +180,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'avoid divebomb',
-          de: 'Divebomb ausweichen',
-          fr: 'Évitez la bombe plongeante',
           ja: 'ダイブボムを避ける',
-          cn: '前方顺劈',
           ko: '다이브밤 피해요',
         },
       },
@@ -238,10 +205,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bait onto unbroken squares',
-          de: 'Auf nicht kaputter Fläche ködern',
-          fr: 'Attirez sur les carrés non brisés',
           ja: '壊れなかった床に誘導',
-          cn: '在未损坏方格上诱导',
           ko: '안부셔진 바닥으로 꼬리 치기 유도',
         },
       },
@@ -373,6 +337,38 @@ const triggerSet: TriggerSet<Data> = {
         'Summon Icicle': '召唤冰柱',
         'TAP BUTTON OR ELSE': 'XJB按',
         'Tail Slap': '尾部猛击',
+        'Tidal Wave': '巨浪',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Cocoon': '光繭',
+        'Left Wing': '左翼',
+        'Right Wing': '右翼',
+        'Shinryu': '神龍',
+        'Tail': '龍尾',
+        'Icicle': '冰柱',
+      },
+      'replaceText': {
+        'Akh Morn': '死亡輪迴',
+        'Elemental Attack': '元素攻擊',
+        'Dark Matter': '黑暗物質',
+        'Dragonfist': '龍掌',
+        'Earth Breath': '大地吐息',
+        'Gyre Charge': '螺旋衝鋒',
+        'Hellfire': '地獄之火炎',
+        'Hypernova': '超新星',
+        'Ice Storm': '吹雪',
+        'Icicle Impact': '冰柱衝擊',
+        'Judgment Bolt': '制裁之雷',
+        'Levinbolt': '閃電',
+        'Meteor Impact': '隕石衝擊',
+        'Protostar': '原恆星',
+        'Spikesicle': '冰柱突刺',
+        'Summon Icicle': '召喚冰柱',
+        'TAP BUTTON OR ELSE': '按按鈕！',
+        'Tail Slap': '尾部猛擊',
         'Tidal Wave': '巨浪',
       },
     },

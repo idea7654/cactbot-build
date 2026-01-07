@@ -84,10 +84,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         repeatedAOE: {
           en: 'Continuous light AoE',
-          de: 'Durchgehende Licht AoE',
-          fr: 'AoE légère continue',
           ja: '連続光属性AoE',
-          cn: '连续小AoE',
           ko: '연속 격자 장판',
         },
       },
@@ -113,10 +110,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         frontCorners: {
           en: 'Front Corner',
-          de: 'Vordere Ecken',
-          fr: 'Coin devant',
           ja: '前方の角へ',
-          cn: '前面角落',
           ko: '모서리로',
         },
         goLeft: Outputs.left,
@@ -139,10 +133,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         regaliaYou: {
           en: 'Laser tether on YOU',
-          de: 'Laserverbindung auf DIR',
-          fr: 'Lien laser sur VOUS',
           ja: 'レーザー線処理',
-          cn: '激光连线点名',
           ko: '내게 유도 레이저 줄',
         },
       },
@@ -171,10 +162,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         floating: {
           en: 'Gravitation -- Levitating',
-          de: 'Gravitation -- Schweben',
-          fr: 'Gravité -- Lévitation',
           ja: '重力装置 -- 浮上',
-          cn: '重力 -- 上浮',
           ko: '곧 뜰꺼예요!',
         },
       },
@@ -192,10 +180,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         falling: {
           en: 'Gravitation -- Falling',
-          de: 'Gravitation -- Fallen',
-          fr: 'Gravité -- Chute',
           ja: '重力装置 -- 降下',
-          cn: '重力 -- 下降',
           ko: '곧 내려가요!',
         },
       },
@@ -213,10 +198,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         floating: {
           en: 'Gravitation -- Levitating',
-          de: 'Gravitation -- Schweben',
-          fr: 'Gravité -- Lévitation',
           ja: '重力装置 -- 浮上',
-          cn: '重力 -- 上浮',
           ko: '곧 뜰꺼예요!',
         },
       },
@@ -238,18 +220,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         fallCastle: {
           en: 'In front of ground windows',
-          de: 'Sei vor dem Fenster am Boden',
-          fr: 'Devant les fenêtres à l\'avant',
           ja: '下層の窓前へ',
-          cn: '正对下层空洞',
           ko: '아랫쪽 구멍으로',
         },
         floatCastle: {
           en: 'In front of middle windows',
-          de: 'Sei vor dem Fenster in der Mitte',
-          fr: 'Devant les fenêtres du milieu',
           ja: '中層の窓前へ',
-          cn: '正对上层空洞',
           ko: '윗쪽 구멍으로',
         },
       },
@@ -262,10 +238,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         getInDonut: {
           en: 'Get in robot circle',
-          de: 'Geh in den Roboterkreis',
-          fr: 'Aller dans le cercle du robot',
           ja: 'ドローンサークルの中に',
-          cn: '小月环',
           ko: '로봇 동글이 안으로',
         },
       },
@@ -294,10 +267,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         gazeLater: {
           en: 'Gaze on you soon',
-          de: 'Bald: Blick auf dir',
-          fr: 'Regard sur vous bientôt',
           ja: 'まもなく視線攻撃',
-          cn: '石化眼点名',
           ko: '내게 곧 눈깔',
         },
       },
@@ -322,18 +292,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         shriekYou: {
           en: 'Gaze -- look away from ${otherTarget}',
-          de: 'Blick -- schau weg von ${otherTarget}',
-          fr: 'Regard -- Ne regardez pas ${otherTarget}',
           ja: '視線攻撃 -- ${otherTarget} を見ない',
-          cn: '石化眼 -- 背对 ${otherTarget}',
           ko: '내게 눈깔! 자리 비켜줘욧! (${otherTarget})',
         },
         shriekOthers: {
           en: 'Look away from ${comboTargets}',
-          de: 'Schau weg von ${comboTargets}',
-          fr: 'Ne regardez pas ${comboTargets}',
           ja: '${comboTargets} を見ない',
-          cn: '背对 ${comboTargets}',
           ko: '보면 안되요: ${comboTargets}',
         },
       },
@@ -347,10 +311,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         bombLater: {
           en: 'Acceleration Bomb soon',
-          de: 'Bald: Beschleunigungsbombe',
-          fr: 'Bombe d\'accélération bientôt',
           ja: 'まもなく加速度爆弾',
-          cn: '稍后 加速度炸弹',
           ko: '곧 가속 폭탄',
         },
       },
@@ -378,10 +339,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         flareMarker: {
           en: 'Flare on YOU',
-          de: 'Flare auf DIR',
-          fr: 'Brasier sur VOUS',
           ja: 'フレア処理',
-          cn: '核爆点名',
           ko: '내게 플레어',
         },
       },
@@ -408,10 +366,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         fiveAOE: {
           en: '5x AoEs',
-          de: '5x AoEs',
-          fr: '5x AoEs',
           ja: '5連続AoE',
-          cn: 'AoE (5次)',
           ko: '5x 전체공격',
         },
       },
@@ -548,6 +503,45 @@ const triggerSet: TriggerSet<Data> = {
         'Ruthless Regalia': '王法无情',
         'Virtual Shift': '虚景切换',
         'Waltz of the Regalia': '王权圆舞曲',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Queen Eternal': '永恆女王',
+      },
+      'replaceText': {
+        // '\\(abandonment\\)': '', // FIXME '(孤独感)'
+        // '\\(all\\)': '', // FIXME '(全体)'
+        // '\\(cast\\)': '', // FIXME '(咏唱)'
+        // '\\(cones': '', // FIXME '(锥形'
+        // '\\(flare\\)': '', // FIXME '(核爆)'
+        // '\\(gaze\\)': '', // FIXME '(石化光)'
+        // '\\(pre-cast\\)': '', // FIXME '(预咏唱)'
+        // '\\(puddles': '', // FIXME '(放圈'
+        // '\\(raidwide\\)': '', // FIXME '(全域)'
+        // '\\(single\\)': '', // FIXME '(单体)'
+        // '\\(stun\\)': '', // FIXME '(眩晕)'
+        'Absolute Authority': '絕對君權',
+        'Aethertithe': '乙太稅',
+        'Authority\'s Hold': '空間掌控：制動',
+        'Besiegement': '激突',
+        'Brutal Crown': '王權殘暴',
+        'Castellation': '護城牆',
+        'Coronation': '終端發射',
+        'Divide and Conquer': '分治法',
+        'Downburst': '下行突風',
+        'Dynastic Diadem': '王冠之力',
+        'Legitimate Force': '合法武力',
+        'Morning Stars': '黎明的群星',
+        'Powerful Gust': '強風',
+        'Prosecution Of War': '訴諸武力',
+        'Royal Banishment': '放逐射線',
+        'Royal Domain': '王土',
+        'Ruthless Regalia': '王法無情',
+        'Virtual Shift': '虛景切換',
+        'Waltz of the Regalia': '王權圓舞曲',
       },
     },
     {

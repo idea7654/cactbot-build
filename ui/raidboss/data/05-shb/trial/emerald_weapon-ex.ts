@@ -26,7 +26,15 @@ const centerX = 100;
 const centerY = 100;
 
 const sharedOutputStrings = {
-  sharedTankStack: Outputs.sharedTankbuster,
+  sharedTankStack: {
+    en: 'Tank stack',
+    de: 'Tanks sammeln',
+    fr: 'Package tanks',
+    ja: 'タンク頭割り',
+    cn: '坦克分摊',
+    ko: '탱끼리 모이기',
+    tc: '坦克分攤',
+  },
 };
 
 const triggerSet: TriggerSet<Data> = {
@@ -68,11 +76,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get orbs',
-          de: 'Orbs nehmen',
-          fr: 'Prenez les orbes',
           ja: '玉を処理',
-          cn: '撞球',
-          ko: '구슬 처리',
+          ko: '구슬 부딪히기',
         },
       },
     },
@@ -113,17 +118,13 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         clockwise: {
           en: 'Rotate Clockwise',
-          de: 'Im Uhrzeigersinn rotieren',
-          fr: 'Tournez dans le sens horaire',
-          cn: '顺时针转',
-          ko: '왼쪽으로 돌아요',
+          ja: 'Rotate Clockwise',
+          ko: '시계방향',
         },
         counterclock: {
           en: 'Rotate Counterclockwise',
-          de: 'Gegen den Uhrzeigersinn rotieren',
-          fr: 'Tournez dans le sens anti-horaire',
-          cn: '逆时针转',
-          ko: '오른쪽으로 돌아요',
+          ja: 'Rotate Counterclockwise',
+          ko: '반시계방향',
         },
       },
     },
@@ -135,10 +136,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away From Red Circle',
-          de: 'Weg vom roten Kreis',
-          fr: 'Éloignez-vous du cercle rouge',
-          cn: '远离红圈',
-          ko: '빨간 장판에서 멀리 떨어져요',
+          ja: 'Away From Red Circle',
+          ko: '빨간 장판에서 멀리 떨어지기',
         },
       },
     },
@@ -158,11 +157,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Near Same Polarity Mines',
-          de: 'Nahe den Bomben mit gleicher Polarisierung',
-          fr: 'Allez vers les mines de même polarité',
           ja: '同じ極性の爆雷に近づく',
-          cn: '靠近同级地雷',
-          ko: '같은 극인 폭탄쪽으로',
+          ko: '같은 극성 폭탄쪽으로',
         },
       },
     },
@@ -189,11 +185,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Flare on YOU',
-          de: 'Flare auf DIR',
-          fr: 'Brasier sur VOUS',
           ja: '自分にフレア',
-          cn: '核爆点名',
-          ko: '내게 플레어',
+          ko: '플레어 대상자',
         },
       },
     },
@@ -206,11 +199,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bait Lines Away From Safe Spot',
-          de: 'Linien weg vom Safespot ködern',
-          fr: 'Orientez les lignes hors de la zone safe',
           ja: '線を安置に被らないように捨てる',
-          cn: '诱导直线，不要覆盖安全点',
-          ko: '안전한 곳으로 줄 유도',
+          ko: '안전지대 밖으로 장판 유도',
         },
       },
     },
@@ -232,11 +222,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         protean: {
           en: 'Protean',
-          de: 'Himmelsrichtungen',
-          fr: 'Positions',
           ja: '8方向散開',
-          cn: '分散站位',
-          ko: '프로틴, 흩어져요',
+          ko: '정해진 위치로 산개',
         },
         ...sharedOutputStrings,
       },
@@ -263,10 +250,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go ${dir}, Aim Across',
-          de: 'Geh nach ${dir}, schau Gegenüber',
-          fr: 'Allez direction ${dir}, visez en face',
-          cn: '去${dir}, 看好对面',
-          ko: '${dir}으로 이동, 반대쪽 봐요',
+          ja: 'Go ${dir}, Aim Across',
+          ko: '${dir}으로 이동, 반대쪽 확인',
         },
         north: Outputs.north,
         east: Outputs.east,
@@ -288,10 +273,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Dodge Arrow Lines',
-          de: 'Weiche den Pfeillinien aus',
-          fr: 'Esquivez les lignes fléchées',
-          cn: '避开箭头路径',
-          ko: '화살표 피해요',
+          ja: 'Dodge Arrow Lines',
+          ko: '화살표 방향 피하기',
         },
       },
     },
@@ -304,10 +287,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Watch for Swords',
-          de: 'Schau nach den Schwertern',
-          fr: 'Repérez les épées',
-          cn: '观察剑',
-          ko: '칼 확인',
+          ja: 'Watch for Swords',
+          ko: '칼 떨어지는 위치 보기',
         },
       },
     },
@@ -359,8 +340,8 @@ const triggerSet: TriggerSet<Data> = {
         // and so the first safe is the middle set of swords (s4, s5).
         const firstSafeIsMiddle = s0 !== s1;
         if (firstSafeIsMiddle)
-          return output.aMidFirst!({ middle: s4, dir1: s0, dir2: s1 });
-        return output.aMidLast!({ middle: s0, dir1: s4, dir2: s5 });
+          return output.middleFirst!({ middle: s4, dir1: s0, dir2: s1 });
+        return output.middleLast!({ middle: s0, dir1: s4, dir2: s5 });
       },
       outputStrings: {
         dirNE: Outputs.dirNE,
@@ -370,29 +351,13 @@ const triggerSet: TriggerSet<Data> = {
         middle: Outputs.middle,
         middleFirst: {
           en: '${middle} -> ${dir1} / ${dir2}',
-          de: '${middle} -> ${dir1} / ${dir2}',
-          fr: '${middle} -> ${dir1} / ${dir2}',
-          cn: '${middle} -> ${dir1} / ${dir2}',
+          ja: '${middle} -> ${dir1} / ${dir2}',
           ko: '${middle} -> ${dir1} / ${dir2}',
         },
         middleLast: {
           en: '${dir1} / ${dir2} -> ${middle}',
-          de: '${dir1} / ${dir2} -> ${middle}',
-          fr: '${dir1} / ${dir2} -> ${middle}',
-          cn: '${dir1} / ${dir2} -> ${middle}',
+          ja: '${dir1} / ${dir2} -> ${middle}',
           ko: '${dir1} / ${dir2} -> ${middle}',
-        },
-        arrowNE: Outputs.arrowNE,
-        arrowSE: Outputs.arrowSE,
-        arrowSW: Outputs.arrowSW,
-        arrowNW: Outputs.arrowNW,
-        aMidFirst: {
-          en: '${middle} -> ${dir1} ${dir2}',
-          ko: '${middle} -> ${dir1} ${dir2}',
-        },
-        aMidLast: {
-          en: '${dir1} ${dir2} -> ${middle}',
-          ko: '${dir1} ${dir2} -> ${middle}',
         },
       },
     },
@@ -424,10 +389,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Intercard + Out (Plus)',
-          de: 'Interkardinal + Raus (Plus)',
-          fr: 'Intercardinal + Extérieur (Plus)',
-          cn: '去场边角落 (十字)',
-          ko: '비스듬 + 밖으로 (➕)',
+          ja: 'Intercard + Out (Plus)',
+          ko: '대각선 밖으로 (십자)',
         },
       },
     },
@@ -440,10 +403,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Cardinal + Out (Cross)',
-          de: 'Kardinal + Raus (Kreuz)',
-          fr: 'Cardinal + Extérieur (Croix)',
-          cn: '去场边中点 (X字)',
-          ko: '십자 + 밖으로 (❌)',
+          ja: 'Cardinal + Out (Cross)',
+          ko: '동서남북 밖으로 (X자)',
         },
       },
     },
@@ -461,11 +422,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go North; Dodge Soldiers/Divebombs',
-          de: 'Geh nach Norden; Achte auf die Lücken zwischen den Soldaten',
-          fr: 'Allez au Nord, esquivez les soldats et les bombes plongeantes',
-          ja: '飛行部隊と射撃部隊を見覚える', // FIXME
-          cn: '去北边；躲避士兵射击/飞机轰炸',
-          ko: '북으로! 쫄병과 다이브밤 피해요',
+          ja: '飛行部隊と射撃部隊を見覚える', // FIXME,
+          ko: '북쪽으로 이동, 엑사플레어, 병사 사격 확인',
         },
       },
     },
@@ -629,6 +587,44 @@ const triggerSet: TriggerSet<Data> = {
         'Full Rank': '全军集合',
         'Final Formation': '全军列队',
         'Fatal Fire': '全军攻击',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'bitblade': '槍刃浮游砲',
+        'Black Wolf\'s Image': '蓋烏斯的幻影',
+        'Imperial Image': '帝國兵的幻影',
+        'Reaper Image': '魔導死神的幻影',
+        'The Emerald Weapon': '綠寶石武器',
+      },
+      'replaceText': {
+        '--cutscene--': '妨礙思念',
+        'Aetheroplasm Production': '生成炸彈',
+        'Aire Tam Storm': '綠寶石大爆炸',
+        'Bit Storm': '浮游砲：圓形射擊',
+        'Divide Et Impera': '分而治之',
+        'Emerald Beam': '綠寶石光束',
+        'Emerald Shot': '綠寶石射擊',
+        'Expire': '噴射',
+        'Heirsbane': '遺禍',
+        'Legio Phantasmatis': '幻影軍團',
+        'Magitek Cannon': '魔導加農砲',
+        'Magitek Magnetism': '魔導磁石',
+        'Optimized Ultima': '魔導究極',
+        'Photon Ring': '光子環',
+        'Primus Terminus Est': '恩惠終結：壹',
+        'Secundus Terminus Est': '恩惠終結：貳',
+        'Shots Fired': '全體掃射',
+        'Sidescathe': '側面掃射',
+        'Split': '分離',
+        'Tertius Terminus Est': '恩惠終結：三',
+        'Mechanized Maneuver': '機動戰術',
+        'Bombs Away': '轟炸命令',
+        'Emerald Crusher': '綠寶石碎擊',
+        'Full Rank': '全軍集合',
+        'Final Formation': '全軍列隊',
+        'Fatal Fire': '全軍攻擊',
       },
     },
     {

@@ -23,10 +23,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Limit break now!',
-          de: 'Limit break jetzt!',
-          fr: 'Transcendance maintenant !',
           ja: 'タンクLBを！',
-          cn: '坦克LB！',
           ko: '리미트 브레이크!',
         },
       },
@@ -40,10 +37,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Towers',
-          de: 'Türme nehmen',
-          fr: 'Prenez les tours',
           ja: '塔を踏む',
-          cn: '踩塔',
           ko: '타워 밟아요',
         },
       },
@@ -60,10 +54,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Full Heal Everyone',
-          de: 'Alle voll heilen',
-          fr: 'Soignez tout le monde complètement',
           ja: 'HPを満タンに！',
-          cn: '奶满全队',
           ko: '전원 체력 만땅으로',
         },
       },
@@ -120,26 +111,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         outMove: {
           en: 'Out => Move',
-          de: 'Raus => Bewegen',
-          fr: 'Extérieur => Bougez',
           ja: '外 => 動け',
-          cn: '钢铁 => 动动动',
           ko: '밖으로 🔜 움직여요',
         },
         outStop: {
           en: 'Out => Stop',
-          de: 'Raus => Nichts machen',
-          fr: 'Extérieur => Stoppez tout',
           ja: '外 => 動かない',
-          cn: '钢铁 => 停停停',
           ko: '밖으로 🔜 멈춰요',
         },
         out: {
           en: 'Out => ???',
-          de: 'Raus => ???',
-          fr: 'Extérieur => ???',
           ja: '外 => ???',
-          cn: '钢铁 => ？？？',
           ko: '밖으로 🔜 ???',
         },
       },
@@ -159,26 +141,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         underMove: {
           en: 'Under => Move',
-          de: 'Runter => Bewegen',
-          fr: 'Intérieur => Bougez',
           ja: '中 => 動け',
-          cn: '月环 => 动动动',
           ko: '안으로 🔜 움직여요',
         },
         underStop: {
           en: 'Under => Stop',
-          de: 'Runter => Nichts machen',
-          fr: 'Intérieur => Stoppez tout',
           ja: '中 => 動かない',
-          cn: '月环 => 停停停',
           ko: '안으로 🔜 멈춰요',
         },
         under: {
           en: 'Under => ???',
-          de: 'Runter => ???',
-          fr: 'Intérieur => ???',
           ja: '中 => ???',
-          cn: '月环 => ？？？',
           ko: '안으로 🔜 ???',
         },
       },
@@ -191,10 +164,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Out of Triangle',
-          de: 'Raus aus den Dreiecken',
-          fr: 'Sortez du triangle',
           ja: '三角の外へ',
-          cn: '站在三角外面',
           ko: '삼각형 밖으로',
         },
       },
@@ -211,10 +181,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Wyrm Dash',
-          de: 'Wyrm-Ansturm ausweichen',
-          fr: 'Évitez la charge du Wyrm',
           ja: '竜を避ける',
-          cn: '躲避巴哈冲锋',
           ko: '웸 돌진 피해요',
         },
       },
@@ -241,10 +208,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'GTFO',
-          de: 'GTFO',
-          fr: 'Éloignez-vous',
           ja: '出ていく！',
-          cn: '快出去！',
           ko: '밖으로 나가욧!',
         },
       },
@@ -284,10 +248,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack Groups',
-          de: 'Gruppen stacken',
-          fr: 'Packages de groupes',
           ja: '集合',
-          cn: '集合',
           ko: '뭉쳐요',
         },
       },
@@ -301,10 +262,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go to Corner',
-          de: 'In die Ecken gehenr',
-          fr: 'Allez dans un coin',
           ja: 'コーナーへ',
-          cn: '去角落',
           ko: '구석으로',
         },
       },
@@ -325,10 +283,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Point tether outside',
-          de: 'Verbindungen nach Außen zeigen',
-          fr: 'Pointez le lien vers l\'extérieur',
           ja: '線を外に引く',
-          cn: '把线拉向场外',
           ko: '줄 바깥으로 빼기',
         },
       },
@@ -529,6 +484,56 @@ const triggerSet: TriggerSet<Data> = {
         'To The Limit': '突破极限',
         'Twincast': '合力咏唱',
         'Ultimate Crossover': '究极·交汇',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Spectral Bard': '幻光吟遊詩人',
+        'Spectral Black Mage': '幻光黑魔道士',
+        'Spectral Dark Knight': '幻光暗黑騎士',
+        'Spectral Egi': '幻光召喚獸',
+        'Spectral Ninja': '幻光忍者',
+        'Spectral Summoner': '幻光召喚士',
+        'Spectral Warrior': '幻光狂戰士',
+        'Warrior Of Light': '光之戰士',
+        'Wyrm Of Light': '光之真龍',
+      },
+      'replaceText': {
+        // '--active time event--': '', // FIXME '--XJB按--'
+        'Absolute Blizzard III': '絕對大暴雪',
+        'Absolute Fire III': '絕對大火焰',
+        // 'Absolute Fire/Blizzard': '', // FIXME '绝对爆炎/绝对冰封'
+        'Absolute Holy': '絕對神聖',
+        'Absolute Teleport': '絕對傳送',
+        'Ascendance': '生辰星位',
+        'Brimstone Earth': '獄火大地',
+        'Cauterize': '灼熱俯衝',
+        'Coruscant Saber': '光明利劍',
+        'Deluge Of Death': '死亡暴雨',
+        'Elddragon Dive': '遠古龍炎衝',
+        'Flare Breath': '火光吐息',
+        'Imbued Coruscance': '魔法劍技·光明利劍',
+        // 'Imbued Fire/Blizzard': '', // FIXME '魔法剑·绝对爆炎/绝对冰封'
+        'Katon: San': '三式火遁之術',
+        'Meteor Impact': '隕石衝擊',
+        'Perfect Decimation': '完美地毀人亡',
+        'Radiant Braver': '光之英勇斬擊',
+        'Radiant Desperado': '光之亡命之徒',
+        'Radiant Meteor': '光之隕石流星',
+        'Shining Wave': '光芒波動',
+        'Solemn Confiteor': '莊嚴悔罪',
+        'Specter Of Light': '幻光召喚',
+        'Suiton: San': '三式水遁之術',
+        'Summon(?! Wyrm)': '召喚',
+        'Summon Wyrm': '真龍召喚',
+        'Sword Of Light': '光之劍',
+        'Terror Unleashed': '恐懼釋放',
+        'The Bitter End': '盡滅',
+        'To The Limit': '突破極限',
+        'Twincast': '合力詠唱',
+        'Ultimate Crossover': '究極·交匯',
       },
     },
     {

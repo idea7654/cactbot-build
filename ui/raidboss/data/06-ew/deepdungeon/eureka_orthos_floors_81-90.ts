@@ -30,6 +30,7 @@ const interceptionOutputStrings: { [label: string]: LocaleText } = {
     ja: 'たまご',
     cn: '蛋',
     ko: '알',
+    tc: '蛋',
   },
   cube: {
     en: 'cubes',
@@ -38,14 +39,17 @@ const interceptionOutputStrings: { [label: string]: LocaleText } = {
     ja: '四角',
     cn: '方块',
     ko: '큐브',
+    tc: '方塊',
   },
   ball: {
     en: 'ball',
     de: 'Ball',
     fr: 'Balle',
     ja: '円', // 〇
+    // 〇
     cn: '球',
     ko: '동글',
+    tc: '球',
   },
 } as const;
 
@@ -152,10 +156,7 @@ const triggerSet: TriggerSet<Data> = {
           // "Intercardinals" may confuse people between absolute and relative,
           // so add in the "of boss" just to be extra clear.
           en: 'Go Intercardinal of Boss',
-          de: 'Geh in eine Intercardinale Himmelsrichtung vom Boss',
-          fr: 'Allez en intercardinal du boss',
           ja: 'ボスの斜めへ',
-          cn: '去Boss的斜角方向',
           ko: '보스 비스듬히 피해요',
         },
       },
@@ -257,10 +258,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${first} => ${second} => ${third}',
-          de: '${first} => ${second} => ${third}',
-          fr: '${first} => ${second} => ${third}',
           ja: '${first} => ${second} => ${third}',
-          cn: '${first} => ${second} => ${third}',
           ko: '${first} 🔜 ${second} 🔜 ${third}',
         },
       },
@@ -347,18 +345,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         between: {
           en: '${safe}, between eggs',
-          de: '${safe}, zwichen den Eiern',
-          fr: '${safe}, entre les œufs',
           ja: '${safe}, たまごの間',
-          cn: '${safe}, 蛋中间',
           ko: '${safe}, 알 사이',
         },
         safe: {
           en: '${safe}',
-          de: '${safe}',
-          fr: '${safe}',
           ja: '${safe}',
-          cn: '${safe}',
           ko: '${safe}',
         },
         northEast: Outputs.northeast,
@@ -443,6 +435,25 @@ const triggerSet: TriggerSet<Data> = {
         'Orthos Spartoi': '正统地生人',
         'Orthos Specter': '正统妖影',
         'Orthos Wraith': '正统幽灵',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Administrator': '管理者',
+        'Interceptor α': '截擊系統α',
+        'Interceptor β': '截擊系統β',
+        'Interceptor γ': '截擊系統γ',
+        'Orthoiron Corse': '正統鐵面腐屍',
+        'Orthos Ahriman': '正統惡精靈',
+        'Orthos Catoblepas': '正統卡托佈雷帕斯',
+        'Orthos Deepeye': '正統深瞳',
+        'Orthos Gourmand': '正統貪吃鬼',
+        'Orthos Hecteyes': '正統百目妖',
+        'Orthos Pegasus': '正統黑天馬',
+        'Orthos Spartoi': '正統地生人',
+        'Orthos Specter': '正統妖影',
+        'Orthos Wraith': '正統幽靈',
       },
     },
     {

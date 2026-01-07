@@ -16,6 +16,7 @@ const triggerSet: TriggerSet<Data> = {
     fr: 'Avant le remaniement 6.1',
     cn: '6.1改版前',
     ko: '6.1 개편 전',
+    tc: '6.1改版前',
   },
   initData: () => {
     return {
@@ -54,18 +55,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         esunaYourPoison: {
           en: 'Esuna Your Poison',
-          de: 'Entferne dein Gift',
-          fr: 'Purifiez-vous du poison',
           ja: '自分の毒をエスナ',
-          cn: '康复自己的毒',
           ko: '내게 에스나',
         },
         esunaPoisonOn: {
           en: 'Esuna Poison on ${players}',
-          de: 'Entferne Gift von ${players}',
-          fr: 'Purifiez le poison sur ${players}',
           ja: '${players}の毒をエスナ',
-          cn: '康复${players}',
           ko: '에스나: ${players}',
         },
       },
@@ -117,18 +112,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         breakBubbleOn: {
           en: 'Break Bubble on ${player}',
-          de: 'Besiege die Blase von ${player}',
-          fr: 'Brisez la bulle de ${player}',
           ja: '${player}の泡を破れ',
-          cn: '打${player}的泡泡',
           ko: '버블 부서요: ${player}',
         },
         breakYourBubble: {
           en: 'Break Your Bubble',
-          de: 'Besiege deine Blase',
-          fr: 'Brisez votre bulle',
           ja: '自分の泡を破れ',
-          cn: '打自己的泡泡',
           ko: '내 버블 부셔요',
         },
       },
@@ -151,10 +140,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Move Boss Out of Puddles',
-          de: 'Bewege den Boss aus der Fläche',
-          fr: 'Déplacez le boss hors des zones au sol',
           ja: 'ボスを円範囲の外に',
-          cn: '把BOSS拉出圈圈',
           ko: '보스를 장판에서 빼와요',
         },
       },
@@ -175,18 +161,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         esunaPoisonOn: {
           en: 'Esuna Poison on ${player}',
-          de: 'Entferne Gift von ${player}',
-          fr: 'Purifiez le poison sur ${player}',
           ja: '${player}の毒をエスナ',
-          cn: '康复${player}的毒',
           ko: '에스나: ${player}',
         },
         esunaYourPoison: {
           en: 'Esuna Your Poison',
-          de: 'Entferne dein Gift',
-          fr: 'Purifiez-vous du poison',
           ja: '自分の毒をエスナ',
-          cn: '康复自己的毒',
           ko: '내게 에스나',
         },
       },
@@ -237,6 +217,16 @@ const triggerSet: TriggerSet<Data> = {
         'Great Yellow Pelican': '大黄鹈鹕',
         'Hellbender': '水栖蝾螈',
         'Inferno Drake': '狱炎火蛟',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Aiatar': '阿傑特',
+        'Ashdrake': '白燼火蛟',
+        'Great Yellow Pelican': '大黃鵜鶘',
+        'Hellbender': '水棲蠑螈',
+        'Inferno Drake': '獄炎火蛟',
       },
     },
     {

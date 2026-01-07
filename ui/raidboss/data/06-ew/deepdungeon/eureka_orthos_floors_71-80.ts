@@ -64,10 +64,7 @@ const triggerSet: TriggerSet<Data> = {
         getBehind: {
           // Telegraphed Killing Paw swipe (81A9) followed by untelegraphed Savage Swipe (7F8E).
           en: 'Get Behind (Stay Behind)',
-          de: 'Geh nach hinten (und bleib hinten)',
-          fr: 'Allez derrière (Restez derrière)',
           ja: '背面へ (そのまま背面)',
-          cn: '去背后 (待在背后)',
           ko: '원투 펀치! 뒤로!',
         },
       },
@@ -113,18 +110,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         stunOrBreakLOS: {
           en: 'Stun or Break line-of-sight to ${name}',
-          de: 'Unterbrechen oder unterbreche die Sichtlinie zu ${name}',
-          fr: 'Étourdissez ou masquez le champ de vision vers ${name}',
           ja: 'スタンまたは視線から隠れる: ${name}',
-          cn: '眩晕或利用掩体卡 ${name} 的视线',
           ko: '${name}: 스턴 또는 시야 밖으로 숨어요',
         },
         breakLOS: {
           en: 'Break line-of-sight to ${name}',
-          de: 'Unterbreche Sichtlinie zu ${name}',
-          fr: 'Masquez le champ de vision vers ${name}',
           ja: '${name}の視線から隠れる',
-          cn: '利用掩体卡 ${name} 的视线',
           ko: '${name}: 시야 밖으로 숨어요',
         },
       },
@@ -139,10 +130,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         breakLOS: {
           en: 'Break line-of-sight to ${name}',
-          de: 'Unterbreche Sichtlinie zu ${name}',
-          fr: 'Masquez le champ de vision vers ${name}',
           ja: '${name}の視線から隠れる',
-          cn: '利用掩体卡 ${name} 的视线',
           ko: '${name}: 시야 밖으로 숨어요',
         },
       },
@@ -243,18 +231,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         push: {
           en: 'Get pushed into safe spot',
-          de: 'Rückstoß in den sicheren Bereich',
-          fr: 'Faites vous pousser dans une zone sûre',
           ja: '安置へノックバック',
-          cn: '被击退到安全区',
           ko: '밀려나서 안전한 곳으로',
         },
         pull: {
           en: 'Get pulled into safe spot',
-          de: 'Werde in den sicheren Bereich gezogen',
-          fr: 'Faites vous attirer dans une zone sûre',
           ja: '安置へ引っ張られる',
-          cn: '被吸引到安全区',
           ko: '당겨져서 안전한 곳으로',
         },
       },
@@ -327,6 +309,23 @@ const triggerSet: TriggerSet<Data> = {
         'Orthos Toco Toco': '正统巨嘴鸟',
         'Proto-Kaliya': '原型卡利亚',
         'Weapons Drone': '炮击无人机',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Bird of Orthos': '正統妖鳥',
+        'Orthos Coeurl': '正統夸爾',
+        'Orthos Flamebeast': '正統焰獸',
+        'Orthos Gulo Gulo': '正統狼獾',
+        'Orthos Kargas': '正統卡爾加斯',
+        'Orthos Primelephas': '正統曙象',
+        'Orthos Sasquatch': '正統雪怪',
+        'Orthos Skatene': '正統斯卡尼特',
+        'Orthos Thunderbeast': '正統雷獸',
+        'Orthos Toco Toco': '正統巨嘴鳥',
+        'Proto-Kaliya': '原型卡利亞',
+        'Weapons Drone': '砲擊無人機',
       },
     },
     {

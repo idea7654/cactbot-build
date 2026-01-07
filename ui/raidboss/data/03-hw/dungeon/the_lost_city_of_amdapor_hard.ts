@@ -33,9 +33,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         comfort: {
           en: '/comfort ${name}',
-          de: '/trösten ${name}',
-          fr: '/consoler ${name}',
-          cn: '/安慰 ${name}',
+          ja: '/comfort ${name}',
           ko: '/위로 ${name}',
         },
       },
@@ -48,9 +46,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go to edge; look outside',
-          de: 'Geh zum Rand und schau nach draußen',
-          fr: 'Allez sur les bords et regardez à l\'extérieur',
-          cn: '去场边; 看场外',
+          ja: 'Go to edge; look outside',
           ko: '구석으로 + 바깥 봐요',
         },
       },
@@ -63,9 +59,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid chasing orb',
-          de: 'Weiche dem verfolgenden Orb aus',
-          fr: 'Évitez l\'orbe',
-          cn: '躲避追踪球',
+          ja: 'Avoid chasing orb',
           ko: '유도 구슬 피해요',
         },
       },
@@ -101,9 +95,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Aero',
-          de: 'Vermeide Wind',
-          fr: 'Évitez le Vent',
-          cn: '躲避风',
+          ja: 'Avoid Aero',
           ko: '에어로 피해요',
         },
       },
@@ -126,9 +118,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Stone',
-          de: 'Vermeide Stein',
-          fr: 'Évitez le rocher',
-          cn: '躲避石',
+          ja: 'Avoid Stone',
           ko: '스톤 피해요',
         },
       },
@@ -148,16 +138,10 @@ const triggerSet: TriggerSet<Data> = {
         output.responseOutputStrings = {
           pop: {
             en: 'Pop stone orb',
-            de: 'Nimm Stein Orb',
-            fr: 'Prenez l\'orbe en pierre',
-            cn: '踩石圈',
             ko: '스톤 구슬 부비부비',
           },
           avoid: {
             en: 'Avoid stone orb',
-            de: 'Vermeide Stein Orb',
-            fr: 'Évitez l\'orbe de pierre',
-            cn: '躲避石圈',
             ko: '스톤 구슬 피해요',
           },
         };
@@ -176,16 +160,10 @@ const triggerSet: TriggerSet<Data> = {
         output.responseOutputStrings = {
           pop: {
             en: 'Pop aero orb',
-            de: 'Nimm Wind Orb',
-            fr: 'Prenez l\'orbe de vent',
-            cn: '踩风圈',
             ko: '에어로 구슬 부비부비',
           },
           avoid: {
             en: 'Avoid aero orb',
-            de: 'Vermeide Wind Orb',
-            fr: 'Évitez l\'orbe de vent',
-            cn: '躲避风圈',
             ko: '에어로 구슬 피해요',
           },
         };
@@ -204,9 +182,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Pop holy orb',
-          de: 'Nimm Sanctus Orb',
-          fr: 'Prenez l\'orbe de lumière',
-          cn: '踩神圣圈',
+          ja: 'Pop holy orb',
           ko: '홀리 구슬 잡아요',
         },
       },
@@ -234,9 +210,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Move boss out of puddle',
-          de: 'Bewege Boss aus der Fläche',
-          fr: 'Déplacez le boss hors de la zone au sol',
-          cn: '把BOSS拉出罩子',
+          ja: 'Move boss out of puddle',
           ko: '보스 끌고 장판에서 나와요',
         },
       },
@@ -249,9 +223,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stand in Circle',
-          de: 'In einem Kreis stehen',
-          fr: 'Restez dans le cercle',
-          cn: '站进圈圈',
+          ja: 'Stand in Circle',
           ko: '보스 장판 안으로',
         },
       },
@@ -409,6 +381,41 @@ const triggerSet: TriggerSet<Data> = {
         'Scratch': '抓击',
         'Toxic Squama': '毒素鳞粉',
         'Transference': '转移',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Achamoth': '阿卡莫特',
+        'Dark Wings': '黑旋風',
+        'Kuribu': '基路伯',
+        'Mana Pot': '魔力罐',
+        'Ranting Ranks Gremlin': '咆哮小精怪',
+        'The Protectorate': '守護聖域',
+        'The Tower Of White': '白魔道士塔',
+        'Void Monk': '虛無鬼魚',
+        'Whisper of Existence': '冒險者的幻影',
+        'Winged Lion': '雙翼飛獅',
+        'light sprite': '光元精',
+      },
+      'replaceText': {
+        '--adds--': '--小怪--',
+        'Ancient Aero': '古代勁風',
+        'Ancient Holy': '古代神聖',
+        'Ancient Libra': '古代偵測',
+        'Ancient Stone': '古代巨岩',
+        'Cure III': '大療傷',
+        'Cure IV': '聖療',
+        'Decoy': '引誘',
+        'Enthrallment': '醉生夢死',
+        'Glory': '榮耀之劍',
+        'Neuro Squama': '幻惑鱗粉',
+        'Psycho Squama': '魅惑鱗粉',
+        'Regen': '再生',
+        'Reverse': '逆轉',
+        'Scratch': '抓擊',
+        'Toxic Squama': '毒素鱗粉',
+        'Transference': '轉移',
       },
     },
     {

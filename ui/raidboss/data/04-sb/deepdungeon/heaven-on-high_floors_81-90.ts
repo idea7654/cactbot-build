@@ -29,10 +29,7 @@ const triggerSet: TriggerSet<Data> = {
         out: Outputs.out,
         interruptOrOut: {
           en: 'Out or interrupt ${name}',
-          de: 'Raus oder unterbreche ${name}',
-          fr: 'Extérieur ou interrompez ${name}',
           ja: '外へ、または${name}に詠唱中断',
-          cn: '远离或打断 ${name}',
           ko: '밖으로 또는 ${name} 시전 끊기',
         },
       },
@@ -51,10 +48,7 @@ const triggerSet: TriggerSet<Data> = {
         getUnder: Outputs.getUnder,
         interruptOrUnder: {
           en: 'Get Under or interrupt ${name}',
-          de: 'Unter oder unterbreche ${name}',
-          fr: 'Dessous ou interrompez ${name}',
           ja: '中へ、または${name}に詠唱中断',
-          cn: '去脚下或打断 ${name}',
           ko: '밑으로 또는 ${name} 시전 끊기',
         },
       },
@@ -197,6 +191,20 @@ const triggerSet: TriggerSet<Data> = {
         'Heavenly Ryujin': '天之龙人',
         'Heavenly Shinzei': '天之真济',
         'Onra': '温罗',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Heavenly Araragi': '天之紫衫',
+        'Heavenly Gozu': '天之牛頭',
+        'Heavenly Hitotsume': '天之獨眼',
+        'Heavenly Koki': '天之鋼鬼',
+        'Heavenly Mukai-inu': '天之送狼',
+        'Heavenly Rakshasa': '天之羅剎',
+        'Heavenly Ryujin': '天之龍人',
+        'Heavenly Shinzei': '天之真濟',
+        'Onra': '溫羅',
       },
     },
     {

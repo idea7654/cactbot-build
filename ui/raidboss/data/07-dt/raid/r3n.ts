@@ -71,10 +71,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Knockback Towers',
-          de: 'Rückstoß Türme',
-          fr: 'Poussée depuis les tours',
           ja: 'ノックバック 塔',
-          cn: '击退塔',
           ko: '타워 넉백',
         },
       },
@@ -105,10 +102,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Long => Short',
-          de: 'Lange => Kurz',
-          fr: 'Long => Court',
           ja: '導火線の長い方 => 短い方',
-          cn: '长引线 => 短引线',
           ko: '긴거 🔜 짧은거',
         },
       },
@@ -122,10 +116,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'East, then West',
-          de: 'Osten, dann Westen',
-          fr: 'Est, puis Ouest',
           ja: '東、そして西',
-          cn: '右 => 左',
           ko: '동쪽갔다, 서쪽으로',
         },
       },
@@ -139,10 +130,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'East, stay East',
-          de: 'Osten, bleib Osten',
-          fr: 'Est, restez à l\'Est',
           ja: '東にそのまま',
-          cn: '右 => 待在同侧',
           ko: '동쪽가서, 그대로',
         },
       },
@@ -156,10 +144,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'West, then East',
-          de: 'Westen, dann Osten',
-          fr: 'Ouest, puis Est',
           ja: '西、そして東',
-          cn: '左 => 右',
           ko: '서쪽갔다, 동쪽으로',
         },
       },
@@ -173,10 +158,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'West, stay West',
-          de: 'Westen, bleib Westen',
-          fr: 'Ouest, restez à l\'Ouest',
           ja: '西にそのまま',
-          cn: '左 => 待在同侧',
           ko: '서쪽가서, 그대로',
         },
       },
@@ -305,6 +287,35 @@ const triggerSet: TriggerSet<Data> = {
         'Knuckle Sandwich': '拳面猛击',
         'Lariat Combo': '碎颈臂连击',
         'Murderous Mist': '致命毒雾',
+        'Self-destruct': '自爆',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        // 'Brute Bomber': '', // FIXME '野蛮爆弹'
+        // 'Lit Fuse': '', // FIXME '引线爆弹怪'
+      },
+      'replaceText': {
+        // '\\(cast\\)': '', // FIXME '(咏唱)'
+        // '\\(cones\\)': '', // FIXME '(锥形)'
+        // '\\(damage\\)': '', // FIXME '(伤害)'
+        // '\\(long\\)': '', // FIXME '(长)'
+        // '\\(short\\)': '', // FIXME '(短)'
+        // 'Barbarous Barrage': '', // FIXME '野蛮爆炸'
+        // 'Brutal Burn': '', // FIXME '野蛮灼烧'
+        'Brutal Impact': '野蠻碎擊',
+        // 'Brutal Lariat': '', // FIXME '野蛮碎颈臂'
+        // 'Doping Draught': '', // FIXME '打药'
+        'Explosion': '爆炸',
+        // 'Explosive Rain': '', // FIXME '爆弹雨'
+        // 'Fire Spin': '', // FIXME '野蛮旋火'
+        // 'Fuses of Fury': '', // FIXME '引线爆弹'
+        // 'Infernal Spin': '', // FIXME '超华丽野蛮旋火'
+        // 'Knuckle Sandwich': '', // FIXME '拳面猛击'
+        // 'Lariat Combo': '', // FIXME '碎颈臂连击'
+        // 'Murderous Mist': '', // FIXME '致命毒雾'
         'Self-destruct': '自爆',
       },
     },

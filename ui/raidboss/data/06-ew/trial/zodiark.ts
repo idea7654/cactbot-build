@@ -33,10 +33,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go NE (knockback)',
-          de: 'Geh nach NO (Rückstoß)',
-          fr: 'Allez au NE (poussée)',
           ja: '北東へ (ノックバック)',
-          cn: '去右上 (东北)',
           ko: '북동쪽으로 가서 넉백',
         },
       },
@@ -49,10 +46,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go NW (knockback)',
-          de: 'Geh nach NW (Rückstoß)',
-          fr: 'Allez au NO (poussée)',
           ja: '北西へ (ノックバック)',
-          cn: '去左上 (西北)',
           ko: '북서쪽으로 가서 넉백',
         },
       },
@@ -184,6 +178,36 @@ const triggerSet: TriggerSet<Data> = {
         'Styx': '仇恨',
         'Trimorphos Exoterikos': '三重外纹',
         'Triple Esoteric Ray': '三重神秘光线',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Arcane Sigil': '秘紋',
+        'Behemoth': '凶惡巨獸',
+        'Python': '大蟒',
+        'Zodiark': '佐狄亞克',
+      },
+      'replaceText': {
+        'Adikia': '不義',
+        'Algedon': '痛苦',
+        'Ania': '悲傷',
+        'Astral Eclipse': '星蝕',
+        'Astral Flow': '星極超流',
+        'Complete Control': '完全控制',
+        'Esoteric Dyad': '神秘二分',
+        '(?<!Triple )Esoteric Ray': '神秘光線',
+        'Esoteric Sect': '神秘切割',
+        '(?<!Trimorphos )Exoterikos': '外紋',
+        'Explosion': '爆炸',
+        'Kokytos': '悲痛',
+        'Meteoros Eidolon': '隕石幻影',
+        'Opheos Eidolon': '巨蛇幻影',
+        'Paradeigma': '範式',
+        'Phlegethon': '冥火',
+        'Styx': '仇恨',
+        'Trimorphos Exoterikos': '三重外紋',
+        'Triple Esoteric Ray': '三重神秘光線',
       },
     },
     {

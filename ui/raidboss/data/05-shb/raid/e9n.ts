@@ -73,10 +73,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Wait Near Bramble',
-          de: 'Warte in der Nähe des Dornenstrauch',
-          fr: 'Attendez près des ronces',
           ja: '闇の茨へ、蔦を切るまで待つ',
-          cn: '靠近荆棘等待',
           ko: '가시 덤불 부근에서 기다려요',
         },
       },
@@ -98,10 +95,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go Sides At Tethered Wall',
-          de: 'Geh seitlich der verundenen Wände',
-          fr: 'Allez vers les côtés du mur lié',
           ja: '線が繋がった外周の横へ',
-          cn: '去连线的墙壁两边',
           ko: '줄로 연결된 벽으로',
         },
       },
@@ -115,10 +109,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away From Tethered Walls',
-          de: 'Weg von den verbundenen Wänden',
-          fr: 'Éloignez-vous des murs liés',
           ja: '線が繋がった外周から離れる',
-          cn: '远离连线的墙壁',
           ko: '줄로 연결된 벽에서 멀리멀리',
         },
       },
@@ -140,10 +131,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Towers',
-          de: 'Türme nehmen',
-          fr: 'Prenez les tours',
           ja: '塔を踏む',
-          cn: '踩塔',
           ko: '타워 밟아요',
         },
       },
@@ -283,6 +271,36 @@ const triggerSet: TriggerSet<Data> = {
         'Wide-angle Particle Beam': '广角式波动炮',
         'Wide-angle Phaser': '广角式跳跃波动炮',
         'Zero-form Particle Beam': '零式波动炮',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Cloud Of Darkness': '黑暗之雲',
+        'Stygian Arbor': '暗之大樹',
+      },
+      'replaceText': {
+        'Anti-air Particle Beam': '高射式波動砲',
+        'Bad Vibrations': '強震動',
+        'Deluge of Darkness': '暗之大氾濫',
+        'Earth-shattering Particle Beam': '貫地式波動砲',
+        'Empty Plane': '暗黑天空',
+        'Evil Seed': '種子彈',
+        'Flood of Emptiness': '暗之氾濫：暗黑天空',
+        'Flood of Obscurity': '暗之氾濫：暗黑森林',
+        'Ground-razing Particle Beam': '放射式波動砲',
+        'Hypercharged Condensation': '吸引波動雲',
+        'Mire of Despair': '暗之沼',
+        'Obscure Woods': '暗黑森林',
+        '(?<! )Particle Beam': '波動爆炸',
+        'Particle Concentration': '波動球',
+        'Rejuvenating Balm': '活性彈',
+        'Summon': '召喚',
+        'the Art of Darkness': '暗之戰技',
+        'Waste Away': '枯萎',
+        'Wide-angle Particle Beam': '廣角式波動砲',
+        'Wide-angle Phaser': '廣角式跳躍波動砲',
+        'Zero-form Particle Beam': '零式波動砲',
       },
     },
     {

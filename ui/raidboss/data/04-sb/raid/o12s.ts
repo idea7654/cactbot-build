@@ -43,10 +43,7 @@ const triggerSet: TriggerSet<Data> = {
         knockback: Outputs.knockback,
         knockbackAndAvoid: {
           en: 'Knockback F + Avoid M',
-          de: 'Rückstoß W + Weiche M aus',
-          fr: 'Poussée F + Évitez M',
           ja: 'Fのノックバック + Mに避ける',
-          cn: '女性击退 + 远离男性',
           ko: 'F쪽에서 넉백, M 피하기',
         },
       },
@@ -89,10 +86,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Don\'t Stack!',
-          de: 'Nicht stacken!',
-          fr: 'Ne vous packez pas !',
           ja: 'スタックするな！',
-          cn: '分散站位！',
           ko: '쉐어 맞지 말것',
         },
       },
@@ -123,10 +117,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Behind => Spread',
-          de: 'Hinter => Verteilen',
-          fr: 'Derrière => Dispersez-vous',
           ja: '後ろ -> 散開',
-          cn: '背后 => 分散',
           ko: '뒤 🔜 산개',
         },
       },
@@ -151,10 +142,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Move Bosses Apart',
-          de: 'Bosse auseinander ziehen',
-          fr: 'Déplacez les boss séparément',
           ja: 'ボスを離して',
-          cn: '拉开Boss',
           ko: '보스 떨어뜨리기',
         },
       },
@@ -167,10 +155,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Move Bosses Together',
-          de: 'Bosse zusammenziehen',
-          fr: 'Déplacez les boss ensembles',
           ja: 'ボスを重ねて',
-          cn: '拉近Boss',
           ko: '보스 붙이기',
         },
       },
@@ -218,10 +203,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bring Bosses Middle, Face Eye',
-          de: 'Zieh Bosse zur Mitte, zum Auge drehen',
-          fr: 'Placez les boss au milieu, face à l\'œil',
           ja: 'ボスを中央に、目を見る',
-          cn: '把BOSS拉到中间，面向眼睛',
           ko: '보스들 중앙으로 데려오고, 눈쪽 보기',
         },
       },
@@ -236,10 +218,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Middle (Blades)',
-          de: 'Zur Mitte (Schwerter)',
-          fr: 'Allez au milieu (Lames)',
           ja: '中へ (剣)',
-          cn: '去中间 (剑)',
           ko: '중앙으로 (검)',
         },
       },
@@ -253,10 +232,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Intercards + Stack',
-          de: 'Interkardinal + Sammeln',
-          fr: 'Intercardinal + Package',
           ja: '斜め + 頭割り',
-          cn: '躲十字AoE + 分摊',
           ko: '대각선 + 쉐어',
         },
       },
@@ -270,10 +246,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Behind => Out + Spread',
-          de: 'Hinter => Raus + Verteilen',
-          fr: 'Derrière => Extérieur + Dispersion',
           ja: '後ろ => 外へ + 散開',
-          cn: '去背后 => 远离 + 分散',
           ko: '뒤 🔜 밖으로 + 산개',
         },
       },
@@ -288,10 +261,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Intercards + Spread (Shield)',
-          de: 'Interkardinal + Verteilen (Schild)',
-          fr: 'Intercardinal + Dispersion (Bouclier)',
           ja: '斜め + 散開 (盾)',
-          cn: '躲十字AoE + 分散 (盾)',
           ko: '대각선 + 산개 (방패)',
         },
       },
@@ -308,10 +278,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Spread => Follow M',
-          de: 'Verteilen => Folge M',
-          fr: 'Dispersion => Suivez M',
           ja: '散開 -> Mを追う',
-          cn: '分散 => 去男性脚下',
           ko: '산개 🔜 M 따라가기',
         },
       },
@@ -327,10 +294,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away from M',
-          de: 'Weg von M',
-          fr: 'Éloignez-vous de M',
           ja: 'Mから離れる',
-          cn: '远离男性',
           ko: 'M으로부터 멀어지기',
         },
       },
@@ -352,18 +316,12 @@ const triggerSet: TriggerSet<Data> = {
         output.responseOutputStrings = {
           square: {
             en: '#${num} Square',
-            de: '#${num} Viereck',
-            fr: '#${num} Carré',
             ja: '#${num} 四角',
-            cn: '#${num} 四角',
             ko: '#${num} 짝수',
           },
           triangle: {
             en: '#${num} Triangle',
-            de: '#${num} Dreieck',
-            fr: '#${num} Triangle',
             ja: '#${num} 三角',
-            cn: '#${num} 三角',
             ko: '#${num} 홀수',
           },
         };
@@ -395,10 +353,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack Groups',
-          de: 'Gruppen-Sammeln',
-          fr: 'Package en groupes',
           ja: '組み分け頭割り',
-          cn: '分组分摊',
           ko: '그룹별 쉐어',
         },
       },
@@ -419,10 +374,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Arrow on YOU',
-          de: 'Pfeil auf DIR',
-          fr: 'Flèche sur VOUS',
           ja: '自分にアロー',
-          cn: '天箭点名',
           ko: '나에게 화살징',
         },
       },
@@ -436,10 +388,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Attack Omega-M',
-          de: 'Omega-M angreifen',
-          fr: 'Attaquez Oméga-M',
           ja: 'Mを攻撃',
-          cn: '攻击男性',
           ko: '오메가 M 공격',
         },
       },
@@ -453,10 +402,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Attack Omega-F',
-          de: 'Omega-W angreifen',
-          fr: 'Attaquez Oméga-F',
           ja: 'Fを攻撃',
-          cn: '攻击女性',
           ko: '오메가 F 공격',
         },
       },
@@ -486,18 +432,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         monitorsLeft: {
           en: 'Monitors Left',
-          de: 'Monitore Links',
-          fr: 'Moniteurs à gauche',
           ja: '波動砲 (左)',
-          cn: '探测左边',
           ko: '모니터 왼쪽',
         },
         dodgeLeft: {
           en: 'Dodge Left',
-          de: 'Links ausweichen',
-          fr: 'Évitez à gauche',
           ja: '左側に離れる',
-          cn: '左侧躲闪',
           ko: '오른쪽으로',
         },
       },
@@ -515,18 +455,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         monitorsRight: {
           en: 'Monitors Right',
-          de: 'Monitore Rechts',
-          fr: 'Moniteurs à droite',
           ja: '波動砲 (右)',
-          cn: '探测右边',
           ko: '모니터 오른쪽',
         },
         dodgeRight: {
           en: 'Dodge Right',
-          de: 'Rechts ausweichen',
-          fr: 'Évitez à droite',
           ja: '右側に離れる',
-          cn: '右侧躲闪',
           ko: '왼쪽으로',
         },
       },
@@ -549,18 +483,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         vulnOn: {
           en: 'Vuln on ${player}',
-          de: 'Verwundbarkeit auf ${player}',
-          fr: 'Vulnérabilité sur ${player}',
           ja: '${player}に標的',
-          cn: '目标识别 点${player}',
           ko: '"${player}" 표적식별',
         },
         vulnOnYou: {
           en: 'Vuln on YOU',
-          de: 'Verwundbarkeit auf DIR',
-          fr: 'Vulnérabilité sur VOUS',
           ja: '自分に標的',
-          cn: '目标识别',
           ko: '표적식별 대상자',
         },
       },
@@ -575,10 +503,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Close Tethers',
-          de: 'Nahe Verbindungen',
-          fr: 'Liens proches',
           ja: 'ニアー',
-          cn: '靠近连线',
           ko: '가까이 붙는 줄',
         },
       },
@@ -593,10 +518,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Far Tethers',
-          de: 'Entfernte Verbindungen',
-          fr: 'Liens éloignés',
           ja: 'ファー',
-          cn: '远离连线',
           ko: '멀리 떨어지는 줄',
         },
       },
@@ -611,10 +533,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Defamation on YOU',
-          de: 'Urteil auf DIR',
-          fr: 'Médisance sur VOUS',
           ja: 'サークルついた',
-          cn: '严重错误：上溢',
           ko: '치명적오류:광역 8초',
         },
       },
@@ -628,10 +547,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Blue Marker',
-          de: 'Blauer Marker',
-          fr: 'Marqueur bleu',
           ja: 'レイテントついた',
-          cn: '蓝点名',
           ko: '잠재적오류 10초',
         },
       },
@@ -646,10 +562,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Rot',
-          de: 'Fäulnis',
-          fr: 'Pourriture',
           ja: 'デグレードついた',
-          cn: '红点名',
           ko: '치명적오류:전이 14초',
         },
       },
@@ -692,26 +605,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         shortStackOn: {
           en: 'Short Stack on ${player}',
-          de: 'Kurzer Stack auf ${player}',
-          fr: 'Marque courte sur ${player}',
           ja: '${player}に早シェア',
-          cn: '短D 点${player}',
           ko: '"${player}" 쉐어',
         },
         shortStackOnYou: {
           en: 'Short Stack on YOU',
-          de: 'Kurzer Stack auf YOU',
-          fr: 'Marque courte sur VOUS',
           ja: '自分に早シェア',
-          cn: '短D',
           ko: '8초 치명적오류:분배(쉐어)',
         },
         longStackOnYou: {
           en: 'Long Stack on YOU',
-          de: 'Langer Stack auf YOU',
-          fr: 'Marque longue sur VOUS',
           ja: '自分に遅シェア',
-          cn: '长D',
           ko: '13초 치명적오류:분배(쉐어)',
         },
       },
@@ -748,10 +652,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'No Marker',
-          de: 'Kein Marker',
-          fr: 'Aucun marqueur',
           ja: '無職',
-          cn: '无BUFF',
           ko: '무징 대상자',
         },
       },
@@ -766,10 +667,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Move out for Defamation',
-          de: 'Rausgehen für Urteil',
-          fr: 'Sortez pour Médisance',
           ja: 'サークルを捨てる',
-          cn: '离开人群传毒',
           ko: '잠재적 오류: 전이',
         },
       },
@@ -829,10 +727,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Back Left',
-          de: 'Hinten Links',
-          fr: 'Derrière à gauche',
           ja: '左後ろ',
-          cn: '左后',
           ko: '좌측 후방',
         },
       },
@@ -845,10 +740,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Back Right',
-          de: 'Hinten Rechts',
-          fr: 'Derrière à droite',
           ja: '右後ろ',
-          cn: '右后',
           ko: '우측 후방',
         },
       },
@@ -1162,6 +1054,70 @@ const triggerSet: TriggerSet<Data> = {
         'Synthetic Shield': '合成盾',
         'Target Analysis': '目标识别',
         '(?<! )Wave Cannon': '波动炮',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Left Arm Unit': '左臂組',
+        'Omega(?!-)': '歐米茄',
+        'Omega-F': '歐米茄F',
+        'Omega-M': '歐米茄M',
+        'Optical Unit': '視覺組',
+        'Rear Power Unit': '尾部組',
+        'Right Arm Unit': '右臂組',
+      },
+      'replaceText': {
+        'Advanced Optical Laser': '光學射線S',
+        'Advanced Suppression': '援護程式S',
+        '(?<! )Archive All': '全歸檔',
+        '(?<! )Archive Peripheral': '手臂歸檔',
+        'Beyond Defense': '盾連擊S',
+        'Beyond Strength': '盾連擊G',
+        'Cascading Latent Defect': '潛在錯誤：下溢',
+        'Colossal Blow': '巨能爆散',
+        'Cosmo Memory': '宇宙記憶',
+        'Critical Error': '嚴重錯誤',
+        'Critical Overflow Bug': '嚴重錯誤：上溢',
+        'Critical Synchronization Bug': '嚴重錯誤：同步',
+        'Critical Underflow Bug': '嚴重錯誤：下溢',
+        'Delta Attack': '三角攻擊',
+        'Diffuse Wave Cannon': '擴散波動砲',
+        'Discharger': '能量放出',
+        'Efficient Bladework': '劍擊',
+        'Electric Slide': '歐米茄滑躍',
+        'Firewall': '防禦程式',
+        'Floodlight': '泛光燈',
+        'Fundamental Synergy': '協作程式C',
+        'Hello, World': 'Hello, World',
+        'Hyper Pulse': '超能脈衝',
+        'Index and Archive Peripheral': '手臂歸檔X',
+        'Ion Efflux': '離子流出',
+        'Laser Shower': '雷射驟雨',
+        'Operational Synergy': '協作程式W',
+        '(?<! )Optical Laser': '光學射線F',
+        'Optimized Blade Dance': '歐米茄刀光劍舞',
+        'Optimized Blizzard III': '歐米茄大暴雪',
+        'Optimized Fire III': '歐米茄・中火焰',
+        'Optimized Meteor': '歐米茄隕石流星',
+        'Optimized Sagittarius Arrow': '歐米茄射手天箭',
+        'Oversampled Wave Cannon': '探測式波動砲',
+        'Patch': '更新',
+        'Pile Pitch': '能量投射',
+        'Program Omega': '程式·歐米茄',
+        'Resonance': '共鳴',
+        'Savage Wave Cannon': '零式波動砲',
+        'Solar Ray': '太陽射線',
+        'Spotlight': '聚光燈',
+        'Subject Simulation F': '變形F',
+        'Subject Simulation M': '變形M',
+        'Superliminal Motion': '劍連擊F',
+        'Superliminal Steel': '劍連擊B',
+        '(?<! )Suppression': '援護程式F',
+        'Synthetic Blades': '合成劍',
+        'Synthetic Shield': '合成盾',
+        'Target Analysis': '目標識別',
+        '(?<! )Wave Cannon': '波動砲',
       },
     },
     {

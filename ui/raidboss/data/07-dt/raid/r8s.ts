@@ -92,6 +92,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Light Party Platform',
+          ja: 'Light Party Platform',
           ko: '(담당 플랫폼으로)',
         },
       },
@@ -108,10 +109,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         tank: {
           en: 'Tank Buster Platform',
+          ja: 'Tank Buster Platform',
           ko: '(탱크 버스터 플랫폼으로)',
         },
         other: {
           en: 'Avoid Tank Buster Platform',
+          ja: 'Avoid Tank Buster Platform',
           ko: '(버스터 플랫폼 피해요)',
         },
       },
@@ -124,6 +127,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'UV Positions',
+          ja: 'UV Positions',
           ko: '(나란히 나란히)',
         },
       },
@@ -136,6 +140,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'UV Positions',
+          ja: 'UV Positions',
           ko: '(나란히 나란히)',
         },
       },
@@ -148,6 +153,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bait Mooncleaver',
+          ja: 'Bait Mooncleaver',
           ko: '(처음 플랫폼으로)',
         },
       },
@@ -167,18 +173,22 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Rise Positions - ${extra}',
+          ja: 'Rise Positions - ${extra}',
           ko: '(줄다리기 ${extra} 플랫폼으로)',
         },
         tank: {
           en: 'Left top',
+          ja: 'Left top',
           ko: '왼쪽 위🡼',
         },
         healer: {
           en: 'Base',
+          ja: 'Base',
           ko: '처음🡻',
         },
         dps: {
           en: 'Right',
+          ja: 'Right',
           ko: '오른쪽🡺',
         },
       },
@@ -190,6 +200,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Howling Eight Position',
+          ja: 'Howling Eight Position',
           ko: '(처음 플랫폼으로)',
         },
       },
@@ -639,10 +650,7 @@ const triggerSet: TriggerSet<Data> = {
       id: 'R8S Quake III',
       type: 'StartsUsing',
       netRegex: { id: 'A45A', source: 'Howling Blade', capture: false },
-      alertText: (_data, _matches, output) => output.healerGroups!(),
-      outputStrings: {
-        healerGroups: Outputs.healerGroups,
-      },
+      response: Responses.healerGroups('alert'),
     },
     {
       id: 'R8S Mooncleaver',
@@ -1161,6 +1169,85 @@ const triggerSet: TriggerSet<Data> = {
         'Windfang': '风之魔技',
         'Winds of Decay': '千年狂风',
         'Wolves\' Reign': '群狼剑',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Gleaming Fang': '光の牙',
+        'Howling Blade': 'ハウリングブレード',
+        'Moonlit Shadow': 'ハウリングブレードの幻影',
+        'Wolf Of Stone': '土の狼頭',
+        'Wolf of Stone': '土の狼頭',
+        'Wolf of Wind': '風の狼頭',
+      },
+      'replaceText': {
+        // '--adds-targetable--': '', // FIXME '--小怪可选中--'
+        // '--shadow ': '', // FIXME '--幻影 '
+        // '--tank/line aoes--': '', // FIXME '--坦克/直线 AOE--'
+        // '\\(circles\\)': '', // FIXME '(圆形)'
+        // '\\(cones\\)': '', // FIXME '(扇形)'
+        // '\\(enrage\\)': '', // FIXME '(狂暴)'
+        // '\\(Platform\\)': '', // FIXME '(平台)'
+        // '\\(Towers\\)': '', // FIXME '(塔)'
+        'Aero III': '大勁風',
+        // 'Aerotemporal Blast': '', // FIXME '定时风击' (RSV ID: 42088)
+        // 'Alpha Stone': '', // FIXME '光狼之土'
+        // 'Alpha Wind': '', // FIXME '光狼之风'
+        'Bare Fangs': '光牙召喚',
+        'Beckon Moonlight': '幻狼召喚',
+        // 'Breath of Decay': '', // FIXME '千年风啸'
+        // 'Champion\'s Circuit': '', // FIXME '回天动地'
+        // 'Elemental Purge': '', // FIXME '风震魔印' (RSV ID: 42087)
+        // 'Eminent Reign': '', // FIXME '扫击群狼剑'
+        // 'Extraplanar Feast': '', // FIXME '空间灭斩'
+        'Extraplanar Pursuit': '空間斬',
+        'Fanged Charge': '突進光牙',
+        // 'Forlorn Stone': '', // FIXME '土之狼吼'
+        // 'Forlorn Wind': '', // FIXME '风之狼吼'
+        // 'Geotemporal Blast': '', // FIXME '定时震击' (RSV ID: 42089)
+        // 'Gleaming Barrage': '', // FIXME '连击闪光炮' (RSV ID: 42102)
+        // 'Gleaming Beam': '', // FIXME '闪光炮' (RSV ID: 42078)
+        'Great Divide': '一刀兩斷',
+        'Gust': '狂風',
+        'Heavensearth': '大震擊',
+        // 'Hero\'s Blow': '', // FIXME '铠袖一触'
+        // 'Howling Eight': '', // FIXME '八连光弹' (RSV ID: 42132)
+        // 'Howling Havoc': '', // FIXME '风尘咆哮' (RSV ID: 41948)
+        // 'Hunter\'s Harvest': '', // FIXME '贪狼之剑'
+        // 'Lone Wolf\'s Lament': '', // FIXME '独狼的诅咒'
+        // 'Millennial Decay': '', // FIXME '千年风化' (RSV ID: 41906)
+        'Moonbeam\'s Bite': '幻狼劍',
+        // 'Mooncleaver': '', // FIXME '刚刃一闪' (RSV ID: 42085)
+        // 'Pack Predation': '', // FIXME '光狼阵' (RSV ID: 41932)
+        // 'Prowling Gale': '', // FIXME '风狼阵' (RSV ID: 42117)
+        'Quake III': '魔光',
+        'Ravenous Saber': '風塵光狼斬',
+        // 'Revolutionary Reign': '', // FIXME '旋击群狼剑'
+        // 'Rise of the Howling Wind': '', // FIXME '魔狼战形·飓风之相' (RSV ID: 43050)
+        // 'Rise of the Hunter\'s Blade': '', // FIXME '魔狼战形·咒刃之相'
+        'Roaring Wind': '風狼豪波',
+        'Shadowchase': '殘影劍',
+        // 'Stalking Stone': '', // FIXME '光狼地烈波'
+        // 'Stalking Wind': '', // FIXME '光狼风烈波'
+        // 'Starcleaver': '', // FIXME '刚刃一闪・终' (RSV ID: 42141)
+        // 'Stonefang': '', // FIXME '土之魔技'
+        'Suspended Stone': '大岩石',
+        'Tactical Pack': '光狼召喚',
+        'Terrestrial Rage': '大地之怒',
+        'Terrestrial Titans': '大地之喚',
+        'Titanic Pursuit': '斬空劍',
+        'Towerfall': '崩塌',
+        'Tracking Tremors': '連震擊',
+        // 'Twinbite': '', // FIXME '双牙击' (RSV ID: 42189)
+        // 'Twofold Tempest': '', // FIXME '双牙暴风击' (RSV ID: 42100)
+        // 'Ultraviolent Ray': '', // FIXME '魔光'
+        'Weal of Stone': '地烈波',
+        'Wind Surge': '風爆',
+        // 'Windfang': '', // FIXME '风之魔技'
+        // 'Winds of Decay': '', // FIXME '千年狂风' (RSV ID: 41909)
+        'Wolves\' Reign': '群狼劍',
       },
     },
     {

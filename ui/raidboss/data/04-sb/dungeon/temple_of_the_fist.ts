@@ -52,10 +52,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stand in blue',
-          de: 'Im Blauen stehen',
-          fr: 'Placez-vous dans le bleu',
           ja: '青色を踏む',
-          cn: '站在蓝色区域',
           ko: '🔵파랑 밟아요',
         },
       },
@@ -69,10 +66,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stand in red',
-          de: 'Im Roten stehen',
-          fr: 'Placez-vous dans le rouge',
           ja: '赤色を踏む',
-          cn: '站在红色区域',
           ko: '🔴빨강 밟아요',
         },
       },
@@ -97,10 +91,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'watch for safe',
-          de: 'nach sicherer Position schauen',
-          fr: 'Trouvez une zone safe',
           ja: 'ブロックされてない方角から攻撃',
-          cn: '前往安全区',
           ko: '안전한 곳 찾아요',
         },
       },
@@ -121,10 +112,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Heal ${player} soon',
-          de: 'Bald ${player} heilen',
-          fr: 'Soignez ${player} bientôt',
           ja: 'すぐに${player}をヒール',
-          cn: '马上奶 ${player}',
           ko: '힐 준비: ${player}',
         },
       },
@@ -137,10 +125,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid floating heads',
-          de: 'Weiche den fliegenden Köpfen aus',
-          fr: 'Évitez les têtes flottantes',
           ja: 'ヘッドを避ける',
-          cn: '避开漂浮的头',
           ko: '떠다니는 머리 피해요',
         },
       },
@@ -153,10 +138,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away from marker',
-          de: 'Weg von den Markierungen',
-          fr: 'Éloignez-vous du marqueur',
           ja: 'マーカーから離れる',
-          cn: '远离标记',
           ko: '마커에서 먼곳으로',
         },
       },
@@ -312,6 +294,42 @@ const triggerSet: TriggerSet<Data> = {
         'The Rose Of Destruction': '斗灵弹',
         'Touch of Slaughter': '灵魂秘孔拳',
         'Wide Blaster': '广域冲击波',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Arbuda': '額部陀',
+        'Coeurl Smriti': '凶豹所憶',
+        'Coeurl Sruti': '凶豹所聞',
+        'Guidance': '導靈殿',
+        'Harmony': '陰陽苑',
+        'Ivon Coeurlfist': '雙豹伊沃恩',
+        'Tourmaline Pond': '水苔池',
+      },
+      'replaceText': {
+        '--Smriti Appears--': '--凶豹出現--',
+        'Basic Instinct': '鬥爭本能',
+        'Cardinal Shift': '四劍大迴旋',
+        'Coeurl Whisper': '雙豹招來',
+        'Electric Burst': '電流爆裂',
+        'Fourfold Shear': '四連雙斬',
+        'Front/Back\\?Sides\\?': '前/後?兩側?',
+        'Furious Fists': '雙豹蒼連擊',
+        'Heat Lightning': '驚電',
+        'Hellseal': '試煉刻印',
+        'Hurricane Kick': '靈魂旋風腳',
+        'Impact': '拉爾戈衝擊',
+        'Killer Instinct': '預判',
+        'Pounce': '爪襲',
+        'Radial Blaster': '放射衝擊波',
+        'Rhalgr\'s Piece': '破壞神拳',
+        'Silent Roar': '雙豹擊',
+        'Spirit Wave': '真靈波',
+        'Tapas': '苦行',
+        'The Rose Of Destruction': '鬥靈彈',
+        'Touch of Slaughter': '靈魂秘孔拳',
+        'Wide Blaster': '廣域衝擊波',
       },
     },
     {

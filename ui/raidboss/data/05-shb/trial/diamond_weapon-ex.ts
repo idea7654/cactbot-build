@@ -44,6 +44,112 @@ const triggerSet: TriggerSet<Data> = {
       response: Responses.aoe(),
       run: (data) => data.phase = data.phase ?? 1,
     },
+    // @TODO: There's probably a better callout for these mechanics, e.g.
+    // `jump -> stay -> aoe`
+    // `stay -> jump -> aoe`
+    // `jump -> stack -> stay`
+    // `stay -> stack -> jump`
+    // `jump -> spread -> stay`
+    // `stay -> spread -> jump`
+    // but need to figure out what side player is on
+    {
+      id: 'DiamondEx Adamant Purge West Diamond Rain',
+      type: 'StartsUsing',
+      netRegex: { source: 'The Diamond Weapon', id: '5F9B', capture: false },
+      durationSeconds: 15,
+      infoText: (_data, _matches, output) => output.text!(),
+      outputStrings: {
+        text: {
+          en: 'go east -> aoe',
+          ja: '東へ -> AoE',
+          ko: '동쪽 -> 광역기',
+        },
+      },
+    },
+    {
+      id: 'DiamondEx Adamant Purge East Diamond Rain',
+      type: 'StartsUsing',
+      netRegex: { source: 'The Diamond Weapon', id: '5F9A', capture: false },
+      durationSeconds: 15,
+      infoText: (_data, _matches, output) => output.text!(),
+      outputStrings: {
+        text: {
+          en: 'go west -> aoe',
+          ja: '西へ -> AoE',
+          ko: '서쪽 -> 광역기',
+        },
+      },
+    },
+    {
+      id: 'DiamondEx Adamant Purge West Diamond Flash',
+      type: 'StartsUsing',
+      netRegex: { source: 'The Diamond Weapon', id: '5FA5', capture: false },
+      durationSeconds: 15,
+      infoText: (_data, _matches, output) => output.text!(),
+      outputStrings: {
+        text: {
+          en: 'go east -> stack',
+          ja: '東へ -> 頭割り',
+          ko: '동쪽 -> 쉐어',
+        },
+      },
+    },
+    {
+      id: 'DiamondEx Adamant Purge East Diamond Flash',
+      type: 'StartsUsing',
+      netRegex: { source: 'The Diamond Weapon', id: '5FA4', capture: false },
+      durationSeconds: 15,
+      infoText: (_data, _matches, output) => output.text!(),
+      outputStrings: {
+        text: {
+          en: 'go west -> stack',
+          ja: '西へ -> 頭割り',
+          ko: '서쪽  -> 쉐어',
+        },
+      },
+    },
+    {
+      id: 'DiamondEx Adamant Purge West Homing Laser',
+      type: 'StartsUsing',
+      netRegex: { source: 'The Diamond Weapon', id: '5FA3', capture: false },
+      durationSeconds: 15,
+      infoText: (_data, _matches, output) => output.text!(),
+      outputStrings: {
+        text: {
+          en: 'go east -> spread',
+          ja: '東へ -> 散開',
+          ko: '동쪽 -> 산개',
+        },
+      },
+    },
+    {
+      id: 'DiamondEx Adamant Purge East Homing Laser',
+      type: 'StartsUsing',
+      netRegex: { source: 'The Diamond Weapon', id: '5FA2', capture: false },
+      durationSeconds: 15,
+      infoText: (_data, _matches, output) => output.text!(),
+      outputStrings: {
+        text: {
+          en: 'go west -> spread',
+          ja: '西へ -> 散開',
+          ko: '서쪽 -> 산개',
+        },
+      },
+    },
+    // @TODO: Make this a collector with with flare/away from flare
+    {
+      id: 'DiamondEx Photon Burst',
+      type: 'StartsUsing',
+      netRegex: { source: 'The Diamond Weapon', id: '5FA8', capture: false },
+      infoText: (_data, _matches, output) => output.text!(),
+      outputStrings: {
+        text: {
+          en: 'Flare',
+          ja: 'フレア',
+          ko: '플레어',
+        },
+      },
+    },
     // @TODO: Phase transition tethers and KB
     {
       id: 'DiamondEx Code Chi-Xi-Stigma',
@@ -63,6 +169,76 @@ const triggerSet: TriggerSet<Data> = {
       type: 'StartsUsing',
       netRegex: { source: 'The Diamond Weapon', id: '5FBD' },
       response: Responses.tankBusterSwap(),
+    },
+    // @TODO: Get boss facing and bits position, call out adjust?
+    {
+      id: 'DiamondEx P2 Zig-Zag',
+      type: 'StartsUsing',
+      netRegex: { source: 'The Diamond Weapon', id: '5FAF', capture: false },
+      infoText: (_data, _matches, output) => output.text!(),
+      outputStrings: {
+        text: {
+          en: 'Dodge Zig-Zag',
+          ja: 'ジグザグに避ける',
+          ko: '지그재그 피하기',
+        },
+      },
+    },
+    // @TODO: Get boss facing and orb position, call out safe side?
+    {
+      id: 'DiamondEx P2 Zig-Zag Jump',
+      type: 'StartsUsing',
+      netRegex: { source: 'The Diamond Weapon', id: '5FB2', capture: false },
+      infoText: (_data, _matches, output) => output.text!(),
+      outputStrings: {
+        text: {
+          en: 'Dodge East/West',
+          ja: '東/西へ',
+          ko: '동/서쪽 피하기',
+        },
+      },
+    },
+    // @TODO: Get boss facing and orb count, call out towards/away?
+    {
+      id: 'DiamondEx P2 North/South Jump',
+      type: 'StartsUsing',
+      netRegex: { source: 'The Diamond Weapon', id: '5FB5', capture: false },
+      infoText: (_data, _matches, output) => output.text!(),
+      outputStrings: {
+        text: {
+          en: 'Dodge Towards/Away',
+          ja: '前/後ろへ',
+          ko: '가까이/멀리 이동하기',
+        },
+      },
+    },
+    // @TODO: Get bit locations, call out north/south diagonal KB?
+    {
+      id: 'DiamondEx P2 Vertical Cleave',
+      type: 'StartsUsing',
+      netRegex: { source: 'The Diamond Weapon', id: '5FB7', capture: false },
+      infoText: (_data, _matches, output) => output.text!(),
+      outputStrings: {
+        text: {
+          en: 'Diagonal Knockback',
+          ja: '斜めにノックバック',
+          ko: '대각으로 넉백',
+        },
+      },
+    },
+    {
+      id: 'DiamondEx P2 Articulated Bits',
+      type: 'StartsUsing',
+      netRegex: { source: 'The Diamond Weapon', id: '5FC1', capture: false },
+      durationSeconds: 15,
+      infoText: (_data, _matches, output) => output.text!(),
+      outputStrings: {
+        text: {
+          en: 'Dodge Bits',
+          ja: 'ビームを避ける',
+          ko: '비트 피하기',
+        },
+      },
     },
     {
       id: 'DiamondEx Headmarker',
@@ -96,177 +272,44 @@ const triggerSet: TriggerSet<Data> = {
       },
     },
     // Phase 3
-    // ---------------------------------
     {
-      // 5FC2이 손톱 휘두르기
-      // 5FA2 오른쪽(산개)
-      // 5FA4 오른쪽(같이맞기)
-      // 5F9A 오른쪽(없음)?
-      id: 'DiamondEx 어듬이 Adamant Purge Right',
+      id: 'DiamondEx P3 Articulated Bits',
       type: 'StartsUsing',
-      netRegex: { source: 'The Diamond Weapon', id: ['5FA4', '5FA2', '5F9A'], capture: false },
-      alertText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: '◁◀◁ Left',
-          ko: '◁◀◁ 왼쪽으로',
-        },
-      },
-    },
-    {
-      // 5FC3이 손톱 휘두르기
-      // 5FA3 왼쪽(산개)
-      // 5FA5 왼쪽(같이맞기)?
-      // 5F9B 왼쪽(없음)
-      id: 'DiamondEx 어듬이 Adamant Purge Left',
-      type: 'StartsUsing',
-      netRegex: { source: 'The Diamond Weapon', id: ['5FA5', '5FA3', '5F9B'], capture: false },
-      alertText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: '▷▶▷ Right',
-          ko: '▷▶▷ 오른쪽으로',
-        },
-      },
-    },
-    {
-      id: 'DiamondEx 어듬이 Adamant Purge After Spread',
-      type: 'StartsUsing',
-      netRegex: { source: 'The Diamond Weapon', id: ['5FA3', '5FA2'], capture: false },
-      delaySeconds: 7,
-      alarmText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'Spread!',
-          ko: '흩어져욧!',
-        },
-      },
-    },
-    {
-      id: 'DiamondEx 어듬이 Adamant Purge After Stack',
-      type: 'StartsUsing',
-      netRegex: { source: 'The Diamond Weapon', id: ['5FA5', '5FA4'], capture: false },
-      delaySeconds: 7,
-      alarmText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'Stack!',
-          ko: '모두 뭉쳐욧!',
-        },
-      },
-    },
-    {
-      id: 'DiamondEx 어듬이 Photon Burst',
-      type: 'StartsUsing',
-      netRegex: { source: 'The Diamond Weapon', id: '5FCA' },
-      response: (data, matches, output) => {
-        // cactbot-builtin-response
-        output.responseOutputStrings = {
-          itsme: {
-            en: 'Photon on YOU',
-            ko: '내게 포톤',
-          },
-          photon: {
-            en: 'Photon: ${player}',
-            ko: '포톤: ${player}',
-          },
-        };
-        if (data.me === matches.target)
-          return { alertText: output.itsme!() };
-        return { infoText: output.photon!({ player: data.party.member(matches.target) }) };
-      },
-    },
-    {
-      id: 'DiamondEx 어듬이 Code Chi-Xi-Stigma',
-      type: 'StartsUsing',
-      netRegex: { source: 'The Diamond Weapon', id: '5FAD', capture: false },
+      netRegex: { source: 'The Diamond Weapon', id: '5FA9', capture: false },
+      durationSeconds: 20,
       infoText: (_data, _matches, output) => output.text!(),
       outputStrings: {
         text: {
-          en: 'Jump soon',
-          ko: '가운데서 점프준비',
+          en: 'Dodge Bits',
+          ja: 'ビームを避ける',
+          ko: '비트 피하기',
         },
       },
     },
     {
-      // 5FFE 왼쪽에 장판 (5FD3 후속)
-      id: 'DiamondEx 어듬이 Airship\'s Bane',
-      type: 'StartsUsing',
-      netRegex: { source: 'The Diamond Weapon', id: '5FFE', capture: false },
-      alertText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'Avoid puddles',
-          ko: '장판 피해욧',
-        },
-      },
-    },
-    {
-      id: 'DiamondEx 어듬이 Moving',
-      type: 'StartsUsing',
-      netRegex: { source: 'The Diamond Weapon', id: ['5FAF', '5FB2', '5FB5'], capture: false },
-      infoText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'Go to safe zone',
-          ko: '안전한 곳으로 피해욧',
-        },
-      },
-    },
-    {
-      // 5FB7 -> 5FD0 왼쪽을 보고 달려듬
-      id: 'DiamondEx 어듬이 Vertical Cleave',
-      type: 'StartsUsing',
-      netRegex: { source: 'The Diamond Weapon', id: '5FB7', capture: false },
-      durationSeconds: 5,
-      response: Responses.knockback(),
-    },
-    {
-      id: 'DiamondEx 어듬이 Articulated Bits',
-      type: 'StartsUsing',
-      netRegex: { source: 'The Diamond Weapon', id: ['5FC1', '5FA9'], capture: false },
-      infoText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'Bits',
-          ko: '때가 쏙 비트',
-        },
-      },
-    },
-    {
-      id: 'DiamondEx 어듬이 Flood Ray',
-      type: 'StartsUsing',
-      netRegex: { source: 'The Diamond Weapon', id: '5FA6', capture: false },
-      infoText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'Get Dice Tower',
-          ko: '주사위 들어감요',
-        },
-      },
-    },
-    {
-      id: 'DiamondEx 어듬이 Diamond Shrapnel',
+      id: 'DiamondEx Diamond Shrapnel',
       type: 'StartsUsing',
       netRegex: { source: 'The Diamond Weapon', id: '5FAC', capture: false },
       alertText: (_data, _matches, output) => output.text!(),
       outputStrings: {
         text: {
-          en: 'Drop puddles',
-          ko: '장판깔고 튀어욧',
+          en: 'Bait Puddles',
+          ja: 'AoEを誘導',
+          ko: '장판 피하기',
         },
       },
     },
     {
-      id: 'DiamondEx 어듬이 Diamond Shrapnel Burst',
+      id: 'DiamondEx Burst',
       type: 'StartsUsing',
       netRegex: { source: 'The Diamond Weapon', id: '5FAC', capture: false },
       delaySeconds: 15,
       alertText: (_data, _matches, output) => output.text!(),
       outputStrings: {
         text: {
-          en: 'Get Tower',
-          ko: '탑에 들어가세욧',
+          en: 'Towers',
+          ja: '塔を踏む',
+          ko: '장판 들어가기',
         },
       },
     },
@@ -383,6 +426,36 @@ const triggerSet: TriggerSet<Data> = {
         'Outrage': '震怒',
         'Photon Burst': '光子爆发',
         'Vertical Cleave': '纵劈',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Articulated Bit': '飛手浮游砲',
+        'The Diamond Weapon': '鑽石武器',
+      },
+      'replaceText': {
+        // '\\(Jump\\)': '', // FIXME '(跳)'
+        // '\\(Cleave\\)': '', // FIXME '(冲锋)'
+        'Adamant Purge': '裝甲展開',
+        'Aetherial Bullet': '乙太砲',
+        'Articulated Bits': '飛手浮游砲',
+        'Auri Arts': '敖龍技巧',
+        'Auri Cyclone': '敖龍旋風',
+        'Auri Doomstead': '敖龍厄運',
+        '(?<!Photon )Burst': '大爆炸',
+        'Claw Swipe': '利爪突進',
+        'Code Chi-Xi-Stigma': '代號666',
+        'Diamond Flash': '鑽石閃光',
+        'Diamond Rain': '鑽石雨',
+        'Diamond Shot': '鑽石射擊',
+        'Diamond Shrapnel': '鑽石爆發',
+        'Flood Ray': '泛光射線',
+        // 'Homing Laser': '', // FIXME '自控导弹'
+        'Outrage': '震怒',
+        'Photon Burst': '光子爆發',
+        'Vertical Cleave': '縱劈',
       },
     },
     {

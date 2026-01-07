@@ -29,10 +29,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get to your pads',
-          de: 'Geh auf Dein Feld',
-          fr: 'Allez sur votre tour',
           ja: '各サークルに入る',
-          cn: '踩塔',
           ko: '동그라미 들어가요',
         },
       },
@@ -45,10 +42,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Pick up tether',
-          de: 'Verbindung abnehmen',
-          fr: 'Prenez le lien',
           ja: '線を取る',
-          cn: '坦克接线',
           ko: '줄 채요',
         },
       },
@@ -82,10 +76,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Point opening at Mustadio',
-          de: 'Richte Öffnung auf Mustadio',
-          fr: 'Pointez l\'ouverture vers Mustadio',
           ja: '未解析の方角をボスに向ける',
-          cn: '脚下光环缺口对准boss',
           ko: '열린 곳을 보스쪽으로',
         },
       },
@@ -105,10 +96,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Searchlight on YOU',
-          de: 'Suchscheinwerfer auf DIR',
-          fr: 'Repérage sur VOUS',
           ja: '外に放置',
-          cn: '远离人群放圈',
           ko: '내게 서치라이트',
         },
       },
@@ -150,10 +138,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Pick up swords',
-          de: 'Schwerter aufnehmen',
-          fr: 'Prenez les épées',
           ja: 'ソード（剣）を取る',
-          cn: '进入附近的剑标记圈',
           ko: '칼 줏어요',
         },
       },
@@ -181,10 +166,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Use Swords On Jails',
-          de: 'Kristalle mit Schwert zerschlagen',
-          fr: 'Utilisez les épées sur les prisons',
           ja: '（コンテンツアクション）剣で模造聖域を破る',
-          cn: '使用额外技能攻击',
           ko: '칼로 감옥 부셔요',
         },
       },
@@ -198,10 +180,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go To Center',
-          de: 'In die Mitte gehen',
-          fr: 'Allez au centre',
           ja: '中央に入る',
-          cn: '前往中间',
           ko: '한가운데로',
         },
       },
@@ -214,10 +193,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Shield',
-          de: 'Schild nehmen',
-          fr: 'Prenez un bouclier',
           ja: 'シールド（盾）を取る',
-          cn: '进入盾标记圈',
           ko: '방패 줏어요',
         },
       },
@@ -231,10 +207,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Use Shield, Face Knights',
-          de: 'Schild benutzen, Ritter anschauen',
-          fr: 'Utilisez un bouclier, face aux chevaliers',
           ja: '騎士に向けてシールドを使う',
-          cn: '面对剑骑使用盾牌',
           ko: '나이트 바라보고 방패 사용',
         },
       },
@@ -248,10 +221,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Kill shields with sword',
-          de: 'Schilde mit Schwert zerstören',
-          fr: 'Détruisez les boucliers avec les épées',
           ja: '剣で大盾を破れ',
-          cn: '用剑摧毁护盾',
           ko: '칼로 방패 부셔요',
         },
       },
@@ -264,10 +234,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Use shield, face boss',
-          de: 'Schild benutzen, Boss anschauen',
-          fr: 'Utilisez un bouclier, face au boss',
           ja: 'ボスに向いてシールドを使う',
-          cn: '面对boss使用盾牌',
           ko: '보스 바라보고 방패 사용',
         },
       },
@@ -280,10 +247,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Use shield if tethered',
-          de: 'Schild benutzen, wenn verbunden',
-          fr: 'Utilisez un bouclier si lié',
           ja: '線と繋ったらシールドを使う',
-          cn: '被连线使用盾牌',
           ko: '줄이 달렸다면 방패 사용',
         },
       },
@@ -304,10 +268,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Feint Tank Buster',
-          de: 'Tankbuster Zermürben',
-          fr: 'Évitez le Tank buster',
           ja: 'タンクバスター（牽制使って）',
-          cn: '坦克死刑',
           ko: '성천폭격탄',
         },
       },
@@ -328,10 +289,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Give Tether Away',
-          de: 'Verbindung abgeben',
-          fr: 'Éloignez-vous et donnez le lien',
           ja: '線を取らない！',
-          cn: '获取连线受到一次伤害后转给下一个',
           ko: '줄 받으면 안되요! 건네주고 튀어요',
         },
       },
@@ -345,10 +303,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Give Tether Away',
-          de: 'Verbindung abgeben',
-          fr: 'Éloignez-vous et donnez le lien',
           ja: '線を次の人と交代',
-          cn: '获取连线受到一次伤害后转给下一个',
           ko: '줄 건네주고 튀어요',
         },
       },
@@ -361,10 +316,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Kill Icewolf Adds',
-          de: 'Besiege die Eiswolf Adds',
-          fr: 'Tuez les Grêlons de glace',
           ja: '氷狼を討つ',
-          cn: '速度消灭冰狼',
           ko: '아이스울프 잡아요',
         },
       },
@@ -379,10 +331,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Heal To Full',
-          de: 'Vollheilen',
-          fr: 'Soignez complètement',
           ja: '全員のHPを全回復',
-          cn: '奶满全队',
           ko: 'HP 만땅으로!',
         },
       },
@@ -395,10 +344,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stand on Pads',
-          de: 'Auf Felder stellen',
-          fr: 'Placez-vous sur les pads',
           ja: '各サークルに入る',
-          cn: '踩塔',
           ko: '동그라미 들어가요',
         },
       },
@@ -412,10 +358,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Drop Bubble In Back',
-          de: 'Blase hinten ablegen',
-          fr: 'Déposez les bulles derrière',
           ja: '後ろに捨てる',
-          cn: '将身上圆圈放在圆型区域后方',
           ko: '뒤쪽에 버블 버려요',
         },
       },
@@ -429,10 +372,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bolt on YOU',
-          de: 'Blitz auf DIR',
-          fr: 'Éclair sur VOUS',
           ja: '自分に無双稲妻突き',
-          cn: '离开剑所指的区域',
           ko: '내게 볼트',
         },
       },
@@ -460,10 +400,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Point Line Outside',
-          de: 'Linie nach Außen',
-          fr: 'Pointez la ligne vers l\'extérieur',
           ja: '（線形AoE）外周に向かって捨てる',
-          cn: '向外远离',
           ko: '바깥쪽으로 줄 빼요',
         },
       },
@@ -501,10 +438,7 @@ const triggerSet: TriggerSet<Data> = {
         text: {
           // e.g. E / NE / NW platforms
           en: 'Rotate right',
-          de: 'Im Uhrzeigersinn ausweichen',
-          fr: 'Tournez dans le sens anti-horaire',
           ja: '右へ（反時計回り）',
-          cn: '向右移动避开',
           ko: '오른쪽으로 돌아요',
         },
       },
@@ -518,10 +452,7 @@ const triggerSet: TriggerSet<Data> = {
         text: {
           // NW / NE / E platforms
           en: 'Rotate left',
-          de: 'Schwertern im Uhrzeigersinn ausweichen',
-          fr: 'Tournez dans le sens horaire',
           ja: '左へ（時計回り）',
-          cn: '向左移动避开',
           ko: '왼쪽으로 돌아요',
         },
       },
@@ -548,10 +479,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Eruption on YOU',
-          de: 'Eruption auf DIR',
-          fr: 'Éruption sur vous',
           ja: '自分にエラプション',
-          cn: '地火喷发',
           ko: '내게 이럽션',
         },
       },
@@ -571,10 +499,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stand on Slow Clock',
-          de: 'In der langsamen Uhr stehen',
-          fr: 'Placez-vous sur une horloge lente',
           ja: '遅い時計で待機（早い方が爆発したらすぐ安置へ）',
-          cn: '站慢速时钟等待快速爆炸后立即离开',
           ko: '느린 시계로',
         },
       },
@@ -587,10 +512,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Look for Hashmal dash',
-          de: 'Nach Hashmal-Dash ausschau halten',
-          fr: 'Repérez Hashmal pour la ruée',
           ja: 'ブーストエッジ見逃すな！',
-          cn: '观察场地三个大十字路径并远离',
           ko: '하시말 돌진 확인해요',
         },
       },
@@ -604,10 +526,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Heal Like Whoa',
-          de: 'Heilen was das Zeug hält',
-          fr: 'Soignez à mort',
           ja: 'ヒーラー頑張って！',
-          cn: '加大治疗',
           ko: '힐러 화이팅!',
         },
       },
@@ -623,10 +542,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Kill Ruination!',
-          de: 'Zerstörung vernichten',
-          fr: 'Tuez la Marque des déchus',
           ja: '堕天の証を倒す',
-          cn: '速度消灭堕天之证',
           ko: '루이네이션 잡아요!',
         },
       },
@@ -1057,6 +973,108 @@ const triggerSet: TriggerSet<Data> = {
         'Time Eruption': '时空地火喷发',
         'Towerfall': '崩塌',
         'Ultimate Illusion': '究极幻想',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Agrias': '聖騎士阿格莉亞絲',
+        'Aspersory': '聖雲水瓶',
+        'Dark Crusader': '黑暗十字軍',
+        'Demi-Belias': '亞靈貝利亞斯',
+        'Demi-Famfrit': '亞靈法姆弗里特',
+        'Demi-Hashmal': '亞靈哈修馬利姆',
+        'Dominion': '主天使',
+        'Early Turret': '古代機工兵器',
+        'Emblazoned Shield': '光輝的大盾',
+        'Ephemeral Knight': '幻影騎士',
+        'Halidom': '仿製聖域',
+        'Harpy': '哈比鳥',
+        'I see it now': '我將釋放全部力量……',
+        'Iron Construct': '勞動型鐵巨人',
+        'Mustadio': '機工士姆斯塔迪奧',
+        'Ramza': '勇者拉姆札',
+        'Sword Knight': '劍之騎士',
+        'The Crystalline Gaol': '水晶監獄',
+        'The Realm of the Machinists': '機工士的領域',
+        'The Realm of the Templars': '聖騎士的領域',
+        'The Realm of the Thunder God': '雷神的領域',
+        '(?<! )The Thunder God': '雷神希德',
+        'The lifeless alley': '無命街路',
+        'Ultima, the High Seraph': '聖天使阿爾蒂瑪',
+      },
+      'replaceText': {
+        '--ghost stun--': '幽靈擊暈',
+        '--crystal stun--': '水晶擊暈',
+        'Analysis': '分析',
+        'Arm Shot': '擊腕',
+        'Auralight': '聖石光',
+        'Balance Asunder': '平衡崩壞',
+        'Ballistic Impact': '閃光衝擊',
+        'Ballistic Missile': '導彈發射',
+        'Cataclysm': '天崩地裂',
+        'Cleansing Flame': '聖光燒卻擊',
+        'Cleansing Strike': '亂命割殺打',
+        'Colosseum': '劍鬥技場',
+        'Compress': '執行壓縮',
+        'Consecration': '聖域束縛式',
+        'Control Tower': '統治之塔',
+        'Crush Accessory': '咬擊冰狼破',
+        'Crush Armor': '強甲破點突',
+        'Crush Helm': '星天爆擊打',
+        'Crush Weapon': '冥界恐叫打',
+        'Dark Cannonade': '暗砲擊',
+        'Dark Ewer': '暗雲水瓶',
+        'Dark Rite': '暗之儀式',
+        'Demi-Aquarius': '亞靈水瓶座',
+        'Demi-Aries': '亞靈牡羊座',
+        'Demi-Leo': '亞靈獅子座',
+        'Demi-Virgo Feet': '亞靈處女座 (腳)',
+        'Demi-Virgo Line(?!\/)': '亞靈處女座 (直線)',
+        'Demi-Virgo Line/Tether': '亞靈處女座 (直線/連線)',
+        'Demi-Virgo Tether(?!\/)': '亞靈處女座 (連線)',
+        'Demi-Virgo Tether/Feet': '亞靈處女座 (連線/腳)',
+        'Divine Light': '幻光波',
+        'Divine Ruination': '聖光爆裂破',
+        'Duskblade': '暗影之劍',
+        'Earth Hammer': '大地之錘',
+        'East/West March': '東/西進軍',
+        'Embrace': '抱擁',
+        'Energy Burst': '能量爆發',
+        '(?<![\\w| ])Eruption': '噴發',
+        'Extreme Edge': '加速刃',
+        'Flare IV': '核轟',
+        'Grand Cross': '大十字',
+        'Hallowed Bolt': '無雙閃電突刺',
+        'Hammerfall': '錘擊',
+        'Heavenly Judgment': '聖天擊滅斬',
+        'Holy IV': '極聖',
+        'Infernal Wave': '地獄波動',
+        'Judgment Blade': '不動無明劍',
+        'L/R Handgonne': '左/右舷掃射',
+        'Last Testament': '最終聖約',
+        'Leg Shot': '擊足',
+        'Maintenance': '維護',
+        'Materialize': '現身',
+        'Mortal Blow': '強擊',
+        'Noahionto': '新烈光',
+        'Northswain\'s Strike': '北斗骨碎打',
+        'Ray of Light': '光波',
+        'Redemption': '破壞',
+        'Sanction': '制裁之刃',
+        'Satellite Beam': '衛星光束',
+        'Searchlight': '探照燈',
+        'Shadowblade': '暗黑之劍',
+        'Shockwave': '衝擊波',
+        'Stack': '無雙閃電突刺',
+        'Sword In/Out': '劍 (靠近/遠離)',
+        'Sword L/R': '劍 (左/右)',
+        'Sword Out/In': '劍 (遠離/靠近)',
+        'Sword Three In A Row': '一行三劍',
+        'Thunder Slash': '雷鳴劍',
+        'Time Eruption': '時空噴發',
+        'Towerfall': '崩塌',
+        'Ultimate Illusion': '究極幻想',
       },
     },
     {

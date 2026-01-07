@@ -47,10 +47,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Brooms',
-          de: 'Besen ausweichen',
-          fr: 'Évitez les balais',
           ja: 'ほうきを避ける',
-          cn: '躲扫把',
           ko: '빗자루 피해요',
         },
       },
@@ -84,10 +81,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'put seeds on dirt',
-          de: 'Samen auf den nicht bewachsenen Boden legen',
-          fr: 'Mettez les graines sur la terre',
           ja: '種を土に置かないように',
-          cn: '种子搬离AOE',
           ko: '씨앗을 흙 위로 옮겨요',
         },
       },
@@ -128,10 +122,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Dodge Crosses',
-          de: 'Den Kreuzen ausweichen',
-          fr: 'Esquivez les croix',
           ja: '十字を避ける',
-          cn: '躲避交叉',
           ko: '십자 피해요',
         },
       },
@@ -153,10 +144,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Touch Furniture',
-          de: 'Einrichtung berühren',
-          fr: 'Touchez un meuble',
           ja: '調度品に寄る',
-          cn: '传火家具',
           ko: '불을 주변 기물에 묻혀요',
         },
       },
@@ -190,18 +178,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         pointTetherAwayFromFurniture: {
           en: 'Point Tether Away From Furniture',
-          de: 'Verbindung weg von der Einrichtung zeigen',
-          fr: 'Pointez le lien éloigné des meubles',
           ja: '調度品に当たらないように',
-          cn: '连线不要打到家具',
           ko: '주변 기물에 닿지 않게 줄 늘려요',
         },
         tetherOnYou: {
           en: 'Tether on YOU',
-          de: 'Verbindung auf DIR',
-          fr: 'Lien sur VOUS',
           ja: '線ついた',
-          cn: '连线点名',
           ko: '내게 줄',
         },
       },
@@ -362,6 +344,46 @@ const triggerSet: TriggerSet<Data> = {
         'Shadowbolt': '暗影雷',
         'Storm Of Color': '春风',
         'Tribulation': '苦难',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Ser Hamonth': '幻影騎士哈蒙斯',
+        'Lover\'s Ring': '戀人之戒',
+        'Enslaved Love': '被奴役的愛',
+        'Leannan Sith': '涼南茜',
+        'Lugus': '盧格斯',
+        'Seeker of Solitude': '宮殿的隱者',
+        'The Chamber of Celestial Song': '演奏之間',
+        'The Font of Quintessence': '春水湧泉',
+        'The Martial Court': '兵棋之間',
+      },
+      'replaceText': {
+        'Black Flame': '黑炎流',
+        'Captive Bolt': '破碎斬',
+        'Culling Blade': '衝擊斬',
+        'Dark Pulse': '黑暗波動',
+        'Dark Shock': '黑暗衝擊',
+        'Dark Well': '黑暗爆碎',
+        'Direct Seeding': '直接播種',
+        // '(?<! )Far Wind': '', // FIXME '(?<! )晴岚'
+        'Fire\'s Domain': '炎獄殺',
+        'Fire\'s Ire': '炎獄閃',
+        'Gardener\'s Hymn': '育芽之謠',
+        'Immortal Anathema': '不朽的詛咒',
+        'Ireful Wind': '強風',
+        'Mortal Flame': '必滅之炎',
+        'Ode To Fallen Petals': '花雨之歌',
+        'Ode To Far Winds': '晴嵐之歌',
+        'Ode To Lost Love': '狂愛之歌',
+        'Otherworldly Heat': '鬼炎斬',
+        'Plummet': '掉落',
+        // 'Scorching Left/Right': '', // FIXME '左/右炎狱斩'
+        'Shadowbolt': '暗影雷',
+        'Storm Of Color': '春風',
+        'Tribulation': '苦難',
       },
     },
     {

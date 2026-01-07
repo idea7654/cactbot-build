@@ -95,16 +95,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         noJump: {
           en: 'Out => Away from Image',
-          de: 'Raus => Weg von der Inkarnation',
-          fr: 'Extérieur => Loin de l\'incarnation',
-          cn: '远离 => 远离场边分身',
+          ja: 'Out => Away from Image',
           ko: '밖으로 🔜 바깥애와 멀어져요',
         },
         withJump: {
           en: 'Out => Away from Image After Jump',
-          de: 'Raus => Weg von der Inkarnation nach dem Sprung',
-          fr: 'Extérieur => Loin de l\'incarnation après le saut',
-          cn: '远离 => 远离场边跳跃后的分身',
+          ja: 'Out => Away from Image After Jump',
           ko: '밖으로 🔜 바깥애가 점프하면 멀어져요',
         },
       },
@@ -122,16 +118,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         noJump: {
           en: 'In => Under Image',
-          de: 'Rein => Unter die Inkarnation',
-          fr: 'Intérieur => Sous l\'incarnation',
-          cn: '靠近 => 靠近场边分身',
+          ja: 'In => Under Image',
           ko: '안으로 🔜 바깥애쪽으로',
         },
         withJump: {
           en: 'In => Under Image After Jump',
-          de: 'Rein => Unter die Inkarnation nach dem Sprung',
-          fr: 'Intérieur => Sous l\'incarnation après le saut',
-          cn: '靠近 => 靠近场边跳跃后的分身',
+          ja: 'In => Under Image After Jump',
           ko: '안으로 🔜 바깥애가 점프하면 그쪽으로',
         },
       },
@@ -149,16 +141,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         noJump: {
           en: 'Avoid Cleave => Sides of Image',
-          de: 'Cleave ausweichen => Seitlich der Inkarnation',
-          fr: 'Évitez le cleave => Côtés de l\'incarnation',
-          cn: '躲避直线AoE => 去场边分身两侧',
+          ja: 'Avoid Cleave => Sides of Image',
           ko: '옆으로 🔜 바깥애 옆으로',
         },
         withJump: {
           en: 'Avoid Cleave => Sides of Image After Jump',
-          de: 'Cleave ausweichen => Seitlich der Inkarnation nach dem Sprung',
-          fr: 'Évitez le cleave => Côtés de l\'incarnation après le saut',
-          cn: '躲避直线AoE => 去场边跳跃后的分身两侧',
+          ja: 'Avoid Cleave => Sides of Image After Jump',
           ko: '옆으로 🔜 바깥애가 점프하면 옆으로',
         },
       },
@@ -208,37 +196,27 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go ${dirs} ${spot}',
-          de: 'Geh ${dirs} ${spot}',
-          fr: 'Allez ${dirs} ${spot}',
-          cn: '去 ${dirs} ${spot}',
+          ja: 'Go ${dirs} ${spot}',
           ko: '${dirs} ${spot}',
         },
         doubledirs: {
           en: '${dir1} / ${dir2}',
-          de: '${dir1} / ${dir2}',
-          fr: '${dir1} / ${dir2}',
-          cn: '${dir1} / ${dir2}',
+          ja: '${dir1} / ${dir2}',
           ko: '${dir1} / ${dir2}',
         },
         in: {
           en: '(under image)',
-          de: '(Unter die Inkarnation)',
-          fr: '(Sous l\'incarnation)',
-          cn: '(靠近分身)',
+          ja: '(under image)',
           ko: '(바깥애랑 붙어요)',
         },
         out: {
           en: '(away from image)',
-          de: '(Weg von der Inkarnation)',
-          fr: '(Loin de l\'incarnation',
-          cn: '(远离分身)',
+          ja: '(away from image)',
           ko: '(바깥애랑 멀어져요)',
         },
         sides: {
           en: '(sides of image)',
-          de: '(Setlich der Inkarnation)',
-          fr: '(Côtés de l\'incarnation',
-          cn: '(分身两侧)',
+          ja: '(sides of image)',
           ko: '(바깥애 옆쪽으로)',
         },
         ...Directions.outputStringsCardinalDir,
@@ -286,37 +264,27 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go ${dirs} ${spot}',
-          de: 'Geh ${dirs} ${spot}',
-          fr: 'Allez ${dirs} ${spot}',
-          cn: '去 ${dirs} ${spot}',
+          ja: 'Go ${dirs} ${spot}',
           ko: '${dirs} ${spot}',
         },
         doubledirs: {
           en: '${dir1} / ${dir2}',
-          de: '${dir1} / ${dir2}',
-          fr: '${dir1} / ${dir2}',
-          cn: '${dir1} / ${dir2}',
+          ja: '${dir1} / ${dir2}',
           ko: '${dir1} / ${dir2}',
         },
         in: {
           en: '(under image)',
-          de: '(Unter die Inkarnation)',
-          fr: '(Sous l\'incarnation)',
-          cn: '(靠近分身)',
+          ja: '(under image)',
           ko: '(바깥애랑 붙어요)',
         },
         out: {
           en: '(away from image)',
-          de: '(Weg von der Inkarnation)',
-          fr: '(Loin de l\'incarnation)',
-          cn: '(远离分身)',
+          ja: '(away from image)',
           ko: '(바깥애랑 멀어져요)',
         },
         sides: {
           en: '(sides of image)',
-          de: '(Setlich der Inkarnation)',
-          fr: '(Côtés de l\'incarnation)',
-          cn: '(分身两侧)',
+          ja: '(sides of image)',
           ko: '(바깥애 옆쪽으로)',
         },
         ...Directions.outputStringsCardinalDir,
@@ -424,9 +392,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${dir1} (x2) => ${dir2} (x2) => ${dir3} => ${dir4}',
-          de: '${dir1} (x2) => ${dir2} (x2) => ${dir3} => ${dir4}',
-          fr: '${dir1} (x2) => ${dir2} (x2) => ${dir3} => ${dir4}',
-          cn: '${dir1} (x2) => ${dir2} (x2) => ${dir3} => ${dir4}',
+          ja: '${dir1} (x2) => ${dir2} (x2) => ${dir3} => ${dir4}',
           ko: '${dir1} (x2) => ${dir2} (x2) => ${dir3} => ${dir4}',
         },
         dirSE: Outputs.dirSE,
@@ -583,6 +549,43 @@ const triggerSet: TriggerSet<Data> = {
         'The Face Of Delight': '愉悦的神气',
         'The Face Of Wrath': '愤怒的神气',
         '(?<! )Wheel Of Deincarnation': '环斩',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        '(?<! )Asura(?! )': '阿修羅',
+        'Asura Image': '阿修羅的化身',
+        'Phantom Asura': '阿修羅的幻影',
+      },
+      'replaceText': {
+        // '\\(execute\\)': '', // FIXME '(执行)'
+        // '\\(preview\\)': '', // FIXME '(预览)'
+        // '\\(release\\)': '', // FIXME '(释放)'
+        // '\\(store\\)': '', // FIXME '(储存)'
+        'Asuri Chakra': '旋轉法輪',
+        'Bladescatter': '亂光波',
+        '(?<! )Bladewise': '劍光波',
+        'Cutting Jewel': '光玉',
+        'Divine Awakening': '化身開眼',
+        'Divinity': '化身',
+        'Ephemerality': '神出鬼沒',
+        'Iconic Execution': '化身劍技',
+        'Iconography: Bladewise': '劍技轉寫·劍光波',
+        'Iconography: Pedestal Purge': '劍技轉寫·圓斬',
+        'Iconography: Wheel Of Deincarnation': '劍技轉寫·環斬',
+        '(?<! )Khadga': '斷擊',
+        'Laceration': '斬擊',
+        'Lower Realm': '王妃的威光',
+        'Many Faces': '神氣變容',
+        'Myriad Aspects': '光芒一閃',
+        'Ordered Chaos': '天光',
+        '(?<! )Pedestal Purge': '圓斬',
+        'Six-bladed Khadga': '三頭六臂：斷',
+        // 'The Face Of Delight': '', // FIXME '愉悦的神气'
+        'The Face Of Wrath': '憤怒的神氣',
+        '(?<! )Wheel Of Deincarnation': '環斬',
       },
     },
     {

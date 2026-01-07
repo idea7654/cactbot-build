@@ -45,10 +45,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go to a lightning rod',
-          de: 'Geh zu einem Blitzableiter',
-          fr: 'Allez sur un paratonnerre',
           ja: '避雷針に円範囲を転嫁',
-          cn: '蹭一下无AoE的塔',
           ko: '장판을 피뢰침에 묻혀요',
         },
       },
@@ -100,10 +97,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away from circles',
-          de: 'Weg von den Kreisen',
-          fr: 'Éloignez-vous des cercles',
           ja: '円を避ける',
-          cn: '远离圈圈',
           ko: '동글 장판 피해요',
         },
       },
@@ -117,10 +111,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Kan Rhai on YOU',
-          de: 'Kan Rhai auf DIR',
-          fr: 'Kan Rhai sur VOUS',
           ja: '自分にカン・ラーイ',
-          cn: '十字AoE点名',
           ko: '내게 칸 라이',
         },
       },
@@ -133,10 +124,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away from crosses',
-          de: 'Weg von dem Kreuz',
-          fr: 'Éloignez-vous des croix',
           ja: '十字から離れる',
-          cn: '远离十字',
           ko: '십자 피해요',
         },
       },
@@ -169,18 +157,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         getMiddle: {
           en: 'Get Middle',
-          de: 'In die Mitte gehen',
-          fr: 'Allez au milieu',
           ja: '中心へ',
-          cn: '中间',
           ko: '한가운데',
         },
         getOutsideBetweenCircles: {
           en: 'Get Outside Between Circles',
-          de: 'Geh zum Rand zwichen den Kreisen',
-          fr: 'Allez à l\'extérieur entre les cercles',
           ja: '外周の円の隙間へ',
-          cn: '去外圈交接处',
           ko: '바깥쪽 동글들 사이로',
         },
       },
@@ -327,6 +309,40 @@ const triggerSet: TriggerSet<Data> = {
         'Twisted Scream': '异形咆哮',
         'Upburst': '顶起',
         'Wide Blaster': '广域冲击波',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Amhuluk': '阿姆魯克',
+        'Lunar Bahamut': '真月巴哈姆特',
+        'Magitek Fortress': '魔導要塞',
+        'Magitek Core': '魔導核心',
+        'Sunseat': '黃昏庭園',
+        'The Gathering Ring': '佐爾瑪刻祭場',
+      },
+      'replaceText': {
+        // '\\(circles\\)': '', // FIXME '(预兆)'
+        // '\\(explosions\\)': '', // FIXME '(爆炸)'
+        // '--Levin orbs--': '', // FIXME '--电球--'
+        'Akh Morn': '死亡輪迴',
+        'Big Burst': '大爆炸',
+        'Critical Rip': '暴擊撕裂',
+        'Electric Burst': '電流爆裂',
+        'Flatten': '夷為平地',
+        'Gigaflare': '十億火光',
+        'Kan Rhai': '天光交錯',
+        'Lightning Bolt': '落雷',
+        'Lunar Flare': '真月火光',
+        'Megaflare(?! Dive)': '百萬火光',
+        'Megaflare Dive': '百萬火光衝',
+        'Perigean Breath': '近地吐息',
+        'Spike Flail': '刃尾橫掃',
+        'Thundercall': '招雷',
+        'Twisted Scream': '異形咆哮',
+        'Upburst': '頂起',
+        'Wide Blaster': '廣域衝擊波',
       },
     },
     {

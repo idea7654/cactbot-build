@@ -39,10 +39,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Move Bosses',
-          de: 'Bosse bewegen',
-          fr: 'Déplacez les boss',
           ja: 'ボス動かして',
-          cn: '移动Boss',
           ko: '보스 이동 주차',
         },
       },
@@ -58,10 +55,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Sluice on YOU',
-          de: 'Schleusenöffnung auf DIR',
-          fr: 'Éclusage sur Vous',
           ja: '自分にスルース',
-          cn: '蓝点名',
           ko: '봇물 대상자',
         },
       },
@@ -75,10 +69,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Tank Debuff',
-          de: 'Tank Debuff',
-          fr: 'Debuff vulnérabilité',
           ja: 'タンクデバフ',
-          cn: '坦克 Debuff',
           ko: '탱커 디버프',
         },
       },
@@ -92,10 +83,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Healer Debuff',
-          de: 'Heiler Debuff',
-          fr: 'Debuff soins',
           ja: 'ヒーラーデバフ',
-          cn: '奶妈 Debuff',
           ko: '힐러 디버프',
         },
       },
@@ -109,10 +97,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Damage Debuff',
-          de: 'DD Debuff',
-          fr: 'Debuff dégats',
           ja: 'DPSデバフ',
-          cn: 'DPS Debuff',
           ko: '딜러 디버프',
         },
       },
@@ -125,10 +110,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Burn Higher HP Hand',
-          de: 'Fokusiere Hand mit mehr HP',
-          fr: 'Focus sur la main aux PV les plus élevés',
           ja: 'HPが高い手を討つ',
-          cn: '转火血多手',
           ko: 'HP 더 많은 손에 집중',
         },
       },
@@ -142,10 +124,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Drainage on YOU',
-          de: 'Entwässerung auf DIR',
-          fr: 'Drainage sur VOUS',
           ja: '自分にドレナージ',
-          cn: '连线点名',
           ko: '하수로 대상자',
         },
       },
@@ -160,10 +139,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get drainage tether',
-          de: 'Hole die Entwässerungs-Verbindung',
-          fr: 'Prenez un lien de drainage',
           ja: '線を取る',
-          cn: '接线',
           ko: '하수로 선 가져오기',
         },
       },
@@ -209,18 +185,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         repel: {
           en: 'Repel: close to ${player}',
-          de: 'Abstoß: nahe bei ${player}',
-          fr: 'Répulsion : Rapprochez-vous de ${player}',
           ja: '同じ極: ${player}に近づく',
-          cn: '同极：靠近${player}',
           ko: '반발: ${player}와 가까이 붙기',
         },
         attract: {
           en: 'Attract: away from ${player}',
-          de: 'Anziehung: weg von ${player}',
-          fr: 'Attraction : Éloignez-vous de ${player}',
           ja: '異なる極: ${player}から離れる',
-          cn: '异极：远离${player}',
           ko: '자력: ${player}와 떨어져요',
         },
       },
@@ -243,10 +213,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Throttle on ${player}',
-          de: 'Vollgas auf ${player}',
-          fr: 'Geôle liquide sur ${player}',
           ja: '${player}に窒息',
-          cn: '窒息点${player}',
           ko: '"${player}" 액체 감옥',
         },
       },
@@ -266,18 +233,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         clawOn: {
           en: 'Claw on ${player}',
-          de: 'Klaue auf ${player}',
-          fr: 'Griffe sur ${player}',
           ja: '${player}にフルイドクロー',
-          cn: '抓奶手点${player}',
           ko: '"${player}" 액체 발톱',
         },
         clawOnYou: {
           en: 'Claw on YOU',
-          de: 'Klaue auf DIR',
-          fr: 'Griffe sur VOUS',
           ja: '自分にフルイドクロー',
-          cn: '抓奶手点名',
           ko: '액체 발톱 대상자',
         },
       },
@@ -292,10 +253,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Embolus: Move Boss',
-          de: 'Pfropfen: Boss bewegen',
-          fr: 'Caillot : Déplacez le boss',
           ja: 'エンボラス: ボスを引いて離れる',
-          cn: '水球出现：拉走BOSS',
           ko: '물구슬: 보스 주차 옮기기',
         },
       },
@@ -431,6 +389,39 @@ const triggerSet: TriggerSet<Data> = {
         'Splash': '溅开',
         'Throttle': '窒息',
         'Wash Away': '冲净',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Condensate Demineralizer \\.9': '第9大型冷凝器',
+        'Hydrate Core': '水合核心',
+        'Liquid Limb': '活水之手',
+        'Liquid Rage': '活水之怒',
+        'Living Liquid': '有生命活水',
+      },
+      'replaceText': {
+        'Cascade': '傾瀉',
+        'Digititis': '指尖',
+        'Drainage': '排水',
+        'Embolus': '填充水壓',
+        'Equal Concentration': '水量均等化',
+        'Ferrofluid': '磁石',
+        'Fluid Claw': '流體之爪',
+        'Fluid Strike': '流體強襲',
+        'Fluid Swing': '流體擺動',
+        'Gear Lubricant': '齒輪潤滑劑',
+        'Hand Of Pain': '苦痛之手',
+        'Hand Of Prayer': '祈禱之手',
+        'Hydromorph': '水態轉換',
+        'Magnetism': '磁力',
+        'Piston Lubricant': '活塞潤滑劑',
+        'Protean Wave': '萬變水波',
+        'Repel': '相斥',
+        'Sluice': '沖洗',
+        'Splash': '濺開',
+        'Throttle': '液體監獄',
+        'Wash Away': '沖淨',
       },
     },
     {

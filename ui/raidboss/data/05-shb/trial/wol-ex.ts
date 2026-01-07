@@ -25,7 +25,8 @@ const sharedOutputStrings = {
     fr: 'Stop',
     ja: '動かない',
     cn: '停停停',
-    ko: '멈춰요',
+    ko: '멈추기',
+    tc: '停停停',
   },
   blizzard: {
     en: 'Move',
@@ -33,7 +34,8 @@ const sharedOutputStrings = {
     fr: 'Bougez',
     ja: '動け',
     cn: '动动动',
-    ko: '움직여요',
+    ko: '움직이기',
+    tc: '動動動',
   },
   holy: {
     en: 'Stack',
@@ -41,15 +43,17 @@ const sharedOutputStrings = {
     fr: 'Packez-vous',
     ja: 'スタック',
     cn: '集合',
-    ko: '뭉쳐요',
+    ko: '쉐어',
+    tc: '集合',
   },
   stone: {
     en: 'Protean',
     de: 'Himmelsrichtungen',
     fr: 'Positions',
     ja: '散開',
-    cn: '散开',
-    ko: '프로틴',
+    cn: '八方分散',
+    ko: '위치 산개',
+    tc: '八方分散',
   },
 };
 
@@ -62,8 +66,9 @@ const imbuedOutputStrings = {
     de: 'Raus',
     fr: 'Exterieur',
     ja: '外へ',
-    cn: '钢铁',
+    cn: '远离',
     ko: '밖으로',
+    tc: '遠離',
   },
 };
 
@@ -76,7 +81,8 @@ const quintupleOutputStrings = {
     fr: 'Regardez ailleurs',
     ja: '見ない',
     cn: '背对',
-    ko: '보면 안되요',
+    ko: '뒤돌기',
+    tc: '背對',
   },
 };
 
@@ -106,19 +112,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         limitBreak1: {
           en: 'role positions',
-          de: 'Rollenposition',
-          fr: 'Positions par rôle',
           ja: 'ロール特定位置へ',
-          cn: '去指定位置',
-          ko: '롤 포지션',
+          ko: '직업군별 위치로',
         },
-        limitBreak2: Outputs.healerGroups,
+        limitBreak2: {
+          en: 'healer stacks',
+          ja: 'ヒーラーと集合',
+          ko: '좌우 산개',
+        },
         limitBreak3: {
           en: 'meteor',
-          de: 'Meteor',
-          fr: 'Météore',
           ja: 'メテオ',
-          cn: '陨石',
           ko: '메테오',
         },
       },
@@ -135,11 +139,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Heal All to Full',
-          de: 'Alle vollheilen',
-          fr: 'Soignez tout le monde complètement',
           ja: '全員のHPを満タンに！',
-          cn: '奶满全队',
-          ko: '모두 HP 만땅으로',
+          ko: '전원 체력 풀피로',
         },
       },
     },
@@ -151,11 +152,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bait Confiteor',
-          de: 'Confiteor ködern',
-          fr: 'Attirez les zones au sol',
           ja: 'ソーレムコンフィテオル',
-          cn: '诱导庄严悔罪',
-          ko: '컨피테올 유도해요',
+          ko: '장판 유도하기',
         },
       },
     },
@@ -264,11 +262,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Wyrm Dash',
-          de: 'Wyrm-Ansturm ausweichen',
-          fr: 'Évitez la charge du Wyrm',
           ja: '竜を避ける',
-          cn: '躲避巴哈冲锋',
-          ko: '웸 돌진 피해요',
+          ko: '용 돌진 피하기',
         },
       },
     },
@@ -320,11 +315,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Interrupt',
-          de: 'Unterbreche',
-          fr: 'Interrompez',
           ja: '沈黙',
-          cn: '插言',
-          ko: '인터럽트',
+          ko: '기술 시전 끊기',
         },
       },
     },
@@ -337,11 +329,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Flare on YOU',
-          de: 'Flare auf DIR',
-          fr: 'Brasier sur VOUS',
           ja: '自分にフレア',
-          cn: '核爆点名',
-          ko: '내게 플레어',
+          ko: '플레어 대상자',
         },
       },
     },
@@ -355,11 +344,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Point Tether Out',
-          de: 'Verbindung nach draußen richten',
-          fr: 'Pointez le lien vers l\'extérieur',
           ja: '線を外に引く',
-          cn: '连线拉向场外',
-          ko: '줄 바깥으로 빼기',
+          ko: '선 연결 바깥으로 빼기',
         },
       },
     },
@@ -380,11 +366,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'TANK LB!!',
-          de: 'TANK LB!!',
-          fr: 'LB TANK !!',
           ja: 'タンクLB!!',
-          cn: '坦克LB！！',
-          ko: '탱크 LB!!',
+          ko: '탱리밋!!',
         },
       },
     },
@@ -399,11 +382,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Black Mage + White Mage',
-          de: 'Schwarzmagier + Weißmagier',
-          fr: 'Mage noir + Mage blanc',
           ja: '黒魔導士 + 白魔導士',
-          cn: '黑魔法师 + 白魔法师',
-          ko: '흥마 + 뱅마',
+          ko: '흑마도사 + 백마도사',
         },
       },
     },
@@ -418,10 +398,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Summoner + Warrior',
-          de: 'Beschwörer + Krieger',
-          fr: 'Invocateur + Guerrier',
           ja: '召喚師 + 戦士',
-          cn: '召唤师 + 战士',
           ko: '소환사 + 전사',
         },
       },
@@ -437,11 +414,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Dark Knight + Bard',
-          de: 'Dunkelritter + Barde',
-          fr: 'Chevalier noir + Barde',
           ja: '暗黒騎士 + 吟遊詩人',
-          cn: '暗黑骑士 + 吟游诗人',
-          ko: '암흑 + 바드',
+          ko: '암흑기사 + 음유시인',
         },
       },
     },
@@ -457,10 +431,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Ninja',
-          de: 'Ninja',
-          fr: 'Ninja',
           ja: '忍者',
-          cn: '忍者',
           ko: '닌자',
         },
       },
@@ -506,11 +477,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Warrior Cleave on YOU',
-          de: 'Krieger Cleave auf DIR',
-          fr: 'Cleave du Guerrier sur VOUS',
           ja: '自分に戦士の範囲攻撃',
-          cn: '战士顺劈点名',
-          ko: '내게 전사 쪼개기',
+          ko: '전사 범위 공격 대상자',
         },
       },
     },
@@ -523,11 +491,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Puddle on YOU',
-          de: 'Fläche auf DIR',
-          fr: 'Zone au sol sur VOUS',
           ja: '自分に水溜り',
-          cn: '扩散AOE点名',
-          ko: '내게 물 장판',
+          ko: '장판 대상자',
         },
       },
     },
@@ -541,11 +506,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Flare on YOU',
-          de: 'Flare auf DIR',
-          fr: 'Brasier sur VOUS',
           ja: '自分にフレア',
-          cn: '核爆点名',
-          ko: '내게 플레어',
+          ko: '플레어 대상자',
         },
       },
     },
@@ -929,6 +891,71 @@ const triggerSet: TriggerSet<Data> = {
         'To The Limit': '突破极限',
         'Twincast': '合力咏唱',
         'Ultimate Crossover': '究极·交汇',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Spectral Ninja': '幻光忍者',
+        'Warrior Of Light': '光之戰士',
+        'Spectral Dark Knight': '幻光暗黑騎士',
+        'Spectral Warrior': '幻光狂戰士',
+        'Spectral Black Mage': '幻光黑魔道士',
+        'Spectral Summoner': '幻光召喚士',
+        'Spectral Egi': '幻光召喚獸',
+        'Wyrm Of Light': '光之真龍',
+        'Spectral Bard': '幻光吟遊詩人',
+        'Spectral White Mage': '幻光白魔道士',
+      },
+      'replaceText': {
+        'Absolute Flash': '絕對閃光',
+        'Absolute Holy': '絕對神聖',
+        'Absolute Stone III': '絕對大巨岩',
+        'Berserk': '狂暴',
+        'Blade Of Shadow': '漆黑魔劍',
+        // 'BLM/WHM': '', // FIXME '黒魔／白魔'
+        'Brimstone Earth': '獄火大地',
+        // '(?<!\\w)Cast(?= )': '', // FIXME '五连'
+        'Cauterize': '灼熱俯衝',
+        'Coruscant Saber': '光明利劍',
+        'Deep Darkside': '深度暗黑',
+        'Deluge Of Death': '死亡暴雨',
+        // 'DRK/BRD': '', // FIXME '黑骑／诗人'
+        'Elddragon Dive': '遠古龍炎衝',
+        'Fatal Cleave': '奪命飛環',
+        // '(?<! )Fire/Ice': '', // FIXME '火/冰'
+        'Flare Breath': '火光吐息',
+        '(?<! )Holy': '神聖',
+        'Imbued Coruscance': '魔法劍技·光明利劍',
+        // 'Imbued Fire/Ice': '', // FIXME '魔法剑(火／冰)'
+        'Imbued Holy': '魔法劍',
+        // 'Imbued Ice/Fire': '', // FIXME '魔法剣 (冰／火)'
+        'Imbued Stone': '魔法劍',
+        // 'Katon\\: San': '', // FIXME '叁式火遁之术'
+        // '(?<! )Limit(?! Break)': '', // FIXME '极限技'
+        'Limit Break': '極限爆發',
+        'Meteor Impact': '隕石衝擊',
+        // '(?<= )NIN': '', // FIXME '忍者'
+        'Perfect Decimation': '完美地毀人亡',
+        'Quintuplecast': '五連詠唱',
+        'Radiant Braver': '光之英勇斬擊',
+        'Radiant Desperado': '光之亡命之徒',
+        'Radiant Meteor': '光之隕石流星',
+        'Shining Wave': '光芒波動',
+        // 'SMN/WAR': '', // FIXME '召唤／战士'
+        'Solemn Confiteor': '莊嚴悔罪',
+        'Specter Of Light': '幻光召喚',
+        '(?<! )Stone(?! Earth)': '巨岩',
+        // 'Suiton\\: San': '', // FIXME '叁式水遁之术'
+        'Summon(?! Wyrm)': '召喚',
+        'Summon Wyrm': '真龍召喚',
+        'Sword Of Light': '光之劍',
+        'Terror Unleashed': '恐懼釋放',
+        'The Bitter End': '盡滅',
+        'To The Limit': '突破極限',
+        'Twincast': '合力詠唱',
+        'Ultimate Crossover': '究極·交匯',
       },
     },
     {

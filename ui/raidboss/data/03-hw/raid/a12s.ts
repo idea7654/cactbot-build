@@ -53,10 +53,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Scourge on YOU',
-          de: 'Licht auf DIR',
-          fr: 'Lumière sur VOUS',
           ja: '自分に白光の鞭',
-          cn: '白光之鞭点名',
           ko: '성광의 채찍 대상자',
         },
       },
@@ -93,10 +90,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Scourge: ${players}',
-          de: 'Licht: ${players}',
-          fr: 'Lumière : ${players}',
           ja: '${players}に白光の鞭',
-          cn: '白光之鞭点:${players}',
           ko: '성광의 채찍:${players}',
         },
       },
@@ -121,10 +115,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Lasers',
-          de: 'Laser',
-          fr: 'Lasers',
           ja: '十字の秘蹟',
-          cn: '十字圣礼',
           ko: '십자 성례',
         },
       },
@@ -147,10 +138,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Close Tethers (${player})',
-          de: 'Nahe Verbindungen (${player})',
-          fr: 'Liens proches (${player})',
           ja: '(${player})に近づく',
-          cn: '靠近连线 (${player})',
           ko: '강제접근: 상대와 가까이 붙기 (${player})',
         },
       },
@@ -167,10 +155,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Far Tethers (${player})',
-          de: 'Entfernte Verbindungen (${player})',
-          fr: 'Liens éloignés (${player})',
           ja: ' (${player})から離れる',
-          cn: '远离连线 (${player})',
           ko: '접근금지: 상대와 떨어지기 (${player})',
         },
       },
@@ -184,10 +169,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Shared Sentence',
-          de: 'Urteil Kollektivstrafe',
-          fr: 'Partagez peine collective',
           ja: '集団罰',
-          cn: '集团罪',
           ko: '집단형: 쉐어',
         },
       },
@@ -201,10 +183,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Defamation',
-          de: 'Ehrenstrafe',
-          fr: 'Diffamation',
           ja: '名誉罰',
-          cn: '名誉罪',
           ko: '명예형: 멀리가기',
         },
       },
@@ -218,10 +197,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Crystal on YOU',
-          de: 'Kristall auf DIR',
-          fr: 'Cristal sur VOUS',
           ja: '自分に結晶',
-          cn: '结晶点名',
           ko: '나에게 수정',
         },
       },
@@ -234,10 +210,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Shared Tankbuster',
-          de: 'geteilter Tankbuster',
-          fr: 'Partagez le Tank buster',
           ja: '頭割りタンクバスター',
-          cn: '分摊死刑',
           ko: '쉐어 탱크버스터',
         },
       },
@@ -257,10 +230,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Puddle Tether on YOU',
-          de: 'Flächen-Verbindung auf dir',
-          fr: 'Lien Zone au sol sur VOUS',
           ja: '自分に線',
-          cn: '放圈连线点名',
           ko: '장판 남기는 선 대상자',
         },
       },
@@ -445,6 +415,50 @@ const triggerSet: TriggerSet<Data> = {
         'timegate(?!s)': '时空门',
         'timegates active': '时空门激活',
         'timestop': '时停',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        '(?<! )Alexander(?! )': '亞歷山大',
+        'Alexander Prime': '至尊亞歷山大',
+        'Judgment Crystal': '審判結晶',
+        'The General\'s Might': '阿里達烏斯之力',
+        'The General\'s Time': '阿里達烏斯之時',
+        'The General\'s Wing': '阿里達烏斯之翼',
+      },
+      'replaceText': {
+        '(?<!Radiant )Sacrament': '十字聖禮',
+        'Almost Holy': '小神聖',
+        'Arrhidaeus\'s Lanner': '阿里達烏斯之速',
+        'Blazing Scourge': '白光之鞭',
+        'Chastening Heat': '神罰射線',
+        'Chronofoil': '光陰之翼',
+        'Communion': '聖餐',
+        'Confession': '強制告解',
+        'Divine Judgment': '神聖審判',
+        'Divine Spear': '神聖火焰',
+        'Gravitational Anomaly': '重力異常',
+        'Half Gravity': '小重力',
+        'Holy Bleed': '神聖爆發',
+        'Holy Scourge': '聖光之鞭',
+        'Inception': '時空潛行',
+        'Incinerating Heat': '淨化射線',
+        'Judgment Crystal': '審判結晶',
+        'Mega Holy': '百萬神聖',
+        'Punishing Heat': '懲戒射線',
+        'Radiant Sacrament': '拜火聖禮',
+        'Smash': '粉碎',
+        'Summon Alexander': '召喚亞歷山大',
+        'Temporal Stasis': '時間停止',
+        'Tetrashatter': '結晶破碎',
+        'The General\'s Might': '阿里達烏斯之力',
+        'The General\'s Time': '阿里達烏斯之時',
+        'The General\'s Wing': '阿里達烏斯之翼',
+        'Void Of Repentance': '懺悔區',
+        'timegate(?!s)': '時空門',
+        'timegates active': '時空門啟動',
+        'timestop': '時停',
       },
     },
     {

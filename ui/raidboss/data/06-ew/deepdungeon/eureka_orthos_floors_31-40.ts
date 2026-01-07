@@ -85,10 +85,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Twisters',
-          de: 'Wirbelstürme',
-          fr: 'Tornades',
           ja: '大竜巻',
-          cn: '旋风',
           ko: '트위스터',
         },
       },
@@ -101,10 +98,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'DIVEBOMB',
-          de: 'STURZBOMBE',
-          fr: 'BOMBE PLONGEANTE',
           ja: 'ダイブボム',
-          cn: '俯冲',
           ko: '다이브봄',
         },
       },
@@ -117,10 +111,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Twisters',
-          de: 'Wirbelstürme',
-          fr: 'Tornades',
           ja: 'ツイスター',
-          cn: '旋风',
           ko: '트위스터',
         },
       },
@@ -183,6 +174,19 @@ const triggerSet: TriggerSet<Data> = {
         'Orthotaur': '正统弥诺陶洛斯',
         'Phantom Orthoray': '正统幻影光',
         'Twintania\'s Clone': '双塔尼亚复制体',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Orthochimera': '正統奇美拉',
+        'Orthoempuse': '正統疫蟲',
+        'Orthonaga': '正統那迦',
+        'Orthos Mirrorknight': '正統魔鏡騎士',
+        'Orthospider': '正統蜘蛛',
+        'Orthotaur': '正統米諾陶洛斯',
+        'Phantom Orthoray': '正統魅影射線',
+        'Twintania\'s Clone': '雙塔尼亞複製體',
       },
     },
     {

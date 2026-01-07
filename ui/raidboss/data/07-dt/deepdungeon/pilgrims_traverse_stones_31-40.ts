@@ -61,8 +61,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid jump => Out',
-          de: 'Sprung vermeiden => Raus',
-          cn: '避开跳跃 => 外',
+          ja: 'Avoid jump => Out',
           ko: '점프 피하고 🔜 밖으로',
         },
       },
@@ -98,8 +97,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${mech} x3',
-          de: '${mech} x3',
-          cn: '${mech} x3',
+          ja: '${mech} x3',
           ko: '${mech}x3',
         },
         knockback: Outputs.knockback,
@@ -156,6 +154,18 @@ const triggerSet: TriggerSet<Data> = {
         'Traverse Inquisitor': 'トラバース・インクイジター',
         'Traverse Pegasus': 'トラバース・ペガサス',
         'Traverse Soldierstone': 'トラバース・ストーンソルジャー',
+      },
+    },
+    {
+      'locale': 'ko',
+      'replaceSync': {
+        'Forgiven Naivety': '면죄된 순진',
+        'Forgiven Petulance': '면죄된 심술',
+        'Forgiven Plague': '면죄된 역병',
+        'Forgiven Prejudice': '면죄된 편견',
+        'Traverse Inquisitor': '순례길 심문관',
+        'Traverse Pegasus': '순례길 페가수스',
+        'Traverse Soldierstone': '순례길 석병',
       },
     },
   ],

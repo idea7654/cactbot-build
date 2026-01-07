@@ -35,10 +35,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Be Near Boss',
-          de: 'sei in der Nähe des Bosses',
-          fr: 'Placez-vous près du boss',
           ja: 'ボスに貼りつく',
-          cn: '靠近Boss',
           ko: '보스 가까이',
         },
       },
@@ -51,10 +48,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Move to South Edge',
-          de: 'zur südlichen Kante',
-          fr: 'Allez vers le bord sud',
           ja: '南へ',
-          cn: '前往南侧边缘',
           ko: '남쪽 구석으로',
         },
       },
@@ -82,10 +76,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Look for Lasers',
-          de: 'Pass auf die Laser auf',
-          fr: 'Repérez les lasers',
           ja: 'レーザーを避ける',
-          cn: '小心激光',
           ko: '레이저 피해요',
         },
       },
@@ -131,10 +122,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Dodge Moving Circle',
-          de: 'Bewegenden Kreisen ausweichen',
-          fr: 'Esquivez les cercles mouvants',
           ja: '動いてるサークルを避ける',
-          cn: '躲避移动圆圈',
           ko: '움직이는 동글 피해요',
         },
       },
@@ -150,10 +138,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Look Behind For Flamethrowers',
-          de: 'Flammenwerfer hinter dir',
-          fr: 'Repérez les lance-flammes derrière',
           ja: '後ろに火炎放射器',
-          cn: '观察后方放火',
           ko: '뒷쪽 화염방사 피해요',
         },
       },
@@ -177,10 +162,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Dodge Falling Walls',
-          de: 'Den fallenden Wände asuweichen',
-          fr: 'Esquivez les murs tombants',
           ja: '倒れてくる壁を避ける',
-          cn: '躲避倒塌墙壁',
           ko: '넘어지는 벽 피해요',
         },
       },
@@ -192,12 +174,10 @@ const triggerSet: TriggerSet<Data> = {
       delaySeconds: 10,
       alertText: (_data, _matches, output) => output.text!(),
       outputStrings: {
-        text: { // In fact mostly Tank takes all tethers.
+        text: {
+          // In fact mostly Tank takes all tethers.
           en: 'Spread Tethers',
-          de: 'Verbindungen Verteilen',
-          fr: 'Dispersez les liens',
           ja: '線を重ならないように散開',
-          cn: '散开扯断连线',
           ko: '줄! 이건 탱크 혼자 처리',
         },
       },
@@ -227,10 +207,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Dodge Electric Floor',
-          de: 'Elektrischem Boden ausweichen',
-          fr: 'Esquivez le sol électrifié',
           ja: '電気床を避ける',
-          cn: '躲避带电地板',
           ko: '전기 바닥 피해요',
         },
       },
@@ -245,10 +222,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Conveyor Belts',
-          de: 'Förderbänder',
-          fr: 'Tapis roulant',
           ja: 'ローラーコンベア',
-          cn: '输送带',
           ko: '컨베이어 벨트',
         },
       },
@@ -265,10 +239,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Oil Vats',
-          de: 'Ölbehälter',
-          fr: 'Cuves à huile',
           ja: 'オイルが沸く',
-          cn: '油桶',
           ko: '기름이 끓어요',
         },
       },
@@ -284,10 +255,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Oil Vats',
-          de: 'Ölbehälter',
-          fr: 'Cuves à huile',
           ja: 'オイルが沸く',
-          cn: '油桶',
           ko: '기름이 끓어요',
         },
       },
@@ -301,10 +269,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Exploder on YOU',
-          de: 'Explosion auf DIR',
-          fr: 'Explosion sur VOUS',
           ja: '自分に自爆',
-          cn: '自爆点名',
           ko: '내게 폭발',
         },
       },
@@ -342,10 +307,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Front and Center',
-          de: 'Vorne und Mitte',
-          fr: 'Devant et au centre',
           ja: '前方の中へ',
-          cn: '前方中间',
           ko: '앞쪽 가운데로',
         },
       },
@@ -358,10 +320,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Back and Sides',
-          de: 'Hinten und Seiten',
-          fr: 'Derrière et sur les côtés',
           ja: '後方の横へ',
-          cn: '后方两侧',
           ko: '뒤쪽 옆으로',
         },
       },
@@ -374,10 +333,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Kill Claws',
-          de: 'Klauen töten',
-          fr: 'Tuez les pinces',
           ja: 'マルクスを倒す',
-          cn: '杀掉爪子',
           ko: '마르크스 잡아요',
         },
       },
@@ -406,10 +362,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go Sides (Near Front)',
-          de: 'Zu den Seiten (Nahe der Front)',
-          fr: 'Allez sur les côtés (vers l\'avant)',
           ja: '横へ (前に近づく)',
-          cn: '两侧（靠近前方）',
           ko: '옆으로 (조금 앞쪽에서)',
         },
       },
@@ -423,10 +376,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Towers',
-          de: 'Türme nehmen',
-          fr: 'Prenez les tours',
           ja: '塔を踏む',
-          cn: '踩塔',
           ko: '타워 밟아요',
         },
       },
@@ -440,10 +390,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Puddle on YOU',
-          de: 'Fläche auf dir',
-          fr: 'Zone au sol sur VOUS',
           ja: '自分に水溜り',
-          cn: '水圈点名',
           ko: '내게 물 장판',
         },
       },
@@ -457,10 +404,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Out + Dodge Homing AoE',
-          de: 'Geh Raus + Zielsuch-AoE ausweichen',
-          fr: 'À l\'extérieur + Esquivez l\'AoE',
           ja: '外 + AoE',
-          cn: '远离 + 躲避弹幕',
           ko: '밖으로 + 호밍 AOE 피해요',
         },
       },
@@ -474,10 +418,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Adds (Ignore Small)',
-          de: 'Adds (kleine ignorieren)',
-          fr: 'Adds (ignorez les petits)',
           ja: '雑魚 (小さいのは無視)',
-          cn: '小怪（忽略小的）',
           ko: '큰 쫄 잡아요 (작은 쫄 무시)',
         },
       },
@@ -490,10 +431,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Front and Center',
-          de: 'Vorne und Mitte',
-          fr: 'Devant et au centre',
           ja: '前方の中へ',
-          cn: '前方中间',
           ko: '앞쪽 가운데로',
         },
       },
@@ -507,10 +445,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Look For Wall Saws',
-          de: 'Halt nach den kleinen Sägen ausschau',
-          fr: 'Repérez les scies murales',
           ja: 'マルクス突撃',
-          cn: '观察墙壁',
           ko: '바깥에 마르크스는 어디 있을까요',
         },
       },
@@ -549,10 +484,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Laser Buster on YOU',
-          de: 'Laser Tankbuster auf DIR',
-          fr: 'Tank buster laser sur VOUS',
           ja: '自分にレーザー',
-          cn: '激光点名',
           ko: '내게 레이저 버스터',
         },
       },
@@ -578,10 +510,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Dodge Overhead Saws',
-          de: 'Sägen über dem Kopf ausweichen',
-          fr: 'Esquivez les scies aériennes',
           ja: 'マルクス支援',
-          cn: '躲避头顶锯',
           ko: '마르크스 피해요',
         },
       },
@@ -608,10 +537,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go Behind Untethered Tank',
-          de: 'Hinter den nicht verbundenen Panzer gehen',
-          fr: 'Allez derrière le tank non-lié',
           ja: '線のない戦車の後ろへ',
-          cn: '没连线的坦克后躲避',
           ko: '줄 없는 탱크 뒤에 숨어요',
         },
       },
@@ -632,10 +558,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get in the bubble',
-          de: 'Geh in die Kuppel',
-          fr: 'Allez dans la bulle',
           ja: '泡に入る',
-          cn: '进入圈圈',
           ko: '버블 안으로',
         },
       },
@@ -1004,6 +927,101 @@ const triggerSet: TriggerSet<Data> = {
         'Total Annihilation Maneuver': '攻击：歼灭轰炸',
         'Undock': '对接解除',
         'Wall Mechanic': '墙机制',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        '9S-operated Flight Unit': '9S：裝備飛行裝置',
+        '9S-Operated Walking Fortress': '9S：接入多腳戰車',
+        'Engels': '昂格士',
+        '(?<! )Flight Unit': '飛行裝置',
+        'Goliath Tank': '大型戰車',
+        'Hobbes': '霍布斯',
+        'Marx': '麥喀士',
+        'Medium Exploder': '中型自爆',
+        'Multi-leg Medium Model': '中型多腳',
+        'Quality assurance': '質檢場',
+        'Reverse-jointed Goliath': '大型逆關節',
+        'Serial-Jointed Command Model': '多關節型：司令機',
+        'Serial-Jointed Service Model': '多關節型：士兵機',
+        'Small Biped': '小型二足',
+        'Small Flyer': '小型飛行體',
+        'The forward deck': '前部甲板',
+        'The rear deck': '後部甲板',
+        'Warehouse A': '倉庫A',
+        'Warehouse B': '倉庫B',
+        'Warehouse C': '倉庫C',
+      },
+      'replaceText': {
+        '360-Degree Bombing Maneuver': '攻擊：周邊導彈轟炸',
+        'Anti-Personnel Missile': '導彈命中',
+        'Area Bombardment': '導彈亂射',
+        'Area Bombing Maneuver': '攻擊：追蹤導彈轟炸',
+        'Arm Laser': '腕部雷射',
+        // 'Cannons': '', // FIXME '加农'
+        'Clanging Blow': '強攻擊',
+        'Convenient Self-Destruction': '自爆攻擊',
+        // 'Crusher Adds': '', // FIXME '粉碎机小怪'
+        // 'Tank Adds': '', // FIXME '坦克小怪'
+        // 'Serial-Jointed Adds': '', // FIXME '多关节型小怪'
+        // '(?<! )Adds': '', // FIXME '小怪'
+        'Crushing Wheel': '碾輪夾擊',
+        'Demolish Structure': '地形破壞攻擊',
+        'Wide-Angle Diffuse Laser': '廣擴散雷射',
+        '(?<! )Diffuse Laser': '擴散雷射',
+        'Energy Assault': '連續能量彈',
+        'Energy Barrage': '能量彈幕',
+        'Energy Blast': '能量炸裂',
+        'Energy Bombardment': '迫擊能量彈',
+        'Energy Ring': '全方位能量彈',
+        'Engage Goliath Tank Support': '請求支援：大型戰車',
+        'Engage Marx Support': '請求支援：麥喀士',
+        // 'Exploding Tethers': '', // FIXME '爆炸连线'
+        // 'Floor': '', // FIXME '地板'
+        'Forceful Impact': '大震動',
+        'Frontal Somersault': '跳躍攻擊',
+        'Ground-To-Ground Missile': '導彈命中',
+        'Precision Guided Missile': '高性能追蹤導彈',
+        '(?<! )Guided Missile': '追蹤導彈',
+        'Hack Goliath Tank': '駭入：大型戰車',
+        'High-Caliber Laser': '大口徑雷射',
+        'High-Frequency Laser': '高周波雷射',
+        'High-Powered Laser': '高功率雷射',
+        'Incendiary Bombing': '燃燒導彈',
+        'Incendiary Saturation Bombing': '擴散燃燒導彈',
+        'Laser Saturation': '全方位雷射',
+        'Laser Sight': '雷射照射',
+        'Laser Turret': '主砲雷射',
+        'Laser-Resistance Test': '耐雷射檢測',
+        'Lightfast Blade': '光刃斬機',
+        'Marx Activation': '麥喀士啟動',
+        'Marx Crush': '麥喀士夾擊',
+        'Marx Impact': '麥喀士衝擊',
+        // 'Marx Smash L/R': '', // FIXME '麦喀士打击左/右'
+        // 'Marx Smash R/L': '', // FIXME '麦喀士打击右/左'
+        // 'Marx Smash Back': '', // FIXME '麦喀士打击后'
+        // 'Marx Smash Front': '', // FIXME '麦喀士打击前'
+        // 'Marx Smash F/B': '', // FIXME '麦喀士打击前/后'
+        // 'Marx Smash B/F': '', // FIXME '麦喀士打击后/前'
+        'Marx Smash(?! )': '麥喀士打擊',
+        'Marx Thrust': '麥喀士突擊',
+        'Neutralization': '壓制射擊',
+        'Radiate Heat': '放熱攻擊',
+        'Ring Laser': '環形雷射',
+        'Shockwave': '衝擊波',
+        'Short-Range Missile': '短途導彈',
+        'Shrapnel Impact': '殘骸墜落',
+        // 'Spin': '', // FIXME '中央/侧方旋转攻击'
+        'Surface Missile': '對地導彈',
+        'Systematic Airstrike': '空襲陣型',
+        'Systematic Siege': '包圍陣型',
+        'Systematic Suppression': '掃射陣型',
+        'Systematic Targeting': '瞄準陣型',
+        'Total Annihilation Maneuver': '攻擊：殲滅轟炸',
+        'Undock': '對接解除',
+        // 'Wall Mechanic': '', // FIXME '墙机制'
       },
     },
     {

@@ -35,9 +35,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Knockback on YOU',
-          de: 'Rückstoß auf DIR',
-          fr: 'Poussée sur VOUS',
-          cn: '击退点名',
+          ja: 'Knockback on YOU',
           ko: '내게 넉백',
         },
       },
@@ -146,6 +144,29 @@ const triggerSet: TriggerSet<Data> = {
         'Ukehi': '祈请',
         'Yasakani-No-Magatama': '八尺琼勾玉',
         'Yata-No-Kagami': '八咫镜',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Ama-No-Iwato': '天之岩戶',
+        'Dark Cloud': '暗雲',
+        'Susano': '須佐之男',
+      },
+      'replaceText': {
+        'Ame-No-Murakumo': '天之叢雲',
+        'Assail': '強擊',
+        'Brightstorm': '晴嵐',
+        'Dark Levin': '紫電',
+        'Rasen Kaikyo': '螺旋海峽',
+        'Seasplitter': '斷海',
+        'Stormsplitter': '破浪斬',
+        'The Hidden Gate': '岩戶隱',
+        'The Parting Clouds': '雲間放電',
+        'The Sealed Gate': '岩戶閉合',
+        'Ukehi': '祈請',
+        'Yasakani-No-Magatama': '八尺瓊勾玉',
+        'Yata-No-Kagami': '八咫鏡',
       },
     },
     {

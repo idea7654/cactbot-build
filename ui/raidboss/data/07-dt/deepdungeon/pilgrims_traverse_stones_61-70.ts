@@ -87,8 +87,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away from jump => Get Under or Out',
-          de: 'Weg vom Sprung => Geh Unter oder Raus',
-          cn: '远离跳跃 => 去脚下或外面',
+          ja: 'Away from jump => Get Under or Out',
           ko: '점프 먼곳으로 🔜 밑이나 밖으로',
         },
       },
@@ -139,20 +138,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         sting: {
           en: 'Final Sting',
-          de: 'Schlussstich',
-          cn: '终极针',
+          ja: 'Final Sting',
           ko: '파이널 스팅',
         },
         stingOnYou: {
           en: 'Final Sting on YOU',
-          de: 'Schlussstich auf DIR',
-          cn: '终极针点名',
+          ja: 'Final Sting on YOU',
           ko: '내게 파이널 스팅!',
         },
         stingOnPlayer: {
           en: 'Final Sting on ${player}',
-          de: 'Schlussstich auf ${player}',
-          cn: '终极针点${player}',
+          ja: 'Final Sting on ${player}',
           ko: '파이널 스팅: ${player}',
         },
       },
@@ -207,20 +203,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Dodge ${dir}',
-          de: 'Ausweichen ${dir}',
-          cn: '${dir} 躲避',
+          ja: 'Dodge ${dir}',
           ko: '${dir} 피해요!',
         },
         backFront: {
           en: 'Back-to-front',
-          de: 'Hinten-nach-Vorne',
-          cn: '后到前',
+          ja: 'Back-to-front',
           ko: '앞에서 뒤로',
         },
         frontBack: {
           en: 'Front-to-back',
-          de: 'Vorne-nach-Hinten',
-          cn: '前到后',
+          ja: 'Front-to-back',
           ko: '뒤에서 앞으로',
         },
       },
@@ -243,8 +236,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Dodge ${dir}',
-          de: 'Ausweichen ${dir}',
-          cn: '${dir} 躲避',
+          ja: 'Dodge ${dir}',
           ko: '${dir}으로 피해요!',
         },
         clockwise: Outputs.clockwise,
@@ -324,20 +316,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         repeat: {
           en: '${dir4} => ${dir1} x3 => ${dir8} => ${dir5} x3',
-          de: '${dir4} => ${dir1} x3 => ${dir8} => ${dir5} x3',
-          cn: '${dir4} => ${dir1} x3 => ${dir8} => ${dir5} x3',
+          ja: '${dir4} => ${dir1} x3 => ${dir8} => ${dir5} x3',
           ko: '${dir4} 🔜 ${dir1}x3 🔜 ${dir8} 🔜 ${dir5}x3',
         },
         rewind: {
           en: '${dir4} => ${dir1} x6 => ${dir4}',
-          de: '${dir4} => ${dir1} x6 => ${dir4}',
-          cn: '${dir4} => ${dir1} x6 => ${dir4}',
+          ja: '${dir4} => ${dir1} x6 => ${dir4}',
           ko: '${dir4} 🔜 ${dir1}x6 🔜 ${dir4}',
         },
         avoid: {
           en: 'Avoid swipes x8',
-          de: 'Vermeide Schwung x8',
-          cn: '避开顺劈 x8',
+          ja: 'Avoid swipes x8',
           ko: '스와이프x8 피해요!',
         },
         left: Outputs.left,
@@ -402,6 +391,24 @@ const triggerSet: TriggerSet<Data> = {
         'Traverse Ngozi': 'トラバース・ンゴツィ',
         'Traverse Queen': 'トラバース・クイーンビー',
         'Traverse Talos': 'トラバース・タロース',
+      },
+    },
+    {
+      'locale': 'ko',
+      'replaceSync': {
+        'Forgiven Attachment': '면죄된 애착',
+        'Forgiven Contention': '면죄된 격론',
+        'Forgiven Doubt': '면죄된 의심',
+        'Forgiven Grudge': '면죄된 원한',
+        'Forgiven Imparity': '면죄된 불평등',
+        'Forgiven Riot': '면죄된 난동',
+        'Forgiven Voracity': '면죄된 식탐',
+        'Forgiven Zeal': '면죄된 열의',
+        'Traverse Cliffmole': '순례길 절벽두더지',
+        'Traverse Gnome': '순례길 노움',
+        'Traverse Ngozi': '순례길 응고지',
+        'Traverse Queen': '순례길 여왕벌',
+        'Traverse Talos': '순례길 탈로스',
       },
     },
   ],

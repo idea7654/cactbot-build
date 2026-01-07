@@ -178,10 +178,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bait Circles',
-          de: 'Kreise ködern',
-          fr: 'Déposez les cercles',
           ja: 'AOE誘導',
-          cn: '集合放圈',
           ko: '장판 모여 깔아요!',
         },
       },
@@ -226,18 +223,12 @@ const triggerSet: TriggerSet<Data> = {
         backThenFront: Outputs.backThenFront,
         backThenFrontThenHealerGroups: {
           en: 'Back => Front => Out => Stacks',
-          de: 'Hinten => Vorne => Raus => Sammeln',
-          fr: 'Derrière => Devant => Extérieur => Package',
           ja: '後ろ => 前 => 外側 => ペア',
-          cn: '后 => 前 => 钢铁 => 集合',
           ko: '뒤에서 🔜 앞으로 🔜 밖으로 🔜 뭉쳐요',
         },
         backThenFrontThenSpread: {
           en: 'Back => Front => Under => Spread',
-          de: 'Hinten => Vorne => Unter ihn => Verteilen',
-          fr: 'Derrière => Devant => Dessous => Écartez-vous',
           ja: '後ろ => 前 => 内側 => 散会',
-          cn: '后 => 前 => 月环 => 分散',
           ko: '뒤에서 🔜 앞으로 🔜 밑으로 🔜 흩어져요',
         },
       },
@@ -259,18 +250,12 @@ const triggerSet: TriggerSet<Data> = {
         front: Outputs.front,
         frontThenHealerGroups: {
           en: 'Front => Out => Stacks',
-          de: 'Vorne => Raus => Sammeln',
-          fr: 'Devant => Extérieur => Package',
           ja: '前 => 外側 => ペア',
-          cn: '前 => 钢铁 => 集合',
           ko: '앞에서 🔜 밖으로 🔜 뭉쳐요',
         },
         frontThenSpread: {
           en: 'Front => Under',
-          de: 'Vorne => Unter ihn',
-          fr: 'Devant => Dessous',
           ja: '前 => 内側',
-          cn: '前 => 月环',
           ko: '앞에서 🔜 밑으로',
         },
       },
@@ -284,10 +269,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         outAndSpread: {
           en: 'Spread Out',
-          de: 'Außen verteilen',
-          fr: 'Écartez-vous',
           ja: '散会',
-          cn: '分散',
           ko: '흩어져요',
         },
       },
@@ -331,10 +313,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         rolePositions: {
           en: 'Role positions',
-          de: 'Rollenposition',
-          fr: 'Positions par rôle',
           ja: 'ロール散会',
-          cn: '去指定位置',
           ko: '롤 포지션으로',
         },
       },
@@ -344,10 +323,7 @@ const triggerSet: TriggerSet<Data> = {
       type: 'StartsUsing',
       netRegex: { id: '8485', source: 'Golbez', capture: false },
       suppressSeconds: 3,
-      alertText: (_data, _matches, output) => output.healerGroups!(),
-      outputStrings: {
-        healerGroups: Outputs.healerGroups,
-      },
+      response: Responses.healerGroups('alert'),
     },
     {
       id: 'GolbezEx Azdaja\'s Shadow Out Tell',
@@ -358,10 +334,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '(out + healer groups, for later)',
-          de: '(raus + Heiler Gruppen, für später)',
-          fr: '(extérieur + groupes sur les heals, pour après)',
           ja: '(外 + 後でヒーラと4:4頭割り)',
-          cn: '(钢铁 + 稍后治疗分组分摊)',
           ko: '(밖에서 + 4:4힐러)',
         },
       },
@@ -375,10 +348,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '(in + spread, for later)',
-          de: '(rein + verteilen, für später)',
-          fr: '(intérieur + dispersion, pour après)',
           ja: '(中 + 後で散会)',
-          cn: '(月环 + 稍后分散)',
           ko: '(안으로 + 흩어져요)',
         },
       },
@@ -538,10 +508,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         safeSpotList: {
           en: '${dir1} => ${dir2} => ${dir3} => ${dir4}',
-          de: '${dir1} => ${dir2} => ${dir3} => ${dir4}',
-          fr: '${dir1} => ${dir2} => ${dir3} => ${dir4}',
           ja: '${dir1} => ${dir2} => ${dir3} => ${dir4}',
-          cn: '${dir1} => ${dir2} => ${dir3} => ${dir4}',
           ko: '${dir1} 🔜 ${dir2} 🔜 ${dir3} 🔜 ${dir4}',
         },
         ...galeSphereOutputStrings,
@@ -632,6 +599,7 @@ const triggerSet: TriggerSet<Data> = {
         anw: Outputs.arrowNW,
         text: {
           en: '${dir} Healer Groups',
+          ja: '${dir} Healer Groups',
           ko: '${dir} 4:4 힐러',
         },
       },
@@ -699,10 +667,7 @@ const triggerSet: TriggerSet<Data> = {
         dirSE: Outputs.dirSE,
         middleLean: {
           en: 'Middle (lean ${dir})',
-          de: 'Mitte (${dir} halten)',
-          fr: 'Milieu (côté ${dir})',
           ja: '真ん中 (すこし${dir})',
-          cn: '中间 (偏 ${dir})',
           ko: '한가운데 (약간 ${dir})',
         },
       },
@@ -719,10 +684,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Knockback on YOU',
-          de: 'Rückstoß auf DIR',
-          fr: 'Poussée sur VOUS',
           ja: '自分にノックバック',
-          cn: '击退点名',
           ko: '내게 넉백!',
         },
       },
@@ -739,10 +701,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Flare on YOU',
-          de: 'Flare auf DIR',
-          fr: 'Brasier sur VOUS',
           ja: '自分にフレア',
-          cn: '陨石点名',
           ko: '내게 플레어!',
         },
       },
@@ -760,10 +719,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Tower',
-          de: 'Nimm Turm',
-          fr: 'Prenez une tour',
           ja: '塔踏み',
-          cn: '踩塔',
           ko: '타워 밟아요',
         },
       },
@@ -777,6 +733,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '(Fake)',
+          ja: '(Fake)',
           ko: '(이거 페이크)',
         },
       },
@@ -790,6 +747,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '(Enrage soon)',
+          ja: '(Enrage soon)',
           ko: '(이제 곧 끝)',
         },
       },
@@ -803,6 +761,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Out 🡺 Healer Groups',
+          ja: 'Out 🡺 Healer Groups',
           ko: '밖으로 🡺 4:4 힐러',
         },
       },
@@ -816,6 +775,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'In 🡺 Protean',
+          ja: 'In 🡺 Protean',
           ko: '안으로 🡺 프로틴',
         },
       },
@@ -834,14 +794,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Behind 🡺 Front',
+          ja: 'Behind 🡺 Front',
           ko: '뒤로 갔다 🡺 앞으로',
         },
         pin: {
           en: 'Behind 🡺 In+Front 🡺 Protean',
+          ja: 'Behind 🡺 In+Front 🡺 Protean',
           ko: '뒤에서 🡺 안쪽+앞으로 🡺 프로틴',
         },
         pout: {
           en: 'Behind 🡺 Out+Front 🡺 Healer Groups',
+          ja: 'Behind 🡺 Out+Front 🡺 Healer Groups',
           ko: '뒤에서 🡺 밖으로+앞으로 🡺 4:4 힐러',
         },
       },
@@ -854,6 +817,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Meteors',
+          ja: 'Meteors',
           ko: '돌 떨어져요',
         },
       },
@@ -1020,16 +984,16 @@ const triggerSet: TriggerSet<Data> = {
         '\\(small\\)': '(小)',
         '\\(light parties\\)': '(四四分组)',
         '\\(spread\\)': '(分散)',
-        '\\(explode\\)': '(爆炸)',
-        '\\(snapshot\\)': '(快照)',
+        '\\(explode\\)': '(发动)',
+        '\\(snapshot\\)': '(诱导)',
         '\\(back\\)': '(后)',
         '\\(cast\\)': '(咏唱)',
         '\\(front\\)': '(前)',
         '\\(out\\)': '(外)',
         '\\(record\\)': '(记录)',
-        '\\(under\\)': '(下方)',
-        '\\(hit\\)': '(打击)',
-        '\\(preview\\)': '(预览)',
+        '\\(under\\)': '(靠近)',
+        '\\(hit\\)': '(命中)',
+        '\\(preview\\)': '(预兆)',
         'Abyssal Quasar': '深渊类星体',
         'Arctic Assault': '极寒突袭',
         'Azdaja\'s Shadow': '黑龙剑阿珠达雅',
@@ -1057,6 +1021,59 @@ const triggerSet: TriggerSet<Data> = {
         'Void Meteor': '虚空陨石',
         'Void Stardust': '虚空彗星雨',
         'Void Tornado': '虚空龙卷',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Gale Sphere': '風球',
+        'Golbez': '高貝扎',
+        'Shadow Dragon': '黑龍',
+      },
+      'replaceText': {
+        // '\\(Enrage\\)': '', // FIXME '(狂暴)'
+        // '\\(big\\)': '', // FIXME '(大)'
+        // '\\(small\\)': '', // FIXME '(小)'
+        // '\\(light parties\\)': '', // FIXME '(四四分组)'
+        // '\\(spread\\)': '', // FIXME '(分散)'
+        // '\\(explode\\)': '', // FIXME '(发动)'
+        // '\\(snapshot\\)': '', // FIXME '(诱导)'
+        // '\\(back\\)': '', // FIXME '(后)'
+        // '\\(cast\\)': '', // FIXME '(咏唱)'
+        // '\\(front\\)': '', // FIXME '(前)'
+        // '\\(out\\)': '', // FIXME '(外)'
+        // '\\(record\\)': '', // FIXME '(记录)'
+        // '\\(under\\)': '', // FIXME '(靠近)'
+        // '\\(hit\\)': '', // FIXME '(命中)'
+        // '\\(preview\\)': '', // FIXME '(预兆)'
+        'Abyssal Quasar': '深淵類星體',
+        'Arctic Assault': '極寒突襲',
+        'Azdaja\'s Shadow': '黑龍劍阿珠達雅',
+        'Binding Cold': '咒縛寒氣',
+        'Black Fang': '黑牙',
+        'Burning Shade': '黑炎',
+        'Cauterize': '黑炎俯衝',
+        'Double Meteor': '雙重隕石',
+        'Dragon\'s Descent': '降龍爆火',
+        'Eventide Fall': '集束黑龍閃',
+        'Eventide Triad': '三連黑龍閃',
+        'Explosion': '爆炸',
+        'Flames of Eventide': '黑龍炎',
+        'Gale Sphere': '風晶球',
+        'Immolating Shade': '重黑炎',
+        'Lingering Spark': '遲緩電火花',
+        'Phases of the Blade': '弦月連劍',
+        'Phases of the Shadow': '弦月黑龍連劍',
+        'Rising Beacon': '升龍烽火',
+        'Rising Ring': '升龍環火',
+        'Terrastorm': '遲緩地暴',
+        'Void Aero III': '虛空大勁風',
+        'Void Blizzard III': '虛空大暴雪',
+        'Void Comet': '虛空隕星',
+        'Void Meteor': '虛空隕石',
+        'Void Stardust': '虛空隕星雨',
+        'Void Tornado': '虛空龍捲風',
       },
     },
     {

@@ -29,10 +29,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Heal to full',
-          de: 'Voll heilen',
-          fr: 'Soignez complètement',
           ja: 'HPを全回復する',
-          cn: '奶满全队',
           ko: 'HP 만땅으로',
         },
       },
@@ -46,10 +43,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away from glowing circles',
-          de: 'Weg von den leuchtenden Kreisen',
-          fr: 'Loin des cercles brillants',
           ja: '光っている円から離れる',
-          cn: '远离黑洞',
           ko: '바닥 동그라미 피해요',
         },
       },
@@ -64,10 +58,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         lineStackOn: {
           en: '5x line stack on ${player}',
-          de: '5x in einer Linie Sammeln auf ${player}',
-          fr: 'Package en ligne x5 sur ${player}',
           ja: '${player}に5回の直線頭割り',
-          cn: '${player} 直线分摊 (5次)',
           ko: '5연속 한줄 뭉치기: ${player}',
         },
       },
@@ -82,10 +73,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${dir1} / ${dir2}',
-          de: '${dir1} / ${dir2}',
-          fr: '${dir1} / ${dir2}',
           ja: '${dir1} / ${dir2}',
-          cn: '${dir1} / ${dir2}',
           ko: '${dir1} / ${dir2}',
         },
         ne: Outputs.northeast,
@@ -102,10 +90,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${dir1} / ${dir2}',
-          de: '${dir1} / ${dir2}',
-          fr: '${dir1} / ${dir2}',
           ja: '${dir1} / ${dir2}',
-          cn: '${dir1} / ${dir2}',
           ko: '${dir1} / ${dir2}',
         },
         nw: Outputs.northwest,
@@ -151,10 +136,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         tower: {
           en: 'Stand in Tower',
-          de: 'Steh im Turm',
-          fr: 'Restez dans une tour',
           ja: '塔を踏む',
-          cn: '踩塔',
           ko: '타워 밟아요',
         },
       },
@@ -214,10 +196,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Spread + Stay Out',
-          de: 'Verteilen + Draußen stehen',
-          fr: 'Écartez-vous + Extérieur',
           ja: '散開 + 範囲から離れる',
-          cn: '分散 + 远离',
           ko: '아크라이: 흩어져서 + 그대로 밖으로',
         },
       },
@@ -339,7 +318,7 @@ const triggerSet: TriggerSet<Data> = {
       },
       'replaceText': {
         '\\(cast\\)': '(咏唱)',
-        '\\(proximity\\)': '(接近)',
+        '\\(proximity\\)': '(距离衰减)',
         'Abyssal Echoes': '深渊回声',
         'Abyssal Nox': '深渊之夜',
         'Big Bang': '宇宙大爆炸',
@@ -366,6 +345,44 @@ const triggerSet: TriggerSet<Data> = {
         'Visceral Whirl': '旋骨利爪',
         'Void Bio': '虚空毒菌',
         'Void Meteor': '虚空陨石',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Comet': '隕星',
+        'Zeromus': '澤羅姆斯',
+      },
+      'replaceText': {
+        // '\\(cast\\)': '', // FIXME '(咏唱)'
+        // '\\(proximity\\)': '', // FIXME '(距离衰减)'
+        'Abyssal Echoes': '深淵回聲',
+        'Abyssal Nox': '深淵之夜',
+        'Big Bang': '宇宙大爆炸',
+        'Big Crunch': '宇宙大擠壓',
+        'Black Hole': '黑洞',
+        'Bury': '塌方',
+        'Chasmic Nails': '深淵連爪',
+        'Dark Matter': '黑暗物質',
+        'Dimensional Surge': '次元湧動',
+        'Explosion': '爆炸',
+        'Flare': '火光',
+        'Flow of the Abyss': '深淵激流',
+        'Fractured Eventide': '黑龍閃',
+        'Meteor Impact': '隕石衝擊',
+        'Nostalgia': '望鄉',
+        '(?<! )Nox': '夜',
+        'Primal Roar': '大咆哮',
+        'Prominence Spine': '日珥焰棘',
+        'Rend the Rift': '次元干涉',
+        '(?<! )Roar': '咆哮',
+        'Sable Thread': '漆黑射線',
+        'The Dark Beckons': '黑暗侵蝕：重擊',
+        'The Dark Divides': '黑暗侵蝕：飛散',
+        'Visceral Whirl': '旋骨利爪',
+        'Void Bio': '虛空毒化',
+        'Void Meteor': '虛空隕石',
       },
     },
     {

@@ -50,10 +50,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'USE VRIL OR DIE',
-          de: 'BENUTZT VRIL ODER STIRB',
-          fr: 'UTILISEZ LE VRIL OU MOURREZ',
           ja: 'エーテル使って！！',
-          cn: '快用元气啊！！',
           ko: '지금 브릴 써요! 아님 쥬금!',
         },
       },
@@ -66,10 +63,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Vril + Knockback',
-          de: 'Vril + Rückstoß',
-          fr: 'Vril + Poussée',
           ja: 'エーテル + 完全なる拒絶',
-          cn: '完全拒绝',
           ko: '브릴 + 넉백',
         },
       },
@@ -116,10 +110,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         dontStack: {
           en: 'Don\'t Stack!',
-          de: 'Nicht Sammeln!',
-          fr: 'Ne vous packez pas !',
-          ja: '重ならないで！',
-          cn: '不要重叠！',
+          ja: '頭割りしないで！',
           ko: '뭉치면 안돼요!',
         },
         stackOnYou: Outputs.stackOnYou,
@@ -143,10 +134,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Cross Marker',
-          de: 'Kreuz-Marker',
-          fr: 'Marqueur croix',
           ja: '自分に右手',
-          cn: '十字点名',
           ko: '십자 장판',
         },
       },
@@ -166,18 +154,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         powerFlower: {
           en: 'Expanding Flower Marker',
-          de: 'Ausdehnender Blumen-Marker',
-          fr: 'Marqueur fleur en extension',
           ja: '自分に左手 (拡大する)',
-          cn: '大花点名',
           ko: '커지는 동글 장판',
         },
         flower: {
           en: 'Flower Marker',
-          de: 'Blumen-Marker',
-          fr: 'Marqueur fleur',
           ja: '自分に左手',
-          cn: '花点名',
           ko: '동글 장판',
         },
       },
@@ -326,6 +308,42 @@ const triggerSet: TriggerSet<Data> = {
         'The Path Of Light': '光之波动',
         'The Pull Of Light': '光之奔流',
         '(?<!-)Vril': '元气',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Dreaming Kshatriya': '夢寐的剎帝利',
+        'Lakshmi': '吉祥天女',
+        'Vril': '元氣',
+      },
+      'replaceText': {
+        '--chanchala start--': '--反覆無常開始--',
+        '--chanchala end--': '--反覆無常結束--',
+        '--vril spawn--': '--元氣出現--',
+        '--vril despawn--': '--元氣消失--',
+        'Adds Appear': '小怪出現',
+        'Aether Drain': '乙太吸收',
+        'Alluring Arm': '魅惑之臂',
+        'Alluring Embrace': '魅惑擁抱',
+        'Blissful Arrow': '聖箭',
+        'Blissful Spear': '聖槍',
+        '(?<!-)Chanchala': '反覆無常',
+        'Divine Denial': '完全拒絕',
+        'Divine Desire': '完全引誘',
+        'Divine Doubt': '完全惑亂',
+        'Hand Of Beauty': '優美的左手',
+        'Hand Of Grace': '優雅的右手',
+        'Hands Of Grace/Beauty': '右手/左手',
+        'Inner Demons': '心魔',
+        'Jagadishwari': '至上天母',
+        'Stotram': '讚歌',
+        '\/Spear': '/聖槍',
+        'Tail Slap': '尾部猛擊',
+        'The Pall Of Light': '光之瀑布',
+        'The Path Of Light': '光之波動',
+        'The Pull Of Light': '光之奔流',
+        '(?<!-)Vril': '元氣',
       },
     },
     {

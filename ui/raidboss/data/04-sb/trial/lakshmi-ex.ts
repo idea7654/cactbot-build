@@ -56,10 +56,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Vrill + Knockback',
-          de: 'Vril + Rückstoß',
-          fr: 'Vril + Poussée',
           ja: 'エーテル + 完全なる拒絶',
-          cn: '完全拒绝',
           ko: '브릴 + 넉백',
         },
       },
@@ -72,10 +69,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Vrill + Be Outside',
-          de: 'Vril + Außen',
-          fr: 'Vril + Extérieur',
           ja: 'エーテル + 完全なる誘引',
-          cn: '完全吸引',
           ko: '브릴 + 바깥으로 (끌어당김)',
         },
       },
@@ -88,10 +82,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Vrill + Pair Up',
-          de: 'Vril + Pärchen bilden',
-          fr: 'Vril + Paire',
           ja: 'エーテル + 完全なる惑乱',
-          cn: '完全惑乱',
           ko: '브릴 + 페어',
         },
       },
@@ -122,26 +113,17 @@ const triggerSet: TriggerSet<Data> = {
         stackOnYou: Outputs.stackOnYou,
         stack: {
           en: 'Stack',
-          de: 'Stack',
-          fr: 'Packez-vous',
           ja: '頭割り',
-          cn: '集合',
           ko: '뭉쳐요',
         },
         vrillStackOnYou: {
           en: 'Vrill + Stack on YOU',
-          de: 'Vril + Stack auf DIR',
-          fr: 'Vril + Package sur VOUS',
           ja: '自分に頭割り (エーテル)',
-          cn: '元气攻击点名',
           ko: '브릴 + 내게 뭉쳐요',
         },
         vrillStack: {
           en: 'Vrill + Stack',
-          de: 'Vril + Stack',
-          fr: 'Vril + Packez-vous',
           ja: 'エーテル と 頭割り',
-          cn: '元气攻击',
           ko: '브릴 + 뭉쳐요',
         },
       },
@@ -155,10 +137,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Vrill for AOE',
-          de: 'Vril fuer Flaechenangriff',
-          fr: 'Vril pour AoE',
           ja: 'ストトラム (エーテル)',
-          cn: '元气AOE',
           ko: '브릴 스토트람 전체 공격',
         },
       },
@@ -178,18 +157,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         vrillCleaveOnYou: {
           en: 'Vrill + Cleave on YOU',
-          de: 'Vril + Cleave auf DIR',
-          fr: 'Vril + Cleave sur VOUS',
           ja: '自分に波動 (エーテル)',
-          cn: '元气 死刑点名',
           ko: '브릴 + 내게 탱크 쪼개기',
         },
         cleaveOnYou: {
           en: 'Cleave on YOU',
-          de: 'Cleave auf DIR',
-          fr: 'Cleave sur VOUS',
           ja: '自分に波動',
-          cn: '死刑点名',
           ko: '내게 탱크 쪼개기',
         },
       },
@@ -209,18 +182,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         vrillCrossMarker: {
           en: 'Vrill + Cross Marker',
-          de: 'Vril + Kreuz-Marker',
-          fr: 'Vril + Marqueur croix',
           ja: '自分に右手 (エーテル)',
-          cn: '元气 十字点名',
           ko: '브릴 + 십자 장판',
         },
         crossMarker: {
           en: 'Cross Marker',
-          de: 'Kreuz-Marker',
-          fr: 'Marqueur croix',
           ja: '自分に右手',
-          cn: '十字点名',
           ko: '십자 장판',
         },
       },
@@ -240,18 +207,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         vrillFlowerMarker: {
           en: 'Vrill + Flower Marker',
-          de: 'Vril + Blumen-Marker',
-          fr: 'Vril + Marqueur fleur',
           ja: '自分に左手 (エーテル)',
-          cn: '元气 花点名',
           ko: '브릴 + 동글 장판',
         },
         flowerMarker: {
           en: 'Flower Marker',
-          de: 'Blumen-Marker',
-          fr: 'Marqueur fleur',
           ja: '自分に左手',
-          cn: '花点名',
           ko: '동글 장판',
         },
       },
@@ -268,10 +229,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Move Away',
-          de: 'Weg da',
-          fr: 'Éloignez-vous',
           ja: '離れる',
-          cn: '远离大锤落点',
           ko: '피해욧',
         },
       },
@@ -410,6 +368,38 @@ const triggerSet: TriggerSet<Data> = {
         'Blissful Hammer': '圣锤',
         'Jagadishwari': '至上天母',
         'Alluring Embrace': '魅惑拥抱',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Dreaming Kshatriya': '夢寐的剎帝利',
+        'Lakshmi': '吉祥天女',
+      },
+      'replaceText': {
+        '--chanchala end--': '--反覆無常結束--',
+        '\\(mid\\)': '(中)',
+        '\\(out\\)': '(外)',
+        '/dance': '/跳舞 (/dance)',
+        'Alluring Arm': '魅惑之臂',
+        'Blissful Spear': '聖槍',
+        '(?<!-)Chanchala': '反覆無常',
+        'Divine Denial': '完全拒絕',
+        'Divine Desire': '完全引誘',
+        'Divine Doubt': '完全惑亂',
+        'Hand Of Beauty': '優美的左手',
+        'Hand Of Grace': '優雅的右手',
+        'Inner Demons': '心魔',
+        'Stotram': '讚歌',
+        'The Pall Of Light': '光之瀑布',
+        'The Path Of Light': '光之波動',
+        'The Pull Of Light': '光之奔流',
+        'Vril': '元氣',
+        'Tail Slap': '尾部猛擊',
+        'Blissful Arrow': '聖箭',
+        'Blissful Hammer': '聖錘',
+        'Jagadishwari': '至上天母',
+        'Alluring Embrace': '魅惑擁抱',
       },
     },
     {

@@ -23,11 +23,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Cleanse Doom soon',
-          de: 'Reinige Verhängnis bald',
-          fr: 'Guérison du Glas bientôt',
           ja: '死の宣告にエスナ',
-          cn: '驱散死宣',
-          ko: '곧 둠 에스나',
+          ko: '곧 둠, 에스나',
         },
       },
     },
@@ -52,10 +49,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Move around',
-          de: 'Bewegen',
-          fr: 'Bougez',
           ja: '動き続ける',
-          cn: '不停移动',
           ko: '얼음: 계속 움직여요',
         },
       },
@@ -86,10 +80,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stand in the gap',
-          de: 'In der Lücke stehen',
-          fr: 'Placez-vous à l\'écart',
           ja: '狭間に',
-          cn: '远离中间位置',
           ko: '빈 틈으로',
         },
       },
@@ -103,10 +94,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Behind head--Avoid zombie breath',
-          de: 'Hinter den Kopf - Vermeide den Zombie-Atem',
-          fr: 'Derrière la tête - Évitez l\'haleine zombie',
           ja: '頭の後ろに - ゾンビブレス来るぞ',
-          cn: '站头后方',
           ko: '머리 뒤로 - 좀비 트름 피해요',
         },
       },
@@ -119,10 +107,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid black holes',
-          de: 'Weiche den Schwarzen Löchern aus',
-          fr: 'Évitez les trous noirs',
           ja: 'ブラックホールから離れる',
-          cn: '远离黑洞',
           ko: '블랙홀 피해요',
         },
       },
@@ -142,10 +127,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Flare on YOU',
-          de: 'Flare auf DIR',
-          fr: 'Brasier sur VOUS',
           ja: '自分にフレア',
-          cn: '核爆点名',
           ko: '내게 플레어',
         },
       },
@@ -247,12 +229,34 @@ const triggerSet: TriggerSet<Data> = {
         'Doom': '死亡宣告',
         'Flare': '核爆',
         'Holy': '神圣',
-        'Mega Blizzard/Fire/Thunder': '冰封/爆炎/暴雷 ++',
+        'Mega Blizzard/Fire/Thunder': '冰封/爆炎/暴雷（强化）',
         'Meteor': '陨石',
         'The Decisive Battle': '决战',
         '(?<!/)Thunder III': '暴雷',
         'Vacuum Wave': '真空波',
         'Zombie Breath': '死亡吐息',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Deathly Vine': '靈樹藤',
+        'Exdeath': '艾克斯迪司',
+      },
+      'replaceText': {
+        'Black Hole': '黑洞',
+        'Blizzard/Fire III': '大暴雪/大火焰',
+        'Clearout': '橫掃',
+        'Collision': '衝擊',
+        'Doom': '死亡宣告',
+        'Flare': '火光',
+        'Holy': '神聖',
+        'Mega Blizzard/Fire/Thunder': '大暴雪/大火焰/大雷電（強化）',
+        'Meteor': '隕石',
+        'The Decisive Battle': '決戰',
+        '(?<!/)Thunder III': '大雷電',
+        'Vacuum Wave': '真空波',
+        'Zombie Breath': '殭屍吐息',
       },
     },
     {

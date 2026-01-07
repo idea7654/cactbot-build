@@ -119,10 +119,7 @@ const triggerSet: TriggerSet<Data> = {
         NW: Outputs.dirNW,
         safeCorner: {
           en: '${dir1} Corner (avoid poison)',
-          de: '${dir1} Ecke (vermeide das Gift)',
-          fr: 'Coin ${dir1} (évitez le poison)',
           ja: '${dir1}の隅へ (毒回避)',
-          cn: '${dir1} 角落 (避开毒)',
           ko: '${dir1} 구석 (독 피하기)',
         },
       },
@@ -255,10 +252,7 @@ const triggerSet: TriggerSet<Data> = {
         NW: Outputs.dirNW,
         text: {
           en: '${dir1} -> ${dir2} -> ${dir3} -> ${dir4}',
-          de: '${dir1} -> ${dir2} -> ${dir3} -> ${dir4}',
-          fr: '${dir1} -> ${dir2} -> ${dir3} -> ${dir4}',
           ja: '${dir1} -> ${dir2} -> ${dir3} -> ${dir4}',
-          cn: '${dir1} -> ${dir2} -> ${dir3} -> ${dir4}',
           ko: '${dir1} -> ${dir2} -> ${dir3} -> ${dir4}',
         },
       },
@@ -281,10 +275,7 @@ const triggerSet: TriggerSet<Data> = {
         spread: Outputs.spread,
         text: {
           en: '${dir1} -> Bait -> ${dir2}',
-          de: '${dir1} -> Ködern -> ${dir2}',
-          fr: '${dir1} -> Attendez -> ${dir2}',
           ja: '${dir1} -> 真ん中 -> ${dir2}',
-          cn: '${dir1} -> 诱导 -> ${dir2}',
           ko: '${dir1} -> 장판 유도 -> ${dir2}',
         },
       },
@@ -300,10 +291,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         groups: {
           en: 'Healer Groups on Topaz Stones',
-          de: 'Heilergruppen auf Topassteine',
-          fr: 'Groupes heal sur les Topazes',
           ja: 'トパーズの上でヒーラーと頭割り',
-          cn: '黄宝石处治疗分组分摊',
           ko: '돌 위에서 4:4 뭉쳐요',
         },
       },
@@ -323,10 +311,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         moveBehind: {
           en: 'Move Behind',
-          de: 'Nach Hinten bewegen',
-          fr: 'Allez derrière',
           ja: '背面へ',
-          cn: '去背面',
           ko: '보스 뒤로',
         },
       },
@@ -353,10 +338,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         moveFront: {
           en: 'Move Front',
-          de: 'Nach Vorne bewegen',
-          fr: 'Allez devant',
           ja: '前へ',
-          cn: '去正面',
           ko: '보스 앞으로',
         },
       },
@@ -417,12 +399,12 @@ const triggerSet: TriggerSet<Data> = {
     },
     {
       'locale': 'fr',
-      'missingTranslations': true,
       'replaceSync': {
         'Lively Bait': 'amuse-gueule',
         'Proto-Carbuncle': 'Proto-Carbuncle',
       },
       'replaceText': {
+        '--towers--': '--Tours--',
         'Acidic Slaver': 'Salive acide',
         'Claw to Tail': 'Griffes et queue',
         'Devour': 'Dévoration',
@@ -524,6 +506,44 @@ const triggerSet: TriggerSet<Data> = {
         'Venom Squall': '毒液风暴',
         'Venom Surge': '毒液喷涌',
         'Venomous Mass': '毒液倾泻',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Lively Bait': '活餌',
+        'Proto-Carbuncle': '原型卡邦庫爾',
+      },
+      'replaceText': {
+        // '--towers--': '', // FIXME '--塔--'
+        'Acidic Slaver': '酸性唾液',
+        'Claw to Tail': '利爪凶尾',
+        'Devour': '捕食',
+        'Double Rush': '二連衝',
+        // 'Impact': '', // FIXME '践踏冲击'
+        'Raging Claw': '暴怒連爪',
+        'Raging Tail': '暴怒掃尾',
+        'Ruby Glow': '紅寶石之光',
+        'Ruby Reflection': '紅寶石反射',
+        'Scatterbait': '碎餌',
+        'Searing Ray': '灼熱射線',
+        'Sonic Howl': '音嚎',
+        'Sonic Shatter': '音碎',
+        'Spit': '吐出',
+        'Starving Stampede': '窮凶極餓',
+        'Tail to Claw': '凶尾利爪',
+        'Topaz Cluster': '黃寶石晶簇',
+        'Topaz Ray': '黃寶石射線',
+        'Topaz Stones': '黃寶石',
+        'Toxic Crunch': '毒液重咬',
+        // 'Venom(?!( |ous))': '', // FIXME '毒液'
+        'Venom Drops': '毒液滴落',
+        'Venom Pool': '毒液飛濺',
+        'Venom Rain': '毒液雨',
+        'Venom Squall': '毒液風暴',
+        'Venom Surge': '毒液噴湧',
+        'Venomous Mass': '毒液傾瀉',
       },
     },
     {

@@ -20,6 +20,7 @@ const triggerSet: TriggerSet<Data> = {
     ja: '全ての状況、全てのエリアに共通するトリガー',
     cn: '适用于所有场合和区域的通用触发器',
     ko: '모든 상황과 지역을 위한 범용 트리거',
+    tc: '適用於所有場合和區域的通用觸發器',
   },
   triggers: [
     {
@@ -27,6 +28,7 @@ const triggerSet: TriggerSet<Data> = {
       comment: {
         cn: '仅在自身或团队成员释放“挑衅”且自身为坦克/治疗/青魔法师时触发。',
         ko: '본인 또는 파티원이 도발을 사용하였고, 자신의 직업이 탱커/힐러/청마도사일 때 작동합니다.',
+        tc: '僅在自身或團隊成員釋放“挑釁”且自身為坦克/治療/青魔法師時觸發。',
       },
       type: 'Ability',
       netRegex: { id: '1D6D' },
@@ -41,10 +43,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Provoke: ${player}',
-          de: 'Herausforderung: ${player}',
-          fr: 'Provocation : ${player}',
           ja: '挑発: ${player}',
-          cn: '挑衅: ${player}',
           ko: '프로보크: ${player}',
         },
       },
@@ -54,6 +53,7 @@ const triggerSet: TriggerSet<Data> = {
       comment: {
         cn: '仅在自身或团队成员释放“蛙腿”且自身为坦克/治疗/青魔法师时触发。',
         ko: '본인 또는 파티원이 개구리 다리를 사용하였고, 자신의 직업이 탱커/힐러/청마도사일 때 작동합니다.',
+        tc: '僅在自身或團隊成員釋放“蛙腿”且自身為坦克/治療/青魔法師時觸發。',
       },
       type: 'Ability',
       netRegex: { id: '4783' },
@@ -71,18 +71,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Provoke: ${player}',
-          de: 'Herausforderung: ${player}',
-          fr: 'Provocation : ${player}',
           ja: 'フロッグレッグ: ${player}',
-          cn: '挑衅: ${player}',
           ko: '개구리: ${player}',
         },
         noTarget: {
           en: 'Provoke: ${player} (missed)',
-          de: 'Herausforderung: ${player} (verfehlt)',
-          fr: 'Provocation : ${player} (manquée)',
           ja: 'フロッグレッグ: ${player} (はずれ！)',
-          cn: '挑衅: ${player} (无目标)',
           ko: '개구리: ${player} (빗나갔네!)',
         },
       },
@@ -92,6 +86,7 @@ const triggerSet: TriggerSet<Data> = {
       comment: {
         cn: '仅在自身或团队成员释放“退避”且自身为坦克/治疗/青魔法师时触发。',
         ko: '본인 또는 파티원이 기피를 사용하였고, 자신의 직업이 탱커/힐러/청마도사일 때 작동합니다.',
+        tc: '僅在自身或團隊成員釋放“退避”且自身為坦克/治療/青魔法師時觸發。',
       },
       type: 'Ability',
       netRegex: { id: '1D71' },
@@ -105,10 +100,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Shirk: ${player}',
-          de: 'Geteiltes Leid: ${player}',
-          fr: 'Dérobade : ${player}',
           ja: 'シャーク: ${player}',
-          cn: '退避: ${player}',
           ko: '셔크: ${player}',
         },
       },
@@ -118,6 +110,7 @@ const triggerSet: TriggerSet<Data> = {
       comment: {
         cn: '仅在自身或团队成员释放“死斗”且自身为坦克/治疗/青魔法师时触发。',
         ko: '본인 또는 파티원이 일대일 결투를 사용하였고, 자신의 직업이 탱커/힐러/청마도사일 때 작동합니다.',
+        tc: '僅在自身或團隊成員釋放“死鬥”且自身為坦克/治療/青魔法師時觸發。',
       },
       type: 'Ability',
       netRegex: { id: '2B' },
@@ -131,10 +124,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Holmgang: ${player}',
-          de: 'Holmgang: ${player}',
-          fr: 'Holmgang : ${player}',
           ja: 'ホルムギャング: ${player}',
-          cn: '死斗: ${player}',
           ko: '홀름갱: ${player}',
         },
       },
@@ -144,6 +134,7 @@ const triggerSet: TriggerSet<Data> = {
       comment: {
         cn: '仅在自身或团队成员释放“神圣领域”且自身为坦克/治疗/青魔法师时触发。',
         ko: '본인 또는 파티원이 천하무적을 사용하였고, 자신의 직업이 탱커/힐러/청마도사일 때 작동합니다.',
+        tc: '僅在自身或團隊成員釋放“神聖領域”且自身為坦克/治療/青魔法師時觸發。',
       },
       type: 'Ability',
       netRegex: { id: '1E' },
@@ -157,10 +148,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Hallowed: ${player}',
-          de: 'Heiliger Boden: ${player}',
-          fr: 'Invincible : ${player}',
           ja: 'インビンシブル: ${player}',
-          cn: '神圣领域: ${player}',
           ko: '인빈시블 할로우드: ${player}',
         },
       },
@@ -170,6 +158,7 @@ const triggerSet: TriggerSet<Data> = {
       comment: {
         cn: '仅在自身或团队成员释放“超火流星”且自身为坦克/治疗/青魔法师时触发。',
         ko: '본인 또는 파티원이 폭발 유성을 사용하였고, 자신의 직업이 탱커/힐러/청마도사일 때 작동합니다.',
+        tc: '僅在自身或團隊成員釋放“超火流星”且自身為坦克/治療/青魔法師時觸發。',
       },
       type: 'Ability',
       netRegex: { id: '3F18' },
@@ -183,10 +172,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bolide: ${player}',
-          de: 'Meteoritenfall: ${player}',
-          fr: 'Bolide : ${player}',
           ja: 'ボーライド: ${player}',
-          cn: '超火流星: ${player}',
           ko: '슈퍼 볼라이드: ${player}',
         },
       },
@@ -196,6 +182,7 @@ const triggerSet: TriggerSet<Data> = {
       comment: {
         cn: '仅在自身或团队成员释放“行尸走肉”且自身为坦克/治疗/青魔法师时触发。',
         ko: '본인 또는 파티원이 산송장을 사용하였고, 자신의 직업이 탱커/힐러/청마도사일 때 작동합니다.',
+        tc: '僅在自身或團隊成員釋放“行屍走肉”且自身為坦克/治療/青魔法師時觸發。',
       },
       type: 'Ability',
       netRegex: { id: 'E36' },
@@ -209,10 +196,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Living: ${player}',
-          de: 'Totenerweckung: ${player}',
-          fr: 'Mort-vivant : ${player}',
           ja: 'リビングデッド: ${player}',
-          cn: '行尸走肉: ${player}',
           ko: '리빙 데드: ${player}',
         },
       },
@@ -222,6 +206,7 @@ const triggerSet: TriggerSet<Data> = {
       comment: {
         cn: '仅在自身或团队成员获得“死而不僵”且自身为坦克/治疗/青魔法师时触发。',
         ko: '본인 또는 파티원이 움직이는 시체 상태가 되었고, 자신의 직업이 탱커/힐러/청마도사일 때 작동합니다.',
+        tc: '僅在自身或團隊成員獲得“死而不僵”且自身為坦克/治療/青魔法師時觸發。',
       },
       type: 'GainsEffect',
       netRegex: { effectId: '32B' },
@@ -235,10 +220,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Walking: ${player}',
-          de: 'Erweckter: ${player}',
-          fr: 'Marcheur des limbes : ${player}',
           ja: 'ウォーキングデッド: ${player}',
-          cn: '死而不僵: ${player}',
           ko: '워킹 데드: ${player}',
         },
       },
@@ -261,10 +243,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'What?! I\'m dead?!',
-          de: 'Ich bin tot! Wie kann das sein?!',
-          fr: 'Je suis mort ! Comment est-ce possible ?!',
           ja: '私が死ぬなんて！ありえない！！！',
-          cn: '我死了！怎么可能！！！',
           ko: '내가 죽다니!!! 이럴수가!!!',
         },
       },
@@ -323,6 +302,18 @@ const triggerSet: TriggerSet<Data> = {
         'You burst out laughing at the striking dummy': '.*看着木人高声大笑',
         'You clap for the striking dummy': '.*向木人送上掌声',
         '7 minutes have elapsed since your last activity.': '已经7分钟没有进行任何操作',
+      },
+    },
+    {
+      locale: 'tc',
+      replaceSync: {
+        ' has initiated a ready check': '發起了準備確認。',
+        'You have commenced a ready check': '發起了準備確認。',
+        'You poke the striking dummy': '.*用手指戳向木人',
+        'You psych yourself up alongside the striking dummy': '.*激勵木人',
+        'You burst out laughing at the striking dummy': '.*看著木人高聲大笑',
+        'You clap for the striking dummy': '.*向木人送上掌聲',
+        '7 minutes have elapsed since your last activity.': '已經7分鐘沒有進行任何操作',
       },
     },
     {

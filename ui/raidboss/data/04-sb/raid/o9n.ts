@@ -30,10 +30,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Orb Tethers',
-          de: 'Kugel-Verbindungen',
-          fr: 'Liens orbes',
           ja: '線',
-          cn: '连线',
           ko: '구슬 줄',
         },
       },
@@ -62,9 +59,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack for Donuts',
-          de: 'Für Donuts sammeln',
-          fr: 'Packez-vous pour les donuts',
-          cn: '集合水环',
+          ja: 'Stack for Donuts',
           ko: '도넛장판! 뭉쳐요',
         },
       },
@@ -111,9 +106,7 @@ const triggerSet: TriggerSet<Data> = {
           // "Big Bang" circle that appears from where this is dropped, on top of the
           // proximity damage.  So this is trying to communicate more of a GTFO.
           en: 'Drop Flare Away',
-          de: 'Flare weit weg ablegen',
-          fr: 'Déposez le brasier au loin',
-          cn: '核爆放在远处',
+          ja: 'Drop Flare Away',
           ko: '플레어 바깥에 버려요',
         },
       },
@@ -134,16 +127,14 @@ const triggerSet: TriggerSet<Data> = {
       alertText: (data, _matches, output) => {
         if (data.stackMarker?.includes(data.me))
           return output.stackOnYou!();
-        return output.stack44!();
+        return output.stackGroups!();
       },
       run: (data) => delete data.stackMarker,
       outputStrings: {
         stackOnYou: Outputs.stackOnYou,
-        stack44: {
+        stackGroups: {
           en: 'Split into stack groups',
-          de: 'In Sammel-Gruppen aufteilen',
-          fr: 'Divisez-vous en groupes packés',
-          cn: '分组分摊',
+          ja: 'Split into stack groups',
           ko: '4:4 뭉쳐요',
         },
       },
@@ -254,12 +245,37 @@ const triggerSet: TriggerSet<Data> = {
         'Damning Edict': '诅咒敕令',
         'Earthquake': '大地震',
         'Fiendish Orbs': '追踪',
-        'Knock(?! )': '中弹',
+        'Knock(?! )': '轰击',
         'Long/Lat Implosion': '经/纬度聚爆',
         'Soul of Chaos': '混沌之魂',
         'Stray Flames': '混沌之炎',
         'Stray Spray': '混沌之水',
         'Tsunami': '海啸',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Chaos': '卡奧斯',
+        'The crystal...destroyed!?': '居然……把黑水晶給',
+        'YOU DARE!': '居然……把黑水晶給……',
+      },
+      'replaceText': {
+        'Big Bang': '頂起',
+        'Blaze': '烈焰',
+        'Bowels of Agony': '深層痛楚',
+        'Chaosphere': '混沌晶球',
+        'Chaotic Dispersion': '散佈混沌',
+        'Cyclone': '龍捲風',
+        'Damning Edict': '詛咒敕令',
+        'Earthquake': '地震',
+        'Fiendish Orbs': '追蹤',
+        'Knock(?! )': '轟擊',
+        'Long/Lat Implosion': '經/緯度聚爆',
+        'Soul of Chaos': '混沌之魂',
+        'Stray Flames': '混沌之炎',
+        'Stray Spray': '混沌之水',
+        'Tsunami': '海嘯',
       },
     },
     {

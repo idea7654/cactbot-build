@@ -32,10 +32,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Look for Wave',
-          de: 'Nach der Welle schauen',
-          fr: 'Repérez la vague',
           ja: 'つなみ来るよ',
-          cn: '看浪',
           ko: '츠나미가 와요',
         },
       },
@@ -57,10 +54,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Middle',
-          de: 'In die Mitte gehen',
-          fr: 'Allez au milieu',
           ja: '中心へ',
-          cn: '中间',
           ko: '한가운데로',
         },
       },
@@ -80,10 +74,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Puddles and Dives',
-          de: 'Flächen und Leviathan ausweichen',
-          fr: 'Évitez les zones au sol et les piqués',
           ja: '円範囲から離れる',
-          cn: '躲圈闪避',
           ko: '돌진이랑 장판 피해요',
         },
       },
@@ -130,10 +121,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Donut on YOU',
-          de: 'Donut auf DIR',
-          fr: 'Donut sur VOUS',
           ja: '自分にドーナツ範囲',
-          cn: '月环点名',
           ko: '내게 도넛 장판',
         },
       },
@@ -237,6 +225,31 @@ const triggerSet: TriggerSet<Data> = {
         'Tidal Roar': '怒潮咆哮',
         'Tidal Wave': '巨浪',
         '(?<! )Tsunami': '大海啸',
+        'Undersea Quake': '海底地震',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Leviathan': '利維坦',
+      },
+      'replaceText': {
+        'Crashing Pulse': '激烈波動',
+        'Drenching Pulse': '猛烈波動',
+        'Freak Wave': '畸形波',
+        'Killer Wave': '殺人浪',
+        'Maelstrom': '巨漩渦',
+        'Monster Wave': '瘋狗浪',
+        'Rip Current': '裂流',
+        'Smothering Tsunami': '溺沒大海嘯',
+        'Spinning Dive': '迴旋俯衝',
+        'Splashing Tsunami': '強風大海嘯',
+        'Surging Tsunami': '強壓大海嘯',
+        'Swirling Tsunami': '渦動大海嘯',
+        'Temporary Current': '臨時洋流',
+        'Tidal Roar': '浪潮嘶吼',
+        'Tidal Wave': '巨浪',
+        '(?<! )Tsunami': '大海嘯',
         'Undersea Quake': '海底地震',
       },
     },

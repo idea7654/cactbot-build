@@ -67,8 +67,6 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Blue Square Safe',
-          de: 'Blaues Viereck sicher',
-          fr: 'Les carrés bleu sont sûrs',
           ja: '安置: 青四角',
           ko: '안전: 🟦사각',
         },
@@ -82,8 +80,6 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Pink Triangle Safe',
-          de: 'Pinkes Dreieck sicher',
-          fr: 'Les triangles rose sont sûrs',
           ja: '安置: 赤三角',
           ko: '분홍색 삼각',
         },
@@ -168,25 +164,21 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         northeast: {
           en: 'Inner northeast safe',
-          de: 'Innen nordöstlich sicher',
           ja: '安置: 🡽',
           ko: '안전: 🡽',
         },
         northwest: {
           en: 'Inner northwest safe',
-          de: 'Innen nordwestlich sicher',
           ja: '安置: 🡼',
           ko: '안전: 🡼',
         },
         southeast: {
           en: 'Inner southeast safe',
-          de: 'Innen südöstlich sicher',
           ja: '安置: 🡾',
           ko: '안전: 🡾',
         },
         southwest: {
           en: 'Inner southwest safe',
-          de: 'Innen südwestlich sicher',
           ja: '安置: 🡿',
           ko: '안전: 🡿',
         },
@@ -207,8 +199,6 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         cleanse: {
           en: 'Cleanse ${player}\'s Doom',
-          de: 'Reinige ${player}\'s Verhängnis',
-          fr: 'Guérissez le Glas de ${player}',
           ja: 'エスナ: ${player}',
           ko: '에스나: ${player}',
         },
@@ -262,8 +252,6 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go Sides on Wall',
-          de: 'Geh seitlich an die Wand',
-          fr: 'Allez sur les côtés du mur',
           ja: '壁の方へ',
           ko: '보스 옆으로!',
         },
@@ -283,10 +271,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Behind and Out',
-          de: 'Geh nach Hinten und Raus',
-          fr: 'Passez derrière et à l\'extérieur',
           ja: '後ろの外側へ',
-          cn: '去背后远离',
           ko: '보스 뒷쪽 바깥으로',
         },
       },
@@ -309,8 +294,6 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         avoid: {
           en: 'Away from orbs',
-          de: 'Weg von den Orbs',
-          fr: 'Éloignez-vous des orbes',
           ja: '玉から離れて',
           ko: '구슬 피해요',
         },
@@ -555,8 +538,6 @@ const triggerSet: TriggerSet<Data> = {
         'The Cloven Crystal Square': 'クリスタル広場',
       },
       'replaceText': {
-        '\\(cast\\)': '(詠唱)',
-        '\\(spread\\)': '(散会)',
         'Abyssal Outburst': '暗黒波動',
         'Antipodal Assault': 'アンティポディース・スラスト',
         'Antlion March': 'アントリオンマーチ',
@@ -627,6 +608,51 @@ const triggerSet: TriggerSet<Data> = {
         'Towerfall': '崩塌',
         'Twilight Phase': '暮光相',
         'Void Dark II': '虚空昏暗',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Aetheric Charge': '魔力球',
+        'Damcyan Antlion': '達姆希安蟻獅',
+        'Dark Elf': '暗黑精靈',
+        'Durante': '杜蘭特',
+        'Hexing Staff': '黑暗之杖',
+        'Stone Pillar': '石柱',
+        'The Bloodied Barbican': '巴隆城正門',
+        'The Carnelian Courtyard': '巴隆城庭院',
+        'The Cloven Crystal Square': '水晶廣場',
+      },
+      'replaceText': {
+        // '\\(cast\\)': '', // FIXME '(咏唱)'
+        // '\\(spread\\)': '', // FIXME '(分散)'
+        'Abyssal Outburst': '黑暗爆發',
+        'Antipodal Assault': '對蹠強刺',
+        'Antlion March': '蟻獅行軍',
+        'Arcane Edge': '魔針彈',
+        'Contrapasso': '因罪施罰',
+        'Dark Impact': '暗黑魔彈',
+        'Death\'s Journey': '死亡之旅',
+        'Duplicitous Battery': '雙連魔彈',
+        'Earthen Geyser': '流沙泉',
+        'Explosion': '爆炸',
+        'Fallen Grace': '降魔彈',
+        'Forsaken Fount': '魔力球',
+        'Hard Slash': '重斬',
+        'Hexing Staves': '黑暗之杖',
+        'Landslip': '滑坡',
+        'Old Magic': '釋放魔力',
+        'Pound Sand': '大地墜擊',
+        'Ruinous Confluence': '十字魔爆',
+        'Sandblast': '噴沙',
+        'Shadowy Sigil': '黑暗紋章',
+        'Sorcerous Shroud': '黑暗帷帳',
+        'Splinter': '碎裂',
+        'Staff Smite': '杖擊',
+        'Towerfall': '崩塌',
+        'Twilight Phase': '暮光相',
+        'Void Dark II': '虛空昏暗',
       },
     },
     {

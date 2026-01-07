@@ -23,6 +23,7 @@ const strings = {
     ja: '${type}: ${dir}',
     cn: '${type}: ${dir}',
     ko: '${type}: ${dir}',
+    tc: '${type}: ${dir}',
   },
   spread: Outputs.spread,
   stack: {
@@ -32,6 +33,7 @@ const strings = {
     ja: 'スタック',
     cn: '集合',
     ko: '집합',
+    tc: '集合',
   },
   getOut: {
     en: 'Get Out',
@@ -40,6 +42,7 @@ const strings = {
     ja: '外へ',
     cn: '远离',
     ko: '밖으로',
+    tc: '遠離',
   },
   getIn: {
     en: 'Get In',
@@ -48,6 +51,7 @@ const strings = {
     ja: '中へ',
     cn: '靠近',
     ko: '안으로',
+    tc: '靠近',
   },
   trueThunder: {
     en: 'True Thunder',
@@ -56,6 +60,7 @@ const strings = {
     ja: '真サンダガ',
     cn: '真雷',
     ko: '진실 선더가',
+    tc: '真雷',
   },
   fakeThunder: {
     en: 'Fake Thunder',
@@ -64,6 +69,7 @@ const strings = {
     ja: 'にせサンダガ',
     cn: '假雷',
     ko: '거짓 선더가',
+    tc: '假雷',
   },
   trueIce: {
     en: 'True Ice',
@@ -72,6 +78,7 @@ const strings = {
     ja: '真ブリザガ',
     cn: '真冰',
     ko: '진실 블리자가',
+    tc: '真冰',
   },
   fakeIce: {
     en: 'Fake Ice',
@@ -80,6 +87,7 @@ const strings = {
     ja: 'にせブリザガ',
     cn: '假冰',
     ko: '거짓 블리자가',
+    tc: '假冰',
   },
 };
 
@@ -104,10 +112,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Look Away From Statue',
-          de: 'Von Statue wegschauen',
-          fr: 'Ne regardez pas la statue',
           ja: '塔を見ない！',
-          cn: '背对神像',
           ko: '시선 피하기',
         },
       },
@@ -132,10 +137,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Look At Statue',
-          de: 'Statue anschauen',
-          fr: 'Regardez la statue',
           ja: '像を見る！',
-          cn: '面对神像',
           ko: '시선 바라보기',
         },
       },
@@ -148,10 +150,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Past: Stack and Stay',
-          de: 'Vergangenheit: Sammeln und Stehenbleiben',
-          fr: 'Passé : Packez-vous et restez',
           ja: '過去: スタックしてそのまま',
-          cn: '分摊不动',
           ko: '과거: 맞고 가만히있기',
         },
       },
@@ -164,10 +163,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Future: Stack and Through',
-          de: 'Zukunft: Sammeln und Durchlaufen',
-          fr: 'Futur : Packez-vous et traversez',
           ja: '未来: 頭割り後ボスを通り抜ける',
-          cn: '分摊穿boss',
           ko: '미래: 맞고 통과해가기',
         },
       },
@@ -182,10 +178,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Past: Bait, then through',
-          de: 'Vergangenheit : Anlocken und Durchlaufen',
-          fr: 'Passé : Attirez, puis traversez',
           ja: '過去: 飛んできたら反対に向ける',
-          cn: '诱导然后穿boss',
           ko: '과거: 맞고, 이동',
         },
       },
@@ -200,10 +193,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Future: Bait, then stay',
-          de: 'Zukunft: Anlocken und Stehenbleiben',
-          fr: 'Futur : Attirez, puis restez',
           ja: '未来: 飛んできたらそのまま',
-          cn: '诱导然后不动',
           ko: '미래: 맞고, 가만히',
         },
       },
@@ -230,18 +220,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         maxMeleeAvoidTanks: {
           en: 'Max Melee: Avoid Tanks',
-          de: 'Max Nahkampf: Weg von den Tanks',
-          fr: 'Max mêlée : éloignez-vous des tanks',
           ja: '近接最大レンジ タンクから離れる',
-          cn: '最远距离',
           ko: '칼끝딜: 탱커 피하기',
         },
         wingsBeNearFar: {
           en: 'Wings: Be Near/Far',
-          de: 'Schwingen: Nah/Fern',
-          fr: 'Ailes : Placez-vous près/loin',
           ja: '翼: めり込む/離れる',
-          cn: '双翅膀：近或远',
           ko: '양날개: 가까이/멀리',
         },
       },
@@ -254,10 +238,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Single Wing',
-          de: 'Einzelner Flügel',
-          fr: 'Aile unique',
           ja: '片翼',
-          cn: '单翅膀',
           ko: '한쪽 날개',
         },
       },
@@ -281,18 +262,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         embraceOn: {
           en: 'Embrace on ${player}',
-          de: 'Umarmung auf ${player}',
-          fr: 'Étreinte sur ${player}',
           ja: '${player}に双腕',
-          cn: '分摊死刑${player}',
           ko: '"${player}" 종말의 포옹',
         },
         embraceOnYou: {
           en: 'Embrace on YOU',
-          de: 'Umarmung auf DIR',
-          fr: 'Étreinte sur VOUS',
           ja: '自分に双腕',
-          cn: '分摊死刑点名',
           ko: '종말의 포옹 대상자',
         },
       },
@@ -313,10 +288,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Confusion: Go Outside',
-          de: 'Konfusion: Nach außen',
-          fr: 'Confusion : Allez à l\'extérieur',
           ja: '混乱: 外へ',
-          cn: '去外面',
           ko: '혼란: 바깥으로',
         },
       },
@@ -330,10 +302,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Sleep: Go Inside',
-          de: 'Schlaf: Zur Mitte',
-          fr: 'Sommeil : Allez à l\'intérieur',
           ja: '睡眠: 中へ',
-          cn: '去中间',
           ko: '수면: 안으로',
         },
       },
@@ -394,10 +363,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         thunderIce: {
           en: '${thunder}, ${dir}',
-          de: '${thunder}, ${dir}',
-          fr: '${thunder}, ${dir}',
           ja: '${thunder}, ${dir}',
-          cn: '${thunder}, ${dir}',
           ko: '${thunder}, ${dir}',
         },
         fakeThunder: strings.fakeThunder,
@@ -765,8 +731,8 @@ const triggerSet: TriggerSet<Data> = {
         'Mana Charge': '魔法储存',
         'Mana Release': '魔法放出',
         'Meteor': '陨石',
-        'Past/Future(?! )': '过去/未来',
-        'Past/Future End': '过去/未来 结束',
+        'Past/Future(?! )': '过去/未来破灭',
+        'Past/Future End': '过去/未来终结',
         'Pulse Wave': '波动弹',
         'Revolting Ruin': '恶狠狠毁荡',
         'Shockwave': '冲击波',
@@ -785,6 +751,58 @@ const triggerSet: TriggerSet<Data> = {
         'Vitrophyre': '岩石弹',
         'Wave Cannon': '波动炮',
         'Wings Of Destruction': '破坏之翼',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Graven Image': '眾神之像',
+        'Kefka': '凱夫卡',
+        'Light Of Consecration': '祝聖之光',
+        'The limit gauge resets!': '極限槽被清零了……',
+      },
+      'replaceText': {
+        'Aero Assault': '疼颼颼大勁風',
+        'All Things Ending': '消滅之腳',
+        'Blizzard Blitz': '滴溜溜大暴雪',
+        'Blizzard\\+Thunder': '暴雪+雷電',
+        'Celestriad': '三星',
+        'Fire III': '大火焰',
+        'Flagrant Fire': '呼啦啦大火焰',
+        'Forsaken': '遺棄末世',
+        'Graven Image': '眾神之像',
+        'Gravitas': '重力彈',
+        'Half Arena': '半場',
+        'Heartless Angel': '無心天使',
+        'Heartless Archangel': '無心大天使',
+        'Hyperdrive': '超驅動',
+        'Indomitable Will': '強腕的神氣',
+        'Inexorable Will': '無情的神氣',
+        'Knockback Tethers': '波動彈',
+        'Light Of Judgment': '制裁之光',
+        'Mana Charge': '魔法儲存',
+        'Mana Release': '魔法放出',
+        'Meteor': '隕石',
+        'Past/Future(?! )': '過去/未來破滅',
+        'Past/Future End': '過去/未來終結',
+        'Pulse Wave': '波動彈',
+        'Revolting Ruin': '惡狠狠大毀滅',
+        'Shockwave': '衝擊波',
+        'Sleep/Confuse Tethers': '睡眠/混亂 連線',
+        'Soak': '光之波動',
+        'Starstrafe': '妖星亂舞',
+        'Statue Gaze': '神像視線',
+        'Statue Half Cleave': '神像半場AOE',
+        'Thrumming Thunder': '劈啪啪大雷電',
+        'Thunder III': '大雷電',
+        'Timely Teleport': '跳蹦蹦傳送',
+        'Trine': '異三角',
+        'Ultima Upsurge': '撲騰騰究極',
+        'Ultimate Embrace': '終末雙腕',
+        'Ultima(?![ |\\w])': '最終究極',
+        'Vitrophyre': '岩石彈',
+        'Wave Cannon': '波動砲',
+        'Wings Of Destruction': '破壞之翼',
       },
     },
     {

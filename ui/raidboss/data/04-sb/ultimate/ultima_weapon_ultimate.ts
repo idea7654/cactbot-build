@@ -105,6 +105,7 @@ const gaolConfig = (id: GaolKey): NamedConfigEntry<GaolKey> => {
       ja: `ジェイルの順番 ${numStr}`,
       cn: `泰坦石牢顺序 ${numStr}`,
       ko: `돌감옥 순서 ${numStr}`,
+      tc: `泰坦石牢順序 ${numStr}`,
     },
     type: 'string',
     default: '',
@@ -135,6 +136,8 @@ const triggerSet: TriggerSet<Data> = {
           '每个条目可以是三个字母的职业缩写 (例如 "war" 或  "SGE") 或玩家全名（例如 "Tini Poutini"），所有字母不区分大小写。编号较小的将在石牢顺序中排列在前。重复的职业将按姓名字母顺序对玩家进行排序。未列出的队员将按字母顺序添加到末尾。空白条目将被忽略。如果玩家按姓名或职业被多次列出，则以较小编号为准。',
         ko:
           '각 항목에는 대소문자를 구분하지 않는 세 글자 직업명(예: "war" 또는 "SGE") 또는 전체 이름(예: "빛의전사")을 입력할 수 있습니다. 먼저 입력된 항목이 감옥 순서에서 먼저 나열됩니다. 직업이 중복된 경우에는  알파벳 순(가나다 순)으로 나타납니다. 목록에 없는 사람은 알파벳 순으로 맨 끝에 추가됩니다. 빈 칸은 무시됩니다. 플레이어가 이름 또는 직업별로 여러 번 나열된 경우, 먼저 입력된 항목이 사용됩니다.',
+        tc:
+          '每個條目可以是三個字母的職業縮寫 (例如 "war" 或  "SGE") 或玩家全名（例如 "Tini Poutini"），所有字母不區分大小寫。編號較小的將在石牢順序中排列在前。重複的職業將按姓名字母順序對玩家進行排序。未列出的隊員將按字母順序添加到末尾。空白條目將被忽略。如果玩家按姓名或職業被多次列出，則以較小編號為準。',
       },
     },
     gaolConfig('gaolOrder2'),
@@ -197,10 +200,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Move!',
-          de: 'Bewegen',
-          fr: 'Bougez !',
           ja: 'フェザーレイン',
-          cn: '躲羽毛',
           ko: '이동',
         },
       },
@@ -214,10 +214,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Eruption Baits',
-          de: 'Köder Eruption',
-          fr: 'Attirez les éruptions',
           ja: 'エラプション',
-          cn: '诱导地火',
           ko: '용암 분출 유도',
         },
       },
@@ -333,11 +330,8 @@ const triggerSet: TriggerSet<Data> = {
           partyStack: Outputs.stackMarker,
           tankCleavePartyOut: {
             en: 'Tank Cleave (PARTY OUT)',
-            de: 'Tank Cleave (GRUPPE RAUS)',
-            fr: 'Tank cleave (Groupe à l\'extérieur)',
             ja: 'タンク頭割り (PTは外へ)',
-            cn: '坦克顺劈 (人群避开)',
-            ko: '탱크 쪼개기 (본대 밖으로)',
+            ko: '광역 탱버 (본대 밖으로)',
           },
         };
 
@@ -364,11 +358,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Mistral on YOU',
-          de: 'Mistral-Song',
-          fr: 'Mistral sur VOUS',
           ja: 'ミストラルソング',
-          cn: '寒风之歌点名',
-          ko: '내게 미스트랄송',
+          ko: '삭풍 징',
         },
       },
     },
@@ -382,11 +373,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Block Mistral Song',
-          de: 'Mistral-Song',
-          fr: 'Chant du mistral',
           ja: 'ミストラルソング',
-          cn: '寒风之歌',
-          ko: '미스트랄송',
+          ko: '삭풍 징',
         },
       },
     },
@@ -399,11 +387,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Spiny Plume Add',
-          de: 'Dorniger Federsturm',
-          fr: 'Add Plume perforante',
           ja: 'スパイニープルーム',
-          cn: '刺羽出现',
-          ko: '스파이니 플럼 등장',
+          ko: '가시돋힌 깃털 등장',
         },
       },
     },
@@ -442,6 +427,7 @@ const triggerSet: TriggerSet<Data> = {
         ja: 'タンクがブロックする2人の分身の位置。dir1 は基本的に「北」から始まり、時計回りに最初の分身の位置に戻ります。',
         cn: '两分身待坦克阻挡的位置。dir1 始终是从地图上方开始顺时针方向的第一个分身位置',
         ko: '탱커가 막을 두 분신의 위치. dir1은 북쪽에서 시계방향으로 도는 것을 기준으로 항상 첫 번째 분신의 위치입니다',
+        tc: '兩分身待坦克阻擋的位置。dir1 始終是從地圖上方開始順時針方向的第一個分身位置',
       },
       type: 'StartsUsing',
       netRegex: { id: '2B55', source: 'Garuda', capture: false },
@@ -494,10 +480,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Sisters: ${dir1} / ${dir2}',
-          de: 'Schwestern: ${dir1} / ${dir2}',
-          fr: 'Sœurs : ${dir1} / ${dir2}',
           ja: '分身: ${dir1} / ${dir2}',
-          cn: '分身：${dir1} / ${dir2}',
           ko: '분신: ${dir1} / ${dir2}',
         },
         // TODO: the lint fails if you `...Directions.outputStringsCardinalDir` :C
@@ -519,37 +502,25 @@ const triggerSet: TriggerSet<Data> = {
           // The person with two stacks must get a tether.
           garuda2: {
             en: 'Get Sister Tether!!!',
-            de: 'Nimm Verbindung von der Schwester!!!',
-            fr: 'Prenez le lien de la sœur !!!',
             ja: '分身の線を取って!!!',
-            cn: '接分身的线!!!',
             ko: '분신 줄 가져가기!!!',
           },
           // Other people with 1 stack can be informed about it.
           garuda1: {
             en: 'Sister Tethers',
-            de: 'Schwester Verbindungen',
-            fr: 'Lien de la sœur',
             ja: '分身の線',
-            cn: '分身连线',
             ko: '분신 줄',
           },
           // Usually static on a ranged.
           annihilation1: {
             en: 'Tether',
-            de: 'Verbindungen',
-            fr: 'Lien',
             ja: '線',
-            cn: '连线',
             ko: '줄',
           },
           // Late in the raid, so make sure anybody with a stack remembers this.
           suppression1: {
             en: 'Tether!!!',
-            de: 'Verbindungen!!!',
-            fr: 'Lien !!!',
             ja: '線!!!',
-            cn: '连线!!!',
             ko: '줄!!!',
           },
         };
@@ -644,10 +615,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Ifrit ${dir}',
-          de: 'Ifrit ${dir}',
-          fr: 'Ifrit ${dir}',
           ja: 'イフリート ${dir}',
-          cn: '火神 ${dir}',
           ko: '이프리트 ${dir}',
         },
         unknown: Outputs.unknown,
@@ -762,10 +730,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Near: ${dir}',
-          de: 'Nahe: ${dir}',
-          fr: 'Proche : ${dir}',
           ja: '近いほう: ${dir}',
-          cn: '近: ${dir}',
           ko: '가까운 기둥: ${dir}',
         },
         ...Directions.outputStrings16Dir,
@@ -848,10 +813,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         fetters: {
           en: 'Fetters (w/${player})',
-          de: 'Fesseln (mit ${player})',
-          fr: 'Entraves (avec ${player})',
           ja: '鎖 (相手: ${player})',
-          cn: '锁链 (与 /${player})',
           ko: '사슬 (+${player})',
         },
       },
@@ -865,11 +827,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Searing Wind on YOU',
-          de: 'Versengen auf DIR',
-          fr: 'Carbonisation sur VOUS',
           ja: '自分に灼熱',
-          cn: '灼热咆哮点名',
-          ko: '내게 작열',
+          ko: '작열 대상자',
         },
       },
     },
@@ -911,6 +870,9 @@ const triggerSet: TriggerSet<Data> = {
         ko: `첫 번째 기둥이 남동쪽인 경우, 역방향 Z와 일반 Z 모두에 대해 남동/북서를 호출합니다.
              첫 번째 기둥이 남쪽인 경우, 역방향 Z는 남동/북서를, 일반 Z는 남서/북동를 호출합니다.
              다른 기둥 순서도 지원되며, 이는 예시일 뿐입니다.`,
+        tc: `如果第一個火神柱在東南，則反向 Z 和正常 Z 都會提示東南/西北
+             如果第一個火神柱在南面, 則反向 Z 將提示東南/西北，正常 Z 將提示西南/東北。
+             這些只是舉例, 其他火神柱順序也支援。`,
       },
       type: 'NameToggle',
       netRegex: { name: 'Ifrit', toggle: '00', capture: false },
@@ -940,10 +902,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         intercardSafeSpot: {
           en: '${dir1} / ${dir2}',
-          de: '${dir1} / ${dir2}',
-          fr: '${dir1} / ${dir2}',
           ja: '${dir1} / ${dir2}',
-          cn: '${dir1} / ${dir2}',
           ko: '${dir1} / ${dir2}',
         },
         ...Directions.outputStrings8Dir,
@@ -972,6 +931,9 @@ const triggerSet: TriggerSet<Data> = {
         ko: `첫 번째 기둥이 대각선에 있으면 첫 번째 이프리트 돌진도 대각선에 있으며,
              이 알람은 첫 번째 돌진 옆으로 이동하라는 것이 됩니다.
              이미 안전하다면 이 알람은 호출되지 않습니다.`,
+        tc: `如果第一個火神柱在對角線上，那麼第一次火神衝也在對角線上。
+             這個可選提示會提示你移動到第一次火神衝附近的位置。
+             如果你已在安全區，則不會輸出此提示。`,
       },
       type: 'NameToggle',
       netRegex: { name: 'Ifrit', toggle: '00', capture: false },
@@ -997,10 +959,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Adjust 45° ${rotation}',
-          de: 'Rotiere 45° ${rotation}',
-          fr: 'Ajustez de 45° ${rotation}',
           ja: '45° ${rotation} に調整',
-          cn: '${rotation} 旋转 45°',
           ko: '${rotation} 45° 이동',
         },
         clockwise: Outputs.clockwise,
@@ -1036,6 +995,10 @@ const triggerSet: TriggerSet<Data> = {
              본대와 힐러 모두 45도 또는 90도로 움직입니다.
              이프리트의 후속 돌진을 피하기 위해 빠르게 이동해야 하는 경우 "빠른" 이동입니다.
              시간적 여유가 있다면 "느린" 이동입니다.`,
+        tc: `這是從第一次火神衝附近開始的火神衝主要移動。
+             人群和奶媽都將移動 45 度或 90 度。
+             "快" 表示需要快速移動才能躲開火神衝。
+             "慢" 表示移動時間相對比較充足。`,
       },
       type: 'NameToggle',
       netRegex: { name: 'Ifrit', toggle: '00', capture: false },
@@ -1101,35 +1064,23 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         awokenDash1: {
           en: '${rotation} 45° to ${dir} (fast)',
-          de: '${rotation} 45° nach ${dir} (schnell)',
-          fr: '${rotation} 45° vers ${dir} (rapide)',
           ja: '${rotation} 45° ${dir} に (急)',
-          cn: '${rotation} 45° 到 ${dir} (快)',
-          ko: '${rotation} 45° ${dir}까지 (빠르게)',
+          ko: '${rotation} 45° ${dir}까지 (빠름)',
         },
         awokenDash2: {
           en: '${rotation} 90° to ${dir} (fast)',
-          de: '${rotation} 90° nach ${dir} (schnell)',
-          fr: '${rotation} 90° vers ${dir} (rapide)',
           ja: '${rotation} 90° ${dir} に (急)',
-          cn: '${rotation} 90° 到 ${dir} (快)',
-          ko: '${rotation} 90° ${dir}까지 (빠르게)',
+          ko: '${rotation} 90° ${dir}까지 (빠름)',
         },
         awokenDash3: {
           en: '${rotation} 45° to ${dir} (slow)',
-          de: '${rotation} 45° nach ${dir} (langsam)',
-          fr: '${rotation} 45° vers ${dir} (lent)',
           ja: '${rotation} 45° ${dir} に (遅)',
-          cn: '${rotation} 45° 到 ${dir} (慢)',
-          ko: '${rotation} 45° ${dir}까지 (천천히)',
+          ko: '${rotation} 45° ${dir}까지 (느림)',
         },
         awokenDash4: {
           en: '${rotation} 90° to ${dir} (slow)',
-          de: '${rotation} 90° nach ${dir} (langsam)',
-          fr: '${rotation} 90° vers ${dir} (lent)',
           ja: '${rotation} 90° ${dir} に (遅)',
-          cn: '${rotation} 90° 到 ${dir} (慢)',
-          ko: '${rotation} 90° ${dir}까지 (천천히)',
+          ko: '${rotation} 90° ${dir}까지 (느림)',
         },
         clockwise: Outputs.clockwise,
         counterclockwise: Outputs.counterclockwise,
@@ -1144,11 +1095,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack',
-          de: 'Stack',
-          fr: 'Packez-vous',
           ja: '頭割り',
-          cn: '集合分摊',
-          ko: '뭉쳐요',
+          ko: '집합',
         },
       },
     },
@@ -1231,10 +1179,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         safe: {
           en: 'Safe: ${dir}',
-          de: 'Sicher: ${dir}',
-          fr: 'Sur : ${dir}',
           ja: '安地: ${dir}',
-          cn: '安全区: ${dir}',
           ko: '안전: ${dir}',
         },
         unknown: Outputs.unknown,
@@ -1260,21 +1205,17 @@ const triggerSet: TriggerSet<Data> = {
         // 5 bombs drop, and then a 6th later.
         // They all drop on one half of the arena, and then 3 on one half and 2 on the other.
         // e.g. all 5 drop on north half, 3 on west half, 2 on east half.
-        let n0 = 0;
-        let n1 = 0;
-        let n2 = 0;
-        let n3 = 0;
+        const numDir = [0, 0, 0, 0]; // north, east, south, west
         for (const bomb of bombs) {
           if (bomb.y < centerY)
-            n0++;
+            numDir[0]++;
           else
-            n2++;
+            numDir[2]++;
           if (bomb.x < centerX)
-            n3++;
+            numDir[3]++;
           else
-            n1++;
+            numDir[1]++;
         }
-        const numDir = [n0, n1, n2, n3]; // north, east, south, west
 
         for (let idx = 0; idx < numDir.length; ++idx) {
           if (numDir[idx] !== 5)
@@ -1400,10 +1341,7 @@ const triggerSet: TriggerSet<Data> = {
         num3: Outputs.num3,
         text: {
           en: '${player1}, ${player2}, ${player3}',
-          de: '${player1}, ${player2}, ${player3}',
-          fr: '${player1}, ${player2}, ${player3}',
           ja: '${player1}, ${player2}, ${player3}',
-          cn: '${player1}, ${player2}, ${player3}',
           ko: '${player1}, ${player2}, ${player3}',
         },
       },
@@ -1428,10 +1366,7 @@ const triggerSet: TriggerSet<Data> = {
         num3: Outputs.num3,
         text: {
           en: 'Everyone to ${num} (${player} died)',
-          de: 'Alle zur ${num} (${player} ist gestorben)',
-          fr: 'Tout le monde sur ${num} (${player} est mort)',
           ja: '${num} で (${player} が死亡)',
-          cn: '所有人到 ${num} (${player}死亡)',
           ko: '전부다 ${num} 쪽으로 (${player} 죽음)',
         },
       },
@@ -1457,10 +1392,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Caster LB NOW!',
-          de: 'Magier LB JETZT!',
-          fr: 'LB MAINTENANT !',
           ja: 'キャスLB！',
-          cn: '法系LB!',
           ko: '캐스터 리밋!',
         },
       },
@@ -1476,10 +1408,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Healer LB NOW!',
-          de: 'Heiler LB JETZT!',
-          fr: 'Healer LB MAINTENANT !',
           ja: 'ヒラLB！',
-          cn: '奶妈LB!',
           ko: '힐러 리밋!',
         },
       },
@@ -1494,11 +1423,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Melee LB NOW!',
-          de: 'Nahkämpfer LB JETZT!',
-          fr: 'LB melee MAINTENANT !',
           ja: '近接LB！',
-          cn: '近战LB!',
-          ko: '밀리 리밋!',
+          ko: '근딜 리밋!',
         },
       },
     },
@@ -1511,11 +1437,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Tank LB NOW',
-          de: 'JETZT Tank LB',
-          fr: 'LB Tank MAINTENANT !',
           ja: '今タンクLB',
-          cn: '坦克LB',
-          ko: '탱크 리밋',
+          ko: '탱리밋',
         },
       },
     },
@@ -1529,6 +1452,7 @@ const triggerSet: TriggerSet<Data> = {
         fr: '"sûr avant" veut dire que vous pouvez bouger avant le dash d\'Ifrit.',
         cn: '这里的 "提前安全" 指你可以在伊弗利特第一次冲锋前移动。',
         ko: '여기서 "안전"이란 첫 이프리트 돌진 전에 미리 가 있어도 된다는 의미입니다.',
+        tc: '這裡的 "提前安全" 指你可以在伊弗利特第一次衝鋒前移動。',
       },
       type: 'StartsUsing',
       netRegex: { id: '2B76', source: 'The Ultima Weapon', capture: false },
@@ -1653,19 +1577,13 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         early: {
           en: '${dir} => ${rotation} (early safe)',
-          de: '${dir} => ${rotation} (früh sicher)',
-          fr: '${dir} => ${rotation} (sûr avant)',
           ja: '${dir} => ${rotation} (先安地)',
-          cn: '${dir} => ${rotation} (提前安全)',
-          ko: '${dir} 🔜 ${rotation} (안전)',
+          ko: '${dir} => ${rotation} (안전)',
         },
         normal: {
           en: '${dir} => ${rotation}',
-          de: '${dir} => ${rotation}',
-          fr: '${dir} => ${rotation}',
           ja: '${dir} => ${rotation}',
-          cn: '${dir} => ${rotation}',
-          ko: '${dir} 🔜 ${rotation}',
+          ko: '${dir} => ${rotation}',
         },
         clockwise: Outputs.clockwise,
         counterclockwise: Outputs.counterclockwise,
@@ -1685,11 +1603,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Gaol on YOU',
-          de: 'Granitgefängnis',
-          fr: 'Geôle sur VOUS',
           ja: 'ジェイル',
-          cn: '石牢点名',
-          ko: '내게 돌감옥',
+          ko: '돌감옥 대상자',
         },
       },
     },
@@ -1701,10 +1616,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Middle Laser',
-          de: 'Laser (Mitte)',
-          fr: 'Laser (Milieu)',
           ja: 'レーザー (中央)',
-          cn: '中间激光',
           ko: '가운데 레이저',
         },
       },
@@ -1717,10 +1629,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'North Laser',
-          de: 'Laser (Norden)',
-          fr: 'Laser (Nord)',
           ja: 'レーザー (北)',
-          cn: '上半场激光',
           ko: '북쪽 레이저',
         },
       },
@@ -1733,10 +1642,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'East Laser',
-          de: 'Laser (Osten)',
-          fr: 'Laser (Est)',
           ja: 'レーザー (東)',
-          cn: '右半场激光',
           ko: '동쪽 레이저',
         },
       },
@@ -1751,10 +1657,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Garuda',
-          de: 'Garuda',
-          fr: 'Garuda',
           ja: 'ガルーダ',
-          cn: '迦楼罗',
           ko: '가루다',
         },
       },
@@ -1768,10 +1671,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Ifrit',
-          de: 'Ifrit',
-          fr: 'Ifrit',
           ja: 'イフリート',
-          cn: '伊弗利特',
           ko: '이프리트',
         },
       },
@@ -1785,10 +1685,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Titan',
-          de: 'Titan',
-          fr: 'Titan',
           ja: 'タイタン',
-          cn: '泰坦',
           ko: '타이탄',
         },
       },
@@ -2073,6 +1970,76 @@ const triggerSet: TriggerSet<Data> = {
         'Weight Of The Land': '大地之重',
         'Wicked Tornado': '邪气龙卷',
         'Wicked Wheel': '邪轮旋风',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Bomb Boulder': '爆破岩石',
+        'Chirada': '妙翅',
+        'Garuda': '迦樓羅',
+        'Ifrit': '伊弗利特',
+        'Lahabrea': '拉哈布雷亞',
+        'Magitek Bit': '浮游砲射出',
+        'Spiny Plume': '刺羽',
+        'Suparna': '美翼',
+        'The Ultima Weapon': '究極武器',
+        'Titan': '泰坦',
+      },
+      'replaceText': {
+        'Aerial Blast': '大氣爆發',
+        'Aetheric Boom': '乙太波動',
+        'Aetherochemical Laser': '魔科學雷射',
+        '(?<! )Aetheroplasm': '乙太爆雷',
+        'Apply Viscous': '吸附式炸彈',
+        'Blight': '毒霧',
+        'Bury': '衝擊',
+        'Ceruleum Vent': '青磷放射',
+        'Citadel Siege': '堡壘圍攻',
+        'Crimson Cyclone': '深紅旋風',
+        'Dark IV': '冥暗',
+        'Diffractive Laser': '擴散雷射',
+        'Downburst': '下行突風',
+        'Earthen Fury': '大地之怒',
+        'Eruption': '噴發',
+        'Eye Of The Storm': '颱風眼',
+        'Feather Rain': '飛翎雨',
+        'Flaming Crush': '烈焰碎擊',
+        'Freefire': '誘導爆炸',
+        'Friction': '烈風刃',
+        'Geocrush': '大地撞擊',
+        'Great Whirlwind': '大旋風',
+        'Hellfire': '地獄之火炎',
+        'Homing Lasers': '誘導射線',
+        'Incinerate': '烈焰焚燒',
+        'Infernal Fetters': '火獄之鎖',
+        'Inferno Howl': '灼熱咆哮',
+        'Landslide': '地裂',
+        'Light Pillar': '光柱',
+        'Mesohigh': '中高壓',
+        'Mistral Shriek': '寒風之嘯',
+        'Mistral Song': '寒風之歌',
+        'Mountain Buster': '山崩',
+        'Nail Adds': '火神柱',
+        'Radiant Plume': '光輝炎柱',
+        'Rock Buster': '岩石破壞者',
+        'Rock Throw': '花崗岩牢獄',
+        'Searing Wind': '灼熱',
+        'Self-detonate': '霧散爆發',
+        'Slipstream': '螺旋氣流',
+        'Summon Random Primal': '召喚隨機蠻神',
+        'Tank Purge': '魔導火光',
+        'Tumult': '激震',
+        'Ultima(?!\\w)': '最終究極',
+        'Ultimate Annihilation': '爆擊之究極幻想',
+        'Ultimate Predation': '追擊之究極幻想',
+        'Ultimate Suppression': '亂擊之究極幻想',
+        'Upheaval': '大激震',
+        'Viscous Aetheroplasm': '引爆吸附式炸彈',
+        'Vulcan Burst': '火神爆裂',
+        'Weight Of The Land': '大地重壓',
+        'Wicked Tornado': '邪氣龍捲',
+        'Wicked Wheel': '邪輪旋風',
       },
     },
     {

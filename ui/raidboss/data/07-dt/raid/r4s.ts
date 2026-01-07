@@ -328,6 +328,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         ok: {
           en: 'Combat: ${moks}',
+          ja: 'Combat: ${moks}',
           ko: '시작: ${moks}',
         },
       },
@@ -918,10 +919,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         shortStacks: {
           en: 'short ${times}',
+          ja: 'short ${times}',
           ko: '짧은 ${times} 스택',
         },
         longStacks: {
           en: 'long ${times}',
+          ja: 'long ${times}',
           ko: '긴 ${times} 스택',
         },
       },
@@ -943,18 +946,22 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         leftTop: {
           en: 'Left Top',
+          ja: 'Left Top',
           ko: '🡼왼쪽 위',
         },
         leftBottom: {
           en: 'Left Bottom',
+          ja: 'Left Bottom',
           ko: '🡿왼쪽 아래',
         },
         rightTop: {
           en: 'Right Top',
+          ja: 'Right Top',
           ko: '🡽오른쪽 위',
         },
         rightBottom: {
           en: 'Right Bottom',
+          ja: 'Right Bottom',
           ko: '🡾오른쪽 아래',
         },
       },
@@ -1019,22 +1026,27 @@ const triggerSet: TriggerSet<Data> = {
         },
         pairNorth: {
           en: 'Pair North',
+          ja: 'Pair North',
           ko: 'Ⓐ 둘이',
         },
         pairSouth: {
           en: 'Pair South',
+          ja: 'Pair South',
           ko: 'Ⓒ 둘이',
         },
         pairWest: {
           en: 'Pair South',
+          ja: 'Pair South',
           ko: 'Ⓓ 둘이',
         },
         pairEast: {
           en: 'Pair South',
+          ja: 'Pair South',
           ko: 'Ⓑ 둘이',
         },
         pairCenter: {
           en: 'Pair Center',
+          ja: 'Pair Center',
           ko: '한가운데 둘이',
         },
       },
@@ -1450,10 +1462,7 @@ const triggerSet: TriggerSet<Data> = {
       netRegex: { id: '013C', capture: false },
       condition: (data) => data.phase === 'crosstail' && !data.options.AutumnOnly,
       suppressSeconds: 1,
-      infoText: (_data, _matches, output) => output.stacks!(),
-      outputStrings: {
-        stacks: Outputs.healerGroups,
-      },
+      response: Responses.healerGroups(),
     },
 
     // Twilight Sabbath
@@ -2029,14 +2038,17 @@ const triggerSet: TriggerSet<Data> = {
         },
         long: {
           en: 'Soak Tower (${bait})',
+          ja: 'Soak Tower (${bait})',
           ko: '${bait}타워 밟아요',
         },
         yellow: {
           en: 'Blue Cannon (${loc})',
+          ja: 'Blue Cannon (${loc})',
           ko: '${loc}🟦빔',
         },
         blue: {
           en: 'Yellow Cannon (${loc})',
+          ja: 'Yellow Cannon (${loc})',
           ko: '${loc}🟨빔',
         },
         ...AutumnDir.stringsArrow,
@@ -2081,6 +2093,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack south',
+          ja: 'Stack south',
           ko: '아래쪽 가운데서 뭉쳐요',
         },
       },
@@ -2099,6 +2112,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack south',
+          ja: 'Stack south',
           ko: '아래쪽 가운데서 뭉쳐요',
         },
       },
@@ -2402,6 +2416,87 @@ const triggerSet: TriggerSet<Data> = {
         '\\(spread \\+ tethers\\)': '(分散 + 连线)',
         '\\(third mines hit\\)': '(第三轮魔方充能)',
         '\\(third set\\)': '(第三轮充能)',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        // 'Electromine': '', // FIXME '雷转质矿组'
+        // 'Wicked Replica': '', // FIXME '狡雷的幻影'
+        // 'Wicked Thunder': '', // FIXME '狡雷'
+      },
+      'replaceText': {
+        '(?<! )Spark': '電火花',
+        // '(?<! )Witch Hunt': '', // FIXME '魔女狩猎'
+        // 'Azure Thunder': '', // FIXME '青雷'
+        // 'Bewitching Flight': '', // FIXME '魔女回翔'
+        'Burst': '爆炸',
+        // 'Cannonbolt': '', // FIXME '聚雷加农炮'
+        'Chain Lightning': '雷光鏈',
+        'Conduction Point': '指向雷',
+        // 'Cross Tail Switch': '', // FIXME '交叉乱尾击'
+        // 'Eight Star': '', // FIXME '八雷星'
+        // 'Electrifying Witch Hunt': '', // FIXME '惊电魔女狩猎'
+        // 'Electron Stream': '', // FIXME '电子流'
+        // 'Electrope Edge': '', // FIXME '雷转质展开'
+        // 'Electrope Transplant': '', // FIXME '雷转质移植'
+        // 'Flame Slash': '', // FIXME '火焰斩'
+        'Forked Fissures': '驚電裂隙',
+        'Forked Lightning': '叉形閃電',
+        // 'Four Star': '', // FIXME '四雷星'
+        // 'Fulminous Field': '', // FIXME '雷电力场'
+        'Impact': '衝擊',
+        // 'Ion Cluster': '', // FIXME '离子簇'
+        'Laceration': '斬擊',
+        // 'Left Roll': '', // FIXME '左转'
+        // 'Lightning Cage': '', // FIXME '电牢笼'
+        // 'Lightning Vortex': '', // FIXME '电闪圆'
+        // 'Midnight Sabbath': '', // FIXME '黑色安息日的午夜'
+        'Mustard Bomb': '芥末炸彈',
+        // 'Narrowing Witch Hunt': '', // FIXME '环圆式魔女狩猎'
+        // 'Raining Swords': '', // FIXME '剑雨'
+        // 'Right Roll': '', // FIXME '右转'
+        // 'Sidewise Spark': '', // FIXME '侧方电火花'
+        // 'Soulshock': '', // FIXME '灵魂震荡'
+        // 'Stampeding Thunder': '', // FIXME '奔雷炮'
+        // 'Sunrise Sabbath': '', // FIXME '黑色安息日的日出'
+        // 'Switch of Tides': '', // FIXME '尖尾溅'
+        // 'Sword Quiver': '', // FIXME '剑舞'
+        // 'Tail Thrust': '', // FIXME '尖尾刺'
+        // 'Thundering': '', // FIXME '电闪环'
+        // 'Twilight Sabbath': '', // FIXME '黑色安息日的日落'
+        // 'Wicked Blaze': '', // FIXME '狡诡炽焰'
+        // 'Wicked Bolt': '', // FIXME '狡诡落雷'
+        // 'Wicked Fire': '', // FIXME '狡诡火炎'
+        // 'Wicked Flare': '', // FIXME '狡诡核爆'
+        // 'Wicked Jolt': '', // FIXME '狡诡摇荡'
+        // 'Wicked Spark': '', // FIXME '狡诡电火花'
+        // 'Wicked Special': '', // FIXME '狡诡特技'
+        // 'Wicked Thunder': '', // FIXME '狡雷'
+        // 'Widening Witch Hunt': '', // FIXME '圆环式魔女狩猎'
+        // 'Witchgleam': '', // FIXME '辉光电火花'
+        'Wrath of Zeus': '宙斯之怒',
+        // '\\(debuffs resolve\\)': '', // FIXME '(处理 Debuff)'
+        // '\\(debuffs\\)': '', // FIXME '(Debuff)'
+        // '\\(enrage\\)': '', // FIXME '(狂暴)'
+        // '\\(first mines hit\\)': '', // FIXME '(第一轮魔方充能)'
+        // '\\(first set\\)': '', // FIXME '(第一轮充能)'
+        // '\\(first sparks detonate\\)': '', // FIXME '(第一轮火花引爆)'
+        // '\\(first towers/cannons resolve\\)': '', // FIXME '(第一轮塔/炮)'
+        // '\\(floor no more\\)': '', // FIXME '(地板消失)'
+        // '\\(fourth set\\)': '', // FIXME '(第四轮充能)'
+        // '\\(mines\\)': '', // FIXME '(魔方)'
+        // '\\(players\\)': '', // FIXME '(玩家)'
+        // '\\(puddles drop\\)': '', // FIXME '(放圈)'
+        // '\\(second hit\\)': '', // FIXME '(第二击)'
+        // '\\(second mines hit\\)': '', // FIXME '(第二轮魔方充能)'
+        // '\\(second set\\)': '', // FIXME '(第二轮充能)'
+        // '\\(second sparks detonate\\)': '', // FIXME '(第二轮火花引爆)'
+        // '\\(second towers/cannons resolve\\)': '', // FIXME '(第二轮塔/炮)'
+        // '\\(spread \\+ tethers\\)': '', // FIXME '(分散 + 连线)'
+        // '\\(third mines hit\\)': '', // FIXME '(第三轮魔方充能)'
+        // '\\(third set\\)': '', // FIXME '(第三轮充能)'
       },
     },
     {

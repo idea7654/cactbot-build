@@ -46,10 +46,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stop attacking ${target}',
-          de: 'Stoppe Angriffe auf ${target}',
-          fr: 'Arrêtez d\'attaquer ${target}',
           ja: '攻撃禁止: ${target}',
-          cn: '停止攻击 ${target}',
           ko: '${target} 공격 중지',
         },
       },
@@ -115,8 +112,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Sides + Rotate ${rotation}',
-          de: 'Seiten + Im ${rotation} rotieren',
-          cn: '两侧 + ${rotation}旋转',
+          ja: 'Sides + Rotate ${rotation}',
           ko: '옆쪽에서 + ${rotation}으로 돌아요',
         },
         clockwise: Outputs.clockwise,
@@ -136,20 +132,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Cactuar move ${count}',
-          de: 'Kaktor Bewegung - ${count}',
-          cn: '仙人掌移动 ${count}',
+          ja: 'Cactuar move ${count}',
           ko: '선인장이 ${count} 이동',
         },
         once: {
           en: 'Once',
-          de: 'Einmal',
-          cn: '一次',
+          ja: 'Once',
           ko: '한 번',
         },
         twice: {
           en: 'Twice',
-          de: 'Zweimal',
-          cn: '两次',
+          ja: 'Twice',
           ko: '두 번',
         },
       },
@@ -192,6 +185,18 @@ const triggerSet: TriggerSet<Data> = {
         'Traverse Phorusrhacos': 'トラバース・フォルスラコス',
         'Traverse Saichania': 'トラバース・サイカニア',
         'Traverse Sand Serpent': 'トラバース・サンドサーペント',
+      },
+    },
+    {
+      'locale': 'ko',
+      'replaceSync': {
+        'Ancestral Maliktender': '선조 말리크텐더',
+        'Traverse Gigant': '순례길 거인',
+        'Traverse Howler': '순례길 절규자',
+        'Traverse Monitor': '순례길 감시도마뱀',
+        'Traverse Phorusrhacos': '순례길 포루스라코스',
+        'Traverse Saichania': '순례길 사이카니아',
+        'Traverse Sand Serpent': '순례길 모래구렁이',
       },
     },
   ],

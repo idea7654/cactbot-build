@@ -28,8 +28,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Spread--Homing Lasers',
-          de: 'Verteilen--Leitlaser',
-          cn: '分散--追踪激光',
+          ja: 'Spread--Homing Lasers',
           ko: '산개--유도 레이저',
         },
       },
@@ -48,9 +47,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Melee knockback',
-          de: 'Melee Rückstoß',
-          fr: 'Poussée',
-          cn: '近战击退',
+          ja: 'Melee knockback',
           ko: '근접 넉백',
         },
       },
@@ -99,16 +96,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         target: {
           en: 'Homing Aetheroplasm on YOU',
-          de: 'Verfolgendes Ätheroplasma auf DIR',
-          fr: 'Laser + Éthéroplasma sur VOUS',
-          cn: '追踪激光点名',
+          ja: 'Homing Aetheroplasm on YOU',
           ko: '에테르 폭뢰 대상자',
         },
         avoid: {
           en: 'Avoid Homing Aetheroplasm',
-          de: 'Weiche dem verfolgendem Ätheroplasma aus',
-          fr: 'Évitez le laser + l\'Éthéroplasma',
-          cn: '躲避追踪激光',
+          ja: 'Avoid Homing Aetheroplasm',
           ko: '에테르 폭뢰 피해요',
         },
       },
@@ -132,23 +125,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         boom1: {
           en: 'Orbs: Cardinals',
-          de: 'Orbs: Kardinal',
-          fr: 'Orbes : Cardinaux',
-          cn: '球: 十字',
+          ja: 'Orbs: Cardinals',
           ko: '구슬: 십자',
         },
         boom2: {
           en: 'Orbs: Cardinals (N/S first)',
-          de: 'Orbs: Kardinal (N/S zuerst)',
-          fr: 'Orbes : Cardinaux (N/S en premier)',
-          cn: '球: 十字（先南/北）',
+          ja: 'Orbs: Cardinals (N/S first)',
           ko: '구슬: 십자(남/북 먼저)',
         },
         boom3: {
           en: 'Orbs: Intercardinals',
-          de: 'Orbs: Interkardinal',
-          fr: 'Orbes : Intercardinaux',
-          cn: '球: 方形',
+          ja: 'Orbs: Intercardinals',
           ko: '구슬: 사각형',
         },
       },
@@ -267,6 +254,33 @@ const triggerSet: TriggerSet<Data> = {
         'Viscous Aetheroplasm': '吸附式以太炸弹',
         'Vulcan Burst': '火神爆裂',
         'Weight of the Land': '大地之重',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'The Ultima Weapon': '究極武器',
+        'Ultima Garuda': '究極迦樓羅',
+        'Ultima Ifrit': '究極伊弗利特',
+        'Ultima Titan': '究極泰坦',
+      },
+      'replaceText': {
+        'Aetheric Boom': '乙太波動',
+        'Ceruleum Vent': '青磷放射',
+        'Crimson Cyclone': '深紅旋風',
+        'Diffractive Laser': '擴散雷射',
+        'Eruption': '噴發',
+        'Eye of the Storm': '颱風眼',
+        'Geocrush': '大地撞擊',
+        'Homing Lasers': '誘導射線',
+        'Magitek Ray': '魔導雷射',
+        'Mistral Song': '寒風之歌',
+        'Radiant Plume': '光輝炎柱',
+        'Tank Purge': '魔導火光',
+        'Ultima': '最終究極',
+        'Viscous Aetheroplasm': '吸附式乙太炸彈',
+        'Vulcan Burst': '火神爆裂',
+        'Weight of the Land': '大地重壓',
       },
     },
     {

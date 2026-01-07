@@ -54,10 +54,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stop attacking ${target}',
-          de: 'Stoppe Angriffe auf ${target}',
-          fr: 'Arrêtez d\'attaquer ${target}',
           ja: '攻撃禁止: ${target}',
-          cn: '停止攻击 ${target}',
           ko: '반사! 공격 중지: ${target}',
         },
       },
@@ -90,10 +87,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Run Away From Boss',
-          de: 'Renn weg vom Boss',
-          fr: 'Courez loin du boss',
           ja: 'ボスから離れる',
-          cn: '远离Boss',
           ko: '보스에게서 먼곳으로',
         },
       },
@@ -164,6 +158,18 @@ const triggerSet: TriggerSet<Data> = {
         'Orthos Falak': '正统法拉克',
         'Orthos Gowrow': '正统高牢怪龙',
         'Orthos Palleon': '正统侏儒避役',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Aeturna': '永恆',
+        'Orthos Basilisk': '正統石蜥蜴',
+        'Orthos Cobra': '正統眼鏡蛇',
+        'Orthos Drake': '正統烈陽火蛟',
+        'Orthos Falak': '正統法拉克',
+        'Orthos Gowrow': '正統高牢怪龍',
+        'Orthos Palleon': '正統侏儒避役',
       },
     },
     {

@@ -20,7 +20,7 @@ export interface Data extends RaidbossData {
 }
 
 // List of events:
-// https://github.com/xivapi/ffxiv-datamining/blob/master/csv/DynamicEvent.csv
+// https://github.com/xivapi/ffxiv-datamining/blob/master/csv/en/DynamicEvent.csv
 //
 // These ids are (unfortunately) gathered by hand and don't seem to correlate
 // to any particular bits of data.  However, there's a game log message when you
@@ -237,10 +237,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stand in dive charge',
-          de: 'Stehe im Ansturm',
-          fr: 'Restez dans la charge',
           ja: '直線頭割りに入る',
-          cn: '进入直线分摊',
           ko: '다이브 돌진에 서요',
         },
       },
@@ -262,10 +259,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Take one tether',
-          de: 'Nimm eine´Verbindung',
-          fr: 'Prenez un lien',
           ja: '線を取る',
-          cn: '接线',
           ko: '줄 하나 채요',
         },
       },
@@ -308,10 +302,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Kill Magitek Core',
-          de: 'Besiege Magitek-Reaktor',
-          fr: 'Tuez le Cœur magitek',
           ja: '魔導コアを撃破',
-          cn: '击杀魔导核心',
           ko: '마지텍 코어 잡아요',
         },
       },
@@ -346,18 +337,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         getUnderOrb: {
           en: 'Get Under Orb',
-          de: 'Geh unter einem Orb',
-          fr: 'Allez sous l\'Orbe',
           ja: '白玉に安置',
-          cn: '靠近白球',
           ko: '구슬 아래로',
         },
         goCorner: {
           en: 'Go To Corner',
-          de: 'Geh in die Ecken',
-          fr: 'Allez dans un coin',
           ja: 'コーナーへ',
-          cn: '去角落',
           ko: '구석으로',
         },
       },
@@ -399,10 +384,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Kill Meteors',
-          de: 'Besiege die Meteore',
-          fr: 'Tuez les météores',
           ja: 'メテオを撃破',
-          cn: '击杀陨石',
           ko: '메테오 잡아요',
         },
       },
@@ -554,42 +536,27 @@ const triggerSet: TriggerSet<Data> = {
         unknown: {
           // "Follow Other People ;)"
           en: 'Go ???',
-          de: 'Gehe nach ???',
-          fr: 'Allez au ???',
           ja: '??? へ',
-          cn: '去 ???',
           ko: '???쪽으로',
         },
         northeast: {
           en: 'Go northeast',
-          de: 'Gehe nach Nordosten',
-          fr: 'Allez au nord-est',
           ja: '北東へ',
-          cn: '去右上(东北)',
           ko: '북동쪽으로',
         },
         southeast: {
           en: 'Go southeast',
-          de: 'Gehe nach Südosten',
-          fr: 'Allez au sud-est',
           ja: '南東へ',
-          cn: '去右下(东南)',
           ko: '남동쪽으로',
         },
         southwest: {
           en: 'Go southwest',
-          de: 'Gehe nach Südwesten',
-          fr: 'Allez au sud-ouest',
           ja: '南西へ',
-          cn: '去左下(西南)',
           ko: '남서쪽으로',
         },
         northwest: {
           en: 'Go northwest',
-          de: 'Gehe nach Nordwesten',
-          fr: 'Allez au nord-ouest',
           ja: '北西へ',
-          cn: '去左上(西北)',
           ko: '북서쪽으로',
         },
       },
@@ -615,18 +582,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         justOrb: {
           en: 'Get Under Light Orb',
-          de: 'Unter einem Lichtorb stellen',
-          fr: 'Allez sous un Orbe lumineux',
           ja: '白玉へ',
-          cn: '靠近白球',
           ko: '하얀 구슬 안으로',
         },
         orbWithFlutter: {
           en: 'Get Under Blown Light Orb',
-          de: 'Zu einem weggeschleuderten Lichtorb gehen',
-          fr: 'Allez sous un Orbe lumineux soufflé',
           ja: '吹き飛ばされた白玉へ',
-          cn: '靠近吹动后的白球',
           ko: '하얀 구슬이 이동할 위치로',
         },
       },
@@ -647,10 +608,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Follow Boss',
-          de: 'Folge dem Boss',
-          fr: 'Suivez le Boss',
           ja: 'ボスの後ろに追う',
-          cn: '跟紧在Boss身后',
           ko: '보스 따라가기',
         },
       },
@@ -665,10 +623,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Lyon Passage Open',
-          de: 'Lyon Zugang offen',
-          fr: 'Passage du Lyon ouvert',
           ja: '獣王ライオンフェイス開始',
-          cn: '挑战兽王莱昂',
           ko: '라이언 포탈 개방',
         },
       },
@@ -1038,6 +993,93 @@ const triggerSet: TriggerSet<Data> = {
         'Warped Light': '闪光炮',
         'Water IV': '骇水',
         'Winds\' Peak': '超级烈风波',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        // 'Lyon the Beast King would do battle at Majesty\'s Place': '', // FIXME '兽王莱昂似乎很期待在王者圆坛战斗！'
+        'Red Comet': '紅色隕星',
+        'Albeleo\'s Monstrosity': '阿爾貝雷歐的巨獸',
+        'Albeleo\'s Hrodvitnir': '阿爾貝雷歐的惡狼',
+        'Electric Charge': '雷氣',
+        '4Th Legion Helldiver': '第四軍團地獄潛者',
+        'Adrammelech': '阿德拉梅里克',
+        'Bladesmeet': '群刃大廳',
+        'Brionac': '布里歐納克',
+        'Dawon': '達溫',
+        'Eaglesight': '蒼鷹廣場',
+        'Lightsphere': '光耀晶球',
+        'Lyon The Beast King(?! would)': '獸王 萊昂',
+        'Majesty\'s Auspice': '圓壇之間',
+        'Shadowsphere': '暗影晶球',
+        // 'The airship landing': '', // FIXME '飞空战舰着陆台'
+        'The grand gates': '城門',
+        'Verdant Plume': '濃綠之羽',
+      },
+      'replaceText': {
+        // '--Lyon Passage--': '', // FIXME '--兽王通道开启--'
+        '(?<!Command: )Chain Cannon': '鏈式機關砲',
+        '(?<!Command: )Dive Formation': '一齊突擊',
+        '(?<!Command: )Infrared Blast': '熱線照射',
+        // '(?<!Command: )Lateral Dive': '', // FIXME '突进攻击'
+        'Accursed Becoming': '魔法合成',
+        'Aero IV': '超勁風',
+        'Anti-Warmachina Weaponry': '對魔導兵器攻擊',
+        'Blizzard IV': '超暴雪',
+        'Burst II': '爆發技',
+        'Call Beast': '呼叫',
+        'Command: Chain Cannon': '下令：鏈式機關砲齊射',
+        'Command: Dive Formation': '下令：對物一齊突擊',
+        'Command: Infrared Blast': '下令：對物熱線照射',
+        'Command: Joint Attack': '下令：對物集中攻擊',
+        'Command: Lateral Dive': '下令：對物突進攻擊',
+        'Command: Suppressive Formation': '下令：對人壓制突擊',
+        'Curse Of The Fiend': '魔法印',
+        'Electric Anvil': '電砧',
+        'Energy Generation': '生成能源體',
+        'Explosion': '爆炸',
+        'False Thunder': '偽雷',
+        '(?<!/)Fervid Pulse': '炙熱脈衝',
+        'Fire IV': '超火焰',
+        'Flare': '火光',
+        'Frigid Pulse': '寒冷脈衝',
+        // 'Frigid/Fervid Pulse': '', // FIXME '寒冷脉冲/炙热脉冲'
+        'Heart Of Nature': '地靈脈',
+        'Holy IV': '極聖',
+        'Lightburst': '光爆破',
+        'Lightning Shower': '雷光雨',
+        'Magitek Magnetism': '魔導磁石',
+        'Magitek Missiles': '魔導飛彈',
+        'Magnetic Jolt': '磁力干涉',
+        'Meteor': '隕石流星',
+        'Molting Plumage': '換羽',
+        'Mrv Missile': '多彈頭飛彈',
+        'Nature\'s Blood': '波導地靈斬',
+        'Nature\'s Pulse': '波導地靈衝',
+        'Obey': '服從',
+        // 'Orb': '', // FIXME '球'
+        'Pentagust': '五向突風',
+        'Polar Magnetism': '轉換磁石',
+        'Pole Shift': '磁場轉換',
+        'Raging Winds': '風烈飛翔流',
+        'Ready': '準備',
+        'Scratch': '抓擊',
+        'Shadow Burst': '暗影爆',
+        'Shock': '放電',
+        'Stone IV': '超巨岩',
+        'Surface Missile': '對地導彈',
+        'Swooping Frenzy': '狂亂猛衝',
+        'Taste Of Blood': '鬼哭血散斬',
+        'The King\'s Notice': '霸王邪視眼',
+        'Thunder IV': '超雷電',
+        'Tornado': '龍捲風',
+        'Twin Agonies': '雙魔邪王斬',
+        'Voltstream': '電壓流',
+        'Warped Light': '閃光砲',
+        'Water IV': 'ウォタジャ',
+        'Winds\' Peak': '超級烈風波',
       },
     },
     {

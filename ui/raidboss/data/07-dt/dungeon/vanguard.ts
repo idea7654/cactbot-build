@@ -39,6 +39,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         corners: {
           en: 'Go outside (corners)',
+          ja: '外へ (角)',
           ko: '바깥으로 (모서리)',
         },
       },
@@ -54,6 +55,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         inside: {
           en: 'Go inside',
+          ja: '中へ',
           ko: '안으로',
         },
       },
@@ -70,10 +72,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         northSouth: {
           en: 'Dodge North/South line cleaves',
+          ja: '南北の線形範囲攻撃を避ける',
           ko: '남북 쪼개기 줄 피해요',
         },
         grid: {
           en: 'Spread + dodge grid cleaves',
+          ja: '散開 + 格子状の範囲攻撃を避ける',
           ko: '흩어졌다 🔜 격자 쪼개기 피해요',
         },
       },
@@ -332,6 +336,49 @@ const triggerSet: TriggerSet<Data> = {
         'Syntheslean': '融魂前倾斩',
         'Syntheslither': '曲蛇融魂斩',
         'Tracking Bolt': '追踪式闪雷',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Protector': '保護者',
+        'Vanguard Commander R8': '先鋒營指揮官R8',
+        'Vanguard Sentry R8': '先鋒營哨兵R8',
+        'Zander the Snakeskinner': '蟒蛇將 詹德',
+      },
+      'replaceText': {
+        // '\\(corners\\)': '', // FIXME '(四角)'
+        // '\\(ground AoEs\\)': '', // FIXME '(地面 AoE)'
+        // '\\(sides\\)': '', // FIXME '(四边)'
+        '(?<! )Rush': '突進',
+        'Aerial Offensive': '空襲',
+        'Battery Circuit': '旋回式衝擊砲',
+        '(?<! )Blast Cannon': '衝擊砲',
+        'Bombardment': '轟炸',
+        'Burst': '爆炸',
+        'Dispatch': '召集小隊',
+        'Electrosurge': '雷轉質激射',
+        'Electrothermia': '雷轉質升溫',
+        'Electrowave': '雷轉質波動',
+        'Electrowhirl': '雷轉質迴旋',
+        'Enhanced Mobility': '高速機動',
+        'Fulminous Fence': '攔截電網',
+        'Heavy Blast Cannon': '重擊式衝擊砲',
+        'Motion Sensor': '賦予加速度炸彈',
+        'Rapid Rotary': '高速迴旋',
+        'Rapid Thunder': '湍雷',
+        'Saber Rush': '利劍斬',
+        'Screech': '嘶嚎',
+        'Search and Destroy': '照射檢測',
+        'Shade Shot': '暗影彈',
+        'Slitherbane Foreguard': '前尾禍劍擊',
+        'Slitherbane Rearguard': '後尾禍劍擊',
+        'Soulbane Saber': '禍魂劍',
+        'Soulbane Shock': '禍魂衝擊',
+        'Syntheslean': '融魂前傾斬',
+        'Syntheslither': '曲蛇融魂斬',
+        'Tracking Bolt': '追蹤式雷電',
       },
     },
     {

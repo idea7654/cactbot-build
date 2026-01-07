@@ -29,10 +29,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Bubble Explosions',
-          de: 'Vermeide die Blasen-Explosionen',
-          fr: 'Évitez les explosions des bulles',
           ja: '泡の爆発から避ける',
-          cn: '躲开泡泡爆炸',
           ko: '버블 폭발 피해요',
         },
       },
@@ -78,10 +75,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'tail cleave',
-          de: 'Schweif-Flächenangriff',
-          fr: 'Évitez la queue',
           ja: 'しっぽ！',
-          cn: '尾巴攻击',
           ko: '꼬리쓸기!',
         },
       },
@@ -101,10 +95,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Ring on YOU',
-          de: 'Ring auf DIR',
-          fr: 'Anneau sur VOUS',
           ja: '自分にドーナツ範囲',
-          cn: '环形AoE点名',
           ko: '내게 도넛 범위',
         },
       },
@@ -118,10 +109,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Cross on YOU',
-          de: 'Kreuz auf DIR',
-          fr: 'Croix sur VOUS',
           ja: '自分に十字範囲',
-          cn: '十字AoE点名',
           ko: '내게 십자 범위',
         },
       },
@@ -295,6 +283,40 @@ const triggerSet: TriggerSet<Data> = {
         'The Spin': '龙卷回旋',
         'Torpedo': '鱼雷',
         'Words Of Woe': '灾厄之语',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'A Door Unopened': '封閉的門扉',
+        'Hrodric Poisontongue': '直言不諱 赫羅德里克',
+        'Hydrosphere': '水化球體',
+        'Kelpie': '凱爾派',
+        'The Golden Walls Of Ruin': '黃金堂',
+        'The Green Screams': '凱爾派的領地',
+        'The Old One': '舊日靈偶',
+      },
+      'replaceText': {
+        'Bloody Puddle': '血池',
+        'Bubble Burst': '泡泡炸裂',
+        'Circle Of Chaos': '混沌之圈',
+        'Cross Of Chaos': '混沌十字',
+        'Eye Of The Fire': '懼亂之眼',
+        'Gallop': 'ギャロップ',
+        'Hydro Pull': '水力吸引',
+        'Hydro Push': '水力推行',
+        'Mystic Flame': '魔光炎',
+        'Mystic Light': '魔光線',
+        'Order To Detonate': '自爆命令',
+        'Ring Of Chaos': '混沌之環',
+        'Rising Seas': '水平面上升',
+        'Rusting Claw': '鏽爪',
+        'Self-Detonate': '霧散爆發',
+        'Shifting Light': '變化光',
+        'Tail Drive': '尾部打擊',
+        'The Spin': '龍捲迴旋',
+        'Torpedo': '魚雷',
+        'Words Of Woe': '災厄之語',
       },
     },
     {

@@ -191,10 +191,7 @@ const triggerSet: TriggerSet<Data> = {
         tankSwap: Outputs.tankSwap,
         avoidLaser: {
           en: 'Avoid Laser',
-          de: 'Laser ausweichen',
-          fr: 'Évitez le laser',
           ja: 'レーザー注意',
-          cn: '躲避死刑激光',
           ko: '레이저 피하기',
         },
       },
@@ -215,10 +212,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Place Bramble',
-          de: 'Dornenstrauch plazieren',
-          fr: 'Placez les ronces',
           ja: '苗木を捨てる',
-          cn: '击退放置树苗',
           ko: '장판 유도하기',
         },
       },
@@ -238,10 +232,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away From Tethered Walls',
-          de: 'Weg von den verbundenen Wänden',
-          fr: 'Éloignez-vous des murs liés',
           ja: '線が繋がれなかった方へ',
-          cn: '远离连线的墙壁',
           ko: '보스 선 연결된 방향 피하기',
         },
       },
@@ -350,10 +341,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Start Left',
-          de: 'Starte Links',
-          fr: 'Commencez à gauche',
           ja: '左から',
-          cn: '左侧开始',
           ko: '왼쪽에서 시작',
         },
       },
@@ -374,10 +362,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Start Right',
-          de: 'Starte Rechts',
-          fr: 'Commencez à droite',
           ja: '右から',
-          cn: '右侧开始',
           ko: '오른쪽에서 시작',
         },
       },
@@ -466,10 +451,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Tile Positions',
-          de: 'Kachel Positionen',
-          fr: 'Positions',
           ja: '定めたパネルに待機',
-          cn: '上自己的方块',
           ko: '바닥 자리잡기',
         },
       },
@@ -484,10 +466,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Face Laser Out',
-          de: 'Laser nach draußen richten',
-          fr: 'Orientez le laser vers l\'extérieur',
           ja: 'レーザーを外に向ける',
-          cn: '向外引导激光',
           ko: '바깥 봐요 (레이저 유도)',
         },
       },
@@ -560,10 +539,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Start Left',
-          de: 'Starte Links',
-          fr: 'Commencez à gauche',
           ja: '左から',
-          cn: '左侧开始',
           ko: '왼쪽에서 시작',
         },
       },
@@ -581,10 +557,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Start Right',
-          de: 'Starte Rechts',
-          fr: 'Commencez à droite',
           ja: '右から',
-          cn: '右侧开始',
           ko: '오른쪽에서 시작',
         },
       },
@@ -599,10 +572,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Towers',
-          de: 'Türme nehmen',
-          fr: 'Prenez les tours',
           ja: '塔を踏む',
-          cn: '踩塔',
           ko: '기둥 들어가기',
         },
       },
@@ -799,6 +769,40 @@ const triggerSet: TriggerSet<Data> = {
         'Anti-Air Particle Beam': '高射式波动炮',
         'Aetherosynthesis': '吸收生命',
         '\\(L/R\\)': '(左/右)',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Clone Of Darkness': '幻影之雲',
+        'Cloud Of Darkness': '黑暗之雲',
+      },
+      'replaceText': {
+        'The Third Art Of Darkness': '三重暗之戰技',
+        'The Second Art Of Darkness': '二重暗之戰技',
+        'The Art Of Darkness': '暗之戰技',
+        'Summon': '召喚',
+        'Rejuvenating Balm': '活性彈',
+        // 'Phaser Unlimited': '', // FIXME '跳跃波动炮'
+        'Particle Concentration': '波動球',
+        'Obscure Woods': '暗黑森林',
+        'Hypercharged Condensation': '吸引波動雲',
+        'Ground-Razing Particle Beam': '放射式波動砲',
+        'Full-Perimeter Particle Beam': '掃射式波動砲',
+        'Flood Of Obscurity': '暗之氾濫：暗黑森林',
+        'Flood Of Emptiness': '暗之氾濫：暗黑天空',
+        'Empty Plane': '暗黑天空',
+        'Devouring Dark': '暗黑侵蝕',
+        'Deluge Of Darkness': '暗之大氾濫',
+        'Dark-Energy Particle Beam': '詛咒式波動砲',
+        'Condensed Wide-Angle Particle Beam': '廣角式高輸出波動砲',
+        'Condensed Anti-Air Particle Beam': '高射式高輸出波動砲',
+        'Bad Vibrations': '強震動',
+        'Anti-Air Phaser Unlimited': '零式高射式跳躍波動砲',
+        'Anti-Air Particle Beam': '高射式波動砲',
+        'Aetherosynthesis': '吸收生命',
+        // '\\(L/R\\)': '', // FIXME '(左/右)'
       },
     },
     {

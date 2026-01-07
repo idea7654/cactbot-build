@@ -43,21 +43,18 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         maul: {
           en: 'Maul',
-          de: 'Zerknirscher',
-          cn: '咬杀',
-          ko: '학대',
+          ja: 'Maul',
+          ko: '물어 죽이기',
         },
         maulOnYou: {
           en: 'Maul on YOU',
-          de: 'Zerknirscher auf DIR',
-          cn: '咬杀点名',
-          ko: '내게 학대',
+          ja: 'Maul on YOU',
+          ko: '내게 물어 죽이기',
         },
         maulOnPlayer: {
           en: 'Maul on ${player}',
-          de: 'Zerknirscher auf ${player}',
-          cn: '咬杀点 ${player}',
-          ko: '학대: ${player}',
+          ja: 'Maul on ${player}',
+          ko: '물어 죽이기: ${player}',
         },
       },
     },
@@ -107,17 +104,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         heat: {
           en: 'Pyretic, Avoid AoE',
-          cn: '热病, 避开AoE',
+          ja: 'Pyretic, Avoid AoE',
           ko: '파이레틱, 장판 피해욧',
         },
         heatOnYou: {
           en: 'Pyretic on YOU, Away from Group => Stop Everything!',
-          cn: '热病点名, 远离小队成员 => 停止一切行动!',
+          ja: 'Pyretic on YOU, Away from Group => Stop Everything!',
           ko: '내게 파이레틱, 혼자 멀리 🔜 그대로 멈춰욧!',
         },
         heatOnPlayer: {
           en: 'Pyretic on ${player}, Avoid AoE',
-          cn: '热病点 ${player}, 避开AoE',
+          ja: 'Pyretic on ${player}, Avoid AoE',
           ko: '파이레틱: ${player}, 장판 피해욧',
         },
       },
@@ -153,8 +150,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid AoE',
-          de: 'Vermeide AoE',
-          cn: '避开AoE',
+          ja: 'Avoid AoE',
           ko: '장판 피해욧',
         },
       },
@@ -182,8 +178,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${count}x attacks => Get Behind',
-          de: '${count}x Attacken => Geh Hinter',
-          cn: '${count}次攻击 => 靠近',
+          ja: '${count}x attacks => Get Behind',
           ko: '공격x${count} 🔜 엉댕이로',
         },
       },
@@ -209,10 +204,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         breakLOS: {
           en: 'Break line-of-sight to ${name}',
-          de: 'Unterbreche Sichtlinie zu ${name}',
-          fr: 'Masquez le champ de vision vers ${name}',
           ja: '${name}の視線から隠れる',
-          cn: '利用掩体卡 ${name} 的视线',
           ko: '시선 잘라요: ${name}',
         },
       },
@@ -239,8 +231,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Behind + Left',
-          de: 'Geh Hinten + Links',
-          cn: '去背后 + 左侧',
+          ja: 'Get Behind + Left',
           ko: '뒤+왼쪽으로',
         },
       },
@@ -253,8 +244,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Behind + Right',
-          de: 'Geh Hinten + Rechts',
-          cn: '去背后 + 右侧',
+          ja: 'Get Behind + Right',
           ko: '뒤+오른쪽으로',
         },
       },
@@ -336,6 +326,25 @@ const triggerSet: TriggerSet<Data> = {
         'Traverse Cubus': 'トラバース・カブス',
         'Traverse Gnoll': 'トラバース・ノール',
         'Traverse Rider': 'トラバース・ライダー',
+      },
+    },
+    {
+      'locale': 'ko',
+      'replaceSync': {
+        'Invoked Arch Demon': '부름받은 아크데몬',
+        'Invoked Baal': '부름받은 바엘',
+        'Invoked Caym': '부름받은 카임',
+        'Invoked Cerberus': '부름받은 케르베로스',
+        'Invoked Gremlin': '부름받은 그렘린',
+        'Invoked Humbaba': '부름받은 훔바바',
+        'Invoked Satana': '부름받은 소악마',
+        'Invoked Succubus': '부름받은 서큐버스',
+        'Invoked Troubadour': '부름받은 방랑음악가',
+        'Malacoda': '말라코다',
+        'Traverse Cama': '순례길 카마',
+        'Traverse Cubus': '순례길 컵푸딩',
+        'Traverse Gnoll': '순례길 놀',
+        'Traverse Rider': '순례길 기수',
       },
     },
   ],

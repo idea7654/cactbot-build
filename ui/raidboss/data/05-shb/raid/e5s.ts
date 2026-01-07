@@ -51,10 +51,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Look for small spear',
-          de: 'Halt nach kleinem Speer ausschau',
-          fr: 'Allez sur la petite lance',
           ja: '低い杖を探す',
-          cn: '找短矛',
           ko: '작은 지팡이 확인',
         },
       },
@@ -76,26 +73,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         lookForAdds: {
           en: 'Look for adds',
-          de: 'Halt nach dem Add ausschau',
-          fr: 'Cherchez les adds',
           ja: '雑魚に注意',
-          cn: '冲锋',
           ko: '쫄 위치 확인',
         },
         bigKnockback: {
           en: 'Big Knockback',
-          de: 'Weiter Rückstoß',
-          fr: 'Forte poussée',
           ja: '遠いノックバック',
-          cn: '长击退',
           ko: '긴 넉백',
         },
         shortKnockback: {
           en: 'Short Knockback',
-          de: 'Kurzer Rückstoß',
-          fr: 'Faible poussée',
           ja: '短いノックバック',
-          cn: '短击退',
           ko: '짧은 넉백',
         },
       },
@@ -112,10 +100,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Grab an orb',
-          de: 'Einen Orb nehmen',
-          fr: 'Prenez un orbe',
           ja: '雷玉を取る',
-          cn: '吃球',
           ko: '구슬 줍기',
         },
       },
@@ -145,10 +130,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Grab an orb',
-          de: 'Einen Orb nehmen',
-          fr: 'Prenez un orbe',
           ja: '雷玉を取る',
-          cn: '吃球',
           ko: '구슬 줍기',
         },
       },
@@ -173,18 +155,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         readySpread: {
           en: 'Ready Spread',
-          de: 'Bereitmachen zum Verteilen',
-          fr: 'Dispersion bientôt',
           ja: '散開準備',
-          cn: '准备分散',
           ko: '산개 준비',
         },
         donutAoe: {
           en: 'donut AoE',
-          de: 'Donut AoE',
-          fr: 'AoE en donut',
           ja: 'ドーナツ範囲',
-          cn: '环形AOE',
           ko: '도넛 장판',
         },
       },
@@ -217,10 +193,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Position for Stormcloud',
-          de: 'Position für die Wolke',
-          fr: 'Positions pour les nuages',
           ja: '雷雲散開',
-          cn: '雷云站位',
           ko: '번개 구름 위치 잡기',
         },
       },
@@ -235,10 +208,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Cleanse In Cloud',
-          de: 'In der Wolke reinigen',
-          fr: 'Purifiez-vous dans le nuage',
-          ja: '麻痺をエスナ',
-          cn: '雷云清Debuff',
+          ja: '雷雲の範囲攻撃でデバフ解除',
           ko: '디버프 제거하기',
         },
       },
@@ -252,10 +222,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Drop Cloud Away',
-          de: 'Wolke drausen ablegen',
-          fr: 'Déposez le nuage à l\'extérieur',
           ja: '外に雷雲を捨てる',
-          cn: '远离放雷云',
           ko: '번개 구름 소환자',
         },
       },
@@ -268,10 +235,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Be in your position',
-          de: 'Befinde dich auf deiner Position!',
-          fr: 'Placez-vous à votre position',
           ja: '突進、自分の位置へ',
-          cn: '冲锋站位',
           ko: '자기 위치에 있기',
         },
       },
@@ -284,10 +248,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Ready for Chain',
-          de: 'Bereit für Kettenblitz',
-          fr: 'Préparez-vous pour la chaine',
           ja: 'チェインライトニング準備',
-          cn: '雷光链',
           ko: '체인 라이트닝 준비',
         },
       },
@@ -400,7 +361,7 @@ const triggerSet: TriggerSet<Data> = {
         'stormcloud': '雷暴云',
         '(?<! )Ramuh': '拉姆',
         'Will Of Ramuh': '拉姆幻影',
-        'Raiden': '莱丁',
+        'Raiden': '雷电',
         'Will Of Ixion': '伊克西翁幻影',
       },
       'replaceText': {
@@ -427,6 +388,41 @@ const triggerSet: TriggerSet<Data> = {
         'Chaos Strike': '混乱冲击',
         'Chain Lightning': '雷光链',
         'Centaur\'s Charge': '人马冲锋',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'stormcloud': '雷暴雲',
+        '(?<! )Ramuh': '拉姆',
+        'Will Of Ramuh': '拉姆幻影',
+        'Raiden': '雷電',
+        'Will Of Ixion': '伊克西翁幻影',
+      },
+      'replaceText': {
+        'Volt Strike': '雷電強襲',
+        'Tribunal Summons': '生成幻影',
+        'Thunderstorm': '雷暴',
+        'Stratospear Summons': '生成武具',
+        'Stormcloud Summons': '生成雷暴雲',
+        'Stepped Leader': '梯級先導',
+        'Shock Strike': '轟雷',
+        'Shock Blast': '震盪爆雷',
+        'Shock(?! )': '放電',
+        'Lightning Bolt': '落雷',
+        'Levinforce': '雷霆之力',
+        'Judgment Volts': '制裁之熱雷',
+        'Judgment Jolt': '制裁之界雷',
+        'Impact': '衝擊',
+        'Gallop': '飛馳',
+        'Fury\'s Fourteen': '十四重蓄雷',
+        'Fury\'s Bolt': '蓄雷',
+        'Executor Summons': '生成僕從',
+        'Deadly Discharge': '死亡衝鋒',
+        'Crippling Blow': '痛擊',
+        'Chaos Strike': '混亂衝擊',
+        'Chain Lightning': '雷光鏈',
+        'Centaur\'s Charge': '人馬衝鋒',
       },
     },
     {

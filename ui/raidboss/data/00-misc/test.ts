@@ -12,6 +12,7 @@ const strikingDummyNames: LocaleText = {
   ja: '木人',
   cn: '木人',
   ko: '나무인형',
+  tc: '木人',
 };
 
 export type ConfigIds = 'testTriggerOutput';
@@ -33,6 +34,7 @@ const triggerSet: TriggerSet<Data> = {
     fr: 'Test des triggers Cactbot',
     cn: 'Cactbot测试触发器',
     ko: 'Cactbot 테스트 트리거',
+    tc: 'Cactbot測試觸發器',
   },
   comments: {
     en:
@@ -45,6 +47,8 @@ const triggerSet: TriggerSet<Data> = {
       '测试/排错触发器（参见：<a href="https://github.com/OverlayPlugin/cactbot/blob/main/docs/FAQ-Troubleshooting.md#summerford-farms-raidboss-test">Summerford Farms Raidboss Test</a>',
     ko:
       '테스트/문제확인 트리거 (참고: <a href="https://github.com/OverlayPlugin/cactbot/blob/main/docs/FAQ-Troubleshooting.md#summerford-farms-raidboss-test">여름여울 농장 Raidboss 테스트</a>)',
+    tc:
+      '測試/排錯觸發器（參見：<a href="https://github.com/OverlayPlugin/cactbot/blob/main/docs/FAQ-Troubleshooting.md#summerford-farms-raidboss-test">Summerford Farms Raidboss Test</a>',
   },
   config: [
     {
@@ -56,6 +60,7 @@ const triggerSet: TriggerSet<Data> = {
         ja: '"/echo cactbot test config"のアウトプット',
         cn: '输出 "/echo cactbot测试配置"',
         ko: '"/echo cactbot 설정 테스트" 출력값',
+        tc: '輸出 "/echo cactbot測試配置',
       },
       type: 'string',
       default: () => {
@@ -121,18 +126,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         stack: {
           en: 'Stack for Angry Dummy',
-          de: 'Sammeln für Wütender Dummy',
-          fr: 'Packez-vous pour le Mannequin en colère',
           ja: '怒る木人に集合',
-          cn: '木人处集合',
           ko: '화난 나무인형에 집합',
         },
         stackTTS: {
           en: 'Stack',
-          de: 'Sammeln',
-          fr: 'Packez-vous',
           ja: '集合',
-          cn: '集合',
           ko: '집합',
         },
       },
@@ -159,10 +158,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         elapsed: {
           en: 'Elapsed ms: ${elapsed}',
-          de: 'Abgelaufene ms: ${elapsed}',
-          fr: 'Expiré ms: ${elapsed}',
           ja: '経過時間：${elapsed}',
-          cn: '经过时间：${elapsed}',
           ko: '경과 시간: ${elapsed}',
         },
       },
@@ -178,10 +174,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         poke: {
           en: 'poke #${numPokes}',
-          de: 'stups #${numPokes}',
-          fr: 'poussée #${numPokes}',
           ja: 'つつく #${numPokes}',
-          cn: '戳 #${numPokes}',
           ko: '${numPokes}번 찌름',
         },
       },
@@ -198,14 +191,12 @@ const triggerSet: TriggerSet<Data> = {
         ja: '活を入れる',
         cn: '激励',
         ko: '힘내라!',
+        tc: '激勵',
       },
       outputStrings: {
         text: {
           en: 'PSYCH!!!',
-          de: 'AUF GEHTS!!!',
-          fr: 'MOTIVATION !!!',
           ja: '活を入れる！！',
-          cn: '激励！！',
           ko: '힘내라!!',
         },
       },
@@ -223,14 +214,12 @@ const triggerSet: TriggerSet<Data> = {
         ja: 'ハハハハハ',
         cn: '哈哈哈哈哈哈',
         ko: '푸하하하하핳',
+        tc: '哈哈哈哈哈哈',
       },
       outputStrings: {
         text: {
           en: 'hahahahaha',
-          de: 'hahahahaha',
-          fr: 'hahahahaha',
           ja: 'ハハハハハ',
-          cn: '2333333333',
           ko: '푸하하하하핳',
         },
       },
@@ -245,10 +234,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'clapity clap',
-          de: 'klatschen',
-          fr: 'applaudissement',
           ja: '拍手',
-          cn: '鼓掌',
           ko: '박수 짝짝짝',
         },
       },
@@ -262,10 +248,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Language: ${lang}',
-          de: 'Sprache: ${lang}',
-          fr: 'Langage: ${lang}',
           ja: '言語：${lang}',
-          cn: '语言: ${lang}',
           ko: '언어: ${lang}',
         },
       },
@@ -324,10 +307,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         close: {
           en: 'Dummy close!',
-          de: 'Puppe beendet!',
-          fr: 'Mannequin proche !',
           ja: '木人に近すぎ！',
-          cn: '靠近木人！',
           ko: '나무인형과 가까움!',
         },
       },
@@ -342,10 +322,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Config Value: ${value}',
-          de: 'Einstellungswert: ${value}',
-          fr: 'Valeur de configuration : ${value}',
           ja: '設定: ${value}',
-          cn: '配置值: ${value}',
           ko: '설정값: ${value}',
         },
       },
@@ -376,10 +353,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         casting: {
           en: 'ID ${id} is casting spell ID ${spellId}',
-          de: 'ID ${id} wirkt Zauber ID ${spellId}',
-          fr: 'ID ${id} incante le sort ID ${spellId}',
           ja: 'ID ${id} スペルID ${spellId}を詠唱中',
-          cn: 'ID ${id} 正在施法 ID ${spellId}',
           ko: 'ID ${id}: 스킬 ID ${spellId}를 시전하는 중',
         },
       },
@@ -395,10 +369,7 @@ const triggerSet: TriggerSet<Data> = {
         countdown: {
           en: '${player} started ${seconds}s countdown',
           // or inline: '${player} started {{CD}} countdown',
-          de: '${player} startet ${seconds}s countdown',
-          fr: '${player} a démarré un compte à rebours de ${seconds}s',
           ja: '${player} が ${seconds} 秒のカウントダウンを開始しました',
-          cn: '${player} 开始倒计时 ${seconds}秒',
           ko: '${player} ${seconds}초 초읽기를 시작했습니다',
         },
       },
@@ -412,10 +383,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         countdownFail: {
           en: '${player} failed to start countdown (result code: ${code})',
-          de: '${player} konnte Countdown nicht starten (Ergebniscode: ${code})',
-          fr: '${player} a échoué à démarrer un compte à rebours (result code: ${code})',
           ja: '${player} がカウントダウンを開始できませんでした (コード: ${code})',
-          cn: '${player} 开始倒计时失败 (结果代码: ${code})',
           ko: '${player} 초읽기를 시작하지 못했습니다 (반환 코드: ${code})',
         },
       },
@@ -428,10 +396,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         countdownCancel: {
           en: '${player} cancelled countdown',
-          de: '${player} hat den Countdown abgebrochen',
-          fr: '${player} a annulé le compte à rebours',
           ja: '${player} がカウントダウンをキャンセルしました',
-          cn: '${player} 取消倒计时',
           ko: '${player} 초읽기를 취소했습니다',
         },
       },
@@ -453,10 +418,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'player = ${player}, player.job = ${player.job}, player.bogus = ${player.bogus}',
-          de: 'player = ${player}, player.job = ${player.job}, player.bogus = ${player.bogus}',
-          fr: 'player = ${player}, player.job = ${player.job}, player.bogus = ${player.bogus}',
           ja: 'player = ${player}, player.job = ${player.job}, player.bogus = ${player.bogus}',
-          cn: 'player = ${player}, player.job = ${player.job}, player.bogus = ${player.bogus}',
           ko: 'player = ${player}, player.job = ${player.job}, player.bogus = ${player.bogus}',
         },
       },
@@ -478,9 +440,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Trigger countdown test',
-          de: 'Trigger countdown test',
-          fr: 'Test de décompte des triggers',
-          cn: '触发器倒计时测试',
+          ja: 'Trigger countdown test',
           ko: '트리거 카운트다운 테스트',
         },
       },
@@ -651,6 +611,46 @@ const triggerSet: TriggerSet<Data> = {
         'Fifteen': '拾伍',
         'Force Jump Three': '强制跳转叁',
         'Invisible': '不可见',
+      },
+    },
+    {
+      locale: 'tc',
+      replaceSync: {
+        'You bid farewell to the striking dummy': '.*向木人告别',
+        'You bow courteously to the striking dummy': '.*恭敬地對木人行禮',
+        'test sync': 'test sync',
+        'testNetRegexTimeline': 'testNetRegexTimeline',
+        'You burst out laughing at the striking dummy': '.*看着木人高聲大笑',
+        'cactbot lang': 'cactbot語言',
+        'cactbot test combatant cast': 'cactbot測試戰鬥員施法',
+        'cactbot test config': 'cactbot測試配置',
+        'cactbot test outputStrings': 'cactbot測試輸出字符串',
+        'cactbot test response': 'cactbot響應測試',
+        'cactbot test trigger countdown': 'cactbot測試觸發器倒計時',
+        'cactbot test watch': 'cactbot探測測試',
+        'You clap for the striking dummy': '.*向木人送上掌聲',
+        'You psych yourself up alongside the striking dummy': '.*激勵木人',
+        'You poke the striking dummy': '.*用手指戳向木人',
+      },
+      replaceText: {
+        'Final Sting': '最終刺針',
+        'Almagest': '至高無上',
+        'Angry Dummy': '憤怒的木人',
+        'Long Castbar': '長時間詠唱',
+        'Dummy Stands Still': '木人8動了',
+        'Super Tankbuster': '超級無敵轉圈死刑',
+        'Death To': '嗝屁攻擊：',
+        'Death': '嗝屁',
+        'Engage': '戰鬥開始',
+        'Pentacle Sac': '傳毒',
+        'Two': '貳',
+        '(?<! )Three': '叄',
+        'Four': '肆',
+        'Six': '陸',
+        'Ten': '拾',
+        'Fifteen': '拾伍',
+        'Force Jump Three': '強制跳轉叄',
+        'Invisible': '不可見',
       },
     },
     {

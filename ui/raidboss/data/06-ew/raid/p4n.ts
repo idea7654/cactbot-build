@@ -25,10 +25,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go to Corner',
-          de: 'In eine Ecke gehen',
-          fr: 'Allez dans un coin',
           ja: '角へ',
-          cn: '去角落',
           ko: '구석으로',
         },
       },
@@ -42,10 +39,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Middle Knockback',
-          de: 'Rückstoß von der Mitte',
-          fr: 'Poussée au milieu',
           ja: '真ん中からノックバック',
-          cn: '中间击退',
           ko: '한가운데서 넉백',
         },
       },
@@ -89,10 +83,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Other Role Tower',
-          de: 'Geh in einen Turm einer anderen Rolle',
-          fr: 'Prenez la tour d\'un autre rôle',
           ja: '他のロールの塔を処理',
-          cn: '踩其他职能的塔',
           ko: '다른 롤 타워 밟아요',
         },
       },
@@ -105,10 +96,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go North Edge',
-          de: 'Geh zur nördlichen Kante',
-          fr: 'Allez au bord nord',
           ja: '北側へ',
-          cn: '去上 (北) 边',
           ko: '북쪽 옆으로',
         },
       },
@@ -121,10 +109,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go East Edge',
-          de: 'Geh zur östlichen Kante',
-          fr: 'Allez au bord est',
           ja: '東側へ',
-          cn: '去右 (东) 边',
           ko: '동쪽 옆으로',
         },
       },
@@ -137,10 +122,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go South Edge',
-          de: 'Geh zur südlichen Kante',
-          fr: 'Allez au bord sud',
           ja: '南側へ',
-          cn: '去下 (南) 边',
           ko: '남쪽 옆으로',
         },
       },
@@ -153,10 +135,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go West Edge',
-          de: 'Geh zur westlichen Kante',
-          fr: 'Allez au bord ouest',
           ja: '西側へ',
-          cn: '去左 (西) 边',
           ko: '서쪽 옆으로',
         },
       },
@@ -170,10 +149,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'North Knockback',
-          de: 'Rückstoß vom Norden',
-          fr: 'Poussée au nord',
           ja: '北側からノックバック',
-          cn: '上 (北) 击退',
           ko: '북쪽 넉백',
         },
       },
@@ -187,10 +163,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'East Knockback',
-          de: 'Rückstoß vom Osten',
-          fr: 'Poussée à l\'est',
           ja: '東側からノックバック',
-          cn: '右 (东) 击退',
           ko: '동쪽 넉백',
         },
       },
@@ -204,10 +177,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'South Knockback',
-          de: 'Rückstoß vom Süden',
-          fr: 'Poussée au sud',
           ja: '南側からノックバック',
-          cn: '下 (南) 击退',
           ko: '남쪽 넉백',
         },
       },
@@ -221,10 +191,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'West Knockback',
-          de: 'Rückstoß vom Westen',
-          fr: 'Poussée à l\'ouest',
           ja: '西側からノックバック',
-          cn: '左 (西) 击退',
           ko: '서쪽 넉백',
         },
       },
@@ -237,10 +204,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Pop other role orbs',
-          de: 'Nimm einen Orb einer anderen Rolle',
-          fr: 'Éclatez l\'orbe d\'un autre rôle',
           ja: '他のロールの玉に当たる',
-          cn: '撞其他职能的球',
           ko: '다른 롤 구슬 처리해요',
         },
       },
@@ -335,7 +299,7 @@ const triggerSet: TriggerSet<Data> = {
         'Hesperos': '赫斯珀洛斯',
       },
       'replaceText': {
-        '\\(cleave\\)': '(顺劈)',
+        '\\(cleave\\)': '(扇形)',
         '\\(knockback\\)': '(击退)',
         'Acid Pinax': '剧毒板画',
         'Belone Bursts': '附魔佩罗涅·爆炸',
@@ -352,6 +316,32 @@ const triggerSet: TriggerSet<Data> = {
         'Shifting Strike': '换位强袭',
         'Well Pinax': '喷水板画',
         'Westerly Shift': '换位强袭·西',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Hesperos': '赫斯珀洛斯',
+      },
+      'replaceText': {
+        // '\\(cleave\\)': '', // FIXME '(扇形)'
+        // '\\(knockback\\)': '', // FIXME '(击退)'
+        'Acid Pinax': '劇毒板畫',
+        'Belone Bursts': '附魔佩羅涅·爆炸',
+        'Belone Coils': '附魔佩羅涅·場地',
+        'Bloodrake': '聚血',
+        'Burst(?!s)': '大爆炸',
+        'Decollation': '斷頭',
+        'Directional Shift': '換位強襲·北',
+        'Elegant Evisceration': '優雅除髒',
+        'Hell Skewer': '地獄穿刺',
+        'Levinstrike Pinax': '雷電板畫',
+        '(?<!\\w )Pinax': '板畫',
+        'Setting the Scene': '佈置劇場',
+        'Shifting Strike': '換位強襲',
+        'Well Pinax': '噴水板畫',
+        'Westerly Shift': '換位強襲·西',
       },
     },
     {

@@ -112,10 +112,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Attack Head Only',
-          de: 'Nur den Kopf angreifen',
-          fr: 'Attaquez seulement la tête',
           ja: '頭だけに攻撃',
-          cn: '攻击头部',
           ko: '머리만 공격',
         },
       },
@@ -130,10 +127,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Attack Tail Only',
-          de: 'Nur den Schwanz angreifen',
-          fr: 'Attaquez seulement la queue',
           ja: 'テールだけに攻撃',
-          cn: '攻击尾巴',
           ko: '꼬리만 공격',
         },
       },
@@ -156,10 +150,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Kill Wavetooth Add',
-          de: 'Besiege Wellenzahn Add',
-          fr: 'Tuez l\'add Dent-du-ressac',
           ja: 'ウェイブトゥース・サハギンに攻撃',
-          cn: '优先击杀波齿鱼人',
           ko: '웨이브투스(물결이빨 사하긴) 잡아요',
         },
       },
@@ -184,10 +175,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Kill Gyre Spumes',
-          de: 'Besiege Gischtblase',
-          fr: 'Tuez les écumes concentriques',
           ja: 'ジャイヤ・スピュームに攻撃',
-          cn: '打黄泡泡',
           ko: '자이레 스품(노랑 물거품) 잡아요',
         },
       },
@@ -201,10 +189,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Wave Spume Adds',
-          de: 'Gischtwelle Adds',
-          fr: 'Adds Écumes ondulantes',
           ja: 'ウェイブ・スピューム出現',
-          cn: '蓝泡泡出现',
           ko: '웨이브 스품(파랑 물거품) 나왔어요',
         },
       },
@@ -222,10 +207,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Burst Soon',
-          de: 'Gischtwelle platzen gleich',
-          fr: 'Burst bientôt',
           ja: 'まもなく爆発',
-          cn: '黄泡泡即将爆炸',
           ko: '곧 웨이브 스품(파랑 물거품) 폭발',
         },
       },
@@ -250,10 +232,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Hit The Button!',
-          de: 'Mit Elementarumwandler interagieren!',
-          fr: 'Activez la barrière !',
           ja: '魔法障壁を発動',
-          cn: '打开开关！',
           ko: '스위치 눌러요!',
         },
       },
@@ -383,6 +362,37 @@ const triggerSet: TriggerSet<Data> = {
         'Wave Spume': '巨浪泡沫',
         'Wavespine Sahagin': '波棘鱼人',
         'Wavetooth Sahagin': '波齿鱼人',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Elemental Converter': '魔法障壁發動器',
+        'Leviathan(?!\'s)': '利維坦',
+        'Leviathan\'s Tail': '利維坦的尾巴',
+        'Gyre Spume': '游渦泡沫',
+        'Wave Spume': '巨浪泡沫',
+        'Wavetooth Sahagin': '波齒魚人',
+        'Wavespine Sahagin': '波棘魚人',
+      },
+      'replaceText': {
+        'Aqua Breath': '水紋吐息',
+        'Aqua Burst': '流水爆發',
+        'Body Slam': '猛撞',
+        'Briny Veil': '海水鏡面',
+        'Dread Tide': '恐慌潮水',
+        'Grand Fall': '九天落水',
+        'Gyre Spume': '游渦泡沫',
+        'Mantle Of The Whorl': '水神的披風',
+        'Spinning Dive': '迴旋俯衝',
+        'Tail Whip': '掃尾',
+        'Tidal Roar': '浪潮嘶吼',
+        'Tidal Wave': '巨浪',
+        'Veil Of The Whorl': '水神的面紗',
+        'Waterspout': '海龍捲',
+        'Wave Spume': '巨浪泡沫',
+        'Wavespine Sahagin': '波棘魚人',
+        'Wavetooth Sahagin': '波齒魚人',
       },
     },
     {

@@ -105,6 +105,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         baitHand: {
           en: 'Bait Hand',
+          ja: 'Bait Hand',
           ko: '손 유도',
         },
       },
@@ -146,18 +147,22 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         lightWest: {
           en: 'Light West => Spread',
+          ja: 'Light West => Spread',
           ko: '🟡빛 서쪽 🔜 흩어져요',
         },
         lightEast: {
           en: 'Light East => Spread',
+          ja: 'Light East => Spread',
           ko: '🟡빛 동쪽 🔜 흩어져요',
         },
         aWest: {
           en: 'Go West => Spread',
+          ja: 'Go West => Spread',
           ko: '❰❰❰서쪽 맡은 자리로',
         },
         aEast: {
           en: 'Go East => Spread',
+          ja: 'Go East => Spread',
           ko: '동쪽 맡은 자리로❱❱❱',
         },
       },
@@ -197,6 +202,7 @@ const triggerSet: TriggerSet<Data> = {
         mid: Outputs.middle,
         stored: {
           en: 'Stored ${dir}',
+          ja: 'Stored ${dir}',
           ko: '(저장: ${dir})',
         },
       },
@@ -227,6 +233,7 @@ const triggerSet: TriggerSet<Data> = {
         partners: Outputs.stackPartner,
         text: {
           en: '${dir} + ${mech}',
+          ja: '${dir} + ${mech}',
           ko: '${dir} + ${mech}',
         },
       },
@@ -245,10 +252,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         bait: {
           en: 'Drop hand => Bait hand',
+          ja: 'Drop hand => Bait hand',
           ko: '손 떨구고 🔜 다시 유도',
         },
         spector: {
           en: 'Spread => Bait',
+          ja: 'Spread => Bait',
           ko: '손 떨구고 🔜 함께 유도',
         },
       },
@@ -268,6 +277,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         bait: {
           en: 'Bait puddles',
+          ja: 'Bait puddles',
           ko: '장판 유도',
         },
       },
@@ -282,6 +292,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         bait: {
           en: 'Bait puddles => Intercardinals',
+          ja: 'Bait puddles => Intercardinals',
           ko: '장판 유도 🔜 비스듬히',
         },
       },
@@ -304,6 +315,7 @@ const triggerSet: TriggerSet<Data> = {
         spread: Outputs.spread,
         tower: {
           en: 'Tower',
+          ja: 'Tower',
           ko: '타워로',
         },
       },
@@ -345,9 +357,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         cleanse: {
           en: 'Cleanse Slow',
-          fr: 'Guérisez la lenteur',
           ja: 'スロウを解除',
-          cn: '康复减速',
           ko: '슬로우 에스나',
         },
       },
@@ -390,18 +400,22 @@ const triggerSet: TriggerSet<Data> = {
         positions: Outputs.positions,
         middle: {
           en: 'Middle Row',
+          ja: 'Middle Row',
           ko: '가운데',
         },
         north: {
           en: 'North Row',
+          ja: 'North Row',
           ko: '🡹북쪽',
         },
         south: {
           en: 'South Row',
+          ja: 'South Row',
           ko: '🡻남쪽',
         },
         text: {
           en: '${row} + ${positions}',
+          ja: '${row} + ${positions}',
           ko: '${row} + ${positions}',
         },
       },
@@ -501,6 +515,7 @@ const triggerSet: TriggerSet<Data> = {
         },
         text: {
           en: '${dir1} => ${dir2} => ${dir3} => ${dir4} + ${mech}',
+          ja: '${dir1} => ${dir2} => ${dir3} => ${dir4} + ${mech}',
           ko: '${dir1} / ${dir2} / ${dir3} / ${dir4} (${mech})',
         },
       },
@@ -536,10 +551,12 @@ const triggerSet: TriggerSet<Data> = {
         middle: Outputs.middle,
         delay: {
           en: 'Wait for hand => ${dir}',
+          ja: 'Wait for hand => ${dir}',
           ko: '손 기다렸다가 ${dir}',
         },
         dodge: {
           en: '${dir} => Dodge Hand',
+          ja: '${dir} => Dodge Hand',
           ko: '${dir} 🔜 손 피해요',
         },
       },
@@ -556,6 +573,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         towerPos: {
           en: '(Towers soon)',
+          ja: '(Towers soon)',
           ko: '(곧 타워)',
         },
       },
@@ -756,6 +774,53 @@ const triggerSet: TriggerSet<Data> = {
         'The Fourth Season': '四重青之波潮',
         'The Second Season': '二重青之波潮',
         'Twofold Blight': '青之二重波',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        // 'Azure Aether': '', // FIXME '青之魂块'
+        // 'Beckoning Hands': '', // FIXME '邀死之手'
+        // 'Icy Hands': '', // FIXME '招死之手'
+        // 'Necron': '', // FIXME '永远之暗'
+      },
+      'replaceText': {
+        // '\\(cast\\)': '', // FIXME '(咏唱)'
+        // '\\(damage\\)': '', // FIXME '(伤害)'
+        // '\\(intercards\\)': '', // FIXME '(斜角)'
+        // '\\(line\\)': '', // FIXME '(直线)'
+        // '\\(lines\\)': '', // FIXME '(直线)'
+        // '\\(puddle\\)': '', // FIXME '(圈)'
+        // '\\(puddles\\)': '', // FIXME '(圈)'
+        // '\\(spread\\)': '', // FIXME '(分散)'
+        // '\\(tower\\)': '', // FIXME '(塔)'
+        // 'Aetherblight': '', // FIXME '青之波动'
+        // 'Blue Shockwave': '', // FIXME '青之冲击'
+        // 'Choking Grasp': '', // FIXME '压溃'
+        // 'Circle of Lives': '', // FIXME '青之环波'
+        // 'Cold Grip': '', // FIXME '暗之死腕'
+        // 'Crop Rotation': '', // FIXME '灵魂轮转'
+        // 'Darkness of Eternity': '', // FIXME '永远之暗'
+        'Existential Dread': '萬死的憎惡',
+        // 'Fear of Death': '', // FIXME '死之恐惧'
+        // 'Fourfold Blight': '', // FIXME '青之四重波'
+        'Grand Cross': '大十字',
+        // 'Inevitability': '', // FIXME '死之泛滥'
+        // 'Mass Macabre': '', // FIXME '群体恐慌'
+        // 'Memento Mori': '', // FIXME '死亡警告'
+        // 'Muted Struggle': '', // FIXME '击溃'
+        // 'Neutron Ring': '', // FIXME '中子环'
+        // 'Relentless Reaping': '', // FIXME '青之连魂'
+        'Shock(?!wave)': '放電',
+        // '(?<!Blue )Shockwave': '', // FIXME '青之冲击'
+        'Smite of Gloom': '黑暗一擊',
+        // 'Soul Reaping': '', // FIXME '青魂'
+        // 'Specter of Death': '', // FIXME '黑暗巨腕'
+        // 'The End\'s Embrace': '', // FIXME '引导之翼'
+        // 'The Fourth Season': '', // FIXME '四重青之波潮'
+        // 'The Second Season': '', // FIXME '二重青之波潮'
+        // 'Twofold Blight': '', // FIXME '青之二重波'
       },
     },
     {

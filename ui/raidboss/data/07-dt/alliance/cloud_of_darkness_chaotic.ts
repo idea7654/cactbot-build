@@ -61,7 +61,6 @@ const triggerSet: TriggerSet<Data> = {
         text: {
           en: 'Cleanse Doom',
           ja: '死の宣告にエスナ',
-          cn: '驱散死宣',
           ko: '에스나 써줘요!',
         },
       },
@@ -83,10 +82,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         provoke: {
           en: 'Provoke',
+          ja: 'Provoke',
           ko: '프로보크!',
         },
         shirk: {
           en: 'Shirk',
+          ja: 'Shirk',
           ko: '셔크 날려요!',
         },
       },
@@ -109,7 +110,6 @@ const triggerSet: TriggerSet<Data> = {
         combo: {
           en: '${action} => ${scast}',
           ja: '${action} => ${scast}',
-          cn: '${action} => ${scast}',
           ko: '${action} 🔜 ${scast}',
         },
         out: Outputs.out,
@@ -143,10 +143,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         front: {
           en: '(Move forward, later)',
+          ja: '(Move forward, later)',
           ko: '(앞에서 주먹 🔜 앞으로)',
         },
         back: {
           en: '(Move backward, later)',
+          ja: '(Move backward, later)',
           ko: '(뒤에서 주먹 🔜 뒤로)',
         },
       },
@@ -162,10 +164,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         front: {
           en: '(Forward soon)',
+          ja: '(Forward soon)',
           ko: '(곧 앞으로, 보스 봐요)',
         },
         back: {
           en: '(Backward soon)',
+          ja: '(Backward soon)',
           ko: '(곧 뒤로, 벽 봐요)',
         },
         unknown: Outputs.unknown,
@@ -182,10 +186,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         front: {
           en: 'Move forward!',
+          ja: 'Move forward!',
           ko: '앞으로!',
         },
         back: {
           en: 'Move backward!',
+          ja: 'Move backward!',
           ko: '뒤로!',
         },
         unknown: Outputs.unknown,
@@ -199,6 +205,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Charge beams',
+          ja: 'Charge beams',
           ko: '연속 레이저',
         },
       },
@@ -207,10 +214,7 @@ const triggerSet: TriggerSet<Data> = {
       id: 'Cloud Chaotic Unholy Darkness',
       type: 'StartsUsing',
       netRegex: { id: 'A12D', source: 'Cloud of Darkness', capture: false },
-      infoText: (_data, _matches, output) => output.healerGroups!(),
-      outputStrings: {
-        healerGroups: Outputs.healerGroups,
-      },
+      response: Responses.healerGroups(),
     },
     {
       id: 'Cloud Chaotic Flare Marker',
@@ -331,6 +335,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Towers',
+          ja: 'Get Towers',
           ko: '타워 밟아요!',
         },
       },
@@ -344,10 +349,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         in: {
           en: 'In',
+          ja: 'In',
           ko: '도넛, 안으로!',
         },
         out: {
           en: 'Out',
+          ja: 'Out',
           ko: '십자, 모서리로!',
         },
       },
@@ -401,6 +408,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Beam',
+          ja: 'Beam',
           ko: '바깥 봐요!',
         },
       },
@@ -428,7 +436,6 @@ const triggerSet: TriggerSet<Data> = {
         text: {
           en: 'Sides => middle',
           ja: 'サイド => 真ん中',
-          cn: '两侧 => 中间',
           ko: '옆에 있다 🔜 가운데로',
         },
       },
@@ -446,7 +453,6 @@ const triggerSet: TriggerSet<Data> = {
         text: {
           en: 'Middle => sides',
           ja: '真ん中 => サイド',
-          cn: '中间 => 两侧',
           ko: '가운데 있다 🔜 옆으로',
         },
       },
@@ -460,6 +466,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Place Bramble',
+          ja: 'Place Bramble',
           ko: '씨앗 장판 버려요',
         },
       },
@@ -540,7 +547,6 @@ const triggerSet: TriggerSet<Data> = {
         text: {
           en: 'Start ${first}',
           ja: '最初は ${first} から',
-          cn: '先 ${first}',
           ko: '시작: ${first}',
         },
         left: Outputs.right,
@@ -584,7 +590,6 @@ const triggerSet: TriggerSet<Data> = {
         text: {
           en: '${first} => ${second} => ${third}',
           ja: '${first} => ${second} => ${third}',
-          cn: '${first} => ${second} => ${third}',
           ko: '${first} 🔜 ${second} 🔜 ${third}',
         },
         left: Outputs.right,
@@ -616,6 +621,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Align',
+          ja: 'Align',
           ko: '자리 정렬, 줄 준비',
         },
       },
@@ -630,7 +636,6 @@ const triggerSet: TriggerSet<Data> = {
         text: {
           en: 'Chasing AoE on YOU',
           ja: '追跡AOE',
-          cn: '追踪AOE点名',
           ko: '내게 장판이 따라와요! 돌아요!',
         },
       },
@@ -768,6 +773,146 @@ const triggerSet: TriggerSet<Data> = {
         'Unholy Darkness': 'ダークホーリー',
         'Vortex': '吸引',
         'the Third Art of Darkness': '闇の戦技：三重',
+      },
+    },
+    {
+      'locale': 'cn',
+      'replaceSync': {
+        'Cloud Of Darkness': '暗黑之云',
+        'Cloud of Darkness': '暗黑之云',
+        'Cloudlet of Darkness': '暗黑之破片云',
+        'Stygian Shadow': '生于黑暗之物',
+      },
+      'replaceText': {
+        '--adds untargetable--': '--小怪不可选中--',
+        'Active-pivot Particle Beam': '回旋式波动炮',
+        '(?<!En)Aero IV': '飙风',
+        'Blade of Darkness': '暗之刃',
+        'Break IV': '超石化',
+        'Chaos-condensed Particle Beam': '凝聚式波动炮',
+        'Core-lateral Phaser': '正侧跳跃波动炮',
+        'Curse of Darkness': '波动诅咒',
+        'Dark Dominion': '深暗领域',
+        'Dark-energy Particle Beam': '诅咒式波动炮',
+        '(?<!En)Death IV': '极死',
+        'Deluge of Darkness': '暗之大泛滥',
+        'Diffusive-force Particle Beam': '分散式波动炮',
+        'Enaero IV': '超附风',
+        'Endeath IV': '超附死',
+        'Evaporation': '云散',
+        'Evil Seed': '种子弹',
+        'Excruciate': '磔杀',
+        'Feint Particle Beam': '潜地式波动炮',
+        'Flare': '核爆',
+        'Flood of Darkness': '暗之泛滥',
+        'Ghastly Gloom': '恐惧之云',
+        'Grim Embrace': '阴冷拥抱',
+        'Lateral-core Phaser': '侧正跳跃波动炮',
+        'Looming Chaos': '混沌迫近',
+        '(?<! )Particle Beam': '波动爆炸',
+        'Particle Concentration': '波动球',
+        '(?<! )Phaser': '跳跃波动炮',
+        'Rapid-sequence Particle Beam': '连射式波动炮',
+        'Razing-volley Particle Beam': '齐射式波动炮',
+        'Thorny Vine': '荆棘丛生',
+        'Unholy Darkness': '黑暗神圣',
+        'Vortex': '吸引',
+        'the Third Art of Darkness': '三重暗之战技',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Cloud Of Darkness': '黑暗之雲',
+        'Cloud of Darkness': '黑暗之雲',
+        // 'Cloudlet of Darkness': '', // FIXME '暗黑之破片云'
+        // 'Stygian Shadow': '', // FIXME '生于黑暗之物'
+      },
+      'replaceText': {
+        // '--adds untargetable--': '', // FIXME '--小怪不可选中--'
+        // 'Active-pivot Particle Beam': '', // FIXME '回旋式波动炮'
+        '(?<!En)Aero IV': '超勁風',
+        // 'Blade of Darkness': '', // FIXME '暗之刃'
+        // 'Break IV': '', // FIXME '超石化'
+        // 'Chaos-condensed Particle Beam': '', // FIXME '凝聚式波动炮'
+        // 'Core-lateral Phaser': '', // FIXME '正侧跳跃波动炮'
+        // 'Curse of Darkness': '', // FIXME '波动诅咒'
+        // 'Dark Dominion': '', // FIXME '深暗领域'
+        'Dark-energy Particle Beam': '詛咒式波動砲',
+        // '(?<!En)Death IV': '', // FIXME '极死'
+        'Deluge of Darkness': '暗之大氾濫',
+        // 'Diffusive-force Particle Beam': '', // FIXME '分散式波动炮'
+        // 'Enaero IV': '', // FIXME '超附风'
+        // 'Endeath IV': '', // FIXME '超附死'
+        // 'Evaporation': '', // FIXME '云散'
+        'Evil Seed': '種子彈',
+        // 'Excruciate': '', // FIXME '磔杀'
+        'Feint Particle Beam': '潛地式波動砲',
+        'Flare': '火光',
+        // 'Flood of Darkness': '', // FIXME '暗之泛滥'
+        // 'Ghastly Gloom': '', // FIXME '恐惧之云'
+        // 'Grim Embrace': '', // FIXME '阴冷拥抱'
+        // 'Lateral-core Phaser': '', // FIXME '侧正跳跃波动炮'
+        // 'Looming Chaos': '', // FIXME '混沌迫近'
+        '(?<! )Particle Beam': '波動爆炸',
+        'Particle Concentration': '波動球',
+        // '(?<! )Phaser': '', // FIXME '跳跃波动炮'
+        // 'Rapid-sequence Particle Beam': '', // FIXME '连射式波动炮'
+        // 'Razing-volley Particle Beam': '', // FIXME '齐射式波动炮'
+        'Thorny Vine': '荊棘叢生',
+        'Unholy Darkness': '黑暗神聖',
+        'Vortex': '吸引',
+        'the Third Art of Darkness': '三重暗之戰技',
+      },
+    },
+    {
+      'locale': 'ko',
+      'replaceSync': {
+        'Cloud Of Darkness': '어둠의 구름',
+        'Cloud of Darkness': '어둠의 구름',
+        'Cloudlet of Darkness': '어둠의 조각구름',
+        'Stygian Shadow': '어둠에서 나타난 자',
+      },
+      'replaceText': {
+        '\\(cast\\)': '(시전)',
+        '\\(damage\\)': '(피해)',
+        '\\(brambles drop\\)': '(장판 떨어짐)',
+        '\\(chasing AoEs\\)': '(추적 장판)',
+        '--adds untargetable--': '--쫄 타겟불가능--',
+        'Active-pivot Particle Beam': '선회식 파동포',
+        '(?<!En)Aero IV': '에어로쟈',
+        'Blade of Darkness': '어둠의 칼날',
+        'Break IV': '브레크쟈',
+        'Chaos-condensed Particle Beam': '응축식 파동포',
+        'Core-lateral Phaser': '도약파동포: 정면 측면',
+        'Curse of Darkness': '파동의 저주',
+        'Dark Dominion': '짙은 어둠의 영역',
+        'Dark-energy Particle Beam': '저주식 파동포',
+        '(?<!En)Death IV': '데스쟈',
+        'Deluge of Darkness': '어둠의 대범람',
+        'Diffusive-force Particle Beam': '분산식 파동포',
+        'Enaero IV': '인에어로쟈',
+        'Endeath IV': '인데스쟈',
+        'Evaporation': '흩어지는 구름',
+        'Evil Seed': '씨앗탄',
+        'Excruciate': '책살',
+        'Feint Particle Beam': '위장형 파동포',
+        'Flare': '플레어',
+        'Flood of Darkness': '어둠의 범람',
+        'Ghastly Gloom': '공포의 구름',
+        'Grim Embrace': '음산한 포옹',
+        'Lateral-core Phaser': '도약파동포: 측면 정면',
+        'Looming Chaos': '다가오는 혼돈',
+        '(?<! )Particle Beam': '파동 폭발',
+        'Particle Concentration': '파동구',
+        '(?<! )Phaser': '도약파동포',
+        'Rapid-sequence Particle Beam': '연사식 파동포',
+        'Razing-volley Particle Beam': '일제 사격식 파동포',
+        'Thorny Vine': '가시덩굴',
+        'Unholy Darkness': '다크 홀리',
+        'Vortex': '흡인',
+        'the Third Art of Darkness': '어둠의 전투술: 삼중',
       },
     },
   ],

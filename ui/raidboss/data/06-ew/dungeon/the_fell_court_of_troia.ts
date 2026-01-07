@@ -20,10 +20,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Eye Lasers',
-          de: 'Weiche dem Augenlaser aus',
-          fr: 'Évitez les lasers',
           ja: '目からビーム',
-          cn: '躲避视线激光',
           ko: '눈에서 빔 피해욧',
         },
       },
@@ -44,10 +41,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Kill One Eye',
-          de: 'Besiege ein Auge',
-          fr: 'Tuez une tête',
           ja: '安置になる目を攻撃',
-          cn: '击杀一只小怪',
           ko: '눈깔 하나 잡아욧',
         },
       },
@@ -68,10 +62,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Look Away from Rings',
-          de: 'Schau von den Ringen weg',
-          fr: 'Ne regardez pas l\'anneau',
           ja: '輪の目から視線回避',
-          cn: '视线避开圆环',
           ko: '고리 시선 잘 피해욧',
         },
       },
@@ -84,10 +75,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away From Exploding Lines',
-          de: 'Weg von den explodierenden Linien',
-          fr: 'Éloignez-vous des lignes explosives',
           ja: '線から離れる',
-          cn: '避开即将爆炸的线',
           ko: '터지는 선 순서 보고 피해요',
         },
       },
@@ -139,10 +127,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Knockback Into Wall',
-          de: 'Rückstoß in eine Wand',
-          fr: 'Faites-vous pousser sur un mur',
           ja: '壁にノックバック',
-          cn: '击退到护栏',
           ko: '벽으로 넉백 당해욧',
         },
       },
@@ -155,10 +140,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Behind and Out',
-          de: 'Geh nach Hinten und Raus',
-          fr: 'Passez derrière et extérieur',
           ja: '後ろの外側へ',
-          cn: '去背后远离',
           ko: '뒤로 그리고 밖으로',
         },
       },
@@ -333,6 +315,42 @@ const triggerSet: TriggerSet<Data> = {
         'Void Nail': '虚无钉',
         'Void Vortex': '虚无旋涡',
         'Voidshaker': '虚无摇动',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Beatrice': '貝雅特麗齊',
+        'Evil Dreamer': '夢禍',
+        'Penitence': '責罪廣場',
+        'Scarmiglione': '斯卡米留尼',
+        'The Seat Of The Foremost': '首席神官之間',
+        'The Garden Of Epopts': '姐妹之園',
+      },
+      'replaceText': {
+        'Antipressure': '虛無強壓',
+        'Beatific Scorn': '魔光閃',
+        'Blighted Bedevilment': '食死劍·迴旋',
+        'Blighted Bladework': '食死劍·裁斷',
+        'Blighted Sweep': '食死劍·橫掃',
+        'Corruptor\'s Pitch': '腐敗瀝青池',
+        'Creeping Decay': '召喚腐屍',
+        'Cursed Echo': '詛咒回聲',
+        'Dark Vision': '夢禍視線',
+        'Death Foreseen': '死亡魔眼',
+        'Endless Nightmare': '死重爆',
+        'Eye of Troia': '特羅亞魔眼',
+        'Firedamp': '沼氣',
+        'Hush': '寂靜一揮',
+        'Nox': '夜',
+        'Rotten Rampage': '腐爛狂怒',
+        'Toric Void': '虛無環',
+        'Unite Mare': '重魂爆',
+        'Vacuum Wave': '真空波',
+        'Void Gravity': '虛空重力',
+        'Void Nail': '虛無釘',
+        'Void Vortex': '虛無旋渦',
+        'Voidshaker': '虛無搖動',
       },
     },
     {

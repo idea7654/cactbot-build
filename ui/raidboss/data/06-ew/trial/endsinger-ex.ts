@@ -316,10 +316,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Tower',
-          de: 'Türme',
-          fr: 'Tours',
           ja: '塔を踏む',
-          cn: '踩塔',
           ko: '타워 밟아요',
         },
       },
@@ -364,23 +361,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         sides: {
           en: 'Out (Sides)',
-          de: 'Raus (Seiten)',
           ja: '外 (横へ)',
-          cn: '去外面 (两边)',
           ko: '바깥 옆으로',
         },
         sidesWithTower: {
           en: 'Tower + Outside',
-          de: 'Turm + Außerhalb',
           ja: '塔踏み + 外側',
-          cn: '踩塔 + 去外面',
           ko: '타워 밟고 + 바깥',
         },
         sidesWithStacks: {
           en: 'Outside + Healer Groups',
-          de: 'Außerhalb + Heiler-Gruppen',
           ja: '外側 + ヒーラと4:4頭割り',
-          cn: '去外面 + 治疗分组分摊',
           ko: '바깥 옆에서 + 4:4 뭉쳐요',
         },
       },
@@ -402,23 +393,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         middle: {
           en: 'Inside (Middle)',
-          de: 'Innen (Mitte)',
           ja: '中へ (真ん中)',
-          cn: '去里面 (中间)',
           ko: '안으로 (한가운데)',
         },
         middleWithTower: {
           en: 'Tower + Inside',
-          de: 'Turm + Innen',
           ja: '塔踏み + 内側',
-          cn: '踩塔 + 去里面',
           ko: '타워 밟고 + 안쪽',
         },
         middleWithStacks: {
           en: 'Inside + Healer Groups',
-          de: 'Innen + Heiler-Gruppen',
           ja: '内側 + ヒーラと4:4頭割り',
-          cn: '去里面 + 治疗分组分摊',
           ko: '안에서 + 4:4 뭉쳐요',
         },
       },
@@ -496,10 +481,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         groups: {
           en: 'Healer Groups',
-          de: 'Heiler-Gruppen',
-          fr: 'Groupes sur les heals',
           ja: 'ヒラに頭割り',
-          cn: '治疗分组分摊',
           ko: '4:4 뭉쳐요',
         },
       },
@@ -837,10 +819,7 @@ const triggerSet: TriggerSet<Data> = {
         se: Outputs.arrowSE,
         text: {
           en: '${dir1} / ${dir2}',
-          de: '${dir1} / ${dir2}',
-          fr: '${dir1} / ${dir2}',
           ja: '${dir1} / ${dir2}',
-          cn: '${dir1} / ${dir2}',
           ko: '${dir1} 또는 ${dir2}',
         },
       },
@@ -961,11 +940,10 @@ const triggerSet: TriggerSet<Data> = {
     },
     {
       'locale': 'fr',
-      'missingTranslations': true,
       'replaceSync': {
-        'Azure Star': 'astre azuré',
-        'Fiery Star': 'astre incarnat',
-        'The Endsinger': 'chantre de l\'anéantissement',
+        'Azure Star': 'Astre azuré',
+        'Fiery Star': 'Astre incarnat',
+        'The Endsinger': 'Chantre de l\'anéantissement',
       },
       'replaceText': {
         'Befoulment': 'Bombe de pus',
@@ -980,8 +958,10 @@ const triggerSet: TriggerSet<Data> = {
         '(?<! )Fatalism(?!e)': 'Fatalisme',
         'Grip of Despair': 'Chaînes du désespoir',
         'Hubris': 'Hubris',
+        'Star Collision': 'Collision d\'étoile',
         'Telomania': 'Télomanie',
         'Telos': 'Télos',
+        'Tower Explosion': 'Explosion de tour',
         'Theological Fatalism': 'Fatalisme théologique',
         'Twinsong\'s Aporrhoia': 'Chœur aporétique',
         'Ultimate Fate': 'Ultime destin',
@@ -1042,6 +1022,36 @@ const triggerSet: TriggerSet<Data> = {
         'Theological Fatalism': '神学宿命',
         'Twinsong\'s Aporrhoia': '流溢：绝望合唱',
         'Ultimate Fate': '终极命运',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Azure Star': '藍色天體',
+        'Fiery Star': '紅色天體',
+        'The Endsinger': '謳歌終結之物',
+      },
+      'replaceText': {
+        'Befoulment': '膿液彈',
+        'Benevolence': '博愛',
+        'Despair Unforgotten': '絕望侵蝕：記錄事件',
+        'Diairesis': '分離',
+        'Eironeia': '反諷',
+        'Elegeia Unforgotten': '哀歌：記錄事件',
+        'Elenchos': '反詰',
+        'Endsong\'s Aporrhoia': '流溢：絕望輪唱',
+        'Endsong(?!\')': '絕望輪唱',
+        '(?<! )Fatalism': '宿命',
+        'Grip of Despair': '絕望的鎖鏈',
+        'Hubris': '傲慢',
+        // 'Star Collision': '', // FIXME '天体撞击'
+        'Telomania': '終末狂熱',
+        'Telos': '終末',
+        'Tower Explosion': '爆炸',
+        'Theological Fatalism': '神學宿命',
+        'Twinsong\'s Aporrhoia': '流溢：絕望合唱',
+        'Ultimate Fate': '終極命運',
       },
     },
     {

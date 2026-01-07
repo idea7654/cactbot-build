@@ -73,10 +73,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         directions: {
           en: 'Back of head',
-          de: 'Zur Rückseite des Kopfes',
-          fr: 'Derrière la tête',
           ja: '頭の後ろへ',
-          cn: '去头的后面',
           ko: '머리 뒤쪽으로',
         },
       },
@@ -90,10 +87,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         directions: {
           en: 'Front of head',
-          de: 'Zur Vorderseite des Kopfes',
-          fr: 'Devant la tête',
           ja: '頭の前へ',
-          cn: '去头的前面',
           ko: '머리 앞쪽으로',
         },
       },
@@ -103,17 +97,7 @@ const triggerSet: TriggerSet<Data> = {
       type: 'StartsUsing',
       netRegex: { id: '682B', source: 'Hippokampos', capture: false },
       suppressSeconds: 1,
-      infoText: (_data, _matches, output) => output.groups!(),
-      outputStrings: {
-        groups: {
-          en: 'Healer Groups',
-          de: 'Heiler-Gruppen',
-          fr: 'Groupes sur les heals',
-          ja: 'ヒラに頭割り',
-          cn: '与治疗分摊',
-          ko: '4:4 뭉쳐요',
-        },
-      },
+      response: Responses.healerGroups(),
     },
     {
       id: 'P2S Mark of the Tides Collect',
@@ -132,18 +116,12 @@ const triggerSet: TriggerSet<Data> = {
         output.responseOutputStrings = {
           marks: {
             en: 'Marks: ${player1}, ${player2}',
-            de: 'Marker: ${player1}, ${player2}',
-            fr: 'Marques sur : ${player1}, ${player2}',
             ja: 'マーカー: ${player1}, ${player2}',
-            cn: '标记: ${player1}, ${player2}',
             ko: '징: ${player1}, ${player2}',
           },
           avariceOnYou: {
             en: 'Avarice on YOU',
-            de: 'Marker auf DIR',
-            fr: 'Marque sur VOUS',
             ja: 'マーカーついた',
-            cn: '标记点名',
             ko: '내가 징 대상자',
           },
           unknown: Outputs.unknown,
@@ -204,18 +182,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         arrowFirst: {
           en: 'Arrow First',
-          de: 'Pfeil zuerst',
-          fr: 'Flèches en premières',
           ja: '突進→散開',
-          cn: '先对冲',
           ko: '화살표 처리 먼저',
         },
         spreadFirst: {
           en: 'Spread First',
-          de: 'Verteilen zuerst',
-          fr: 'Dispersez-vous en premier',
           ja: '散開→突進',
-          cn: '先散开',
           ko: '산개 먼저',
         },
       },
@@ -256,10 +228,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Flare Tether',
-          de: 'Flare Verbindung',
-          fr: 'Lien Brasier',
           ja: 'フレアの線',
-          cn: '核爆连线',
           ko: '플레어 선',
         },
       },
@@ -279,19 +248,13 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         flareLineStack: {
           en: 'Line Stack (behind tank)',
-          de: 'Linien-Sammeln (hinter dem Tank)',
-          fr: 'Package en ligne (derrière le tank)',
           ja: '直線頭割り（タンクより後ろ）',
-          cn: '直线分摊（站坦克后面）',
-          ko: '뭉쳐요 (탱크 뒤에서)',
+          ko: '직선 쉐어 (탱커 뒤로)',
         },
         flareLineTank: {
           en: 'Line Stack (be in front)',
-          de: 'Linien-Sammeln (vorne sein)',
-          fr: 'Package en ligne (Placez-vous devant)',
           ja: '直線頭割り（みんなの前に）',
-          cn: '直线分摊（坦克站前面）',
-          ko: '뭉쳐요 (맨 앞에서 막아요)',
+          ko: '직선 쉐어 (맨 앞으로)',
         },
       },
     },
@@ -314,27 +277,18 @@ const triggerSet: TriggerSet<Data> = {
         output.responseOutputStrings = {
           squareAcross: {
             en: '#${num} Square, go across',
-            de: '#${num} Viereck, geh gegenüber',
-            fr: '#${num} Carré, allez à l\'opposé',
             ja: '四角 #${num}：ボスの対角へ',
-            cn: '方块 #${num}: 去Boss对角',
             ko: '#${num} 네모, 보스 대각 발판으로',
           },
           // Trying not to confuse with boss/across
           squareBoss: {
             en: '#${num} Square, boss tile',
-            de: '#${num} Viereck, Boss Fläche',
-            fr: '#${num} Carré, case du boss',
             ja: '四角 #${num}：ボスの下へ',
-            cn: '方块 #${num}: 去Boss脚下',
             ko: '#${num} 네모, 보스 발판으로',
           },
           triangle: {
             en: '#${num} Triangle',
-            de: '#${num} Dreieck',
-            fr: '#${num} Triangle',
             ja: '三角 #${num}',
-            cn: '三角 #${num}',
             ko: '#${num} 세모',
           },
         };
@@ -511,6 +465,42 @@ const triggerSet: TriggerSet<Data> = {
         'Spoken Cataract': '吐息飞瀑',
         'Tainted Flood': '污染洪水',
         'Winged Cataract': '展翅飞瀑',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Hippokampos': '馬頭魚尾怪',
+      },
+      'replaceText': {
+        // '\\(knockback\\)': '', // FIXME '(击退)'
+        // '\\(short\\)': '', // FIXME '(短)'
+        // '\\(long\\)': '', // FIXME '(长)'
+        'Channeling Flow': '溝流充溢',
+        'Channeling Overflow': '溝流溢出',
+        'Coherence(?! [FL])': '連貫攻擊',
+        'Coherence Flare': '連貫攻擊',
+        'Coherence Line': '連貫攻擊',
+        'Crash': '衝撞',
+        'Deadly Current': '激流衝',
+        'Dissociation(?! Dive)': '分離',
+        'Dissociation Dive': '分離',
+        'Doubled Impact': '雙重衝擊',
+        'Great Typhoon': '荒波',
+        'Hard Water': '重水塊',
+        'Kampeos Harma': '海怪戰車',
+        'Murky Depths': '深度污濁',
+        'Ominous Bubbling(?! Groups)': '靈水彈',
+        'Ominous Bubbling Groups': '靈水彈',
+        'Predatory Avarice': '多重刻印',
+        'Predatory Sight': '活餌的刻印',
+        'Sewage Deluge': '污水氾濫',
+        'Sewage Eruption': '污水噴發',
+        'Shockwave': '衝擊狂潮',
+        'Spoken Cataract': '吐息飛瀑',
+        'Tainted Flood': '污染洪水',
+        'Winged Cataract': '展翅飛瀑',
       },
     },
     {

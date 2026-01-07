@@ -43,10 +43,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         avoidMines: {
           en: 'Avoid Mines',
-          de: 'Mienen vermeiden',
-          fr: 'Évitez les mines',
           ja: '地雷を踏まない',
-          cn: '躲开地雷',
           ko: '지뢰 피해요',
         },
       },
@@ -60,10 +57,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Dodge Mirage Charge',
-          de: 'Superladung ausweichen',
-          fr: 'Esquivez la charge de la réplique',
           ja: 'スーパーチャージを避ける',
-          cn: '躲开冲锋',
           ko: '미라지 돌진 피해요',
         },
       },
@@ -78,10 +72,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go High',
-          de: 'Geh Hoch',
-          fr: 'Allez en haut',
           ja: '高い床に乗る',
-          cn: '去高地',
           ko: '높은곳으로',
         },
       },
@@ -96,10 +87,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go Low',
-          de: 'Geh Runter',
-          fr: 'Allez en bas',
           ja: '低い床に乗る',
-          cn: '去低地',
           ko: '낮은곳으로',
         },
       },
@@ -122,10 +110,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${player}: ${count}',
-          de: '${player}: ${count}',
-          fr: '${player}: ${count}',
           ja: '${player}: ${count}',
-          cn: '${player}: ${count}',
           ko: '${player}: ${count}',
         },
       },
@@ -144,10 +129,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Hide Behind Ice',
-          de: 'Hinter dem Eis verstecken',
-          fr: 'Cachez-vous derrière la glace',
           ja: '氷柱の後ろに',
-          cn: '躲在冰柱之后',
           ko: '얼음 뒤에 숨어요',
         },
       },
@@ -161,10 +143,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Ice: Freeze Tornado',
-          de: 'Eis: Tornado einfrieren',
-          fr: 'Glace : Gelez la tornade',
           ja: '氷柱: 竜巻を凍結',
-          cn: '冰点名: 冻结龙卷风',
           ko: '얼음: 토네이도 얼려요',
         },
       },
@@ -178,10 +157,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Water on YOU',
-          de: 'Wasser auf DIR',
-          fr: 'Eau sur VOUS',
           ja: '自分に水',
-          cn: '水点名',
           ko: '내게 워터',
         },
       },
@@ -198,10 +174,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Drop Water Soon',
-          de: 'Gleich Wasser ablegen',
-          fr: 'Déposez l\'eau bientôt',
           ja: '水来るよ',
-          cn: '即将水分摊',
           ko: '곧 워터 버려요',
         },
       },
@@ -358,6 +331,43 @@ const triggerSet: TriggerSet<Data> = {
         'Single Buster': '破坏炮击',
         'Double Buster': '双重破坏炮击',
         'Rocket Drill': '火箭飞钻',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Blaster(?! Mirage)': '爆破者',
+        'Blaster Mirage': '爆破者幻象',
+        'Brawler': '爭鬥者',
+        'Machinery Bay 67': '第67機工兵倉庫',
+        'Machinery Bay 68': '第68機工兵倉庫',
+        'Machinery Bay 69': '第69機工兵倉庫',
+        'Machinery Bay 70': '第70機工兵倉庫',
+        'Swindler': '欺詐者',
+        'Vortexer': '環旋者',
+      },
+      'replaceText': {
+        '--unseal--': '--解除封鎖--',
+        'Attachment': '配件更換',
+        'Ballistic Missile': '導彈發射',
+        'Bio-Arithmeticks': '生命計算術',
+        'Brute Force': '殘暴鐵拳',
+        'Crashing Wave': '衝擊波',
+        'Earth Missile': '大地導彈',
+        'Elemental Jammer': '元素干擾',
+        'Enumeration': '計數',
+        'Height': '高度算術',
+        'Ice Missile': '寒冰導彈',
+        'Magicked Mark': '魔力射擊',
+        'Mind Blast': '精神衝擊',
+        'Mirage': '幻影系統',
+        'Super Cyclone': '超級颶風',
+        'Ultra Flash': '究極閃光',
+        'Minefield': '地雷散佈',
+        'Supercharge': '超突擊',
+        'Single Buster': '破壞砲擊',
+        'Double Buster': '雙重破壞砲擊',
+        'Rocket Drill': '火箭飛鑽',
       },
     },
     {

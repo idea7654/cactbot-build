@@ -51,18 +51,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         waveCannonTarget: {
           en: 'Wave Cannon on YOU',
-          de: 'Wellenkanone auf DIR',
-          fr: 'Canon plasma sur VOUS',
           ja: '波動砲対象',
-          cn: '波动炮点名',
           ko: '내게 웨이브 캐논!',
         },
         avoidWaveCannon: {
           en: 'Away from ${target} -- Wave Cannon',
-          de: 'Weg von ${target} -- Wellenkanone',
-          fr: 'Éloignez-vous de ${target} -- Canon plasma',
           ja: '${target} から離れる -- 波動砲',
-          cn: '远离 ${target} -- 波动炮',
           ko: '웨이브 캐논 피해요: ${target}',
         },
       },
@@ -103,10 +97,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         demonClawYou: {
           en: 'Knockback from boss on YOU',
-          de: 'Rückstoß vom Boss auf DIR',
-          fr: 'Poussée depuis le boss sur VOUS',
           ja: 'デモンクロー ノックバック対象',
-          cn: 'BOSS击退点名',
           ko: '내게 데몬 클로 넉백이!',
         },
       },
@@ -146,10 +137,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         demonicSpread: {
           en: 'Spread -- Don\'t stack!',
-          de: 'Verteilen -- Nicht aufeinander!',
-          fr: 'Écartez-vous - Ne vous packez pas !',
           ja: '散開 -- 重ならないで！',
-          cn: '分散 -- 别去分摊！',
           ko: '흩어져요! 뭉치면 주거!',
         },
       },
@@ -186,10 +174,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stay outside hitbox',
-          de: 'Auserhalb der Hitbox stehen',
-          fr: 'Restez à l\'extérieur de la hitbox',
-          ja: '範囲攻撃を避ける', // FIXME
-          cn: '站在目标圈外',
+          ja: '範囲攻撃を避ける', // FIXME,
           ko: '센터 서클 밖에서 기둘',
         },
       },
@@ -215,10 +200,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         baitSouthernCross: {
           en: 'Bait Ice Puddles',
-          de: 'Eisflächen ködern',
-          fr: 'Bait les puddles de glace',
           ja: '氷範囲を捨てる',
-          cn: '诱导冰圈',
           ko: '얼음 깔 준비',
         },
       },
@@ -245,10 +227,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         tetherBuddy: {
           en: 'Tethered with ${buddy}',
-          de: 'Mit ${buddy} verbunden',
-          fr: 'Lié avec ${buddy}',
           ja: '${buddy} とペア',
-          cn: '与 ${buddy} 连线',
           ko: '파트너: ${buddy}',
         },
       },
@@ -275,26 +254,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         infiniteDebuff: {
           en: '${element} on you',
-          de: '${element} auf dir',
-          fr: '${element} sur vous',
           ja: '${element} 付与',
-          cn: '${element} 点名',
           ko: '내게 ${element}',
         },
         fire: {
           en: 'Fire',
-          de: 'Feuer',
-          fr: 'Feu',
           ja: '炎',
-          cn: '火',
           ko: '불',
         },
         ice: {
           en: 'Ice',
-          de: 'Eis',
-          fr: 'Glace',
           ja: '氷',
-          cn: '冰',
           ko: '얼음',
         },
         unknown: Outputs.unknown,
@@ -316,26 +286,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         sealTowers: {
           en: '${element} towers with ${buddy}',
-          de: '${element} Türme mit ${buddy}',
-          fr: 'Tour de ${element} avec ${buddy}',
           ja: '${buddy} と ${element} の塔に入る',
-          cn: '与${buddy}踩${element}塔',
           ko: '${element} 타워로! 파트너: ${buddy}',
         },
         fire: {
           en: 'Fire',
-          de: 'Feuer',
-          fr: 'Feu',
           ja: '炎',
-          cn: '火',
           ko: '불',
         },
         ice: {
           en: 'Ice',
-          de: 'Eis',
-          fr: 'Glace',
           ja: '氷',
-          cn: '冰',
           ko: '얼음',
         },
         unknown: Outputs.unknown,
@@ -493,6 +454,43 @@ const triggerSet: TriggerSet<Data> = {
         'Tyrfing': '提尔锋',
         'Wave Cannon': '波动炮',
         'the Purge': '肃清',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Execrated Wile': '狡詐信徒',
+        'Zurvan': '祖爾宛',
+      },
+      'replaceText': {
+        '\\(circles\\)': '(圓)',
+        '\\(explosion\\)': '(爆炸)',
+        '\\(puddle\\)': '(圈)',
+        '\\(snapshot\\)': '(快照)',
+        '\\(avoid\\)': '(躲避)',
+        '\\(stack\\)': '(集合)',
+        'Ahura Mazda': '阿胡拉·馬茲達',
+        'Biting Halberd': '刺骨冰戟',
+        'Broken Seal': '冰炎之紋',
+        'Ciclicle': '旋冰射線',
+        'Cool Flame': '冷炎',
+        'Demonic Dive': '鬼神衝',
+        'Fire III': '大火焰',
+        'Flaming Halberd': '焚身炎戟',
+        'Flare Star': '耀星',
+        'Ice and Fire': '冰與火',
+        'Infinite Fire': '炎之刻印',
+        'Infinite Ice': '冰之刻印',
+        'Metal Cutter': '金屬利刃',
+        'Sarva': '變異',
+        'Soar': '飛翔',
+        'Southern Cross': '南十字星',
+        'Tail End': '煞尾',
+        'The Demon\'s Claw': '鬼神之爪',
+        'Twin Spirit': '多重靈身',
+        'Tyrfing': '提爾鋒',
+        'Wave Cannon': '波動砲',
+        'the Purge': '肅清',
       },
     },
     {

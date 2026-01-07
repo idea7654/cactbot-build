@@ -169,10 +169,7 @@ const triggerSet: TriggerSet<Data> = {
         unknown: Outputs.unknown,
         avoidCone: {
           en: 'Avoid cone (from ${dir})',
-          de: 'Weiche dem KEgel aus (von ${dir})',
-          fr: 'Évitez le cône (depuis ${dir})',
           ja: '${dir}からの扇回避',
-          cn: '躲避扇形 (从${dir})',
           ko: '원뿔 피해요: ${dir}',
         },
       },
@@ -208,10 +205,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         avoid: {
           en: 'Avoid line cleave, then in',
-          de: 'Weiche Linien Cleave aus, dann rein',
-          fr: 'Évitez le cleave en ligne, puis intérieur',
           ja: '直線AOE回避 => 中へ',
-          cn: '躲避直线攻击, 然后去中间',
           ko: '직선 장판 피하고, 안으로',
         },
       },
@@ -265,10 +259,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         stackBehind: {
           en: 'Stack behind Boss',
-          de: 'Hinter dem Boss sammeln',
-          fr: 'Packez-vous derrière le boss',
           ja: 'ボスの後ろで頭割り',
-          cn: 'BOSS背后分摊',
           ko: '보스 뒤에서 뭉쳐요',
         },
       },
@@ -413,6 +404,43 @@ const triggerSet: TriggerSet<Data> = {
         'Soulscald': '灭土烧尽',
         'Sweeping Immolation': '赤灭热波',
         'Total Immolation': '赤灭热波：重炎',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Circle of Purgatory': '煉獄魔陣',
+        '(?<!Greater )Flamesent': '炎妖',
+        'Greater Flamesent': '業炎妖',
+        'Rubicante(?! )': '盧比坎特',
+        'Rubicante Mirage': '盧比坎特的幻影',
+      },
+      'replaceText': {
+        // '\\(aoe\\)': '', // FIXME '(AOE)'
+        // '\\(spread\\)': '', // FIXME '(分散)'
+        'Arcane Revelation': '魔法陣展開',
+        'Arch Inferno': '烈風火焰流',
+        'Blazing Rapture': '狂炎',
+        'Conflagration': '劫火流',
+        'Dualfire': '雙炎流',
+        'Explosive Pyre': '大火焰擊',
+        'Fiery Expiation': '獄炎',
+        'Flamerake': '烈火赤滅爪',
+        'Ghastly Flame': '妖火',
+        'Ghastly Torch': '妖火炎',
+        'Ghastly Wind': '妖火風',
+        'Hope Abandon Ye': '煉獄招來',
+        'Infernal Slaughter': '火焰亂擊',
+        // '(?<!(Arch |Erz))Inferno(?! Devil)': '', // FIXME '火焰流'
+        'Inferno Devil': '火焰旋風',
+        'Ordeal of Purgation': '煉獄朱炎',
+        'Radial Flagration': '放散火流',
+        'Scalding Fleet': '滅土燒盡：迅火',
+        'Shattering Heat': '炎擊',
+        'Soulscald': '滅土燒盡',
+        'Sweeping Immolation': '赤滅熱波',
+        'Total Immolation': '赤滅熱波：重炎',
       },
     },
     {

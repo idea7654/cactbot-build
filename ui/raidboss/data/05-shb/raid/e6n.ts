@@ -39,10 +39,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid green nails',
-          de: 'Weiche den grünen Nägeln aus',
-          fr: 'Évitez les griffes',
           ja: '緑の爪を避ける',
-          cn: '躲避风牙',
           ko: '초록 발톱 피해요',
         },
       },
@@ -61,18 +58,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         enumerationOnYou: {
           en: 'Enumeration on YOU',
-          de: 'Enumeration aud DIR',
-          fr: 'Énumération sur VOUS',
           ja: '自分にエアーバンプ',
-          cn: '蓝圈分摊点名',
           ko: '내게 에어 범프!',
         },
         enumeration: {
           en: 'Enumeration',
-          de: 'Enumeration',
-          fr: 'Énumération',
           ja: 'エアーバンプ',
-          cn: '蓝圈分摊',
           ko: '에어 범프',
         },
       },
@@ -108,10 +99,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         chargeOnYou: {
           en: 'Charge on YOU',
-          de: 'Ansturm auf DIR',
-          fr: 'Charge sur VOUS',
           ja: '自分に突進',
-          cn: '冲锋点名',
           ko: '내게 돌진',
         },
         tankSwap: Outputs.tankSwap,
@@ -139,10 +127,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Tether Marker on YOU',
-          de: 'Verbindung auf DIR',
-          fr: 'Marque de lien sur VOUS',
           ja: '自分に線マーカー',
-          cn: '连线点名',
           ko: '내게 줄 마커',
         },
       },
@@ -158,10 +143,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Move to Ifrit',
-          de: 'Zu Ifrit bewegen',
-          fr: 'Allez sur Ifrit',
           ja: 'イフリートところへ',
-          cn: '踢球 集合待机',
           ko: '이프리트로!',
         },
       },
@@ -297,6 +279,37 @@ const triggerSet: TriggerSet<Data> = {
         'Radiant Plume': '光辉炎柱',
         'Heat Burst': '热波',
         'Conflag Strike': '瞬燃强袭',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Garuda': '迦樓羅',
+        'Ifrit': '伊弗利特',
+        'Raktapaksa': '赤翼羅羯坨博叉',
+      },
+      'replaceText': {
+        'Ferostorm': '凶猛風暴',
+        'Superstorm': '超級風暴',
+        'Air Bump': '空氣彈墊',
+        'Thorns': '血祭',
+        'Downburst': '下行突風',
+        'Storm Of Fury': '暴怒風暴',
+        'Vacuum Slice': '真空斬',
+        'Occluded Front': '錮囚鋒',
+        'Irresistible Pull': '吸引力',
+        'Touchdown': '空降',
+        'Hands Of Flame': '火焰拳',
+        'Hands Of Hell': '業火拳',
+        'Instant Incineration': '爆裂炎',
+        'Eruption': '噴發',
+        'Strike Spark': '火花爆',
+        'Hot Foot': '飛火',
+        'Inferno Howl': '灼熱咆哮',
+        'Firestorm': '火焰流',
+        'Radiant Plume': '光輝炎柱',
+        'Heat Burst': '熱波',
+        'Conflag Strike': '瞬燃強襲',
       },
     },
     {

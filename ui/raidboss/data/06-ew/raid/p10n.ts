@@ -44,18 +44,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         onYou: {
           en: 'Spread (avoid posts)',
-          de: 'Verteilen (vermeide Stäbe)',
-          fr: 'Écartez-vous (évitez les poteaux)',
           ja: '散会 (柱回避)',
-          cn: '分散（远离柱子）',
           ko: '흩어져요 (기둥은 터치 ㄴㄴ)',
         },
         onOthers: {
           en: 'Avoid marked players',
-          de: 'Vermeide markierte Spieler',
-          fr: 'Évitez les joueurs marqués',
           ja: 'ウェブ回避',
-          cn: '远离点名玩家',
           ko: '마커 달린 사람 피해요',
         },
       },
@@ -76,10 +70,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid jails',
-          de: 'Gefängnisen vermeiden',
-          fr: 'Évitez les pièges',
           ja: 'ジェイル回避',
-          cn: '远离塔',
           ko: '감옥 피해요',
         },
       },
@@ -93,10 +84,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Under jails',
-          de: 'Geh unter ein Gefängnis',
-          fr: 'Sous les pièges',
           ja: 'ジェイルの下へ',
-          cn: '站在塔下（或远离）',
           ko: '감옥 아래로',
         },
       },
@@ -141,10 +129,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Side platform(s)',
-          de: 'Seite-Platform(en)',
-          fr: 'Plateforme(s) latérale(s)',
           ja: 'サイド島へ',
-          cn: '去侧边平台',
           ko: '옆쪽 바닥으로',
         },
       },
@@ -176,18 +161,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         soak: {
           en: 'Soak tower',
-          de: 'Türme nehmen',
-          fr: 'Prenez une tour',
           ja: '塔踏み',
-          cn: '踩塔',
           ko: '타워 밟아요',
         },
         avoid: {
           en: 'Avoid towers',
-          de: 'Türme vermeiden',
-          fr: 'Évitez les tours',
           ja: '塔回避',
-          cn: '远离塔',
           ko: '타워 피해요',
         },
       },
@@ -282,6 +261,31 @@ const triggerSet: TriggerSet<Data> = {
         'Touchdown': '空降',
         'Ultima': '究极',
         'Wicked Step': '尖脚',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        // 'Pand(?:\\\\u00e6|\u00e6)monium': '', // FIXME '万魔殿'
+      },
+      'replaceText': {
+        // '\\(marked\\)': '', // FIXME '(标记)'
+        // '\\(resolves\\)': '', // FIXME '(判定)'
+        // '\\(knockback\\)': '', // FIXME '(击退)'
+        'Cannonspawn': '擴散砲',
+        'Entangling Web': '糾纏之網',
+        'Harrowing Hell': '魔殿震擊',
+        'Imprisonment': '入獄',
+        'Pandaemoniac Meltdown': '萬魔殿熔毀',
+        'Pandaemoniac Pillars': '萬魔殿之柱',
+        // 'Pandaemoniac Ray': '', // FIXME '万魔殿射线'
+        'Parted Plumes': '分割之羽',
+        'Silkspit': '噴吐絲網',
+        'Soul Grasp': '攥魂',
+        'Touchdown': '空降',
+        'Ultima': '最終究極',
+        'Wicked Step': '尖腳',
       },
     },
     {

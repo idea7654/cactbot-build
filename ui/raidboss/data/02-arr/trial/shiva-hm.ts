@@ -59,10 +59,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Free ${player}',
-          de: 'Befreie ${player}',
-          fr: 'Libérez ${player}',
           ja: '${player}を救う',
-          cn: '解救${player}',
           ko: '얼음: ${player}',
         },
       },
@@ -160,6 +157,30 @@ const triggerSet: TriggerSet<Data> = {
         'Icicle Impact': '冰柱冲击',
         'Melt': '武器融化',
         'Permafrost': '永久冻土',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Ice Soldier': '寒冰士兵',
+        'Shiva': '濕婆',
+      },
+      'replaceText': {
+        // '\\(circle\\)': '', // FIXME '(圆)'
+        // '\\(cross\\)': '', // FIXME '(十字)'
+        'Absolute Zero': '絕對零度',
+        'Diamond Dust': '鑽石星塵',
+        'Dreams Of Ice': '寒冰的幻想',
+        'Frost Blade': '冰霜之劍',
+        'Frost Staff': '冰霜之杖',
+        'Glacier Bash': '冰河怒擊',
+        'Hailstorm': '冰雹',
+        'Heavenly Strike': '極樂冰柱',
+        'Icebrand': '冰印劍',
+        'Icicle Impact': '冰柱衝擊',
+        'Melt': '武器融化',
+        'Permafrost': '永久凍土',
       },
     },
     {

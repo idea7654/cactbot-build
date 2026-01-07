@@ -70,18 +70,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         red: {
           en: 'Get hit by red',
-          de: 'Von Rot treffen lassen',
-          fr: 'Faites-vous toucher par le rouge',
           ja: '炎に当たる',
-          cn: '去吃火',
           ko: '🟥빨강으로',
         },
         blue: {
           en: 'Get hit by blue',
-          de: 'Von Blau treffen lassen',
-          fr: 'Faites-vous toucher par le bleu',
           ja: '氷に当たる',
-          cn: '去吃冰',
           ko: '🟦파랑으로',
         },
       },
@@ -105,18 +99,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         fire: {
           en: 'Stand on fire',
-          de: 'Auf der Feuerfläche stehen',
-          fr: 'Placez-vous sur le feu',
           ja: '炎の床へ',
-          cn: '站在火',
           ko: '🟥빨강 위로',
         },
         light: {
           en: 'Stand on light',
-          de: 'Auf der Lichtfläche stehen',
-          fr: 'Placez-vous sur la lumière',
           ja: '光の床へ',
-          cn: '站在光',
           ko: '⬜하양 위로',
         },
       },
@@ -232,6 +220,33 @@ const triggerSet: TriggerSet<Data> = {
         'Slam Shut': '监狱封闭',
         'True Holy': '纯正神圣',
         'Warder\'s Wrath': '魔锁乱流',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Erichthonios': '艾里克托尼奧斯',
+      },
+      'replaceText': {
+        // '--knockback stack--': '', // FIXME '--集合击退--'
+        'Aetherchain': '爆鎖',
+        // 'Aetherflail Left': '', // FIXME '左惩罚爆锁'
+        // 'Aetherflail Right': '', // FIXME '右惩罚爆锁'
+        'Cold Spell': '魔力解放·冰',
+        // 'Gaoler\'s Flail Left': '', // FIXME '左惩罚抽击'
+        // 'Gaoler\'s Flail Right': '', // FIXME '右惩罚抽击'
+        'Heavy Hand': '掌摑',
+        'Hot Spell': '魔力解放·火',
+        'Intemperance': '冰火侵蝕',
+        'Intemperate Torment': '侵蝕發動',
+        'Pitiless Flail': '懲罰連擊',
+        'Powerful Fire': '炎爆',
+        'Powerful Light': '光爆',
+        'Shining Cells': '光炎監獄',
+        'Slam Shut': '監獄封閉',
+        'True Holy': '純正神聖',
+        'Warder\'s Wrath': '魔鎖亂流',
       },
     },
     {

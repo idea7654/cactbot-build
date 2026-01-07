@@ -13,6 +13,11 @@ const triggerSet: TriggerSet<Data> = {
   zoneId: ZoneId.Kholusia,
   comments: {
     en: 'A Rank Hunts, missing Formidable boss FATE',
+    de: 'A Rang Hohe Jagd, Ein formidabler Kampf Boss FATE fehlt',
+    fr: 'Chasse de rang A, ALÉA boss Formidable manquant',
+    cn: 'A级狩猎怪, 缺失特殊FATE',
+    ko: 'A급 마물, 특수돌발 누락.',
+    tc: 'A級狩獵怪, 缺失特殊FATE',
   },
   triggers: [
     {
@@ -81,9 +86,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'In => Sides',
-          de: 'Rein => Seiten',
-          fr: 'Intérieur => Côtés',
-          cn: '中间 => 两侧',
+          ja: 'In => Sides',
           ko: '안으로 🔜 옆으로',
         },
       },
@@ -97,9 +100,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Sides => Sides (again)',
-          de: 'Seiten => Seiten (nochmal)',
-          fr: 'Côtés => Côtés (encore)',
-          cn: '两侧 => 两侧 (重复)',
+          ja: 'Sides => Sides (again)',
           ko: '옆으로 🔜 옆으로 (반복)',
         },
       },
@@ -185,6 +186,14 @@ const triggerSet: TriggerSet<Data> = {
         'Forgiven Pedantry': '得到宽恕的炫学',
         'Huracan': '乌拉坎',
         'Li\'l Murderer': '小小杀手',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Forgiven Pedantry': '得到寬恕的炫學',
+        'Huracan': '烏拉坎',
+        'Li\'l Murderer': '小小殺手',
       },
     },
     {

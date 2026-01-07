@@ -114,9 +114,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         stackThenBehind: {
           en: 'Stack => Away From Front',
-          de: 'Sammeln => Weg von Vorne',
-          fr: 'Package => Loin du devant',
-          cn: '集合 => 远离正面',
+          ja: 'Stack => Away From Front',
           ko: '뭉쳤다 🔜 앞쪽은 피해요',
         },
       },
@@ -190,6 +188,14 @@ const triggerSet: TriggerSet<Data> = {
         'Starcrier': '幻煌鸟',
         'Rrax Yity\'a': '血鸣鼠',
         'Neyoozoteel': '内尤佐缇',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Starcrier': '幻煌鳥',
+        'Rrax Yity\'a': '血鳴鼠',
+        'Neyoozoteel': '內尤佐緹',
       },
     },
     {

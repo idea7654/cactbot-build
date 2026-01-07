@@ -36,10 +36,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stand In Front',
-          de: 'Vor ihm stehen',
-          fr: 'Placez-vous devant',
           ja: 'Bossの前に',
-          cn: '面前躲避',
           ko: '보스랑 같은 줄',
         },
       },
@@ -54,10 +51,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Hide Behind Boulder',
-          de: 'Hinter Felsen verstecken',
-          fr: 'Cachez-vous derrière le rocher',
           ja: 'ボルダーの後ろに',
-          cn: '躲在石头后',
           ko: '볼더 뒤로',
         },
       },
@@ -76,10 +70,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stand On Flank',
-          de: 'Auf seiner Flanke stehen',
-          fr: 'Placez-vous sur le flanc',
           ja: '横へ',
-          cn: '两侧躲避',
           ko: '보스 옆 줄',
         },
       },
@@ -201,6 +192,35 @@ const triggerSet: TriggerSet<Data> = {
         'Stonecrusher': '崩岩',
         'Voice of the Land': '大地之号',
         'Weight of the Land': '大地之重',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Bomb Boulder': '爆破岩石',
+        'Massive Boulder': '巨大岩石',
+        'Titan': '泰坦',
+      },
+      'replaceText': {
+        'Bomb Boulders': '爆破岩石',
+        'Bury': '塌方',
+        'Cobalt Bomb': '鈷彈',
+        'Crumbling Down': '岩層崩落',
+        'Earthen Armor': '大地之鎧',
+        'Earthen Fury': '大地之怒',
+        'Earthen Gauntlets': '大地之手甲',
+        'Earthen Wheels': '大地之車輪',
+        'Evil Earth': '邪土',
+        'Explosion': '爆炸',
+        'Fault Zone': '斷裂帶',
+        'Geocrush': '大地撞擊',
+        'Left/Right Landslide': '左側地裂',
+        'Magnitude 5.0': '震級5.0',
+        'Massive Landslide': '百萬地裂',
+        'Seismic Wave': '地震波',
+        'Stonecrusher': '崩岩',
+        'Voice of the Land': '大地之吼',
+        'Weight of the Land': '大地重壓',
       },
     },
     {

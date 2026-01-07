@@ -13,6 +13,7 @@ const triggerSet: TriggerSet<Data> = {
     fr: 'Avant le remaniement 6.2',
     cn: '6.2 改版前',
     ko: '6.2 개편 전',
+    tc: '6.2 改版前',
   },
   triggers: [
     {
@@ -23,10 +24,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Hide behind Ice',
-          de: 'Hinter dem Eis verstecken',
-          fr: 'Cachez vous derrière un pilier de glace',
           ja: '氷柱の後ろに',
-          cn: '躲在冰柱后',
           ko: '얼음 뒤에 숨어요',
         },
       },
@@ -55,6 +53,12 @@ const triggerSet: TriggerSet<Data> = {
       'locale': 'cn',
       'replaceSync': {
         'Fenrir': '芬里尔',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Fenrir': '芬里爾',
       },
     },
     {

@@ -30,9 +30,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away from falling pillar',
-          de: 'Weg von der fallenden Säule',
-          fr: 'Éloignez-vous du pilier',
-          cn: '远离柱子落点',
+          ja: '落ちる柱から離れる',
           ko: '떨어지는 기둥 피해요',
         },
       },
@@ -158,9 +156,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away from boss',
-          de: 'Weg vom Boss',
-          fr: 'Éloignez-vous du boss',
-          cn: '远离 BOSS',
+          ja: 'ボスから離れる',
           ko: '보스로 부터 먼 곳으로!',
         },
       },
@@ -365,6 +361,54 @@ const triggerSet: TriggerSet<Data> = {
         'Soulweave': '灵魂飞掠',
         'Telltale Tears': '幽魂之泪',
         'Turali Stone IV': '图拉尔崩石',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Lindblum Zaghnal': '林德布魯姆扎古納魯',
+        'Lunipyati': '魯尼皮亞提',
+        'Overseer Kanilokka': '卡尼洛喀站長',
+        'Preserved Soul': '站員的亡魂',
+      },
+      'replaceText': {
+        // '\\(arcs\\)': '', // FIXME '(弧线)'
+        // '\\(big\\)': '', // FIXME '(大)'
+        // '\\(multiple\\)': '', // FIXME '(多重)'
+        // '\\(spiral\\)': '', // FIXME '(螺旋)'
+        // '--adds 1 targetable--': '', // FIXME '--小怪 1 可选中--'
+        // '--adds 2 targetable--': '', // FIXME '--小怪 2 可选中--'
+        // '--adds 3 targetable--': '', // FIXME '--小怪 3 可选中--'
+        'Beastly Roar': '殘虐咆哮',
+        'Bloodburst': '血爆',
+        'Boulder Dance': '舞動的岩石',
+        'Caber Toss': '投擲',
+        'Cell Shock': '放電',
+        'Crater Carve': '刨坑',
+        'Dark II': '昏暗',
+        'Dark Souls': '黑暗之魂',
+        'Electrical Overload': '廣域放電',
+        'Free Spirits': '靈魂釋放',
+        'Gore': '刺牙',
+        'Jagged Edge': '岩石突擊',
+        'Leaping Earth': '躍動的大地',
+        'Leporine Loaf': '穩如兔山',
+        'Lost Hope': '恍惚的叫聲',
+        'Lightning Bolt': '落雷',
+        'Lightning Storm': '百雷',
+        'Line Voltage': '線狀放電',
+        'Necrohazard': '死靈危機',
+        'Phantom Flood': '幽魂泛濫',
+        'Raging Claw': '暴怒連爪',
+        'Rock Blast': '岩石衝擊',
+        'Slabber': '唾液飛濺',
+        'Sparking Fissure': '對地放電',
+        'Sonic Howl': '音嚎',
+        'Soul Douse': '失魂',
+        'Soulweave': '靈魂飛掠',
+        'Telltale Tears': '幽魂之淚',
+        'Turali Stone IV': '圖拉爾超巨岩',
       },
     },
     {

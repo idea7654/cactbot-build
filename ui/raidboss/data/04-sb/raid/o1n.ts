@@ -33,10 +33,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Breath Wing: Be beside boss',
-          de: 'Atemschwinge: Neben Boss gehen',
-          fr: 'Aile déferlante : Placez-vous à côté du boss',
           ja: 'ブレスウィング: ボスに近づく',
-          cn: '站boss附近',
           ko: '브레스 윙: 보스 옆으로',
         },
       },
@@ -66,7 +63,7 @@ const triggerSet: TriggerSet<Data> = {
       netRegex: { id: '23DB', source: 'Alte Roite', capture: false },
       condition: (data) => data.role === 'healer' || data.job === 'BLU',
       // Alert rather than info, as any further raid damage is lethal if unhealed.
-      response: Responses.aoe('alert'),
+      response: Responses.hpTo1Aoe('alert'),
     },
     {
       id: 'O1N Twin Bolt',
@@ -170,6 +167,28 @@ const triggerSet: TriggerSet<Data> = {
         'Charybdis': '大漩涡',
         'Burn': '燃烧',
         'Breath Wing': '风息之翼',
+        'Blaze': '冰焰',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Ball Of Fire': '火焰球',
+        'Alte Roite': '老者',
+      },
+      'replaceText': {
+        'Wyrm Tail': '太古龍尾',
+        'Twin Bolt': '雙重落雷',
+        'The Classical elements': '經典元素',
+        'Roar': '咆哮',
+        'Levinbolt': '雷電',
+        'Flash Freeze': '閃耀凍結',
+        'Flame': '火焰',
+        'Downburst': '下行突風',
+        'Clamp': '壓迫',
+        'Charybdis': '大漩渦',
+        'Burn': '燃燒',
+        'Breath Wing': '風息之翼',
         'Blaze': '冰焰',
       },
     },

@@ -82,18 +82,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         first: {
           en: 'Short parasite on YOU',
-          de: 'Kurzer Parasit auf DIR',
-          fr: 'Parasite court sur VOUS',
           ja: '自分に短い寄生',
-          cn: '短寄生点名',
           ko: '내게 짧은 기생',
         },
         second: {
           en: 'Long parasite on YOU',
-          de: 'Langer Parasit auf DIR',
-          fr: 'Parasite long sur VOUS',
           ja: '自分に長い寄生',
-          cn: '长寄生点名',
           ko: '게 긴 기생',
         },
       },
@@ -108,10 +102,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Face outside: Parasite',
-          de: 'Nach außen schauen: Parasit',
-          fr: 'Regardez vers l\'extérieur : Parasite',
           ja: '外向き：寄生',
-          cn: '面向外面: 寄生',
           ko: '바깥 봐요: 기생',
         },
       },
@@ -126,18 +117,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         left: {
           en: 'Rotate left',
-          de: 'Nach links rotieren',
-          fr: 'Tournez vers la gauche',
           ja: '左回り',
-          cn: '向左转',
           ko: '왼쪽으로 돌아요',
         },
         right: {
           en: 'Rotate right',
-          de: 'Nach rechts rotieren',
-          fr: 'Tournez vers la droite',
           ja: '右回り',
-          cn: '向右转',
           ko: '오른쪽으로 돌아요',
         },
       },
@@ -157,10 +142,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Be opposite tethered safespot',
-          de: 'Sei gegenüber dem verbundenen, sicheren Platz',
-          fr: 'Placez vous sur la zone sûre de l\'élément opposé',
           ja: '線が繋がってる安置へ移動',
-          cn: '去连线方格对侧安全区',
           ko: '줄 반대편 안전한 곳으로',
         },
       },
@@ -193,7 +175,6 @@ const triggerSet: TriggerSet<Data> = {
     },
     {
       'locale': 'fr',
-      'missingTranslations': true,
       'replaceSync': {
         'Hegemone': 'Hégémone',
         'Parasitos': 'créature parasite',
@@ -214,7 +195,6 @@ const triggerSet: TriggerSet<Data> = {
     },
     {
       'locale': 'ja',
-      'missingTranslations': true,
       'replaceSync': {
         'Hegemone': 'ヘーゲモネー',
         'Parasitos': '寄生生物',
@@ -255,6 +235,31 @@ const triggerSet: TriggerSet<Data> = {
         'Strophe Ixou': '寄生之旋',
         'Synergy': '协同',
         'Transmission': '寄生传染',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Hegemone': '赫革摩涅',
+        'Parasitos': '寄生生物',
+      },
+      'replaceText': {
+        // 'random': '', // FIXME '随机'
+        // 'sides': '', // FIXME '两侧'
+        // 'front': '', // FIXME '前方'
+        // 'back': '', // FIXME '后方'
+        'Aetherial Exchange': '乙太交換',
+        'Aetheric Polyominoid': '乙太方陣',
+        'Choros Ixou': '寄生之舞',
+        'Dark Ashes': '冥灰',
+        'Hemitheos\'s Dark IV': '半神冥暗',
+        'Polyominoid Sigma': '乙太方陣Σ',
+        'Polyominous Dark IV': '多連方冥暗',
+        'Reek Havoc': '噴氣',
+        'Strophe Ixou': '寄生之旋',
+        'Synergy': '協同',
+        'Transmission': '寄生傳染',
       },
     },
     {

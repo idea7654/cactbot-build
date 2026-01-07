@@ -52,10 +52,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Kill Storm of Words or die',
-          de: 'Wörtersturm besiegen',
-          fr: 'Tuez Tempête de mots ou mourrez',
           ja: 'ストーム・オブ・ワードを倒す',
-          cn: '击杀言语风暴!',
           ko: '뒤쪽 스톰(신언의 폭풍) 잡아요',
         },
       },
@@ -94,6 +91,13 @@ const triggerSet: TriggerSet<Data> = {
       'replaceSync': {
         'Sephirot': '萨菲洛特',
         'Storm of Words': '言语风暴',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Sephirot': '賽菲羅特',
+        'Storm of Words': '言語風暴',
       },
     },
     {

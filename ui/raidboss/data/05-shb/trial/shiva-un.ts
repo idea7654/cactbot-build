@@ -36,10 +36,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Party Share Tankbuster',
-          de: 'Tankbuster mit der Gruppe Teilen',
-          fr: 'Partagez le Tank buster avec le groupe',
           ja: '頭割りタンクバスター',
-          cn: '团队分摊死刑',
           ko: '파티 쉐어 탱버',
         },
       },
@@ -214,10 +211,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Knockback Laser on YOU',
-          de: 'Rückstoß-Laser auf DIR',
-          fr: 'Poussée-Laser sur VOUS',
           ja: '自分にノックバックレーザー',
-          cn: '击退激光点名',
           ko: '넉백 레이저 대상자',
         },
       },
@@ -231,10 +225,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Laser',
-          de: 'Laser ausweichen',
-          fr: 'Évitez le laser',
           ja: 'ノックバックレーザーを避ける',
-          cn: '躲避击退激光',
           ko: '레이저 피해요',
         },
       },
@@ -272,10 +263,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Free ${player}',
-          de: 'Befreie ${player}',
-          fr: 'Libérez ${player}',
           ja: '${player}を救って',
-          cn: '解救${player}',
           ko: '${player}감옥 해제',
         },
       },
@@ -391,6 +379,35 @@ const triggerSet: TriggerSet<Data> = {
         'Melt': '武器融化',
         'Permafrost': '永久冻土',
         'Whiteout': '白化视界',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Ice Soldier': '寒冰士兵',
+        'Shiva': '濕婆',
+      },
+      'replaceText': {
+        // '\\?': '', // FIXME ' ?'
+        // '\\(circle\\)': '', // FIXME '(圆)'
+        // '\\(cross\\)': '', // FIXME '(十字)'
+        'Absolute Zero': '絕對零度',
+        'Avalanche': '雪崩',
+        'Diamond Dust': '鑽石星塵',
+        'Dreams Of Ice': '寒冰的幻想',
+        'Frost Blade': '冰霜之劍',
+        'Frost Bow': '冰霜之弓',
+        'Frost Staff': '冰霜之杖',
+        'Glacier Bash': '冰河怒擊',
+        'Glass Dance': '冰雪亂舞',
+        'Hailstorm': '冰雹',
+        'Heavenly Strike': '極樂冰柱',
+        'Icebrand': '冰印劍',
+        'Icicle Impact': '冰柱衝擊',
+        'Melt': '武器融化',
+        'Permafrost': '永久凍土',
+        'Whiteout': '白化視界',
       },
     },
     {

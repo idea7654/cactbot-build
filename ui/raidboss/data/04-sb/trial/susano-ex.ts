@@ -25,10 +25,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'look for cloud',
-          de: 'Nach Wolke ausschau halten',
-          fr: 'Cherchez le nuage',
           ja: '雷雲を探せ',
-          cn: '寻找雷云',
           ko: '구름 봐요',
         },
       },
@@ -97,18 +94,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         knockbackWithCloud: {
           en: 'Knockback on you (cloud)',
-          de: 'Rückstoss auf Dir (Wolke)',
-          fr: 'Poussée sur VOUS (nuage)',
           ja: '自分にノックバック (雷雲)',
-          cn: '击退点名（雷云）',
           ko: '내게 넉백 (구름)',
         },
         knockbackWithDice: {
           en: 'Knockback + dice (STOP)',
-          de: 'Rückstoss + Würfel (STOPP)',
-          fr: 'Poussée + dé (ARRÊTEZ)',
           ja: 'ノックバック + 禍泡 (そのまま)',
-          cn: '击退+水泡（静止）',
           ko: '넉백 + 카운트 (멈춰요)',
         },
         knockback: Outputs.knockbackOnYou,
@@ -134,18 +125,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         levinboltWithCloud: {
           en: 'Levinbolt on you (cloud)',
-          de: 'Blitz auf Dir (Wolke)',
-          fr: 'Fulguration sur VOUS (nuage)',
           ja: '自分に稲妻 (雷雲)',
-          cn: '闪电点名（雷云）',
           ko: '내게 레빈볼트 (구름)',
         },
         levinboltOnYou: {
           en: 'Levinbolt on you',
-          de: 'Blitz auf dir',
-          fr: 'Fulguration sur VOUS',
           ja: '自分に稲妻',
-          cn: '闪电点名',
           ko: '내게 레빈 볼트',
         },
       },
@@ -163,10 +148,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stun: ${player}',
-          de: 'Paralyse ${player}',
-          fr: 'Étourdi(e) :  ${player}',
           ja: '${player}にスタン',
-          cn: '击晕${player}',
           ko: '스턴: ${player}',
         },
       },
@@ -303,6 +285,36 @@ const triggerSet: TriggerSet<Data> = {
         'Brightstorm': '晴岚',
         'Yasakani-No-Magatama': '八尺琼勾玉',
         'The Parting Clouds': '云间放电',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Ame-No-Murakumo': '天之叢雲',
+        'Susano': '須佐之男',
+        'Thunderhead': '雷雲',
+        'Ama-No-Iwato': '天之岩戶',
+      },
+      'replaceText': {
+        'Assail': '強擊',
+        'Churn': '禍泡附身',
+        'Dark Levin': '紫電',
+        'Knockback': '擊退',
+        'Levinbolt': '閃電',
+        'Phase': '階段',
+        'Rasen Kaikyo': '螺旋海峽',
+        'Seasplitter': '斷海',
+        'Stormsplitter': '破浪斬',
+        'The Hidden Gate': '岩戶隱',
+        'The Sealed Gate': '岩戶閉合',
+        'Ukehi': '祈請',
+        '(?<! )cloud': '雲',
+        'Ame-No-Murakumo(?! )': '天之叢雲',
+        'Stun': '眩暈',
+        'Yata-No-Kagami': '八咫鏡',
+        'Brightstorm': '晴嵐',
+        'Yasakani-No-Magatama': '八尺瓊勾玉',
+        'The Parting Clouds': '雲間放電',
       },
     },
     {

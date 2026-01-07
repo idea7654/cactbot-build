@@ -14,6 +14,7 @@ const triggerSet: TriggerSet<Data> = {
     fr: 'Avant le remaniement 7.2',
     cn: '7.2改版前',
     ko: '7.2 개편 전',
+    tc: '7.2改版前',
   },
   triggers: [
     {
@@ -25,10 +26,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Step on Glowing Plate',
-          de: 'Auf der leuchtende Platte stehen',
-          fr: 'Marchez sur la plaque qui brille',
           ja: '光る床に乗る',
-          cn: '踩发光地板',
           ko: '빛나는 발판 밟아요',
         },
       },

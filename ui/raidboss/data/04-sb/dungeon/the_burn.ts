@@ -31,10 +31,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Hide behind crystal',
-          de: 'Hinter dem Kristall verstecken',
-          fr: 'Cachez-vous derrière le cristal',
           ja: '水晶の後ろに',
-          cn: '躲在水晶后',
           ko: '크리스탈 뒤에 숨어요',
         },
       },
@@ -48,10 +45,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Spread + Avoid Crystals',
-          de: 'Verteilen + Kristall meiden',
-          fr: 'Dispersez-vous + évitez les cristaux',
           ja: '散開 + 水晶を避ける',
-          cn: '散开并远离水晶',
           ko: '흩어졌다 + 크리스탈 피해요',
         },
       },
@@ -64,10 +58,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Hide behind crystal',
-          de: 'Hinter dem Kristall verstecken',
-          fr: 'Cachez-vous derrière le cristal',
           ja: '水晶の後ろに',
-          cn: '躲在水晶后',
           ko: '크리스탈 뒤에 숨어요',
         },
       },
@@ -108,10 +99,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Puddle on YOU',
-          de: 'Fläche auf DIR',
-          fr: 'Zone au sol sur VOUS',
           ja: '自分に粘液',
-          cn: '圈圈点名',
           ko: '내게 점액',
         },
       },
@@ -126,10 +114,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'In line with smoking drone',
-          de: 'In einer Linie mit der rauchenden Drohne stellen',
-          fr: 'En ligne avec le drone endommagé',
           ja: 'ドローンの直線に',
-          cn: '站在冒烟小怪直线上',
           ko: '옆에 보고, 연기나는 드론 앞으로',
         },
       },
@@ -143,10 +128,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Rock Biters',
-          de: 'Felsbeißer meiden',
-          fr: 'Évitez le trancheur de pierre',
           ja: 'ロックカッターを避ける',
-          cn: '躲开电锯',
           ko: '톱니바퀴 피해요',
         },
       },
@@ -171,18 +153,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         puddleCleaveOnYou: {
           en: 'Puddle + cleave on YOU',
-          de: 'Fläche + Cleave auf DIR',
-          fr: 'Zone au sol + Cleave sur VOUS',
           ja: '自分に沼 + フロストブレス',
-          cn: '圈圈+吐息点名',
           ko: '내게 늪 + 프로스트브레스',
         },
         avoidMarkerCone: {
           en: 'Avoid marker cone',
-          de: 'Kegel-Markierung ausweichen',
-          fr: 'Évitez le marqueur de cône',
           ja: 'マーカーを避ける',
-          cn: '远离锥形点名',
           ko: '마커 피해요',
         },
       },
@@ -196,10 +172,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bait Star Explosions',
-          de: 'Stern Explosion ködern',
-          fr: 'Évitez l\'AoE en ligne des étoiles',
           ja: '放射霧を誘導',
-          cn: '诱导放射雾',
           ko: '방사 안개 유도 + 피해요',
         },
       },
@@ -343,6 +316,41 @@ const triggerSet: TriggerSet<Data> = {
         'Aetherochemical Residue': '魔科学粘液',
         'Aetherochemical Flame': '魔科学烈焰',
         'Aetherochemical Coil': '魔科学车轮',
+        'Adit Driver': '削岩',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'The Scorpion\'s Den': '赫德提特的領地',
+        'The Gamma Segregate': '伽馬隔離區',
+        'The Aspersory': '霧碟',
+        'Rock Biter': '石刃',
+        'Mist Dragon': '霧龍',
+        'Dim Crystal': '褪色水晶',
+        'Defective Drone': '次品無人機',
+        'Hedetet': '赫德提特',
+      },
+      'replaceText': {
+        'Vaporize': '霧散',
+        'Shardstrike': '碎片打擊',
+        'Shardfall': '碎片脫落',
+        'Rime Wreath': '白霜環繞',
+        'Resonant Frequency': '共振炸裂',
+        'Hailfire': '冰雹發射',
+        'Full Throttle': '全力轟油起步',
+        'Frost Breath': '寒霜吐息',
+        'Fog Plume': '放射霧',
+        'Dissonance': '不和諧音',
+        'Deep Fog': '濃霧',
+        'Crystalline Fracture': '水晶剝落',
+        'Crystal Needle': '水晶針',
+        'Cold Fog': '冷霧',
+        'Chilling Aspiration': '迷霧吐息',
+        'Cauterize': '烈火燒灼',
+        'Aetherochemical Residue': '魔科學黏液',
+        'Aetherochemical Flame': '魔科學烈焰',
+        'Aetherochemical Coil': '魔科學車輪',
         'Adit Driver': '削岩',
       },
     },

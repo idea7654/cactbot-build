@@ -117,6 +117,7 @@ const chainsOfCondemnationOutputStrings = {
     ja: '全体攻撃 + 止まれ!',
     cn: 'AOE + 停止移动!',
     ko: '전체 공격 + 움직이지마!',
+    tc: 'AOE + 停止移動!',
   },
 } as const;
 
@@ -142,6 +143,7 @@ const triggerSet: TriggerSet<Data> = {
     de: 'Pilgers Pfad Stein 99/Eminente Trauer',
     cn: '朝圣交错路 第99朝圣路/卓异的悲寂歼灭战',
     ko: '필그림 트래버스 99층/최종장',
+    tc: '朝聖交錯路 第99朝聖路/卓異的悲寂殲滅戰',
   },
 
   initData: () => ({
@@ -165,8 +167,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Check Boss HP Difference',
-          de: 'Prüfe Boss HP Unterschied',
-          cn: '检查 BOSS 血量差',
+          ja: 'Check Boss HP Difference',
           ko: '보스 체력차 확인해요',
         },
       },
@@ -185,8 +186,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${effect} on ${target}',
-          de: '${effect} auf ${target}',
-          cn: '${effect} 点 ${target}',
+          ja: '${effect} on ${target}',
           ko: '${target}에게 ${effect}',
         },
       },
@@ -216,8 +216,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Refresh Vengeance',
-          de: 'Echo erneuern',
-          cn: '刷新光/暗 Debuff',
+          ja: 'Refresh Vengeance',
           ko: '빛/어둠 갱신해둬요',
         },
       },
@@ -249,8 +248,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${mech1} => ${mech2}',
-          de: '${mech1} => ${mech2}',
-          cn: '${mech1} => ${mech2}',
+          ja: '${mech1} => ${mech2}',
           ko: '${mech1} 🔜 ${mech2}',
         },
         sides: Outputs.sides,
@@ -279,8 +277,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${mech1} => ${mech2}',
-          de: '${mech1} => ${mech2}',
-          cn: '${mech1} => ${mech2}',
+          ja: '${mech1} => ${mech2}',
           ko: '${mech1} 🔜 ${mech2}',
         },
         sides: Outputs.sides,
@@ -316,8 +313,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${mech1} => ${mech2}',
-          de: '${mech1} => ${mech2}',
-          cn: '${mech1} => ${mech2}',
+          ja: '${mech1} => ${mech2}',
           ko: '${mech1} 🔜 ${mech2}',
         },
         sides: Outputs.sides,
@@ -358,9 +354,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Laser on YOU',
-          de: 'Laser auf DIR',
           ja: '自分にレーザー',
-          cn: '激光点名',
           ko: '내게 레이저!',
         },
       },
@@ -373,9 +367,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid laser',
-          de: 'Laser vermeiden',
           ja: 'レーザーを避ける',
-          cn: '避开激光',
           ko: '레이저 피해요',
         },
       },
@@ -400,9 +392,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Light debuff',
-          de: 'Licht Debuff nehmen',
           ja: '光デバフを受ける',
-          cn: '获取光debuff',
           ko: '빛🟡 받아요',
         },
       },
@@ -419,9 +409,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Dark debuff',
-          de: 'Dunkel Debuff nehmen',
           ja: '闇デバフを受ける',
-          cn: '获取暗debuff',
           ko: '어둠⚫️ 받아요',
         },
       },
@@ -453,8 +441,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${frontBack}-${leftRight}, for later',
-          de: '${frontBack}-${leftRight}, für später',
-          cn: '稍后去 ${leftRight}-${frontBack}',
+          ja: '${frontBack}-${leftRight}, for later',
           ko: '(나중에 ${frontBack}+${leftRight})',
         },
         front: Outputs.front,
@@ -505,8 +492,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${frontBack}-${leftRight}, for later',
-          de: '${frontBack}-${leftRight}, für später',
-          cn: '稍后去 ${leftRight}-${frontBack}',
+          ja: '${frontBack}-${leftRight}, for later',
           ko: '(나중에 ${frontBack}+${leftRight})',
         },
         front: Outputs.front,
@@ -536,8 +522,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${frontBack}-${leftRight}, Avoid Exaflares',
-          de: '${frontBack}-${leftRight}, vermeide Exaflares',
-          cn: '在 ${leftRight}-${frontBack} 躲避地火',
+          ja: '${frontBack}-${leftRight}, Avoid Exaflares',
           ko: '${frontBack}+${leftRight}, 엑사플레어 피해요',
         },
         front: Outputs.front,
@@ -587,8 +572,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go ${dir}',
-          de: 'Geh nach ${dir}',
-          cn: '去 ${dir}',
+          ja: 'Go ${dir}',
           ko: '가세요: ${dir}',
         },
         unknown: Outputs.unknown,
@@ -629,6 +613,18 @@ const triggerSet: TriggerSet<Data> = {
       'replaceSync': {
         'Devoured Eater': '被侵蚀的食罪灵',
         'Eminent Grief': '卓异的悲寂',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {},
+    },
+    {
+      'locale': 'ko',
+      'replaceSync': {
+        'Devoured Eater': '잠식된 죄식자',
+        'Eminent Grief': '드높은 비애',
       },
     },
   ],

@@ -16,7 +16,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack (ignore adds)',
-          ja: '頭割り (雑魚無視)',
+          ja: '集合 (雑魚無視)',
           ko: '뭉쳐요 (쫄은 무시)',
         },
       },
@@ -45,6 +45,12 @@ const triggerSet: TriggerSet<Data> = {
       'locale': 'cn',
       'replaceSync': {
         'Liavinne': '证婚人 莉亚维娜',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Liavinne': '證婚人 莉亞維娜',
       },
     },
     {

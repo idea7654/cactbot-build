@@ -1,65 +1,160 @@
-import Autumn, { AutumnDir } from '../../../../../resources/autumn';
+import Conditions from '../../../../../resources/conditions';
+import { UnreachableCode } from '../../../../../resources/not_reached';
 import Outputs from '../../../../../resources/outputs';
 import { Responses } from '../../../../../resources/responses';
-import { Directions } from '../../../../../resources/util';
+import {
+  DirectionOutput8,
+  DirectionOutputIntercard,
+  Directions,
+} from '../../../../../resources/util';
 import ZoneId from '../../../../../resources/zone_id';
 import { RaidbossData } from '../../../../../types/data';
 import { NetMatches } from '../../../../../types/net_matches';
 import { TriggerSet } from '../../../../../types/trigger';
 
-type Styles = 'mbol' | 'succ' | 'bomb' | 'wing';
-type StyleItem = { l: Styles; r: Styles; c: number };
-const styleMap: { [id: string]: StyleItem } = {
-  '93CA': { l: 'mbol', r: 'succ', c: 2 },
-  '9408': { l: 'succ', r: 'mbol', c: 2 },
-  'A67D': { l: 'mbol', r: 'mbol', c: 2 },
-  'A67E': { l: 'succ', r: 'succ', c: 2 },
-  'A67F': { l: 'bomb', r: 'succ', c: 4 },
-  'A680': { l: 'wing', r: 'succ', c: 4 },
-  'A681': { l: 'bomb', r: 'mbol', c: 4 },
-  'A682': { l: 'wing', r: 'mbol', c: 4 },
-};
-const styleFlags = {
-  'mbol': 0x1,
-  'succ': 0x2,
-  'bomb': 0x4,
-  'wing': 0x8,
-} as const;
-const styleCorner: { [dir: number]: [number, number] } = {
-  0: [1, 7],
-  2: [1, 3],
-  4: [3, 5],
-  6: [5, 7],
-};
-const getStyleConer = (dir: number): number[] => styleCorner[dir] ?? [];
+// TODOs:
+// - clean up timeline
+// - Crowd Brûlée - party stack (non-defamations)?
+// - safe corners for quicksand? (Latte / party fill strats?)
+// - Live Painting - add wave # spawn call?
+// - Ore-rigato - Mu enrage
+// - Hangry Hiss - Gimme Cat enrage
+// - Mousse Drip - ranged baits into 4x pair stacks/puddle drops
+// - Moussacre - melee bait proteans
 
 export interface Data extends RaidbossData {
-  hate?: string;
-  riot?: 'cold' | 'warm';
-  isCrush?: boolean;
-  crushMech?: 'pair' | 'light';
-  styleItem?: StyleItem;
-  styleActors: { [id: string]: NetMatches['ActorSetPos'] };
-  styleTethers: { [id: string]: NetMatches['Tether'] };
-  sandDebuffs: { name: string; count: number }[];
+  actorSetPosTracker: { [id: string]: NetMatches['ActorSetPos'] };
+  lastDoubleStyle?: DoubleStyleEntry;
+  tetherTracker: { [id: string]: NetMatches['Tether'] };
+  colorRiotTint?: 'warm' | 'cool';
+  cloudId?: string;
+  cloudPos?: 'dirNE' | 'dirNW' | 'dirS';
+  cloudLastAngle?: number;
+  cloudNewAngle?: number;
+  cloudExplosionCount: number;
+  firstTowersGone: boolean;
+  secondTowers: { [dir in DirectionOutput8]?: number };
 }
+
+// I lack the footage to confirm these, but they should be correct.
+// There are second set of 24 locations immediately before this which correspond to
+// the "meteor falling" animation
+const towerMapEffectMapping: { [loc: string]: DirectionOutput8 } = {
+  '49': 'dirNW',
+  '4A': 'dirNW',
+  '4B': 'dirNW',
+  '4C': 'dirNW',
+  '4D': 'dirNW',
+  '4E': 'dirNW',
+  '4F': 'dirNW',
+  '50': 'dirNW',
+  '51': 'dirNE',
+  '52': 'dirNE',
+  '53': 'dirNE',
+  '54': 'dirNE',
+  '55': 'dirNE',
+  '56': 'dirNE',
+  '57': 'dirNE',
+  '58': 'dirNE',
+  '59': 'dirS',
+  '5A': 'dirS',
+  '5B': 'dirS',
+  '5C': 'dirS',
+  '5D': 'dirS',
+  '5E': 'dirS',
+  '5F': 'dirS',
+  '60': 'dirS',
+};
+
+const towerFlags = {
+  show: '00020001',
+  hide: '00080004',
+} as const;
+
+type DoubleStyleActors = 'bomb' | 'wing' | 'succ' | 'marl';
+type DoubleStyleEntry = {
+  red: DoubleStyleActors;
+  blue: DoubleStyleActors;
+  count: number;
+};
+const doubleStyleMap: { [id: string]: DoubleStyleEntry } = {
+  '93CA': { red: 'marl', blue: 'succ', count: 2 },
+  '9408': { red: 'succ', blue: 'marl', count: 2 },
+  'A67D': { red: 'marl', blue: 'marl', count: 2 },
+  'A67E': { red: 'succ', blue: 'succ', count: 2 },
+  'A67F': { red: 'bomb', blue: 'succ', count: 4 },
+  'A680': { red: 'wing', blue: 'succ', count: 4 },
+  'A681': { red: 'bomb', blue: 'marl', count: 4 },
+  'A682': { red: 'wing', blue: 'marl', count: 4 },
+};
+
+const dirToSameCorners = (dir: DirectionOutput8): DirectionOutput8[] => {
+  switch (dir) {
+    case 'dirN':
+      return ['dirNE', 'dirNW'];
+    case 'dirE':
+      return ['dirSE', 'dirNE'];
+    case 'dirS':
+      return ['dirSE', 'dirSW'];
+    case 'dirW':
+      return ['dirNW', 'dirSW'];
+  }
+  return [];
+};
+
+const headMarkerData = {
+  // Jabberwock bind/death target
+  'bindMarker': '0017',
+  // Lightning Storm target
+  'lightningStormMarker': '025A',
+  // Pudding Party x5 stack
+  'puddingPartyMarker': '0131',
+} as const;
+
+type CactusPattern = {
+  readonly id: string;
+  readonly x: number;
+  readonly y: number;
+};
+
+// Unique positions for cacti in first set for each pattern
+const cactusSpamPatterns: CactusPattern[] = [
+  { id: '1', x: 100.009, y: 89.999 },
+  { id: '2', x: 116.001, y: 116.001 },
+  { id: '3', x: 100.009, y: 100.009 },
+  { id: '4', x: 110.996, y: 116.001 },
+];
+
+// Positions for cacti corresponding to danger corner
+const cactusQuicksandPatterns: CactusPattern[] = [
+  { id: 'dirNE', x: 116.001, y: 83.987 },
+  { id: 'dirSE', x: 116.001, y: 116.001 },
+  { id: 'dirSW', x: 83.987, y: 116.001 },
+  { id: 'dirNW', x: 83.987, y: 83.987 },
+];
+
+const findCactus = <T extends CactusPattern>(
+  patterns: T[],
+  x: number,
+  y: number,
+): T | undefined => {
+  return patterns.find((coords) => {
+    return Math.abs(coords.x - x) < 0.005 && Math.abs(coords.y - y) < 0.005;
+  });
+};
 
 const triggerSet: TriggerSet<Data> = {
   id: 'AacCruiserweightM2Savage',
   zoneId: ZoneId.AacCruiserweightM2Savage,
   timelineFile: 'r6s.txt',
   initData: () => ({
-    styleActors: {},
-    styleTethers: {},
-    sandDebuffs: [],
+    actorSetPosTracker: {},
+    tetherTracker: {},
+    cloudExplosionCount: 0,
+    firstTowersGone: false,
+    secondTowers: {},
   }),
   triggers: [
-    {
-      id: 'R6S Auto Attack',
-      type: 'Ability',
-      netRegex: { id: 'A7B4', source: 'Sugar Riot' },
-      run: (data, matches) => data.hate = matches.target,
-    },
     {
       id: 'R6S Mousse Mural',
       type: 'StartsUsing',
@@ -67,468 +162,612 @@ const triggerSet: TriggerSet<Data> = {
       response: Responses.aoe(),
     },
     {
-      id: 'R6S Color Riot',
-      type: 'StartsUsing',
-      // A691 웜 아래, 콜드 위
-      // A692 웜 위, 콜드 아래
-      netRegex: { id: ['A691', 'A692'], source: 'Sugar Riot' },
-      response: (data, matches, output) => {
-        // cactbot-builtin-response
-        output.responseOutputStrings = {
-          bait: {
-            en: 'Bait Tank Cleave',
-            ja: 'タンク範囲誘導',
-            ko: '첫 탱크 클레브',
-          },
-          cold: {
-            en: 'Bait cold ${act}',
-            ja: '${act} 🔵誘導',
-            ko: '${act} 🔵유도해욧',
-          },
-          warm: {
-            en: 'Bait warm ${act}',
-            ja: '${act} 🔴誘導',
-            ko: '${act} 🔴유도해욧',
-          },
-          in: Outputs.in,
-          out: Outputs.out,
-          avoidCleave: Outputs.avoidTankCleave,
-        };
-        if (!Autumn.isTank(data.moks))
-          return { infoText: output.avoidCleave!() };
-        if (data.riot === 'cold') {
-          // 웜 유도할 것
-          const act = matches.id === 'A691' ? output.out!() : output.in!();
-          return { alertText: output.warm!({ act: act }) };
-        } else if (data.riot === 'warm') {
-          // 콜드 유도할 것
-          const act = matches.id === 'A692' ? output.out!() : output.in!();
-          return { alertText: output.cold!({ act: act }) };
-        }
-        return { alertText: output.bait!() };
-      },
-    },
-    {
-      id: 'R6S Cold/Warm Collect',
-      type: 'Ability',
-      netRegex: { id: ['A693', 'A694'], source: 'Sugar Riot' },
-      condition: (data, matches) => data.me === matches.target,
-      run: (data, matches) => data.riot = matches.id === 'A693' ? 'cold' : 'warm',
-    },
-    {
-      id: 'R6S Color Crash Collect',
-      type: 'StartsUsing',
-      netRegex: { id: ['A68B', 'A68D'], source: 'Sugar Riot' },
-      run: (data, matches) => {
-        data.isCrush = true;
-        data.crushMech = matches.id === 'A68B' ? 'light' : 'pair';
-        data.styleActors = {};
-        data.styleTethers = {};
-        delete data.styleItem;
-      },
-    },
-    {
-      id: 'R6S Wingmark',
-      type: 'GainsEffect',
-      netRegex: { effectId: '1162' },
-      delaySeconds: (_data, matches) => parseFloat(matches.duration) - 4,
-      durationSeconds: 4,
-      countdownSeconds: 4,
-      suppressSeconds: 10,
-      alertText: (data, _matches, output) => {
-        if (data.crushMech === undefined)
-          return output.text!();
-        return output.combo!({ act: output[data.crushMech]!() });
-      },
-      outputStrings: {
-        text: {
-          en: 'Warp',
-          ja: 'ワープ',
-          ko: '나르샤!',
-        },
-        combo: {
-          en: 'Warp => ${act}',
-          ja: 'ワープ (${act})',
-          ko: '나르샤! (${act})',
-        },
-        pair: Outputs.stackPartner,
-        light: Outputs.healerGroups,
-        unknown: Outputs.unknown,
-      },
-    },
-    {
-      id: 'R6S Color Crash',
-      type: 'GainsEffect',
-      netRegex: { effectId: '1162' },
-      delaySeconds: (_data, matches) => parseFloat(matches.duration),
-      durationSeconds: 5,
-      suppressSeconds: 10,
-      infoText: (data, _matches, output) => {
-        if (data.crushMech !== undefined)
-          return output[data.crushMech]!();
-      },
-      run: (data) => {
-        delete data.isCrush;
-        delete data.crushMech;
-      },
-      outputStrings: {
-        pair: Outputs.stackPartner,
-        light: Outputs.healerGroups,
-        unknown: Outputs.unknown,
-      },
-    },
-    {
-      id: 'R6S Double Actors Collect',
+      id: 'R6S ActorSetPos Tracker',
       type: 'ActorSetPos',
-      netRegex: { id: '4[0-9A-Fa-f]{7}' },
-      condition: (data) => data.isCrush,
-      run: (data, matches) => data.styleActors[matches.id] = matches,
-    },
-    {
-      id: 'R6S Double Style Collect',
-      type: 'StartsUsing',
-      netRegex: { id: Object.keys(styleMap), source: 'Sugar Riot' },
-      condition: (data) => data.isCrush,
-      run: (data, matches) => data.styleItem = styleMap[matches.id],
-    },
-    {
-      // #650
-      id: 'R6S Double Style',
-      type: 'Tether',
-      netRegex: { sourceId: '4[0-9A-Fa-f]{7}', id: ['013F', '0140'] },
-      condition: (data) => data.isCrush && data.styleItem !== undefined,
-      preRun: (data, matches) => data.styleTethers[matches.sourceId] = matches,
-      durationSeconds: 5,
-      infoText: (data, _matches, output) => {
-        if (data.styleItem === undefined)
-          return;
-        if (Object.keys(data.styleTethers).length < data.styleItem.c)
-          return;
-
-        let comb = 0;
-        let safes = [1, 3, 5, 7];
-        const tethers = Object.entries(data.styleTethers);
-        data.styleTethers = {};
-
-        for (const [id, tether] of tethers) {
-          const a = data.styleActors[id];
-          if (a === undefined)
-            return;
-
-          const x = parseFloat(a.x);
-          const y = parseFloat(a.y);
-          const mx = ((x - 100) * -1) + 100;
-          const adir = Directions.xyTo8DirNum(x, y, 100, 100);
-          const mdir = Directions.xyTo8DirNum(mx, y, 100, 100);
-          const corners = getStyleConer(adir);
-          const mob = data.styleItem[tether.id === '013F' ? 'l' : 'r'];
-          switch (mob) {
-            case 'bomb':
-              safes = safes.filter((dir) => dir !== adir);
-              break;
-            case 'wing':
-              safes = safes.filter((dir) => dir !== mdir);
-              break;
-            case 'succ':
-              safes = safes.filter((dir) => !corners.includes(dir));
-              break;
-            case 'mbol':
-              safes = safes.filter((dir) => corners.includes(dir));
-              break;
-          }
-          comb |= styleFlags[mob];
-        }
-
-        const [dir] = safes;
-        if (safes.length !== 1 || dir === undefined)
-          return;
-
-        const diags: { [id: number]: number } = { 1: 5, 3: 7, 5: 1, 7: 3 } as const;
-        const start = diags[dir];
-        if (start === undefined)
-          return output.unknown!();
-
-        let mesg = output.unknown!();
-        if (comb === styleFlags.succ) // 서큐버스 2
-          mesg = output.succ!();
-        else if (comb === styleFlags.mbol)
-          mesg = output.mbol!(); // 몰볼 2
-        else if (comb === (styleFlags.succ | styleFlags.mbol))
-          mesg = output.succmbol!(); // 서큐버스 + 몰볼
-        else if ((comb & styleFlags.bomb) !== 0) {
-          if ((comb & styleFlags.succ) !== 0)
-            mesg = output.bombsucc!(); // 폭탄 + 서큐버스
-          if ((comb & styleFlags.mbol) !== 0)
-            mesg = output.bombmbol!(); // 폭탄 + 몰볼
-        } else if ((comb & styleFlags.wing) !== 0) {
-          if ((comb & styleFlags.succ) !== 0)
-            mesg = output.wingsucc!(); // 날개 + 서큐버스
-          if ((comb & styleFlags.mbol) !== 0)
-            mesg = output.wingmbol!(); // 날개 + 몰볼
-        }
-        return output.text!({ dir: output[AutumnDir.dirFromNum(start)]!(), mesg: mesg });
-      },
-      outputStrings: {
-        text: {
-          en: '${dir} ${mesg}',
-          ja: '${dir} (${mesg})',
-          ko: '${dir} (${mesg})',
-        },
-        succ: {
-          en: 'Succubus x2',
-          ja: 'サキュバス x2',
-          ko: '서큐쪽',
-        },
-        mbol: {
-          en: 'Molbol x2',
-          ja: 'モルボル x2',
-          ko: '몰볼 안됨',
-        },
-        succmbol: {
-          en: 'Succubus + Molbol',
-          ja: 'サキュバス + モルボル',
-          ko: '서큐 + 몰볼 안됨',
-        },
-        bombsucc: {
-          en: 'Painted + Succubus',
-          ja: '爆誕 + サキュバス',
-          ko: '폭탄 + 서큐',
-        },
-        bombmbol: {
-          en: 'Painted + Molbol',
-          ja: '爆誕 + モルボル',
-          ko: '폭탄 + 몰볼 안됨',
-        },
-        wingsucc: {
-          en: 'Heaven + Succubus',
-          ja: '羽根つき + サキュバス',
-          ko: '날개 안됨 + 서큐',
-        },
-        wingmbol: {
-          en: 'Heaven + Molbol',
-          ja: '羽根つき + モルボル',
-          ko: '날개 안됨 + 몰볼 안됨',
-        },
-        unknown: Outputs.unknown,
-        ...AutumnDir.stringsAimCross,
-      },
+      netRegex: { id: '4[0-9A-Fa-f]{7}', capture: true },
+      run: (data, matches) => data.actorSetPosTracker[matches.id] = matches,
     },
     {
       id: 'R6S Sticky Mousse',
       type: 'StartsUsing',
       netRegex: { id: 'A695', source: 'Sugar Riot', capture: false },
-      response: Responses.protean(),
+      response: Responses.spreadThenStack(),
     },
     {
-      id: 'R6S Sugarscape',
-      type: 'StartsUsing',
-      netRegex: { id: 'A668', source: 'Sugar Riot', capture: false },
-      run: (data) => data.sandDebuffs = [],
-    },
-    {
-      id: 'R6S Sand Debuffs',
+      id: 'R6S Color Riot Debuff Tracker',
       type: 'GainsEffect',
-      netRegex: { effectId: '1166' },
-      infoText: (data, matches, output) => {
-        const count = parseFloat(matches.duration);
-        data.sandDebuffs.push({ name: matches.target, count: count });
-        if (data.sandDebuffs.length < 4 || !Autumn.isTank(data.moks))
-          return;
-        const itsme = data.sandDebuffs.findIndex((x) => x.name === data.me);
-        if (itsme === -1) {
-          if (data.hate !== data.me)
-            return output.provoke!();
-          return;
+      netRegex: { effectId: ['1163', '1164'], capture: true },
+      condition: Conditions.targetIsYou(),
+      run: (data, matches) => data.colorRiotTint = matches.effectId === '1163' ? 'warm' : 'cool',
+    },
+    {
+      id: 'R6S Color Riot',
+      type: 'StartsUsing',
+      netRegex: { id: ['A691', 'A692'], source: 'Sugar Riot', capture: true },
+      alertText: (data, matches, output) => {
+        if (data.role !== 'tank')
+          return output.avoidCleave!();
+
+        const coolInOut = matches.id === 'A691' ? output.in!() : output.out!();
+        const warmInOut = matches.id === 'A692' ? output.in!() : output.out!();
+
+        switch (data.colorRiotTint) {
+          case 'warm':
+            return output.coolCleave!({ dir: coolInOut });
+          case 'cool':
+            return output.warmCleave!({ dir: warmInOut });
+          default:
+            return output.tankCleave!();
         }
-        if (data.hate === data.me)
-          return output.shirk!();
       },
       outputStrings: {
-        shirk: {
-          en: '(shirk)',
-          ja: '(シャク)',
-          ko: '(헤이트 넘겨줘요)',
+        avoidCleave: {
+          en: 'Be on boss hitbox (avoid tank cleaves)',
+          ja: 'ボス背面のサークル上に',
+          ko: '보스 히트박스 경계에 있기 (광역 탱버 피하기)',
         },
-        provoke: {
-          en: '(provoke)',
-          ja: '(挑発)',
-          ko: '(프로보크)',
+        warmCleave: {
+          en: 'Tank cleave on YOU (${dir} => get hit by Red)',
+          ja: 'タンク攻撃 (${dir} => 赤に当たる)',
+          ko: '광역 탱버 대상자 (${dir} => 빨간색 맞기)',
+        },
+        coolCleave: {
+          en: 'Tank cleave on YOU (${dir} => get hit by Blue)',
+          ja: 'タンク攻撃 (${dir} => 青に当たる)',
+          ko: '광역 탱버 대상자 (${dir} => 파란색 맞기)',
+        },
+        tankCleave: Outputs.tankCleaveOnYou,
+        in: Outputs.in,
+        out: Outputs.out,
+      },
+    },
+    {
+      id: 'R6S Color Clash',
+      type: 'StartsUsing',
+      netRegex: { id: ['A68B', 'A68D'], source: 'Sugar Riot', capture: true },
+      infoText: (_data, matches, output) => {
+        const mech = matches.id === 'A68B' ? 'healerStacks' : 'partners';
+        return output.stored!({ mech: output[mech]!() });
+      },
+      outputStrings: {
+        healerStacks: Outputs.healerGroups,
+        partners: Outputs.stackPartner,
+        stored: {
+          en: 'Stored ${mech} for later',
+          ja: 'あとで ${mech}',
+          ko: '나중에 ${mech}',
         },
       },
     },
     {
-      id: 'R6S Sand Defamation',
+      id: 'R6S Color Clash Followup',
+      type: 'StartsUsing',
+      netRegex: { id: ['A68B', 'A68D'], source: 'Sugar Riot', capture: true },
+      delaySeconds: 18,
+      alertText: (_data, matches, output) => {
+        const mech = matches.id === 'A68B' ? 'healerStacks' : 'partners';
+        return output[mech]!();
+      },
+      outputStrings: {
+        healerStacks: Outputs.healerGroups,
+        partners: Outputs.stackPartner,
+      },
+    },
+    {
+      id: 'R6S Double Style Tracker',
+      type: 'StartsUsing',
+      netRegex: { id: Object.keys(doubleStyleMap), source: 'Sugar Riot', capture: true },
+      run: (data, matches) => data.lastDoubleStyle = doubleStyleMap[matches.id],
+    },
+    {
+      // tether source is from the actor to the boss
+      id: 'R6S Double Style Tether Tracker',
+      type: 'Tether',
+      netRegex: { sourceId: '4[0-9A-Fa-f]{7}', id: ['013F', '0140'], capture: true },
+      condition: (data) => data.lastDoubleStyle !== undefined,
+      preRun: (data, matches) => data.tetherTracker[matches.sourceId] = matches,
+      infoText: (data, _matches, output) => {
+        const doubleStyle = data.lastDoubleStyle;
+        if (doubleStyle === undefined)
+          return;
+
+        if (Object.keys(data.tetherTracker).length < doubleStyle.count)
+          return;
+
+        let safeDirs: DirectionOutputIntercard[] = [
+          'dirNE',
+          'dirNW',
+          'dirSE',
+          'dirSW',
+        ];
+
+        const startDirMap = {
+          'dirNE': 'dirSW',
+          'dirNW': 'dirSE',
+          'dirSE': 'dirNW',
+          'dirSW': 'dirNE',
+          'unknown': 'unknown',
+        } as const;
+
+        // clean-up so we don't trigger on other tether mechanics
+        delete data.lastDoubleStyle;
+
+        const tethers = Object.entries(data.tetherTracker);
+        data.tetherTracker = {};
+
+        for (const [id, tether] of tethers) {
+          const actorSetPosData = data.actorSetPosTracker[id];
+          if (actorSetPosData === undefined) {
+            console.log(`R6S Double Style Tether Tracker - Missing actor position data!`);
+            return;
+          }
+
+          const actorType = doubleStyle[tether.id === '013F' ? 'red' : 'blue'];
+          const x = parseFloat(actorSetPosData.x);
+          const y = parseFloat(actorSetPosData.y);
+          const mirroredX = ((x - 100) * -1) + 100;
+          const actorDir = Directions.xyTo8DirOutput(x, y, 100, 100);
+          const mirroredXDir = Directions.xyTo8DirOutput(mirroredX, y, 100, 100);
+          const sameDirCorners = dirToSameCorners(actorDir);
+
+          switch (actorType) {
+            case 'bomb':
+              safeDirs = safeDirs.filter((dir) => dir !== actorDir);
+              break;
+            case 'wing':
+              safeDirs = safeDirs.filter((dir) => dir !== mirroredXDir);
+              break;
+            case 'succ':
+              safeDirs = safeDirs.filter((dir) => !sameDirCorners.includes(dir));
+              break;
+            case 'marl':
+              safeDirs = safeDirs.filter((dir) => sameDirCorners.includes(dir));
+              break;
+          }
+        }
+
+        const [dir] = safeDirs;
+
+        if (safeDirs.length !== 1 || dir === undefined) {
+          console.log(`R6S Double Style Tether Tracker - Missing direction data!`);
+          return;
+        }
+
+        const startDir = startDirMap[dir] ?? 'unknown';
+
+        return output.text!({
+          dir1: output[startDir]!(),
+          dir2: output[dir]!(),
+        });
+      },
+      outputStrings: {
+        ...Directions.outputStringsIntercardDir,
+        text: {
+          en: 'Start ${dir1}, launch towards ${dir2}',
+          ja: '${dir1} から ${dir2} に飛ぶ',
+          ko: '${dir1}에서 ${dir2}으로 발사되기',
+        },
+      },
+    },
+    {
+      id: 'R6S Heating Up Early Warning',
       type: 'GainsEffect',
-      netRegex: { effectId: '1166' },
-      condition: (data, matches) => data.me === matches.target,
-      delaySeconds: (_data, matches) => parseFloat(matches.duration) - 6,
-      countdownSeconds: 6,
+      netRegex: { effectId: '1166', capture: true },
+      condition: (data, matches) => data.me === matches.target && data.role !== 'healer',
+      infoText: (_data, _matches, output) => output.defamationLater!(),
+      outputStrings: {
+        defamationLater: {
+          en: 'Defamation on YOU (for later)',
+          ja: 'あとで巨大な爆発',
+          ko: '광역징 대상자 (나중에)',
+        },
+      },
+    },
+    {
+      id: 'R6S Heating Up',
+      type: 'GainsEffect',
+      netRegex: { effectId: '1166', capture: true },
+      condition: Conditions.targetIsYou(),
+      delaySeconds: (_data, matches) => parseFloat(matches.duration) - 5,
+      countdownSeconds: 5,
       alertText: (_data, _matches, output) => output.defamation!(),
       outputStrings: {
         defamation: Outputs.defamationOnYou,
       },
     },
     {
-      id: 'R6S Tether Heaven Bomb',
+      // tether source is from the player to the boss
+      id: 'R6S Pudding Graf',
       type: 'Tether',
-      netRegex: { id: '013F', target: 'Sugar Riot' },
+      netRegex: { id: ['013F', '0140'], capture: true },
       condition: (data, matches) => data.me === matches.source,
-      infoText: (_data, _matches, output) => output.text!(),
+      infoText: (_data, matches, output) => {
+        if (matches.id === '013F')
+          return output.wingedBomb!();
+        return output.bomb!();
+      },
       outputStrings: {
-        text: {
-          en: 'Wing bomb',
-          ja: '羽根爆弾、砂へ',
-          ko: '날개 폭탄, 모래로',
+        bomb: {
+          en: 'Drop bomb in quicksand',
+          ja: '爆弾を流砂に捨てる',
+          ko: '늪에 폭탄 놓기',
+        },
+        wingedBomb: {
+          en: 'Aim bomb towards quicksand',
+          ja: '爆弾を流砂に向ける',
+          ko: '늪 쪽을 향해 폭탄 놓기',
         },
       },
     },
     {
-      id: 'R6S Tether Painted Bomb',
-      type: 'Tether',
-      netRegex: { id: '0140', target: 'Sugar Riot' },
-      condition: (data, matches) => data.me === matches.source,
-      infoText: (_data, _matches, output) => output.text!(),
+      id: 'R6S Jabberwock Bind Marker',
+      type: 'HeadMarker',
+      netRegex: { id: headMarkerData.bindMarker, capture: true },
+      condition: Conditions.targetIsYou(),
+      alertText: (_data, _matches, output) => output.text!(),
       outputStrings: {
         text: {
-          en: 'Painted bomb',
-          ja: '爆弾、流砂へ',
-          ko: '그냥 폭탄, 늪으로!',
+          en: 'Jabberwock on YOU',
+          ja: 'ジャバウォック処理',
+          ko: '재버워크 대상자',
         },
-      },
-    },
-    {
-      id: 'R6S Manxome Windersnatch',
-      type: 'Ability',
-      netRegex: { id: 'A6AD', source: 'Jabberwock' },
-      durationSeconds: 3,
-      response: (data, matches, output) => {
-        // cactbot-builtin-response
-        output.responseOutputStrings = {
-          wock: {
-            en: 'Jabberwock appears',
-            ja: 'ジャバウォック出現',
-            ko: '재버워크 나왔어요',
-          },
-          bind: {
-            en: 'Jabberwock binds YOU',
-            ja: 'ジャバウォックがわたしに！',
-            ko: '내게 재버워크 바인드!',
-          },
-        };
-        if (data.me === matches.target)
-          return { alertText: output.bind!() };
-        return { infoText: output.wock!() };
       },
     },
     {
       id: 'R6S Ready Ore Not',
       type: 'StartsUsing',
       netRegex: { id: 'A6AA', source: 'Sugar Riot', capture: false },
-      response: Responses.aoe(),
+      response: Responses.bigAoe(),
     },
     {
       id: 'R6S Single Style',
       type: 'StartsUsing',
       netRegex: { id: '9A3D', source: 'Sugar Riot', capture: false },
-      durationSeconds: 5,
       infoText: (_data, _matches, output) => output.text!(),
       outputStrings: {
         text: {
-          en: 'Avoid arrows grid',
-          ja: '矢印のグリッド',
-          ko: '화살 격자 장판',
+          en: 'Avoid arrow lines',
+          ja: '矢印線を避ける',
+          ko: '화살 직선 장판 피하기',
         },
       },
     },
     {
-      id: 'R6S Double Style Arrows',
+      id: 'R6S Double Style Taste of Fire/Thunder',
       type: 'StartsUsing',
-      netRegex: { id: ['A687', 'A689'], source: 'Sugar Riot' },
-      durationSeconds: 5,
-      infoText: (_data, matches, output) => {
-        const act = matches.id === 'A687' ? 'group' : 'spread';
-        return output.text!({ act: output[act]!() });
-      },
+      netRegex: { id: ['A687', 'A689'], source: 'Sugar Riot', capture: true },
+      suppressSeconds: 1,
+      alertText: (_data, matches, output) =>
+        matches.id === 'A687' ? output.fire!() : output.thunder!(),
       outputStrings: {
-        text: {
-          en: '${act} + Arrows grid',
-          ja: '${act} + 矢印のグリッド',
-          ko: '${act} + 화살 격자 장판',
+        fire: {
+          en: 'Healer groups in water, avoid arrow lines',
+          ja: 'ヒラ組で水へ、矢印線を避ける',
+          ko: '물에서 힐러 그룹, 화살 직선 장판 피하기',
         },
-        group: Outputs.healerGroups,
-        spread: Outputs.spread,
+        thunder: {
+          en: 'Spread out of water, avoid arrow lines',
+          ja: '水を避けて散開、矢印線を避ける',
+          ko: '물 밖에서 산개, 화살 직선 장판 피하기',
+        },
       },
     },
     {
-      id: 'R6S Taste of Thunder',
+      id: 'R6S Taste of Thunder (Twister/Stepped Leader)',
       type: 'StartsUsing',
       netRegex: { id: 'A69D', source: 'Sugar Riot', capture: false },
-      durationSeconds: 3,
-      suppressSeconds: 5,
+      suppressSeconds: 1,
       response: Responses.moveAway(),
     },
     {
-      id: 'R6S Thunder Target',
+      id: 'R6S Lightning Storm',
       type: 'HeadMarker',
-      netRegex: { id: '025A' },
-      durationSeconds: 4,
-      response: (data, matches, output) => {
-        // cactbot-builtin-response
-        output.responseOutputStrings = {
-          left: {
-            en: 'Thunder on YOU',
-            ja: '自分に雷！左の島へ',
-            ko: '내게 번개! 왼쪽 섬으로',
-          },
-          right: {
-            en: 'Thunder on YOU',
-            ja: '自分に雷！右の島へ',
-            ko: '내게 번개! 오른쪽 섬으로',
-          },
-          provoke: {
-            en: '(provoke)',
-            ja: '(挑発)',
-            ko: '(프로보크)',
-          },
-        };
-        if (data.me !== matches.target) {
-          if (data.role !== 'tank')
-            return;
-          const m = data.party.member(matches.target);
-          if (m.role !== 'tank')
-            return;
-          return { infoText: output.provoke!() };
-        }
-        if (data.role === 'dps')
-          return { alertText: output.right!() };
-        return { alertText: output.left!() };
-      },
+      netRegex: { id: headMarkerData.lightningStormMarker, capture: true },
+      condition: Conditions.targetIsYou(),
+      response: Responses.spread('alert'),
     },
     {
       id: 'R6S Pudding Party',
-      type: 'StartsUsing',
-      netRegex: { id: 'A66D', source: 'Sugar Riot', capture: false },
-      durationSeconds: 8,
-      infoText: (_data, _matches, output) => output.fiveAOE!(),
+      type: 'HeadMarker',
+      netRegex: { id: headMarkerData.puddingPartyMarker, capture: true },
+      infoText: (data, matches, output) => {
+        if (data.me === matches.target)
+          return output.stackOnYou!();
+        return output.stackOn!({ target: matches.target });
+      },
       outputStrings: {
-        fiveAOE: {
-          en: 'Raidwide x5',
-          ja: '頭割り x5',
-          ko: '뭉쳐욧 x5',
+        stackOnYou: {
+          en: 'Stack on YOU x5',
+          ja: '5回連続頭割り',
+          ko: '쉐어 x5 대상자',
+        },
+        stackOn: {
+          en: 'Stack on ${target} x5',
+          ja: '${target} に 5回 連続頭割り',
+          ko: '쉐어 x5 ${target}',
         },
       },
     },
     {
-      id: 'R6S Last Layer',
-      type: 'StartsUsing',
-      netRegex: { id: 'A66D', source: 'Sugar Riot', capture: false },
-      delaySeconds: 8.7,
-      infoText: (_data, _matches, output) => output.spread!(),
+      id: 'R6S Cactus Spam Pattern Identifier',
+      type: 'StartsUsingExtra',
+      netRegex: { id: 'A6A1' },
+      condition: (_data, matches) => {
+        const matchX = parseFloat(matches.x);
+        const matchY = parseFloat(matches.y);
+        const cactus = findCactus(cactusSpamPatterns, matchX, matchY);
+        return cactus !== undefined;
+      },
+      suppressSeconds: 9999,
+      infoText: (_data, matches, output) => {
+        const matchX = parseFloat(matches.x);
+        const matchY = parseFloat(matches.y);
+        const cactus = findCactus(cactusSpamPatterns, matchX, matchY);
+        if (cactus === undefined)
+          return;
+
+        switch (cactus.id) {
+          case '1':
+            return output.pattern1!();
+          case '2':
+            return output.pattern2!();
+          case '3':
+            return output.pattern3!();
+          case '4':
+            return output.pattern4!();
+        }
+
+        return output.unknown!();
+      },
       outputStrings: {
-        spread: {
-          en: 'Go to island',
-          ja: '担当の島へ',
-          ko: '맡은 섬으로!',
+        unknown: Outputs.unknown,
+        pattern1: {
+          en: 'Cactus Pattern 1',
+          ja: 'Cactus Pattern 1',
+          ko: '선인장 패턴 1',
+        },
+        pattern2: {
+          en: 'Cactus Pattern 2 (bad)',
+          ja: 'Cactus Pattern 2 (bad)',
+          ko: '선인장 패턴 2 (어려움)',
+        },
+        pattern3: {
+          en: 'Cactus Pattern 3',
+          ja: 'Cactus Pattern 3',
+          ko: '선인장 패턴 3',
+        },
+        pattern4: {
+          en: 'Cactus Pattern 4',
+          ja: 'Cactus Pattern 4',
+          ko: '선인장 패턴 4',
+        },
+      },
+    },
+    {
+      id: 'R6S Cactus Quicksand Pattern Identifier',
+      type: 'StartsUsingExtra',
+      netRegex: { id: '9A2C' },
+      condition: (_data, matches) => {
+        const matchX = parseFloat(matches.x);
+        const matchY = parseFloat(matches.y);
+        const cactus = findCactus(cactusQuicksandPatterns, matchX, matchY);
+        return cactus !== undefined;
+      },
+      suppressSeconds: 9999,
+      infoText: (_data, matches, output) => {
+        const matchX = parseFloat(matches.x);
+        const matchY = parseFloat(matches.y);
+        const cactus = findCactus(cactusQuicksandPatterns, matchX, matchY);
+        if (cactus === undefined)
+          return;
+
+        switch (cactus.id) {
+          case 'dirNE':
+          case 'dirSE':
+          case 'dirSW':
+          case 'dirNW':
+            return output.cactus!({ dir: output[cactus.id]!() });
+        }
+
+        return output.unknown!();
+      },
+      outputStrings: {
+        unknown: Outputs.unknown,
+        ...Directions.outputStrings8Dir,
+        cactus: {
+          en: 'Danger Cactus ${dir}',
+          ja: 'Danger Cactus ${dir}',
+          ko: '위험한 선인장 ${dir}',
+        },
+      },
+    },
+    {
+      id: 'R6S Tempest Piece Spawn Collector',
+      type: 'AddedCombatant',
+      netRegex: { npcNameId: '13827', capture: true },
+      condition: (data) => data.cloudId === undefined,
+      preRun: (data, matches) => {
+        data.cloudId = matches.id;
+        const cloudDir =
+          Directions.output8Dir[Directions.addedCombatantPosTo8Dir(matches, 100, 100)];
+        switch (cloudDir) {
+          case 'dirNE':
+          case 'dirNW':
+          case 'dirS':
+            data.cloudPos = cloudDir;
+            break;
+          default:
+            console.log(
+              `R6S Tempest Piece Spawn Collector - Invalid cloud spawn direction ${cloudDir}`,
+            );
+            return;
+        }
+        const cloudX = parseFloat(matches.x);
+        const cloudY = parseFloat(matches.y);
+        data.cloudLastAngle = Math.atan2(cloudX - 100, cloudY - 100);
+        // For the initial spawn, the actor moves in place which causes a false positive firing
+        // of the detection trigger. Avoid it by setting new angle to last angle
+        data.cloudNewAngle = data.cloudLastAngle;
+      },
+      infoText: (data, _matches, output) =>
+        output.spawn!({ dir: output[data.cloudPos ?? 'unknown']!() }),
+      outputStrings: {
+        ...Directions.outputStrings8Dir,
+        spawn: {
+          en: 'Cloud spawning ${dir}',
+          ja: 'Cloud spawning ${dir}',
+          ko: '${dir}에 구름 소환',
+        },
+      },
+    },
+    {
+      id: 'R6S Tempest Piece Rotation Detector',
+      type: 'ActorMove',
+      netRegex: { capture: true },
+      condition: (data, matches) => {
+        if (matches.id !== data.cloudId)
+          return false;
+        return data.cloudId !== undefined && data.cloudLastAngle !== undefined &&
+          data.cloudNewAngle === undefined && data.cloudExplosionCount < 5;
+      },
+      preRun: (data, matches) => {
+        const cloudX = parseFloat(matches.x);
+        const cloudY = parseFloat(matches.y);
+        data.cloudNewAngle = Math.atan2(cloudX - 100, cloudY - 100);
+      },
+      infoText: (data, _matches, output) => {
+        const lastAngle = data.cloudLastAngle;
+        const newAngle = data.cloudNewAngle;
+        if (lastAngle === undefined || newAngle === undefined)
+          throw new UnreachableCode();
+        const cwRotation = (Math.PI + newAngle) < (Math.PI + lastAngle);
+        if (data.cloudPos === 'dirNE') {
+          data.cloudPos = cwRotation ? 'dirS' : 'dirNW';
+        } else if (data.cloudPos === 'dirNW') {
+          data.cloudPos = cwRotation ? 'dirNE' : 'dirS';
+        } else {
+          data.cloudPos = cwRotation ? 'dirNW' : 'dirNE';
+        }
+        return output.text!({
+          rot: output[cwRotation ? 'cw' : 'ccw']!(),
+          dir: output[data.cloudPos ?? 'unknown']!(),
+        });
+      },
+      outputStrings: {
+        ...Directions.outputStrings8Dir,
+        cw: Outputs.clockwise,
+        ccw: Outputs.counterclockwise,
+        text: {
+          en: 'Cloud rotating ${rot} towards ${dir}',
+          ja: 'Cloud rotating ${rot} towards ${dir}',
+          ko: '구름이 ${dir}쪽으로 ${rot} 회전',
+        },
+      },
+    },
+    {
+      id: 'R6S Tempest Piece Cleanup 1',
+      type: 'StartsUsing',
+      netRegex: { id: 'A69B', capture: true },
+      condition: (data) => {
+        return data.cloudId !== undefined && data.cloudLastAngle !== undefined &&
+          data.cloudNewAngle !== undefined;
+      },
+      run: (data, matches) => {
+        const cloudX = parseFloat(matches.x);
+        const cloudY = parseFloat(matches.y);
+        data.cloudLastAngle = Math.atan2(cloudX - 100, cloudY - 100);
+        delete data.cloudNewAngle;
+        data.cloudExplosionCount++;
+      },
+    },
+    {
+      id: 'R6S Tempest Piece Cleanup 2',
+      type: 'RemovedCombatant',
+      netRegex: { npcNameId: '13827', capture: true },
+      condition: (data, matches) => {
+        if (data.cloudId === undefined)
+          return false;
+        if (data.cloudId !== matches.id)
+          return false;
+
+        return true;
+      },
+      run: (data) => {
+        delete data.cloudId;
+        delete data.cloudPos;
+        delete data.cloudLastAngle;
+        delete data.cloudNewAngle;
+      },
+    },
+    {
+      id: 'R6S First Towers Detector',
+      type: 'MapEffect',
+      netRegex: {
+        location: Object.keys(towerMapEffectMapping),
+        flags: towerFlags.hide,
+        capture: false,
+      },
+      condition: (data) => data.firstTowersGone === false,
+      run: (data) => data.firstTowersGone = true,
+    },
+    {
+      id: 'R6S Second Towers Collector',
+      type: 'MapEffect',
+      netRegex: {
+        location: Object.keys(towerMapEffectMapping),
+        flags: towerFlags.show,
+        capture: true,
+      },
+      condition: (data) => data.firstTowersGone === true,
+      preRun: (data, matches) => {
+        const dir = towerMapEffectMapping[matches.location];
+        if (dir === undefined) {
+          console.log(
+            `R6S Second Towers Collector - Invalid location somehow, ${matches.location}`,
+          );
+          return;
+        }
+        if (dir !== 'dirNW' && dir !== 'dirNE' && dir !== 'dirS') {
+          console.log(
+            `R6S Second Towers Collector - Invalid location mapping somehow, ${matches.location}`,
+          );
+          return;
+        }
+        data.secondTowers[dir] = (data.secondTowers[dir] ?? 0) + 1;
+      },
+      infoText: (data, _matches, output) => {
+        const nwCount = data.secondTowers.dirNW ?? 0;
+        const neCount = data.secondTowers.dirNE ?? 0;
+        const sCount = data.secondTowers.dirS ?? 0;
+        if (nwCount + neCount + sCount < 8)
+          return;
+
+        if (sCount === 8)
+          return output.eightSouth!();
+        if (nwCount === 4)
+          return output.fourNW!();
+        if (neCount === 4)
+          return output.fourNE!();
+        return output.unknown!();
+      },
+      outputStrings: {
+        unknown: Outputs.unknown,
+        // These outputStrings values are written this way to allow users to replace them
+        // with "all south", "clockwise", "counterclockwise" to match the common strat
+        eightSouth: {
+          en: '8 Towers S',
+          ja: '8 Towers S',
+          ko: '남쪽 탑 8개',
+        },
+        fourNW: {
+          en: '4 Towers NW',
+          ja: '4 Towers NW',
+          ko: '북서쪽 탑 4개',
+        },
+        fourNE: {
+          en: '4 Towers NE',
+          ja: '4 Towers NE',
+          ko: '북동쪽 탑 4개',
         },
       },
     },
@@ -536,7 +775,6 @@ const triggerSet: TriggerSet<Data> = {
   timelineReplace: [
     {
       'locale': 'de',
-      'missingTranslations': true,
       'replaceSync': {
         'Mouthwatering Morbol': 'Zucker-Morbol',
         'Sugar Riot': 'Zuckerschock',
@@ -587,7 +825,6 @@ const triggerSet: TriggerSet<Data> = {
     },
     {
       'locale': 'fr',
-      'missingTranslations': true,
       'replaceSync': {
         'Mouthwatering Morbol': 'Morbol mielleux',
         'Sugar Riot': 'Sugar Riot',
@@ -680,7 +917,6 @@ const triggerSet: TriggerSet<Data> = {
     },
     {
       'locale': 'cn',
-      'missingTranslations': true,
       'replaceSync': {
         'Mouthwatering Morbol': '糖糖魔界花',
         'Sugar Riot': '狂热糖潮',
@@ -730,8 +966,58 @@ const triggerSet: TriggerSet<Data> = {
       },
     },
     {
-      'locale': 'ko',
+      'locale': 'tc',
       'missingTranslations': true,
+      'replaceSync': {
+        'Mouthwatering Morbol': 'シュガーズモルボル',
+        'Sugar Riot': 'シュガーライオット',
+        'Sweet Shot': 'シュガーズアロー',
+      },
+      'replaceText': {
+        // '\\(cast\\)': '', // FIXME '(咏唱)'
+        // '\\(snapshot\\)': '', // FIXME '(快照)'
+        // '--2x Feather Ray targetable--': '', // FIXME '--2x 羽环鳐 可选中--'
+        // '--2x Mu targetable--': '', // FIXME '--2x 亩鼠 可选中--'
+        // '--Gimme Cat targetable--': '', // FIXME '--索取猫 可选中--'
+        // '--Jabberwock targetable--': '', // FIXME '--炸脖龙 可选中--'
+        // '--Yan targetable--': '', // FIXME '--羊 可选中--'
+        // '--jump\\?--': '', // FIXME '--跳?--'
+        'Artistic Anarchy': '藝術大亂鬥',
+        'Bad Breath': '臭氣',
+        'Brûlée': '熱耗散',
+        'Burst': '爆炸',
+        'Color Clash': '色彩衝擊',
+        'Color Riot': '色彩暴亂',
+        // 'Cool Bomb': '', // FIXME '冷色爆弹怪'
+        'Crowd Brûlée': '重熱擴散',
+        'Dark Mist': '暗黑霧',
+        'Double Style': '雙手塗鴉',
+        'Explosion': '爆炸',
+        'Layer': '添筆',
+        'Levin Drop': '雷流',
+        'Lightning Bolt': '落雷',
+        'Lightning Storm': '百雷',
+        'Live Painting': '即興繪畫',
+        'Moussacre': '慕斯怪大進軍',
+        'Mousse Drip': '啪嘰慕斯怪',
+        'Mousse Mural': '慕斯怪之雨',
+        'Pudding Graf': '咣噹布丁',
+        'Pudding Party': '布丁聚會',
+        'Ready Ore Not': '送你原石',
+        'Rush': '突進',
+        'Single Style': '單手塗鴉',
+        'Soul Sugar': '糖果之魂',
+        'Spray Pain': '飛針',
+        'Sticky Mousse': '黏黏慕斯怪',
+        'Sugarscape': '沙地繪景',
+        'Taste of Fire': '糖果火焰',
+        'Taste of Thunder': '糖果雷電',
+        // 'Warm Bomb': '', // FIXME '暖色爆弹怪'
+        'Wingmark': '翅膀標記',
+      },
+    },
+    {
+      'locale': 'ko',
       'replaceSync': {
         'Mouthwatering Morbol': '슈거 몰볼',
         'Sugar Riot': '슈거 라이엇',

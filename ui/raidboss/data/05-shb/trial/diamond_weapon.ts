@@ -61,10 +61,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Flare on YOU',
-          de: 'Flare auf DIR',
-          fr: 'Brasier sur VOUS',
           ja: '自分にフレア',
-          cn: '核爆点名',
           ko: '내게 플레어',
         },
       },
@@ -114,10 +111,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Diamond Shrapnel on YOU',
-          de: 'Diamantschub auf DIR',
-          fr: 'Salve adamantine sur VOUS',
           ja: '自分にダイヤバースト',
-          cn: '钻石爆发点名',
           ko: '내게 다아아버스트',
         },
       },
@@ -130,10 +124,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Bits',
-          de: 'Weiche den Satelliten aus',
-          fr: 'Évitez les bras',
           ja: 'ビームを避ける',
-          cn: '躲避浮游炮激光',
           ko: '비트 피해요',
         },
       },
@@ -147,10 +138,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Towers',
-          de: 'Türme nehmen',
-          fr: 'Prenez les tours',
           ja: '塔を踏む',
-          cn: '踩塔',
           ko: '타워 밟아요',
         },
       },
@@ -276,6 +264,36 @@ const triggerSet: TriggerSet<Data> = {
         'Outrage': '震怒',
         'Photon Burst': '光子爆发',
         'Vertical Cleave': '纵劈',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Articulated Bit': '飛手浮游砲',
+        'The Diamond Weapon': '鑽石武器',
+      },
+      'replaceText': {
+        // '\\(Jump\\)': '', // FIXME '(跳)'
+        // '\\(Cleave\\)': '', // FIXME '(冲锋)'
+        'Adamant Purge': '裝甲展開',
+        'Adamant Sphere': '鑽石球',
+        'Aetherial Bullet': '乙太砲',
+        'Airship\'s Bane': '墜機',
+        'Articulated Bits': '飛手浮游砲',
+        'Auri Arts': '敖龍技巧',
+        'Auri Cyclone': '敖龍旋風',
+        'Auri Doomstead': '敖龍厄運',
+        '(?<!Photon )Burst': '爆炸',
+        'Claw Swipe': '利爪突進',
+        'Code Chi-Xi-Stigma': '代號666',
+        'Diamond Flash': '鑽石閃光',
+        'Diamond Rain': '鑽石雨',
+        'Diamond Shrapnel': '鑽石爆發',
+        'Homing Laser': '追蹤雷射',
+        'Outrage': '震怒',
+        'Photon Burst': '光子爆發',
+        'Vertical Cleave': '縱劈',
       },
     },
     {

@@ -111,10 +111,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         knockback: {
           en: 'Knockback (${pos1}/${pos2} Safe)',
-          de: 'Rückstoß (${pos1}/${pos2} sicher)',
-          fr: 'Poussée (${pos1}/${pos2} sûr)',
           ja: 'ノックバック (${pos1}/${pos2} が安地)',
-          cn: '击退 (${pos1}/${pos2} 安全)',
           ko: '넉백 (${pos1}, ${pos2})',
         },
         northeast: Outputs.dirNE,
@@ -216,26 +213,17 @@ const triggerSet: TriggerSet<Data> = {
         ...Directions.outputStrings8Dir,
         swSeStay: {
           en: '${dir1} ${sep} ${dir2} (Stay)',
-          de: '${dir1} ${sep} ${dir2} (Stehen bleiben)',
-          fr: '${dir1} ${sep} ${dir2} (Restez)',
           ja: '${dir1} ${sep} ${dir2} (そのまま)',
-          cn: '${dir1} ${sep} ${dir2} (不动)',
           ko: '${dir1} ${sep} ${dir2} (그대로)',
         },
         separator: {
           en: ' => ',
-          de: ' => ',
-          fr: ' => ',
           ja: ' => ',
-          cn: ' => ',
           ko: ' 🔜 ',
         },
         combo: {
           en: '${dirs}',
-          de: '${dirs}',
-          fr: '${dirs}',
           ja: '${dirs}',
-          cn: '${dirs}',
           ko: '${dirs}',
         },
       },
@@ -250,10 +238,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         outSpread: {
           en: 'Out + Spread',
-          de: 'Raus + Verteilen',
-          fr: 'Extérieur + Dispersion',
           ja: '外へ + 散開',
-          cn: '远离 + 分散',
           ko: '내게 장판! 흩어져요',
         },
       },
@@ -280,10 +265,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Launch Forward (Aim for uncracked tile)',
-          de: 'Schlag Vorwärts (Ziel auf eine ganze Fläche)',
-          fr: 'Saut vers l\'avant (Visez une tuile saine)',
           ja: '前方吹き飛ばし (割れていない床を狙って)',
-          cn: '向前击飞 (瞄准完好的地板)',
           ko: '내게 어퍼컷 넉백!',
         },
       },
@@ -297,10 +279,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${target} Launch',
-          de: '${target} Start',
-          fr: '${target} Saut',
           ja: '${target} に吹き飛ばし',
-          cn: '${target} 击飞',
           ko: '어퍼컷: ${target}',
         },
       },
@@ -314,10 +293,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stand on uncracked tile',
-          de: 'Steh auf einer ganzen Fläche',
-          fr: 'Restez sur une tuile saine',
           ja: '割れてない床に立って',
-          cn: '被砸 (站在完好的场地)',
           ko: '내게 내려 찍기!',
         },
       },
@@ -331,10 +307,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${target} Stun',
-          de: '${target} Betäubung',
-          fr: '${target} Étourdissment',
           ja: '${target} にスタン',
-          cn: '${target} 被砸',
           ko: '내려 찍기: ${target}',
         },
       },
@@ -347,10 +320,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         partner: {
           en: 'Partner Stacks',
-          de: 'Partner sammeln',
-          fr: 'Package partenaire',
           ja: 'ペア',
-          cn: '和搭档分摊',
           ko: '십자로 페어!',
         },
       },
@@ -364,10 +334,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         partner: {
           en: 'Partner Stacks',
-          de: 'Partner sammeln',
-          fr: 'Package partenaire',
           ja: 'ペア',
-          cn: '和搭档分摊',
           ko: '십자로 페어!',
         },
       },
@@ -376,20 +343,14 @@ const triggerSet: TriggerSet<Data> = {
       id: 'R1S Double Swipe',
       type: 'StartsUsing',
       netRegex: { id: '945F', source: 'Black Cat', capture: false },
-      infoText: (_data, _matches, output) => output.healerStacks!(),
-      outputStrings: {
-        healerStacks: Outputs.healerGroups,
-      },
+      response: Responses.healerGroups(),
     },
     {
       id: 'R1S Delayed Double Swipe',
       type: 'StartsUsing',
       netRegex: { id: '945F', source: 'Black Cat', capture: false },
       delaySeconds: 24.4,
-      infoText: (_data, _matches, output) => output.healerStacks!(),
-      outputStrings: {
-        healerStacks: Outputs.healerGroups,
-      },
+      response: Responses.healerGroups(),
     },
     {
       id: 'R1S Overshadow',
@@ -405,10 +366,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         rolePositions: {
           en: 'Role positions',
-          de: 'Rollenposition',
-          fr: 'Positions par rôle',
           ja: 'ロールの担当位置へ',
-          cn: '职能分散站位',
           ko: '같은 롤 뭉쳐요',
         },
       },
@@ -449,26 +407,17 @@ const triggerSet: TriggerSet<Data> = {
         dirW: Outputs.dirW,
         insideOut: {
           en: 'Inside => Outside',
-          de: 'Rein => Raus',
-          fr: 'Intérieur => Extérieur',
           ja: '内側 => 外側',
-          cn: '场内 => 场外',
           ko: '안에서 🔜 밖으로',
         },
         outsideIn: {
           en: 'Outside => Inside',
-          de: 'Raus => Rein',
-          fr: 'Extérieur => Intérieur',
           ja: '外側 => 内側',
-          cn: '场外 => 场内',
           ko: '밖에서 🔜 안으로',
         },
         combo: {
           en: '${dir}, ${cleaves}',
-          de: '${dir}, ${cleaves}',
-          fr: '${dir}, ${cleaves}',
           ja: '${dir}, ${cleaves}',
-          cn: '${dir}, ${cleaves}',
           ko: '${dir}쪽, ${cleaves}',
         },
         unknown: Outputs.unknown,
@@ -492,10 +441,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         proximity: {
           en: 'Proximity baits at target',
-          de: 'Nah-Distanz-Köder vom Ziel',
-          fr: 'Baits proches de la cible',
           ja: 'ボスに近づいて誘導',
-          cn: '靠近引导站位',
           ko: '자기 자리로! 부채꼴 유도',
         },
         unknown: Outputs.unknown,
@@ -587,34 +533,22 @@ const triggerSet: TriggerSet<Data> = {
         dirW: Outputs.dirW,
         in: {
           en: 'In + Healer Stacks => Out',
-          de: 'Rein + Auf Heiler sammeln => Raus',
-          fr: 'Intérieur + Packs sur les heals => Extérieur',
           ja: '中へ + ヒラ頭割り => 外へ',
-          cn: '场内 + 治疗分组分摊 => 场外',
           ko: '안에서 4:4힐러 🔜 밖으로',
         },
         out: {
           en: 'Out + Healer Stacks => In',
-          de: 'Raus + Auf Heiler sammeln => Rein',
-          fr: 'Extérieur + Packs sur les heals => Intérieur',
           ja: '外へ + ヒラ頭割り => 中へ',
-          cn: '场外 + 治疗分组分摊 => 场内',
           ko: '밖에서 4:4힐러🔜 안으로',
         },
         healerStacks: {
           en: 'Go ${dir} => ${inOut}',
-          de: 'Geh nach ${dir} => ${inOut}',
-          fr: 'Allez ${dir} => ${inOut}',
           ja: '${dir} へ => ${inOut}',
-          cn: '去 ${dir} => ${inOut}',
           ko: '${dir}쪽 🔜 ${inOut}',
         },
         proximity: {
           en: 'Go ${dir} => Proximity Baits + Spreads',
-          de: 'Geh nach ${dir} => Nah-Distanz-Köder + Verteilen',
-          fr: 'Allez ${dir} => Baits proches + Dispersion',
           ja: '${dir} へ => ボスに近づいて誘導 + 散開',
-          cn: '去 ${dir} => 引导站位 + 分散',
           ko: '${dir}쪽 🔜 부채꼴 유도!',
         },
       },
@@ -784,6 +718,51 @@ const triggerSet: TriggerSet<Data> = {
         'Soulshade': '灵魂之影',
         'Splintering Nails': '碎裂尖甲',
         'Tempestuous Tear': '暴风裂',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        // 'Black Cat': '', // FIXME '黑猫'
+        // 'Copy Cat': '', // FIXME '模仿猫'
+        // 'Soulshade': '', // FIXME '灵魂之影'
+      },
+      'replaceText': {
+        // '\\(First\\)': '', // FIXME '(一)'
+        // '\\(Second\\)': '', // FIXME '(二)'
+        // '\\(cast\\)': '', // FIXME '(咏唱)'
+        // '\\(damage\\)': '', // FIXME '(伤害)'
+        // '\\(enrage\\)': '', // FIXME '(狂暴)'
+        // '\\(hit\\)': '', // FIXME '(命中)'
+        // '\\(hits\\)': '', // FIXME '(命中)'
+        // '\\(jump\\)': '', // FIXME '(跳)'
+        // '\\(knockback\\)': '', // FIXME '(击退)'
+        // '\\(stacks\\)': '', // FIXME '(分摊)'
+        // '\\(telegraphs\\)': '', // FIXME '(预兆)'
+        // '\\(tethers\\)': '', // FIXME '(连线)'
+        // 'Biscuit Maker': '', // FIXME '踩奶'
+        // 'Bloody Scratch': '', // FIXME '血腥抓挠'
+        // 'Copycat': '', // FIXME '模仿之猫'
+        // 'Double Swipe': '', // FIXME '双重利爪'
+        // 'Elevate and Eviscerate': '', // FIXME '腾身开膛'
+        // 'Grimalkin Gale': '', // FIXME '猫怪突风'
+        'Impact': '衝擊',
+        // 'Leaping One-two Paw': '', // FIXME '猫跳二连尖甲'
+        // 'Leaping Quadruple Crossing': '', // FIXME '猫跳四连尖甲'
+        // 'Mouser': '', // FIXME '捕鼠'
+        // 'Nailchipper': '', // FIXME '剪指甲'
+        // 'Nine Lives': '', // FIXME '猫生九命'
+        // '(?<! )One-two Paw': '', // FIXME '二连尖甲'
+        // 'Overshadow': '', // FIXME '超暗影'
+        // 'Predaceous Pounce': '', // FIXME '迅猫急袭'
+        // '(?<! )Quadruple Crossing': '', // FIXME '四连尖甲'
+        // 'Quadruple Swipe': '', // FIXME '四重利爪'
+        // 'Raining Cats': '', // FIXME '倾盆大猫'
+        'Shockwave': '衝擊波',
+        // 'Soulshade': '', // FIXME '灵魂之影'
+        // 'Splintering Nails': '', // FIXME '碎裂尖甲'
+        // 'Tempestuous Tear': '', // FIXME '暴风裂'
       },
     },
     {

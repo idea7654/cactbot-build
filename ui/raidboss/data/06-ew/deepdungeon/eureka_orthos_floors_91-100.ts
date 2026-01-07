@@ -37,10 +37,7 @@ const triggerSet: TriggerSet<Data> = {
         out: Outputs.out,
         interruptOrOut: {
           en: 'Out or interrupt ${name}',
-          de: 'Raus oder unterbreche ${name}',
-          fr: 'Extérieur ou interrompez ${name}',
           ja: '沈黙: ${name}',
-          cn: '远离或打断 ${name}',
           ko: '밖으로 또는 인터럽트: ${name}',
         },
       },
@@ -216,18 +213,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         ice: {
           en: 'Get hit by Ice',
-          de: 'Lass dich von Eis treffen',
-          fr: 'Faites-vous toucher par la glace',
           ja: '氷へ',
-          cn: '吃冰',
           ko: '얼음에 부디쳐요',
         },
         fire: {
           en: 'Get hit by Fire',
-          de: 'Lass dich von Feuer treffen',
-          fr: 'Faites-vous toucher par le feu',
           ja: '炎へ',
-          cn: '吃火',
           ko: '불에 부디쳐요',
         },
       },
@@ -248,18 +239,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         ice: {
           en: 'Get hit by Ice',
-          de: 'Lass dich von Eis treffen',
-          fr: 'Faites-vous toucher par la glace',
           ja: '氷へ',
-          cn: '吃冰',
           ko: '얼음에 부디쳐요',
         },
         avoid: {
           en: 'Avoid line AoEs',
-          de: 'Vermeide Linien-AoEs',
-          fr: 'Évitez les AoEs en ligne',
           ja: '剣AOE回避',
-          cn: '躲避直线AOE',
           ko: '칼 AOE 피해요',
         },
       },
@@ -280,18 +265,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         fire: {
           en: 'Get hit by Fire',
-          de: 'Lass dich von Feuer treffen',
-          fr: 'Faites-vous toucher par le feu',
           ja: '炎へ',
-          cn: '吃火',
           ko: '불에 부디쳐요',
         },
         avoid: {
           en: 'Avoid line AoEs',
-          de: 'Vermeide Linien-AoEs',
-          fr: 'Évitez les AoEs en ligne',
           ja: '剣AOE回避',
-          cn: '躲避直线AOE',
           ko: '칼 AOE 피해요',
         },
       },
@@ -368,6 +347,24 @@ const triggerSet: TriggerSet<Data> = {
         'Orthosystem γ': '正统系统γ',
         'Servomechanical Orthochimera': '正统自控化奇美拉',
         'Servomechanical Orthotaur': '正统自控化弥诺陶洛斯',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Excalibur': '鬥神 王者之劍',
+        'Orthodrone': '正統無人機',
+        'Orthonaught': '正統恐慌裝甲',
+        'Orthos Fitter': '正統整備工',
+        'Orthos Mining Drone': '正統採掘無人機',
+        'Orthos Mithridates': '正統米特里達梯',
+        'Orthos Motherbit': '正統浮游砲主機板',
+        'Orthos Sphinx': '正統斯芬克斯',
+        'Orthos Zaghnal': '正統札戈斧龍',
+        'Orthosystem α': '正統系統α',
+        'Orthosystem γ': '正統系統γ',
+        'Servomechanical Orthochimera': '正統自控化奇美拉',
+        'Servomechanical Orthotaur': '正統自控化米諾陶洛斯',
       },
     },
     {

@@ -21,10 +21,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Dragon\'s Voice',
-          de: 'Stimme Des Drachen',
-          fr: 'Voix du dragon',
           ja: '雷電の咆哮',
-          cn: '雷电咆哮',
           ko: '드래곤즈 보이스 (안으로)',
         },
       },
@@ -43,10 +40,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Swipe',
-          de: 'Hieb',
-          fr: 'Fauche',
           ja: 'スワイプ',
-          cn: '横扫',
           ko: '스와이프',
         },
       },
@@ -65,10 +59,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Eye Donut',
-          de: 'Augendonut',
-          fr: 'Donut œil',
           ja: 'アイ・オブ・ビホルダー',
-          cn: '月环',
           ko: '아이 오브 비홀더 (도넛)',
         },
       },
@@ -81,10 +72,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Glower Laser',
-          de: 'Blick Laser',
-          fr: 'Regard laser',
           ja: 'グラワー',
-          cn: '怒视',
           ko: '글로워 레이저',
         },
       },
@@ -110,10 +98,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Ice ball on you!',
-          de: 'Eisball auf dir!',
-          fr: 'Boule de glace sur vous !',
           ja: '自分に氷玉',
-          cn: '点名冰球！',
           ko: '내게 얼음 구슬!',
         },
       },
@@ -145,10 +130,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Plague Donut',
-          de: 'Plagen-Donut',
-          fr: 'Donut Nuée',
           ja: 'ローカストプレイグ',
-          cn: '月环',
           ko: '로커스트 프레이그 (도넛)',
         },
       },
@@ -165,10 +147,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'wraiths: ${num}',
-          de: 'Geister: ${num}',
-          fr: 'spectres: ${num}',
           ja: 'レイス: ${num}',
-          cn: '幽灵击杀: ${num}',
           ko: '레이스: ${num}',
         },
       },
@@ -231,6 +210,19 @@ const triggerSet: TriggerSet<Data> = {
         'Shadow Wraith': '暗影幽灵',
         'Void Garm': '虚无加姆',
         'Voidscale': '虚无鳞龙',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Caym': '蓋因',
+        'Fafnir': '法夫納',
+        'Pazuzu': '帕祖祖',
+        'Polyphemus': '波呂斐摩斯',
+        'Sabotender Corrido': '懸賞魔物：寇里多仙人掌',
+        'Shadow Wraith': '暗影幽靈',
+        'Void Garm': '虛無加姆',
+        'Voidscale': '虛無鱗龍',
       },
     },
     {

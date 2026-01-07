@@ -27,10 +27,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid meteor',
-          de: 'Vermeide Meteor',
-          fr: 'Évitez le météore',
           ja: 'メテオ回避',
-          cn: '远离陨石',
           ko: '메테오 피해요',
         },
       },
@@ -67,10 +64,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get behind, then out',
-          de: 'Geh hinter, dann raus',
-          fr: 'Derrière puis extérieur',
           ja: '後ろ => 外へ',
-          cn: '去背后 => 远离',
           ko: '보스 뒤로 갔다 밖으로',
         },
       },
@@ -114,10 +108,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         clones: {
           en: 'Clones: ${dir1}->${dir2}->${dir3}->${dir4}',
-          de: 'Klone: ${dir1}->${dir2}->${dir3}->${dir4}',
-          fr: 'Clones : ${dir1}->${dir2}->${dir3}->${dir4}',
           ja: '${dir1}->${dir2}->${dir3}->${dir4}',
-          cn: '分身：${dir1}->${dir2}->${dir3}->${dir4}',
           ko: '분신: ${dir1}${dir2}${dir3}${dir4}',
         },
         unknown: Outputs.unknown,
@@ -141,10 +132,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Out first => stack w/ ${player}',
-          de: 'Zuerst Raus => Sammeln mit ${player}',
-          fr: 'Extérieur d\'abord => package avec ${player}',
           ja: '外へ => あたまわり (${player})',
-          cn: '远离 => 与 ${player} 分摊',
           ko: '먼저 밖으로 갔다 뭉쳐요: ${player}',
         },
       },
@@ -237,7 +225,7 @@ const triggerSet: TriggerSet<Data> = {
         'Golbez\'s Shadow': '高贝扎的幻影',
       },
       'replaceText': {
-        '\\(preview\\)': '(预览)',
+        '\\(preview\\)': '(预兆)',
         'Arctic Assault': '极寒突袭',
         'Azdaja\'s Shadow': '黑龙剑阿珠达雅',
         'Binding Cold': '咒缚寒气',
@@ -255,6 +243,34 @@ const triggerSet: TriggerSet<Data> = {
         'Terrastorm': '迟缓地暴',
         'Void Meteor': '虚空陨石',
         'Void Stardust': '虚空彗星雨',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Golbez': '高貝扎',
+        'Golbez\'s Shadow': '高貝扎的幻影',
+      },
+      'replaceText': {
+        // '\\(preview\\)': '', // FIXME '(预兆)'
+        'Arctic Assault': '極寒突襲',
+        'Azdaja\'s Shadow': '黑龍劍阿珠達雅',
+        'Binding Cold': '咒縛寒氣',
+        'Black Fang': '黑牙',
+        'Burning Shade': '黑炎',
+        'Crescent Blade': '弦月劍',
+        'Double Meteor': '雙重隕石',
+        'Eventide Fall': '集束黑龍閃',
+        'Explosion': '爆炸',
+        'Gale Sphere': '風晶球',
+        'Immolating Shade': '重黑炎',
+        'Lingering Spark': '遲緩電火花',
+        'Rising Beacon': '升龍烽火',
+        'Shadow Crescent': '弦月黑龍劍',
+        'Terrastorm': '遲緩地暴',
+        'Void Meteor': '虛空隕石',
+        'Void Stardust': '虛空隕星雨',
       },
     },
     {

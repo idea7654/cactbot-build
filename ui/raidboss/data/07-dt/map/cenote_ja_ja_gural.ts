@@ -58,6 +58,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Tuligora Troupes spawned, kill in order!',
+          ja: 'Tuligora Troupes spawned, kill in order!',
           ko: '툴리고라 등장, 순서대로 잡아요',
         },
       },
@@ -131,6 +132,11 @@ const triggerSet: TriggerSet<Data> = {
         'Bull Apollyon': '莽撞亚波伦',
         'Golden Molter': '黄金蜕皮蜥',
       },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {},
     },
     {
       'locale': 'ko',

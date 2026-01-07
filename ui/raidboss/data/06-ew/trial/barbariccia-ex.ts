@@ -52,9 +52,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack to Bait Puddles',
-          de: 'Sammeln um Flächen zu ködern',
           ja: 'AOE誘導のために頭割り',
-          cn: '集合诱导黄圈',
           ko: '장판 유도하러 뭉쳐요',
         },
       },
@@ -68,6 +66,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack South! Roll & Rolling!',
+          ja: 'Stack South! Roll & Rolling!',
           ko: '남쪽에서 뭉쳐욧! 뱅글뱅글!',
         },
       },
@@ -110,10 +109,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Out and Away',
-          de: 'Raus und Weg',
-          fr: 'Extérieur et derrière',
           ja: '外へ',
-          cn: '外侧远离',
           ko: '밖으로 좀 떨어져요',
         },
       },
@@ -141,18 +137,12 @@ const triggerSet: TriggerSet<Data> = {
         in: Outputs.in,
         inThenSpread: {
           en: 'In => Spread',
-          de: 'Rein => Verteilen',
-          fr: 'Intérieur -> Écartez-vous',
           ja: '中 => 散会',
-          cn: '靠近 => 分散',
           ko: '안으로 🔜 흩어져요',
         },
         inAndHealerGroups: {
           en: 'In => Healer Groups',
-          de: 'Rein => Heiler Gruppen',
-          fr: 'Intérieur -> Groupes sur les heals',
           ja: '中 => ヒーラと4:4頭割り',
-          cn: '靠近 => 治疗分组分摊',
           ko: '안으로 🔜 4:4 뭉쳐요',
         },
       },
@@ -167,10 +157,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Spread Out',
-          de: 'Außen Verteilen',
-          fr: 'Écartez-vous',
           ja: '散会',
-          cn: '分散',
           ko: '흩어져요',
         },
       },
@@ -190,26 +177,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         wall: {
           en: 'Wall',
-          de: 'Wand',
-          fr: 'Mur',
           ja: '壁へ',
-          cn: '去场边',
           ko: '벽으로',
         },
         wallAndHealerGroups: {
           en: 'Wall + Healer Groups',
-          de: 'Wand + Heiler Gruppen',
-          fr: 'Mur + Groupes sur les heals',
           ja: '壁へ + ヒーラと4:4頭割り',
-          cn: '去场边 + 治疗分组分摊',
           ko: '벽으로 + 4:4 뭉쳐요',
         },
         wallThenSpread: {
           en: 'Wall => Spread',
-          de: 'Wand => Verteilen',
-          fr: 'Mur -> Écartez-vous',
           ja: '壁へ => 散会',
-          cn: '去场边 => 分散',
           ko: '벽으로 + 흩어져요',
         },
       },
@@ -224,10 +202,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Spread Out',
-          de: 'Außen Verteilen',
-          fr: 'Écartez-vous',
           ja: '散会',
-          cn: '分散',
           ko: '흩어져요!',
         },
       },
@@ -290,10 +265,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         protean: {
           en: 'Protean Spread',
-          de: 'in Himmelsrichtungen verteilen',
-          fr: 'Positions écartées',
           ja: '散会',
-          cn: '八方分散',
           ko: '프로틴, 흩어져요',
         },
       },
@@ -312,10 +284,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         protean: {
           en: 'Protean',
-          de: 'Himmelsrichtungen',
-          fr: 'Positions',
           ja: '散開',
-          cn: '八方分散',
           ko: '프로틴, 흩어져요',
         },
       },
@@ -336,10 +305,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bait Middle => Out + Spread',
-          de: 'In der Mitte Ködern => Raus (verteilen)',
-          fr: 'Posez au centre -> Écartez-vous à l\'extérieur',
           ja: '真ん中で誘導 => 散開',
-          cn: '中间集合 => 八方分散',
           ko: '한가운데 모였다 🔜 밖으로 + 흩어져요',
         },
       },
@@ -353,10 +319,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Out + Spread',
-          de: 'Raus + Verteilen',
-          fr: 'Extérieur + Écartez-vous',
           ja: '外へ + 散会',
-          cn: '远离 => 分散',
           ko: '밖으로 + 흩어져요',
         },
       },
@@ -372,10 +335,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Brutal Rush tether on You',
-          de: 'Grausame Hatz Verbindung auf DIR',
-          fr: 'Lien de Ruée brutale sur VOUS',
           ja: '自分に突進',
-          cn: '冲拳点名',
           ko: '내게 돌진 줄!',
         },
       },
@@ -434,10 +394,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         partnerStack: {
           en: 'Partner Stack (unmarked)',
-          de: 'Mit Partner sammeln (nicht markiert)',
-          fr: 'Package partenaire (sans marque)',
           ja: 'ペア (マーカーなし)',
-          cn: '2 人分摊 (无点名)',
           ko: '페어, 둘이 함께 (근데 마커가 없네)',
         },
       },
@@ -454,10 +411,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         flareOnYou: {
           en: 'Flare on YOU',
-          de: 'Flare auf DIR',
-          fr: 'Brasier sur VOUS',
           ja: '自分にフレア',
-          cn: '核爆点名',
           ko: '내게 플레어',
         },
       },
@@ -511,10 +465,7 @@ const triggerSet: TriggerSet<Data> = {
         num4: Outputs.num4,
         stackMiddle: {
           en: 'Bait Middle',
-          de: 'Mitte ködern',
-          fr: 'Attirez au milieu',
           ja: '真ん中で誘導',
-          cn: '中间诱导',
           ko: '한가운데로 유도',
         },
       },
@@ -547,34 +498,22 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         circle: {
           en: 'Red Circle',
-          de: 'Roter Kreis',
-          fr: 'Cercle rouge',
           ja: '赤まる',
-          cn: '红圆圈',
           ko: '빨강○',
         },
         triangle: {
           en: 'Green Triangle',
-          de: 'Grünes Dreieck',
-          fr: 'Triangle vert',
           ja: '緑さんかく',
-          cn: '绿三角',
           ko: '초록△',
         },
         square: {
           en: 'Purple Square',
-          de: 'Lilanes Viereck',
-          fr: 'Carré violet',
           ja: '紫しかく',
-          cn: '紫方块',
           ko: '보라□',
         },
         cross: {
           en: 'Blue X',
-          de: 'Blaues X',
-          fr: 'Croix bleue',
           ja: '青バツ',
-          cn: '蓝 X',
           ko: '파랑✖',
         },
       },
@@ -763,6 +702,54 @@ const triggerSet: TriggerSet<Data> = {
         'Void Aero IV': '虚空飙风',
         'Voidstrom': '虚无风暴',
         'Winding Gale': '追命狂风',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Barbariccia': '巴爾巴莉希亞',
+        'Stiff Breeze': '荒風',
+      },
+      'replaceText': {
+        // 'ground': '', // FIXME '地面'
+        // 'line': '', // FIXME '直线'
+        // 'donut': '', // FIXME '月环'
+        // 'protean': '', // FIXME '八方'
+        'Blow Away': '重拳激震',
+        'Blustery Ruler': '天風主宰',
+        'Bold Boulder': '巨岩礫',
+        // '(?<!(Brittle|Bold) )Boulder(?! Break)': '', // FIXME '岩砾'
+        'Boulder Break': '礫岩碎',
+        'Brittle Boulder': '小岩礫',
+        'Brush with Death': '咒髮操控',
+        'Brutal Gust': '殘暴突風',
+        'Brutal Rush': '殘暴衝鋒',
+        'Catabasis': '落獄煞',
+        'Curling Iron': '咒髮武裝',
+        'Deadly Twist': '咒髮刺',
+        'Dry Blows': '拳震',
+        'Entanglement': '咒髮束縛',
+        'Fetters': '拘束',
+        'Hair Raid': '咒髮突襲',
+        'Hair Spray': '咒髮針',
+        'Impact': '衝擊',
+        'Iron Out': '咒髮卸甲',
+        'Knuckle Drum': '怒拳連震',
+        'Maelstrom': '大漩渦',
+        'Raging Storm': '憤怒風暴',
+        'Savage Barbery': '野蠻剃',
+        'Secret Breeze': '隱秘之風',
+        // '(?<!(Teasing |En))Tangle': '', // FIXME '咒发'
+        'Teasing Tangles': '咒髮拘束',
+        'Tornado Chain': '龍捲連風',
+        'Tousle': '荒風',
+        'Trample': '踩踏',
+        'Upbraid': '咒髮突',
+        'Void Aero III': '虛空大勁風',
+        'Void Aero IV': '虛空超勁風',
+        'Voidstrom': '虛無風暴',
+        'Winding Gale': '追命狂風',
       },
     },
     {

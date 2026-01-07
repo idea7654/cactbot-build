@@ -163,19 +163,13 @@ const triggerSet: TriggerSet<Data> = {
         healerGroups: Outputs.healerGroups,
         combo: {
           en: '${dir1}/${dir2}, ${groups}',
-          de: '${dir1}/${dir2}, ${groups}',
-          fr: '${dir1}/${dir2}, ${groups}',
           ja: '${dir1}/${dir2}, ${groups}',
-          cn: '${dir1}/${dir2}, ${groups}',
           ko: '${groups} (${dir1}/${dir2})',
         },
         unknown: Outputs.unknown,
         unknownCombo: {
           en: '${unk} => ${groups}',
-          de: '${unk} => ${groups}',
-          fr: '${unk} => ${groups}',
           ja: '${unk} => ${groups}',
-          cn: '${unk} => ${groups}',
           ko: '${groups} (${unk})',
         },
       },
@@ -187,10 +181,7 @@ const triggerSet: TriggerSet<Data> = {
       type: 'StartsUsing',
       netRegex: { id: 'A025', source: 'Queen Eternal', capture: false },
       suppressSeconds: 1,
-      infoText: (_data, _matches, output) => output.stacks!(),
-      outputStrings: {
-        stacks: Outputs.healerGroups,
-      },
+      response: Responses.healerGroups(),
     },
     {
       id: 'QueenEternal Ex Wind Phase Debuff Collector',
@@ -223,36 +214,24 @@ const triggerSet: TriggerSet<Data> = {
         rightLeft: Outputs.rightThenLeft,
         left: {
           en: 'Knockback Left',
-          de: 'Rückstoß Links',
-          fr: 'Poussée Gauche',
           ja: '左へノックバック',
-          cn: '向左击退',
           ko: '🡸왼쪽 넉백',
         },
         right: {
           en: 'Knockback Right',
-          de: 'Rückstoß Rechts',
-          fr: 'Pousée Droite',
           ja: '右へノックバック',
-          cn: '向右击退',
           ko: '오른쪽🡺 넉백',
         },
         break: Outputs.breakChains,
         unknown: Outputs.unknown,
         combo: {
           en: '${break} => ${safe} => ${kbDir}',
-          de: '${break} => ${safe} => ${kbDir}',
-          fr: '${break} => ${safe} => ${kbDir}',
           ja: '${break} => ${safe} => ${kbDir}',
-          cn: '${break} => ${safe} => ${kbDir}',
           ko: '${break} 🔜 ${safe} 🔜 ${kbDir}',
         },
         comboUnknown: {
           en: '${break} => ${safe} => ${unk}',
-          de: '${break} => ${safe} => ${unk}',
-          fr: '${break} => ${safe} => ${unk}',
           ja: '${break} => ${safe} => ${unk}',
-          cn: '${break} => ${safe} => ${unk}',
           ko: '${break} 🔜 ${safe} 🔜 ${unk}',
         },
         aCombo: {
@@ -281,9 +260,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         up: {
           en: 'Up',
-          de: 'Hoch',
-          fr: 'En haut',
-          cn: '上浮',
+          ja: 'Up',
           ko: '공중부양',
         },
       },
@@ -297,9 +274,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         downSoak: {
           en: 'Down, soak tower',
-          de: 'Runter, Turm nehmen',
-          fr: 'En bas, prenez une tour',
-          cn: '下降 => 踩塔',
+          ja: 'Down, soak tower',
           ko: '땅으로, 타워 밟아요',
         },
       },
@@ -322,10 +297,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         cone: {
           en: 'Cone on YOU',
-          de: 'Kegel auf DIR',
-          fr: 'Cône sur VOUS',
           ja: '扇範囲処理',
-          cn: '扇形点名',
           ko: '내게 줄, 앞으로!',
         },
       },
@@ -344,10 +316,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         downSoak: {
           en: 'Down, soak tower',
-          de: 'Runter, Turm nehmen',
-          fr: 'En bas, prenez une tour',
           ja: '下へ => 塔を踏む',
-          cn: '下降 => 踩塔',
           ko: '땅으로, 타워 밟아요',
         },
       },
@@ -367,10 +336,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Hide behind rocks',
-          de: 'Hinter den Steinen verstecken',
-          fr: 'Cachez-vous derrière les rochers',
           ja: '岩の後ろに隠れる',
-          cn: '躲在石头后',
           ko: '돌 뒤에 숨어요',
         },
       },
@@ -469,10 +435,7 @@ const triggerSet: TriggerSet<Data> = {
         ...Directions.outputStringsCardinalDir,
         text: {
           en: '${laserDir} laser, ${sideDir} side, w/ ${partner}',
-          de: '${laserDir} Laser, ${sideDir} Seite, mit ${partner}',
-          fr: 'Laser ${laserDir} , côté ${sideDir}, avec ${partner}',
           ja: '${laserDir} レーザー、${sideDir} 側、${partner} と一緒',
-          cn: '${laserDir} 激光, ${sideDir} 侧, 和 ${partner}',
           ko: '${laserDir}쪽 레이저, ${sideDir}쪽으로 (${partner})',
         },
         unknown: Outputs.unknown,
@@ -505,28 +468,24 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         spread: {
           en: 'Flare Marker Spread',
-          de: 'Flare Markierung verteilen',
-          fr: 'Dispersion marqueur Brasier',
           ja: 'フレアマーカーさんかい',
-          cn: '核爆点名分散',
           ko: '내게 플레어',
         },
         stack: Outputs.stackMarker,
         dorito: Outputs.doritoStack,
         combo: {
           en: '${stackSpread} => ${dorito}',
-          de: '${stackSpread} => ${dorito}',
-          fr: '${stackSpread} => ${dorito}',
           ja: '${stackSpread} => ${dorito}',
-          cn: '${stackSpread} => ${dorito}',
           ko: '${stackSpread} 🔜 ${dorito}',
         },
         aFlare: {
           en: 'Flare',
+          ja: 'Flare',
           ko: '내게 플레어!',
         },
         aStack: {
           en: 'Stack',
+          ja: 'Stack',
           ko: '한가운데서 뭉쳐요!',
         },
       },
@@ -585,26 +544,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         unknown: {
           en: 'Spread ???, stretch tethers',
-          de: 'Verteilen ???, Verbindungen lang ziehen',
-          fr: 'Dispersion ???, étirez les liens',
           ja: 'さんかいして、線をのばす',
-          cn: '???分散, 拉线至变色',
           ko: '??? 선 늘려요',
         },
         west: {
           en: 'Spread West, stretch tethers',
-          de: 'Verteilen Westen, Verbindungen lang ziehen',
-          fr: 'Dispersion Est, étirez les liens',
           ja: '西側にさんかいして、線をのばす',
-          cn: '左分散, 拉线至变色',
           ko: '🡸서쪽으로 늘려요',
         },
         east: {
           en: 'Spread East, stretch tethers',
-          de: 'Verteilen Osten, Verbindungen lang ziehen',
-          fr: 'Dispersion Ouest, étirez les liens',
           ja: '東側にさんかいして、線をのばす',
-          cn: '右分散, 拉线至变色',
           ko: '동쪽으로🡺 늘려요',
         },
       },
@@ -670,34 +620,22 @@ const triggerSet: TriggerSet<Data> = {
         unknown: Outputs.unknown,
         wind: {
           en: 'Wind/Green',
-          de: 'Wind/Grün',
-          fr: 'Vent/Vert',
           ja: '風/緑',
-          cn: '风/绿地板',
           ko: '녹색 (바람)',
         },
         earth: {
           en: 'Earth/Yellow',
-          de: 'Erde/Gelb',
-          fr: 'Terre/Jaune',
           ja: '土/黄',
-          cn: '土/黄地板',
           ko: '노랑 (땅)',
         },
         ice: {
           en: 'Ice/Blue',
-          de: 'Eis/Blau',
-          fr: 'Glace/Bleu',
           ja: '氷/青',
-          cn: '冰/蓝地板',
           ko: '파랑 (얼음)',
         },
         combo: {
           en: '${elem} => ${spread}',
-          de: '${elem} => ${spread}',
-          fr: '${elem} => ${spread}',
           ja: '${elem} => ${spread}',
-          cn: '${elem} => ${spread}',
           ko: '${elem} 🔜 ${spread}',
         },
       },
@@ -728,10 +666,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         back: {
           en: 'Back => AoE',
+          ja: 'Back => AoE',
           ko: '뒤쪽으로 🔜 전체공격',
         },
         tank: {
           en: 'Tank Towers => AoE',
+          ja: 'Tank Towers => AoE',
           ko: '탱크 타워 🔜 전체공격',
         },
       },
@@ -750,6 +690,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Tank invuln',
+          ja: 'Tank invuln',
           ko: '탱크 무적!',
         },
       },
@@ -978,6 +919,67 @@ const triggerSet: TriggerSet<Data> = {
         'Wind of Change': '左/右风',
         'Right(?! )': '右',
         'Left(?! )': '左',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Ice Pillar': '冰柱',
+        'Queen Eternal': '永恆女王',
+        'Virtual Boulder': '岩石',
+      },
+      'replaceText': {
+        // '\\(Dorito Stack\\)': '', // FIXME '(红三角集合)'
+        // '\\(Flares/Stack\\)': '', // FIXME '(核爆/集合)'
+        // '\\(Knockback\\)': '', // FIXME '(击退)'
+        // '\\(big\\)': '', // FIXME '(大)'
+        // '\\(cast\\)': '', // FIXME '(咏唱)'
+        // '\\(damage\\)': '', // FIXME '(伤害)'
+        // '\\(front\\)': '', // FIXME '(前)'
+        // '\\(left tower\\)': '', // FIXME '(左塔)'
+        // '\\(motion\\)': '', // FIXME '(行动)'
+        // '\\(orb\\)': '', // FIXME '(球)'
+        // '\\(platforms\\)': '', // FIXME '(平台)'
+        // '\\(right tower\\)': '', // FIXME '(右塔)'
+        // '\\(rotate\\)': '', // FIXME '(转)'
+        // '\\(spread\\)': '', // FIXME '(分散)'
+        'Absolute Authority': '絕對君權',
+        'Aeroquell': '風爆',
+        'Aethertithe': '乙太稅',
+        'Atomic Ray': '原子射線',
+        'Authority Eternal': '絕對君權',
+        'Burst': '爆炸',
+        'Coronation': '終端發射',
+        'Dimensional Distortion': '空間扭曲',
+        'Divide and Conquer': '分治法',
+        'Drear Rising': '陰郁風暴',
+        'Dying Memory': '垂死的記憶',
+        'Gravitational Empire': '重力帝國',
+        'Gravity Pillar': '重力之柱',
+        'Gravity Ray': '重力射線',
+        'Ice Dart': '冰塊',
+        'Laws of Earth': '土之律法',
+        'Laws of Ice': '冰之律法',
+        'Laws of Wind': '風之律法',
+        'Legitimate Force': '合法武力',
+        'Meteor Impact': '隕石衝擊',
+        'Preservation': '絕對保全',
+        'Prosecution of War': '訴諸武力',
+        'Radical Shift': '激進切換',
+        'Raised Tribute': '橫征暴斂',
+        'Retribute': '俱是君恩',
+        'Royal Banishment': '放逐射線',
+        'Royal Domain': '王土',
+        'Rush': '突進',
+        'Ruthless Regalia': '王法無情',
+        'Tyranny\'s Grasp': '女王之手',
+        'Virtual Shift': '虛景切換',
+        'Weighty Blow': '重力炸裂',
+        'World Shatter': '世界破碎',
+        // 'Wind of Change': '', // FIXME '左/右风'
+        // 'Right(?! )': '', // FIXME '右'
+        // 'Left(?! )': '', // FIXME '左'
       },
     },
     {

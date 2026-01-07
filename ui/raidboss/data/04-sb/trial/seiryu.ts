@@ -24,10 +24,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'line stack',
-          de: 'Linien-Stack',
-          fr: 'Packez-vous en ligne',
           ja: 'スタック',
-          cn: '直线分摊',
           ko: '뭉쳐요',
         },
       },
@@ -66,10 +63,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Towers',
-          de: 'Türme nehmen',
-          fr: 'Prenez les tours',
           ja: '塔を踏む',
-          cn: '踩塔',
           ko: '타워 밟아요',
         },
       },
@@ -114,9 +108,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Point Knockback Tether Outside',
-          de: 'Rückstoß-Verbindung nach draußen zeigen',
-          fr: 'Orientez les liens de poussée vers l\'extérieur',
-          cn: '将击退连线指向场外',
+          ja: 'Point Knockback Tether Outside',
           ko: '넉백 줄을 바깥으로 유도',
         },
       },
@@ -131,9 +123,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Point Cleave Tether Outside',
-          de: 'Cleave nach draußen zeigen',
-          fr: 'Orientez les liens de cleave vers l\'extérieur',
-          cn: '将顺劈连线指向场外',
+          ja: 'Point Cleave Tether Outside',
           ko: '쪼개기 줄을 바깥으로 유도',
         },
       },
@@ -305,6 +295,43 @@ const triggerSet: TriggerSet<Data> = {
         'Strength Of Spirit': '灵气',
         'Summon Shiki': '式鬼召唤',
         'Yama-Kagura': '山神乐',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Aka-No-Shiki': '紅之式鬼',
+        'Ao-No-Shiki': '蒼之式鬼',
+        'Blue Orochi': '青之大蛇',
+        'Iwa-No-Shiki': '岩之式鬼',
+        'Seiryu': '青龍',
+        'Ten-No-Shiki': '天之式鬼',
+        'Yama-No-Shiki': '山之式鬼',
+      },
+      'replaceText': {
+        '100-Tonze Swing': '百噸迴轉',
+        'Blue Bolt': '青突進',
+        'Coursing River': '蛇崩',
+        'Doro-No-Shiki': '泥之式鬼',
+        'Dragon\'s Wake': '雲蒸龍變',
+        'Fifth Element': '陰陽五行',
+        'Forbidden Arts': '刀禁咒',
+        'Force Of Nature': '大壓殺',
+        'Fortune-Blade Sigil': '陽之刀印',
+        'Handprint': '壓殺掌',
+        'Infirm Soul': '虛證彈',
+        'Kanabo': '如虎添翼',
+        'Kuji-Kiri': '九字切',
+        'Numa-No-Shiki': '沼之式鬼',
+        'Onmyo Sigil': '陰陽之印',
+        'Red Rush': '赤突進',
+        'Serpent Ascending': '升龍',
+        'Serpent Descending': '降蛇',
+        'Serpent\'s Fang': '蛇牙',
+        'Serpent-Eye Sigil': '蛇眼之印',
+        'Strength Of Spirit': '靈氣',
+        'Summon Shiki': '式鬼召喚',
+        'Yama-Kagura': '山神樂',
       },
     },
     {

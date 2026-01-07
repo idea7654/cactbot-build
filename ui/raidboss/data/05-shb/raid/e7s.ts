@@ -23,6 +23,7 @@ const colorMap = {
     ja: '黒',
     cn: '黑色',
     ko: '어둠',
+    tc: '黑色',
   },
   dark: {
     en: 'Light',
@@ -31,6 +32,7 @@ const colorMap = {
     ja: '白',
     cn: '白色',
     ko: '빛',
+    tc: '白色',
   },
 } as const;
 
@@ -73,10 +75,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Tether on YOU',
-          de: 'Verbindung auf DIR',
-          fr: 'Lien sur VOUS',
           ja: '自分に線',
-          cn: '连线点名',
           ko: '선 대상자',
         },
       },
@@ -106,10 +105,7 @@ const triggerSet: TriggerSet<Data> = {
         stackOnYou: Outputs.stackOnYou,
         stackOn: {
           en: 'Stack (${players})',
-          de: 'Sammeln (${players})',
-          fr: 'Package sur (${players})',
           ja: '頭割り (${players})',
-          cn: '分摊 (${players})',
           ko: '모이기 (${players})',
         },
       },
@@ -123,10 +119,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Teleporting Left',
-          de: 'Teleportation Links',
-          fr: 'Téléportation à gauche',
           ja: '左にテレポ',
-          cn: '向左传送',
           ko: '왼쪽으로 순간이동',
         },
       },
@@ -140,10 +133,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Teleporting Right',
-          de: 'Teleportation Rechts',
-          fr: 'Téléportation à droite',
           ja: '右にテレポ',
-          cn: '向右传送',
           ko: '오른쪽으로 순간이동',
         },
       },
@@ -157,10 +147,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Teleporting Forward',
-          de: 'Teleportation Vorwärts',
-          fr: 'Téléportation devant',
           ja: '前にテレポ',
-          cn: '向前传送',
           ko: '앞으로 순간이동',
         },
       },
@@ -174,10 +161,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Teleporting Back',
-          de: 'Teleportation Rückwärts',
-          fr: 'Téléportation derrière',
           ja: '後ろにテレポ',
-          cn: '向后传送',
           ko: '뒤로 순간이동',
         },
       },
@@ -265,10 +249,7 @@ const triggerSet: TriggerSet<Data> = {
         stackOnYou: Outputs.stackOnYou,
         stackPlayers: {
           en: 'Stack (${players})',
-          de: 'Sammeln (${players})',
-          fr: 'Packez-vous (${players})',
           ja: '頭割り (${players})',
-          cn: '分摊 (${players})',
           ko: '모이기 (${players})',
         },
       },
@@ -288,10 +269,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get under vertical add',
-          de: 'Unter das vertikale Add gehen',
-          fr: 'Allez sous l\'add vertical',
           ja: '縦回転をする雑魚へ',
-          cn: '去竖转小怪脚下',
           ko: '세로로 도는 쫄 아래로',
         },
       },
@@ -350,10 +328,7 @@ const triggerSet: TriggerSet<Data> = {
         output.responseOutputStrings = {
           text: {
             en: 'Avoid ${player}',
-            de: 'Vermeide ${player}',
-            fr: 'Évitez ${player}',
             ja: '${player} に避け',
-            cn: '躲开 ${player}',
             ko: '${player}피하기',
           },
         };
@@ -393,10 +368,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get hit by ${color}',
-          de: 'Lass dich treffen von ${color}',
-          fr: 'Encaissez le ${color}',
           ja: '${color}を受ける',
-          cn: '撞${color}',
           ko: '${color} 맞기',
         },
       },
@@ -410,10 +382,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bait Puddles',
-          de: 'Flächen ködern',
-          fr: 'Placez les zones au sol',
           ja: '誘導',
-          cn: '放圈',
           ko: '장판 버리기',
         },
       },
@@ -427,10 +396,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Knocked Into Corner',
-          de: 'Lass dich in die Ecke zurückstoßen',
-          fr: 'Faites-vous pousser dans les coins',
           ja: 'コーナーへノックバック',
-          cn: '击退到角落',
           ko: '구석으로 넉백',
         },
       },
@@ -453,26 +419,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         goSouth: {
           en: 'Go South',
-          de: 'Geh nach Süden',
-          fr: 'Allez au Sud',
           ja: '南へ',
-          cn: '前往南侧',
           ko: '남쪽',
         },
         goNorthwest: {
           en: 'Go Northwest',
-          de: 'Geh nach Nordwesten',
-          fr: 'Allez au Nord-Ouest',
           ja: '北西へ',
-          cn: '前往西北',
           ko: '북서쪽',
         },
         goNortheast: {
           en: 'Go Northeast',
-          de: 'Geh nach Nordosten',
-          fr: 'Allez au Nord-Est',
           ja: '北東へ',
-          cn: '前往东北',
           ko: '북동쪽',
         },
       },
@@ -493,10 +450,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stand in ${color}',
-          de: 'Stehe in ${color}',
-          fr: 'Restez sur ${color}',
           ja: '${color}に踏む',
-          cn: '站进${color}',
           ko: '${color}에 서기',
         },
       },
@@ -689,6 +643,54 @@ const triggerSet: TriggerSet<Data> = {
         'Crusade': '群体突进',
         'Words Of Fervor': '乱舞号令',
         'Threefold Grace': '三重光环',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'The Idol Of Darkness': '暗黑心象',
+        'Unforgiven Idolatry': '未被寬恕的盲崇',
+        'Blasphemy': '褻瀆',
+        '(?<! )Idolatry': '盲崇',
+      },
+      'replaceText': {
+        'Empty Wave': '虛無波動',
+        'Unshadowed Stake': '暗光釘',
+        'Silver Stake': '白光之釘',
+        'Words Of Motion': '波狀號令',
+        'Betwixt Worlds': '次元孔',
+        'Light\'s Course': '白光奔流',
+        'Shockwave': '衝擊波',
+        'Words Of Spite': '瞄準號令',
+        'Away With Thee': '強制傳送',
+        'Silver Sledge': '白光之錘',
+        'Fate\'s Course': '奔流',
+        'False Moonlight': '白夜機動',
+        'Silver Sword': '白光之劍',
+        'Dark\'s Course': '黑暗奔流',
+        'Silver Scourge': '白光之鞭',
+        'False Midnight': '極夜機動',
+        'Silver Shot': '白光之矢',
+        'Overwhelming Force': '破滅濁流',
+        'Insatiable Light': '破滅之光',
+        'Advent Of Light': '極限光',
+        'Strength In Numbers': '攻擊機動',
+        'Unearned Envy': '防禦本能',
+        'Empty Flood': '虛無氾濫',
+        'Unjoined Aspect': '屬性變動',
+        'Words Of Unity': '強襲號令',
+        'Words Of Entrapment': '包圍號令',
+        // 'White/Black Smoke': '', // FIXME '白光/黑暗之火'
+        'Boundless Light': '白光激流',
+        'Words Of Night': '夜襲號令',
+        'False Dawn': '黎明機動',
+        'Stygian Sword': '黑暗之劍',
+        'Stygian Spear': '黑暗之槍',
+        'Silver Spear': '白光之槍',
+        'Crusade': '群體突進',
+        'Words Of Fervor': '亂舞號令',
+        'Threefold Grace': '三重光環',
       },
     },
     {

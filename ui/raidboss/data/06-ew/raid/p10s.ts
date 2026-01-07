@@ -8,8 +8,6 @@ import { NetMatches } from '../../../../../types/net_matches';
 import { TriggerSet } from '../../../../../types/trigger';
 
 export interface Data extends RaidbossData {
-  prsSoul?: number;
-  //
   decOffset?: number;
   combatantData: PluginCombatantState[];
   dividingWingsTethers: string[];
@@ -101,31 +99,7 @@ const triggerSet: TriggerSet<Data> = {
       type: 'HeadMarker',
       netRegex: {},
       condition: (data, matches) => getHeadmarkerId(data, matches) === headmarkers.soulGrasp,
-      /*
       response: Responses.sharedTankBuster(),
-      */
-      response: (data, _matches, output) => {
-        // cactbot-builtin-response
-        output.responseOutputStrings = {
-          avoid: Outputs.avoidTankCleave,
-          tank: {
-            en: 'Shared Tank Buster ${num}',
-            ko: '${num}번째 둘이 버스터',
-          },
-          healer: {
-            en: 'Tank Buster ${num}',
-            ko: '${num}번째 탱크버스터',
-          },
-        };
-
-        data.prsSoul = (data.prsSoul ?? 0) + 1;
-
-        if (data.role === 'tank')
-          return { alertText: output.tank!({ num: data.prsSoul }) };
-        if (data.role === 'healer')
-          return { alertText: output.healer!({ num: data.prsSoul }) };
-        return { infoText: output.avoid!() };
-      },
     },
     {
       id: 'P10S Pandaemon\'s Holy',
@@ -154,19 +128,13 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         soak: {
           en: 'Soak tower',
-          de: 'Türme nehmen',
-          fr: 'Prenez une tour',
           ja: '塔踏み',
-          cn: '踩塔击飞',
-          ko: '타워 밟아요',
+          ko: '기둥 들어가기',
         },
         avoid: {
           en: 'Avoid towers',
-          de: 'Türme vermeiden',
-          fr: 'Évitez les tours',
           ja: '塔回避',
-          cn: '远离塔',
-          ko: '타워 피해요',
+          ko: '기둥 피하기',
         },
       },
     },
@@ -202,31 +170,38 @@ const triggerSet: TriggerSet<Data> = {
           const x = data.combatantData[0]?.PosX;
           if (x === undefined)
             return output.default!();
-          let arrow;
-          if (x > 100)
-            arrow = output.right!();
-          else if (x < 100)
-            arrow = output.left!();
-          if (arrow === undefined)
-            return output.default!();
-          return output.tether!({ arrow: arrow });
+          let wingDir;
+          if (x > 100) {
+            wingDir = output.east!();
+          } else if (x < 100) {
+            wingDir = output.west!();
+          }
+          if (wingDir !== undefined)
+            return output.tetherside!({ dir: wingDir });
+          return output.default!();
         }
       },
       outputStrings: {
+        tetherside: {
+          en: 'Point ${dir} Tether Away',
+          ja: '線伸ばし ${dir}',
+          ko: '선을 ${dir}으로',
+        },
         default: {
           en: 'Point Tether Away',
-          de: 'Zeige Verbindung weg',
-          fr: 'Orientez le lien à l\'extérieur',
           ja: '線伸ばし',
-          cn: '向外引导',
-          ko: '줄 땡겨요',
+          ko: '선을 바깥쪽으로',
         },
-        tether: {
-          en: 'Point Tether Away: ${arrow}${arrow}',
-          ko: '줄 땡겨요: ${arrow}${arrow}',
+        west: {
+          en: 'Left/West',
+          ja: '左/西へ',
+          ko: '왼쪽/서쪽',
         },
-        left: Outputs.arrowW,
-        right: Outputs.arrowE,
+        east: {
+          en: 'Right/East',
+          ja: '右/東へ',
+          ko: '오른쪽/동쪽',
+        },
       },
     },
     {
@@ -239,11 +214,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Break Tethers',
-          de: 'Verbindung brechen',
-          fr: 'Cassez les liens',
           ja: '線切る',
-          cn: '截断丝线',
-          ko: '줄 끊어요',
+          ko: '선 끊기',
         },
       },
     },
@@ -282,11 +254,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack',
-          de: 'Sammeln',
-          fr: 'Package',
           ja: 'あたまわり',
-          cn: '分摊连线',
-          ko: '거미집 이어요',
+          ko: '쉐어',
         },
       },
     },
@@ -299,11 +268,7 @@ const triggerSet: TriggerSet<Data> = {
           return false;
         return getHeadmarkerId(data, matches) === headmarkers.webEntangling;
       },
-      alertText: (data, _matches, output) => {
-        if (data.prsSoul === 4)
-          return output.place!();
-        return output.text!();
-      },
+      alertText: (_data, _matches, output) => output.text!(),
       // This will happen for non-dividing entangling web headmarkers,
       // but will get cleaned up in time for the next dividing wings.
       run: (data, matches) => data.dividingWingsEntangling.push(matches.target),
@@ -311,15 +276,8 @@ const triggerSet: TriggerSet<Data> = {
         text: {
           // TODO: should we say "on posts" or "on back wall" based on count?
           en: 'Overlap Webs',
-          de: 'Netze überlappen',
-          fr: 'Superposez les toiles',
           ja: 'ウェブ重なる',
-          cn: '用网搭桥',
           ko: '거미줄 겹치기',
-        },
-        place: {
-          en: 'Build 3 Webs at South',
-          ko: '남쪽 셋이 나란히 거미집 지어요',
         },
       },
     },
@@ -343,11 +301,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Spread for Webs',
-          de: 'Für Netze verteilen',
-          fr: 'Écartez-vous pour les toiles',
           ja: 'ウェブ散会',
-          cn: '网分散',
-          ko: '흩어져 거미집 지어요',
+          ko: '거미줄 산개',
         },
       },
     },
@@ -378,11 +333,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Line stack',
-          de: 'Linien-Stack',
-          fr: 'Packez-vous en ligne',
           ja: '直線あたまわり',
-          cn: '直线分摊',
-          ko: '뭉쳐요 (직선)',
+          ko: '직선 쉐어',
         },
       },
     },
@@ -439,19 +391,13 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         spreadThenPartners: {
           en: '(spread => partners, for later)',
-          de: '(Verteilen => Partner, für später)',
-          fr: '(Écartez-vous => Partenaires, pour après)',
           ja: '(散会 => ペア)',
-          cn: '(稍后 分散 => 分摊)',
-          ko: '(흩어졌다 🔜 페어)',
+          ko: '(곧 산개 => 파트너)',
         },
         partnersThenSpread: {
           en: '(partners => spread, for later)',
-          de: '(Partner => Verteilen, für später)',
-          fr: '(Partenaires => Écartez-vous, pour après)',
           ja: '(ペア => 散会)',
-          cn: '(稍后 分摊 => 分散)',
-          ko: '(페어 🔜 흩어져요)',
+          ko: '(곧 파트너 => 산개)',
         },
       },
     },
@@ -486,19 +432,13 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         spreadThenStack: {
           en: '(spread => role stack (${player1}, ${player2}), for later)',
-          de: '(Verteilen => Rollengruppe (${player1}, ${player2}), für später)',
-          fr: '(Écartez-vous => Package par rôle (${player1}, ${player2}), pour après)', // FIXME
-          ja: '(散会 => 4:4あたまわり (${player1}, ${player2}))', // FIXME
-          cn: '(稍后 分散 => 四人分摊 (${player1}, ${player2}))',
-          ko: '(흩어졌다 🔜 4:4 뭉쳐요/${player1},${player2})',
+          ja: '(散会 => 4:4あたまわり (${player1}, ${player2}))', // FIXME,
+          ko: '(곧 산개 => 직업군별 쉐어 (${player1}, ${player2}))',
         },
         stackThenSpread: {
           en: '(role stack (${player1}, ${player2}) => spread, for later)',
-          de: '(Rollengruppe (${player1}, ${player2}) => Verteilen, für später)',
-          fr: '(Package par rôle (${player1}, ${player2}) => Écartez-vous, pour après)', // FIXME
-          ja: '(4:4あたまわり (${player1}, ${player2}) => 散会)', // FIXME
-          cn: '(稍后 四人分摊 (${player1}, ${player2}) => 分散)',
-          ko: '(4:4 뭉쳤다/${player1},${player2} 🔜 흩어져요)',
+          ja: '(4:4あたまわり (${player1}, ${player2}) => 散会)', // FIXME,
+          ko: '(곧 직업군별 쉐어 (${player1}, ${player2}) => 산개)',
         },
       },
     },
@@ -523,19 +463,13 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         spreadThenStack: {
           en: 'Spread => Role Stack (${player1}, ${player2})',
-          de: 'Verteilen => Rollengruppe (${player1}, ${player2})',
-          fr: 'Écartez-vous => Package par rôle (${player1}, ${player2})', // FIXME
-          ja: '散会 => 4:4あたまわり (${player1}, ${player2})', // FIXME
-          cn: '分散 => 四人分摊 (${player1}, ${player2})',
-          ko: '흩어졌다 🔜 4:4 뭉쳐요/${player1},${player2}',
+          ja: '散会 => 4:4あたまわり (${player1}, ${player2})', // FIXME,
+          ko: '산개 => 직업군별 쉐어 (${player1}, ${player2})',
         },
         spreadThenPartners: {
           en: 'Spread => Partners',
-          de: 'Verteilen => Partner',
-          fr: 'Écartez-vous => Partenaires',
           ja: '散会 => ペア',
-          cn: '分散 => 分摊',
-          ko: '흩어졌다 🔜 페어',
+          ko: '산개 => 파트너',
         },
       },
     },
@@ -554,11 +488,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         partnersThenSpread: {
           en: 'Partners => Spread',
-          de: 'Partner => Verteilen',
-          fr: 'Partenaires => Écartez-vous',
           ja: 'ペア => 散会',
-          cn: '分摊 => 分散',
-          ko: '페어 🔜 흩어져요',
+          ko: '파트너 => 산개',
         },
       },
     },
@@ -580,11 +511,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         stackThenSpread: {
           en: 'Role Stack (${player1}, ${player2}) => Spread',
-          de: 'Rollengruppe (${player1}, ${player2}) => Verteilen',
-          fr: 'Package par rôle (${player1}, ${player2}) => Écartez-vous', // FIXME
-          ja: '4:4あたまわり (${player1}, ${player2}) => 散会', // FIXME
-          cn: '四人分摊 (${player1}, ${player2}) => 分散',
-          ko: '4:4 뭉쳤다/${player1},${player2} 🔜 흩어져요',
+          ja: '4:4あたまわり (${player1}, ${player2}) => 散会', // FIXME,
+          ko: '직업군별 쉐어 (${player1}, ${player2}) => 산개',
         },
       },
     },
@@ -613,19 +541,13 @@ const triggerSet: TriggerSet<Data> = {
         spread: Outputs.spread,
         partners: {
           en: 'Partners',
-          de: 'Partner',
-          fr: 'Partenaires',
           ja: 'ペア',
-          cn: '分摊',
-          ko: '페어',
+          ko: '파트너',
         },
         stack: {
           en: 'Role Stack (${player1}, ${player2})',
-          de: 'Rollengruppe (${player1}, ${player2})',
-          fr: 'Package par rôle (${player1}, ${player2})', // FIXME
-          ja: '4:4あたまわり (${player1}, ${player2})', // FIXME
-          cn: '四人分摊 (${player1}, ${player2})',
-          ko: '4:4 뭉쳐요/${player1},${player2}',
+          ja: '4:4あたまわり (${player1}, ${player2})', // FIXME,
+          ko: '직업군별 쉐어 (${player1}, ${player2})',
         },
       },
     },
@@ -639,14 +561,8 @@ const triggerSet: TriggerSet<Data> = {
         return output[safeOutput]!();
       },
       outputStrings: {
-        east: {
-          en: '🡺▶▶▶',
-          ko: '🡺▶▶▶',
-        },
-        west: {
-          en: '◀◀◀🡸',
-          ko: '◀◀◀🡸',
-        },
+        east: Outputs.getRightAndEast,
+        west: Outputs.getLeftAndWest,
       },
     },
     {
@@ -662,19 +578,13 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         lines: {
           en: 'On Lines (Avoid Lasers)',
-          de: 'Auf die Linien (vermeide Laser)',
-          fr: 'Sur les lignes (évitez les lasers)',
           ja: 'レーザー回避(マスの境界の上)',
-          cn: '站在线上（躲避激光）',
-          ko: '레이저 피해욧 (선┼ 위로)',
+          ko: '경계선 위 (레이저 피하기)',
         },
         boxes: {
           en: 'Inside Boxes (Avoid Lasers)',
-          de: 'In den Boxen (vermeide Laser)',
-          fr: 'Dans les carrés (évitez les lasers)',
           ja: 'レーザー回避(マスの内側)',
-          cn: '站方格内（躲避激光）',
-          ko: '레이저 피해욧 (네모칸□ 안으로)',
+          ko: '네모칸 안 (레이저 피하기)',
         },
       },
     },
@@ -820,6 +730,43 @@ const triggerSet: TriggerSet<Data> = {
         'Touchdown': '空降',
         'Ultima': '究极',
         'Wicked Step': '尖脚',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Arcane Sphere': '立體魔法陣',
+        // 'Pand(?:\\\\u00e6|\u00e6)moniac Pillar': '', // FIXME '万魔殿之塔'
+        // 'Pand(?:\\\\u00e6|\u00e6)monium': '', // FIXME '万魔殿'
+      },
+      'replaceText': {
+        // '\\(cast\\)': '', // FIXME '(咏唱)'
+        // '\\(cone\\)': '', // FIXME '(锥形)'
+        // '\\(knockback\\)': '', // FIXME '(击退)'
+        // '\\(share\\)': '', // FIXME '(分摊)'
+        'Bury': '塌方',
+        // 'Circles of Pandaemonium': '', // FIXME '万魔殿之环'
+        'Dividing Wings': '分割之翼',
+        'Daemoniac Bonds': '萬魔殿牢獄',
+        'Entangling Web': '糾纏之網',
+        'Harrowing Hell': '魔殿震擊',
+        'Jade Passage': '翡翠通道',
+        'Pandaemoniac Meltdown': '萬魔殿熔毀',
+        'Pandaemoniac Pillars': '萬魔殿之柱',
+        'Pandaemoniac Ray': '萬魔殿射線',
+        'Pandaemoniac Turrets': '萬魔殿砲塔',
+        // 'Pandaemoniac Web': '', // FIXME '万魔殿之网'
+        // 'Pandaemon\'s Holy': '', // FIXME '万魔殿神圣'
+        'Parted Plumes': '分割之羽',
+        'Peal of Condemnation': '譴責衝擊波',
+        'Peal of Damnation': '詛咒衝擊波',
+        'Silkspit': '噴吐絲網',
+        'Soul Grasp': '攥魂',
+        'Steel Web': '沉重之網',
+        'Touchdown': '空降',
+        'Ultima': '最終究極',
+        'Wicked Step': '尖腳',
       },
     },
     {

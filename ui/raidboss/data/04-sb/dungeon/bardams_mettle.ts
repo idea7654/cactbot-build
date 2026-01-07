@@ -35,10 +35,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Run Away From Boss',
-          de: 'Renn weg vom Boss',
-          fr: 'Courez loin du boss',
           ja: 'ボスから離れる',
-          cn: '远离Boss',
           ko: '보스에게서 멀리 도망가요',
         },
       },
@@ -76,10 +73,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stand in a tower',
-          de: 'Im Turm stehen',
-          fr: 'Placez-vous dans une tour',
           ja: '塔を踏む',
-          cn: '踩塔',
           ko: '타워 밟아요',
         },
       },
@@ -95,10 +89,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '8x puddles on YOU',
-          de: '8x Fläche auf DIR',
-          fr: '8x Zones au sol sur VOUS',
           ja: '8つ波動砲',
-          cn: '躲避8连追踪AOE',
           ko: '내게 8x파동포',
         },
       },
@@ -112,10 +103,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Hide behind boulder',
-          de: 'Hinter dem Brocken verstecken',
-          fr: 'Cachez-vous derrière le rocher',
           ja: 'メテオの後ろに',
-          cn: '站在陨石后',
           ko: '메테오 뒤에 숨어요',
         },
       },
@@ -148,10 +136,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Knockback Laser on YOU',
-          de: 'Rückstoß-Laser auf DIR',
-          fr: 'Poussée laser sur VOUS',
           ja: '自分にノックバック',
-          cn: '击退点名',
           ko: '내게 넉백 레이저',
         },
       },
@@ -165,10 +150,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Laser',
-          de: 'Laser ausweichen',
-          fr: 'Évitez le laser',
           ja: 'ノックバックレーザーを避ける',
-          cn: '躲避击退点名',
           ko: '레이저 피해요',
         },
       },
@@ -345,6 +327,49 @@ const triggerSet: TriggerSet<Data> = {
         'Comet(?! Impact)': '彗星',
         'Charge': '刺冲',
         'Bardam\'s Ring': '巴儿达木之环',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Yol(?! )': '胡鷹',
+        'Yol Feather': '胡鷹的羽毛',
+        'Warrior Of Bardam': '巴兒達木的戰士',
+        'Voiceless Muse': '無聲的敘事者',
+        'Throwing Spear': '投槍',
+        'Star Shard': '星體碎片',
+        'Rebirth Of Bardam The Brave': '勇猛巴兒達木的重生',
+        'Looming Shadow': '墜落地點',
+        'Hunter Of Bardam': '巴兒達木的獵人',
+        'Corpsecleaner Eagle': '清道雄鷹',
+        'Garula': '加魯拉',
+        'Bardam\'s Hunt': '戰士巴兒達木的獵場',
+        '(?<! )Bardam(?!( |s|\'))': '巴兒達木魔像',
+      },
+      'replaceText': {
+        'Wingbeat': '翼喚狂風',
+        'Wind Unbound': '無拘之風',
+        'War Cry': '吼叫',
+        'Tremblor': '地震',
+        'Travail': '試煉',
+        'Sacrifice': '犧牲',
+        'Rush': '突進',
+        'Reconstruct': '破壞再生',
+        'Pinion': '飛羽鏢',
+        'Meteor Impact': '隕石衝擊',
+        'Magnetism': '磁力',
+        'Heavy Strike': '靈極重擊',
+        'Heave': '掀地',
+        'Flutterfall': '羽落如雨',
+        'Feathercut': '飛羽斬',
+        'Eye of the Fierce': '猛禽之眼',
+        'Empty Gaze': '空洞之瞳',
+        'Earthquake': '地震',
+        'Crumbling Crust': '地面崩裂',
+        'Comet Impact': '星屑衝擊',
+        'Comet(?! Impact)': '隕星',
+        'Charge': '刺衝',
+        'Bardam\'s Ring': '巴兒達木之環',
       },
     },
     {

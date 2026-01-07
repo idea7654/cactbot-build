@@ -64,39 +64,18 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         first: {
           en: 'Away from Orbs',
-          de: 'Außen zwichen den Orbs',
-          fr: 'Éloignez-vous des orbes',
           ja: 'ハンマー、玉の間の外側へ',
           ko: '망치, 피해요',
         },
         second: {
           en: 'Under Orbs',
-          de: 'Unter einen Orbs',
-          fr: 'Sous les orbes',
           ja: 'ドーナツ、玉の下へ',
           ko: '도넛, 안으로',
         },
         third: {
           en: 'Under Donut Far From Axe',
-          de: 'Unter Donut und weit weg von der Axt',
-          fr: 'Sous le donut loin de l\'Axe',
           ja: '玉に気を付けて',
           ko: '망치, 도넛 조심해요',
-        },
-      },
-    },
-    {
-      id: 'Aloalo Quaqua Arcane Armaments Action',
-      type: 'Ability',
-      netRegex: { id: '8B88', source: 'Quaqua', capture: false },
-      delaySeconds: 2,
-      alertText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'Go to safe NOW!',
-          de: 'Geh zum sicheren Bereich JETZT!',
-          ja: '安置へ移動',
-          ko: '지금 피해요!',
         },
       },
     },
@@ -108,8 +87,6 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '3x Knockback',
-          de: '3x Rückstoß',
-          fr: 'Poussée x3',
           ja: '3x ノックバック',
           ko: '3연속 넉백, 1번부터',
         },
@@ -123,8 +100,6 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '4x Charge',
-          de: '4x Ansturm',
-          fr: 'Ruée x4',
           ja: '4x 突進',
           ko: '4연속 돌진',
         },
@@ -138,8 +113,6 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away from spears',
-          de: 'Außen zwichen den Dreizack',
-          fr: 'Éloignez-vous des lances',
           ja: '槍の間の外側へ',
           ko: '바깥에서 창, 떨어져요',
         },
@@ -153,8 +126,6 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid spreading spear puddles',
-          de: 'Weiche den größer werdenen Speerflächen aus',
-          fr: 'Évitez d\'éloigner les flaques des lances',
           ja: '槍の間の外側へ',
           ko: '바깥에서 창, 떨어져요',
         },
@@ -167,19 +138,6 @@ const triggerSet: TriggerSet<Data> = {
       response: Responses.getBehind(),
     },
     {
-      id: 'Aloalo Quaqua Scalding Waves',
-      type: 'StartsUsing',
-      netRegex: { id: '8B97', capture: false },
-      suppressSeconds: 1,
-      infoText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'Avoid fire puddle',
-          ko: '불 장판 조심해요~',
-        },
-      },
-    },
-    {
       id: 'Aloalo Quaqua Arcane Intervention',
       type: 'StartsUsing',
       netRegex: { id: '8BAE', source: 'Quaqua', capture: false },
@@ -188,10 +146,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Look Away from Rings',
-          de: 'Schau von den Ringen weg',
-          fr: 'Ne regardez pas l\'anneau',
           ja: '輪から視線回避',
-          cn: '视线避开圆环',
           ko: '시선 조심!',
         },
       },
@@ -224,55 +179,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bubbles Move 2 Tiles',
-          de: 'Blasen 2 Flächen Rückstoß',
-          fr: 'Bulles Déplacement de 2 carreaux',
           ja: '泡のみ2マスのノックバック',
           ko: '거품만 2칸 넉백',
-        },
-      },
-    },
-    {
-      id: 'Aloalo Ketuduke Updraft',
-      type: 'StartsUsing',
-      netRegex: { id: '8D0F', source: 'Ketuduke', capture: false },
-      infoText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'Bubbles float',
-          de: 'Blasen schweben',
-          ja: '泡のみ浮上',
-          ko: '거품만 공중 띄우기',
-        },
-      },
-    },
-    {
-      id: 'Aloalo Ketuduke Hydrobomb',
-      type: 'StartsUsing',
-      netRegex: { id: '8D0F', source: 'Ketuduke', capture: false },
-      infoText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'Bubbles Move 2 Tiles + Puddles',
-          de: 'Blasen 2 Flächen Rückstoß + Flächen',
-          ja: '泡のみ2マスのノックバック + ゆか',
-          ko: '거품 2칸 넉백 + 곧 장판',
-        },
-      },
-    },
-    {
-      id: 'Aloalo Ketuduke Hydrobomb Chasing',
-      type: 'Ability',
-      netRegex: { id: '8D0F', source: 'Ketuduke', capture: false },
-      delaySeconds: 1.5,
-      infoText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'Avoid Chasing AOEs',
-          de: 'Weiche den verfolgenden AoEs aus',
-          fr: 'Évitez les AoEs',
-          ja: 'ついてくるAOE回避',
-          cn: '躲避追踪AOE',
-          ko: '연속 따라오는 장판',
         },
       },
     },
@@ -286,8 +194,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stretch Tether',
-          de: 'Verbindung langziehen',
-          fr: 'Étirez les liens',
+          ja: 'Stretch Tether',
           ko: '줄 늘려요',
         },
       },
@@ -301,8 +208,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Knockback => Get in Bubble',
-          de: 'Rückstoß => Geh in eine Blase',
-          fr: 'Poussée => Allez dans la bulle',
+          ja: 'Knockback => Get in Bubble',
           ko: '넉백 🔜 버블 타세요',
         },
       },
@@ -319,8 +225,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get behind non-bubbled Zaratan',
-          de: 'Geh hinter einen Zaratan ohne Blase',
-          fr: 'Allez derrière le Zaratan sans bulle',
+          ja: 'Get behind non-bubbled Zaratan',
           ko: '버블에 안들어간 자라탄 뒤로',
         },
       },
@@ -337,8 +242,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get in Bubble',
-          de: 'Geh in eine Blase',
-          fr: 'Allez dans la bulle',
+          ja: 'Get in Bubble',
           ko: '버블 타세요',
         },
       },
@@ -407,8 +311,6 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go to safe zone',
-          de: 'Geh in den sicheren Bereich',
-          fr: 'Allez dans une zone sûre',
           ja: '安置へ移動',
           ko: '빈 곳으로~',
         },
@@ -416,18 +318,6 @@ const triggerSet: TriggerSet<Data> = {
         back: Outputs.back,
         left: Outputs.left,
         right: Outputs.right,
-      },
-    },
-    {
-      id: 'Aloalo Lala Arcane Plot',
-      type: 'StartsUsing',
-      netRegex: { id: ['8875', '8876'], source: 'Lala', capture: false },
-      infoText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'Remember puddles',
-          ko: '장판 위치 봐둬요',
-        },
       },
     },
     {
@@ -471,29 +361,21 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         front: {
           en: 'Face Towards Lala',
-          de: 'Schau Lala an',
-          fr: 'Regardez Lala',
           ja: 'ボスを見る',
           ko: '보스 봐욧',
         },
         back: {
           en: 'Look Away from Lala',
-          de: 'Schau von Lala weg',
-          fr: 'Ne regardez pas Lala',
           ja: '後ろ見て',
           ko: '뒤돌아 봐요',
         },
         left: {
           en: 'Left Flank towards Lala',
-          de: 'Linke Seite zu Lala drehen',
-          fr: 'Flanc gauche vers Lala',
           ja: '右見て',
           ko: '오른쪽 봐요',
         },
         right: {
           en: 'Right Flank towards Lala',
-          de: 'Rechte Seite zu Lala drehen',
-          fr: 'Flanc droit vers Lala',
           ja: '左見て',
           ko: '왼쪽 봐요',
         },
@@ -507,8 +389,6 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Seed adds => Donut AOEs',
-          de: 'Samen Adds => Donut AoEs',
-          fr: 'Adds graine => AoEs Donut',
           ja: '種 => ドーナツAOE',
           ko: '씨앗 등장 🔜 도넛 장판',
         },
@@ -522,8 +402,6 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Armadillo adds => Big AOEs',
-          de: 'Fledermaus Adds => Große AoEs',
-          fr: 'Adds tatou => Grosses AoEs',
           ja: 'コウモリ => ゆかAOE',
           ko: '밖에 쥐 등장 🔜 큰 장판',
         },
@@ -537,8 +415,6 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Tree adds => Line AOEs',
-          de: 'Baum Adds => Linien AoEs',
-          fr: 'Adds Arbre => AoEs en ligne',
           ja: '木 => 直線AOE',
           ko: '밖에 나무 등장 🔜 직선 AOE',
         },
@@ -587,29 +463,21 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         front: {
           en: 'Forward March (1 square)',
-          de: 'Geistlenkung: Vorwärts',
-          fr: 'Vers l\'avant (1 carreau)',
           ja: '強制移動 : 前',
           ko: '강제이동: 앞',
         },
         back: {
           en: 'Backwards March (1 square)',
-          de: 'Geistlenkung: Rückwärts',
-          fr: 'Vers l\'arrière (1 carreau)',
           ja: '強制移動 : 後ろ',
           ko: '강제이동: 뒤',
         },
         left: {
           en: 'Left March (1 square)',
-          de: 'Geistlenkung: Links',
-          fr: 'Vers la gauche (1 carreau)',
           ja: '強制移動 : 左',
           ko: '강제이동: 왼쪽',
         },
         right: {
           en: 'Right March (1 square)',
-          de: 'Geistlenkung: Rechts',
-          fr: 'Vers la droite (1 carreau)',
           ja: '強制移動 : 右',
           ko: '강제이동: 오른쪽',
         },
@@ -621,34 +489,6 @@ const triggerSet: TriggerSet<Data> = {
       type: 'StartsUsing',
       netRegex: { id: '892F', source: 'Statice', capture: false },
       response: Responses.knockback(),
-    },
-    {
-      id: 'Aloalo Statice 4-tonze Weight',
-      type: 'StartsUsing',
-      netRegex: { id: '8931', source: 'Statice', capture: false },
-      infoText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'Avoid 4-tons',
-          de: 'Weiche 4-Tonnen aus',
-          ja: '4トン回避',
-          ko: '4톤 피해요',
-        },
-      },
-    },
-    {
-      id: 'Aloalo Statice Pinwheel',
-      type: 'StartsUsing',
-      netRegex: { id: '8933', source: 'Statice', capture: false },
-      infoText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'Avoid fire lines',
-          de: 'Weiche Feuer-Linien aus',
-          ja: 'ぐるぐる火を回避',
-          ko: '빙글빙글 불기둥 피해요',
-        },
-      },
     },
     {
       id: 'Aloalo Statice Trick Reload',
@@ -684,8 +524,6 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Safe: ${safe}',
-          de: 'Sicher: ${safe}',
-          fr: 'Sûr : ${safe}',
           ja: '安置: ${safe}',
           ko: '안전: ${safe}',
         },
@@ -711,8 +549,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stand on cushion',
-          de: 'Auf einem Kissen stehen',
-          fr: 'Restez sur le coussin',
+          ja: 'Stand on cushion',
           ko: '쿠션으로',
         },
       },
@@ -722,51 +559,19 @@ const triggerSet: TriggerSet<Data> = {
       id: 'Aloalo Loquloqui Long-lost Light',
       type: 'StartsUsing',
       netRegex: { id: '87BC', source: 'Loquloqui', capture: false },
-      response: Responses.aoe('alert'),
+      response: Responses.aoe(),
     },
     {
       id: 'Aloalo Loquloqui O Life, Flourish',
       type: 'StartsUsing',
-      netRegex: { id: '893C', source: 'Loquloqui', capture: false },
+      netRegex: { id: '87C4', source: 'Loquloqui', capture: false },
       durationSeconds: 10,
       infoText: (_data, _matches, output) => output.text!(),
       outputStrings: {
         text: {
           en: 'Glowing adds get larger',
-          de: 'Weiche leuchtenden Adds aus',
-          fr: 'Les adds brillants deviennent plus large',
           ja: '光ってる物に注意',
           ko: '반짝이는 쫄 조심!',
-        },
-      },
-    },
-    {
-      id: 'Aloalo Uolosapa Loqua Rush',
-      type: 'StartsUsing',
-      netRegex: { id: ['87C0', '87C1'], source: 'Uolosapa Loqua', capture: false },
-      suppressSeconds: 5,
-      infoText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'Birds charge',
-          de: 'Vogel ansturm',
-          ja: '鳥の突進',
-          ko: '참새가 날아든다!',
-        },
-      },
-    },
-    {
-      id: 'Aloalo Repuruba Loqua Turnabout',
-      type: 'StartsUsing',
-      netRegex: { id: ['87C2', '87C3'], source: 'Repuruba Loqua', capture: false },
-      suppressSeconds: 5,
-      infoText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'Avoid AOEs',
-          de: 'Weiche AoEs aus',
-          ja: 'AOE回避',
-          ko: '장판 피해요!',
         },
       },
     },
@@ -785,23 +590,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away from tether ends',
-          de: 'Weiche Verbindungen aus',
-          fr: 'Loin de l\'extrémité du lien',
           ja: '縮む線を回避',
           ko: '줄달린 쫄 조심!',
-        },
-      },
-    },
-    {
-      id: 'Aloalo Loquloqui Pliant Petals',
-      type: 'StartsUsing',
-      netRegex: { id: '87C6', source: 'Loquloqui', capture: false },
-      suppressSeconds: 1,
-      infoText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'After shrink, appear big AoE',
-          ko: '줕 붙으면 크게 터져요!',
         },
       },
     },
@@ -820,22 +610,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Last bloom => Walk into Safe',
-          de: 'Letzte Blüte => Geh zum sicheren Bereich',
-          fr: 'Dernière fleur => Allez dans une zone sûre',
           ja: '最後の花畑 => 安置へ移動',
           ko: '마지막 풀밭 🔜 안전하게 이동',
-        },
-      },
-    },
-    {
-      id: 'Aloalo Loquloqui O Sky, Be Mine',
-      type: 'StartsUsing',
-      netRegex: { id: '87C9', source: 'Loquloqui', capture: false },
-      infoText: (_data, _matches, output) => output.text!(),
-      outputStrings: {
-        text: {
-          en: 'BIG BOSS!',
-          ko: '보스가 커지네!',
         },
       },
     },
@@ -855,8 +631,6 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '5x Knockback',
-          de: '5x Rückstoß',
-          fr: 'Poussée x5',
           ja: '5x ノックバック',
           ko: '5연속 넉백! 2번째 암랭',
         },
@@ -1166,7 +940,6 @@ const triggerSet: TriggerSet<Data> = {
         'Zeal-blind Zozone': '粗忽のゾゾネ',
       },
       'replaceText': {
-        '--cleanse--': '--エスナ--',
         '4-tonze Weight': '4トンズ',
         'Aero II': 'エアロラ',
         'Aero IV': 'エアロジャ',
@@ -1387,6 +1160,136 @@ const triggerSet: TriggerSet<Data> = {
         'Water III': '狂水',
         'Wavefoam': '气泡波',
         'Whoopee Cushion': '放屁坐垫',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Aetheric Charge': '魔力球',
+        'Aloalo Ahool': '阿羅阿羅阿胡',
+        'Aloalo Golem': '阿羅阿羅樹木魔像',
+        'Aloalo Ogrebon': '阿羅阿羅食人歐羅彭',
+        'Aloalo Zaratan': '阿羅阿羅札拉坦',
+        'Anala Familiar': '阿那羅守護精',
+        'Drake Familiar': '雷蛟守護精',
+        'Kairimai Loquloqai': '神子的祭壇',
+        'Kapokapo': '卡波卡波',
+        'Ketuduke': '凱圖嘟凱',
+        'Ketulu Cove': '凱圖魯小灣',
+        'Lala': '拉拉魯',
+        'Loquloqui': '羅庫羅庫伊',
+        'Needle': '飛針',
+        'Quaqua': '庫阿庫阿',
+        'Repuruba Loqua': '雷普魯巴·羅庫阿',
+        'Rodiaki': '羅德亞基',
+        'Seasong\'s Rest': '鯨的歸處',
+        'Spring Crystal': '湧水水晶',
+        'Statice': '斯塔緹絲',
+        'Summoned Anila': '被召喚的阿尼祿',
+        'Summoned Apa': '被召喚的阿帕斯',
+        'Surprising Staff': '驚喜杖',
+        'The Elder Stump': '老樹的樹樁',
+        'The Origin Spring': '大樹命泉',
+        'The Slumbering Canopy': '假寐廳堂',
+        'The ancient forum': '古代廣場',
+        'Treasure Box': '寶寶箱',
+        'Uolosapa Loqua': '烏洛薩帕·羅庫阿',
+        'Zeal-blind Zozone': '糊塗蛋 佐佐涅',
+      },
+      'replaceText': {
+        // '--cleanse--': '', // FIXME '--解除--'
+        '4-tonze Weight': '4星噸',
+        'Aero II': '中勁風',
+        'Aero IV': '超勁風',
+        'Analysis': '分析',
+        'Arcane Armaments': '魔力塑形',
+        'Arcane Blight': '魔紋砲',
+        'Arcane Intervention': '魔眼',
+        'Arcane Plot': '變光魔紋',
+        'Arcane Pursuit': '魔力咒鎖',
+        'Blowing Bubbles': '吹氣泡',
+        'Brilliant Blossoms': '風花遍地',
+        'Bubble Net': '捕食氣泡網',
+        'Burst': '爆炸',
+        'Calculated Trajectory': '強制移動',
+        'Cloud to Ground': '襲雷',
+        'Constructive Figure': '召喚人偶',
+        'Dartboard': '飛鏢大挑戰',
+        'Elemental Impact': '轟擊',
+        'Encroaching Twintides': '環浪連潮',
+        'Faerie Ring': '仙女環',
+        'Faerie Road': '仙女路',
+        'Fair Flight': '仙女擊飛',
+        'Far Tide': '環浪',
+        'Faunal Figure': '召喚動物',
+        'Fire Spread': '噴火',
+        'Flail Smash': '重錘碎擊',
+        'Floral Figure': '召喚植物',
+        'Flowing Lance': '水槍',
+        'Fluke Typhoon': '鯨尾颱風',
+        'Hammer Landing': '衝鋒旋錘',
+        'Happy Surprise': '驚喜大獎',
+        'Hidden Mine': '地雷爆炸',
+        'Howl': '狂吠',
+        'Hundred Lashings': '胡亂打',
+        'Hunks of Junk': '金屬廢料',
+        'Hydroblast': '水力爆發',
+        'Hydrobomb': '水化炸彈',
+        'Hydrosurge': '水力浪湧',
+        'Inferno Theorem': '散火法',
+        'Islebloom Light': '島嶼之光',
+        'Jack-in-the-box': '真假魔術箱',
+        'Land Wave': '地靈波',
+        'Long-lost Light': '遺忘之光',
+        'Made Magic': '釋放魔力',
+        'Meteor': '隕石',
+        'Near Tide': '圓浪',
+        'O Isle, Bloom': '風花遍地之祈願',
+        'O Life, Flourish': '生機勃發之祈願',
+        'O Petals, Unfurl': '鮮花怒放之祈願',
+        'O Sky, Be Mine': '茁壯成長之祈願',
+        'Pinwheel': '旋轉焰火',
+        'Pliant Petals': '鮮花怒放',
+        'Pop': '碎裂',
+        'Present Box': '禮物箱',
+        'Protective Will': '靈衝',
+        'Ravaging Axe': '戰斧重擊',
+        'Receding Twintides': '圓浪連潮',
+        'Ringing Quoits': '戰輪旋擊',
+        '(?<! )Roar': '咆哮',
+        'Rolling Spout': '環狀噴發',
+        'Rout': '猛進',
+        'Rush': '突進',
+        'Sanctuary': '祭祀之光',
+        'Saturate': '放水',
+        'Scalding Waves': '炎波',
+        'Shock(?!\\w)': '放電',
+        'Shocking Abandon': '放縱衝擊',
+        'Shockwave': '衝擊波',
+        'Sledgemagic': '魔法長柄大錘',
+        'Sphere Shatter': '碎裂',
+        'Spring Crystals': '湧水水晶',
+        'Stirring of Spirits': '祭祀重踏',
+        'Strategic Strike': '強擊',
+        'Strewn Bubbles': '散佈氣泡',
+        'Summon(?!\\w)': '召喚',
+        'Summoning Rite': '召喚',
+        'Surprise Balloon': '驚喜氣球',
+        'Surprise Needle': '驚喜飛針',
+        'Targeted Light': '高精度光彈',
+        'Thunderstorm': '雷暴',
+        'Tidal Roar': '浪潮嘶吼',
+        'Tidal Wave': '巨浪',
+        'Trick Reload': '花式裝填',
+        'Trigger Happy': '開心扳機',
+        'Turnabout': '迴旋',
+        'Updraft': '上升氣流',
+        'Violet Storm': '紫雷波',
+        'Volcanic Coordinates': '點火法',
+        'Water III': '大水花',
+        'Wavefoam': '氣泡波',
+        'Whoopee Cushion': '放屁坐墊',
       },
     },
     {

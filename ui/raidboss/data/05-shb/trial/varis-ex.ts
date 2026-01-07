@@ -57,10 +57,7 @@ const triggerSet: TriggerSet<Data> = {
         output.responseOutputStrings = {
           dodgeClonesAndStack: {
             en: 'Dodge Clones + Stack',
-            de: 'Klonen ausweichen und Sammeln',
-            fr: 'Esquivez les Clones + packez-vous',
             ja: 'ターミナス・エストを避ける／頭割り集合',
-            cn: '躲避剑气 + 集合分摊',
             ko: '터미너스 에스트 피하고 + 뭉쳐요',
           },
           stackMarker: Outputs.stackMarker,
@@ -87,10 +84,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Spread Soon',
-          de: 'Bald verteilen',
-          fr: 'Dispersez-vous bientôt',
           ja: 'まもなく散開',
-          cn: '即将散开',
           ko: '곧 흩어져요',
         },
       },
@@ -124,10 +118,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bait Slashes',
-          de: 'Schnitte ködern',
-          fr: 'Attirez les taillades',
           ja: '縦へ、アルティウスを誘導',
-          cn: 'Boss身后诱导剑气方向',
           ko: '슬래시 유도',
         },
       },
@@ -170,10 +161,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go Front',
-          de: 'Nach Vorne gehen',
-          fr: 'Allez devant',
           ja: '前へ',
-          cn: '到正面',
           ko: '앞으로',
         },
       },
@@ -194,10 +182,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stop attacking',
-          de: 'Angriffe stoppen',
-          fr: 'Arrêtez d\'attaquer',
           ja: 'ブロックしない側に攻撃',
-          cn: '攻击未格挡的方向',
           ko: '공격 중지',
         },
       },
@@ -242,18 +227,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         grabTethers: {
           en: 'Grab Tethers',
-          de: 'Verbindung nehmen',
-          fr: 'Prenez les liens',
           ja: '線を取る',
-          cn: '接线',
           ko: '줄 채요',
         },
         killAdds: {
           en: 'Kill adds',
-          de: 'Adds besiegen',
-          fr: 'Tuez les adds',
           ja: '雑魚を処理',
-          cn: '击杀小怪',
           ko: '쫄 잡아요',
         },
       },
@@ -284,10 +263,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Dodge Clones',
-          de: 'Klonen ausweichen',
-          fr: 'Esquivez les Clones',
           ja: 'ターミナス・エストを避ける',
-          cn: '躲避剑气',
           ko: '터미너스 에스트 피해요',
         },
       },
@@ -314,10 +290,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bait Puddles Out',
-          de: 'Flächen nach draußen ködern',
-          fr: 'Attirez les zones au sol à l\'extérieur',
           ja: '外周に安置',
-          cn: '外圈放黑泥',
           ko: '장판 바깥쪽으로 유도',
         },
       },
@@ -475,6 +448,45 @@ const triggerSet: TriggerSet<Data> = {
         'Terminus Est': '恩惠终结',
         'Ventus Est': '是为疾风',
         'Vivere Militare Est': '生者战也',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Bladesblood': '劍氣',
+        'Gunshield': '槍盾',
+        'Ignis Est': '是為烈火',
+        'Magitek Turret II': '魔導砲塔II',
+        'Phantom Varis': '瓦厲斯的幻影',
+        'Terminus Est': '恩惠終結',
+        'Varis Yae Galvus': '瓦厲斯·耶·加爾烏斯',
+        'Ventus Est': '是為疾風',
+      },
+      'replaceText': {
+        // '--clones appear\\?--': '', // FIXME '--幻影出现?--'
+        'Aetherochemical Grenado': '魔導榴彈',
+        'Alea Iacta Est': '大局已定',
+        'Altius': '更高',
+        // 'Blade\'s Pulse': '', // FIXME '双T接刀'
+        'Citius': '更快',
+        'Electrified Gunshield': '槍盾：魔導衝擊',
+        'Festina Lente': '從容不迫',
+        'Fortius': '更強',
+        '(?<! )Gunshield': '槍盾',
+        'Ignis Est': '是為烈火',
+        'Loaded Gunshield': '槍盾：魔導爆發',
+        'Magitek Burst': '魔導爆發',
+        'Magitek Shielding': '魔導反擊',
+        'Magitek Shock': '魔導衝擊',
+        'Magitek Spark/Torch': '魔導光刃',
+        'Magitek Torch/Spark': '魔導光刃',
+        'Reinforced Gunshield': '槍盾：魔導反擊',
+        'Reinforcements': '支援命令',
+        'Shockwave': '衝擊波',
+        'Terminus Est': '恩惠終結',
+        'Ventus Est': '是為疾風',
+        'Vivere Militare Est': '生者戰也',
       },
     },
     {

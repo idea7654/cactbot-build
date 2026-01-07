@@ -19,10 +19,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         kill: {
           en: 'Kill ${name}',
-          de: 'Besiege ${name}',
-          fr: 'Tuez ${name}',
           ja: '${name}を倒す',
-          cn: '击杀 ${name}',
           ko: '잡아요: ${name}',
         },
       },
@@ -42,10 +39,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get In Box',
-          de: 'Geh in die Box',
-          fr: 'Allez dans la boîte',
           ja: '箱に入る',
-          cn: '进盒子',
           ko: '상자 부비부비',
         },
       },
@@ -60,10 +54,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Chasing AOE on YOU',
-          de: 'Verfolgende AoE auf DIR',
-          fr: 'Ruée sur VOUS',
           ja: '追跡AOE',
-          cn: '追踪AOE点名',
           ko: '내게 연속 추적 장판',
         },
       },
@@ -196,6 +187,35 @@ const triggerSet: TriggerSet<Data> = {
         'Shuck': '碎壳重击',
         'Thick Fog': '浓雾',
         'Tornadogenesis': '旋风踢',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Amikiri': '切網蝦蛄',
+        'Naishi-No-Kami': '尚侍',
+        'Ruby Princess': '紅玉公主',
+        'Shisui Gokagura': '紫水禦神樂',
+        'Shisui Yohi': '紫水妖妃',
+        'The Akashio Hall': '紅潮之間',
+        'The Harutsuge Gate': '春告門前',
+      },
+      'replaceText': {
+        '--add--': '--小怪--',
+        '--adds--': '--小怪--',
+        'Abyssal Volcano': '海底火山',
+        'Black Tide': '黑潮',
+        'Coriolis Kick': '暴風踢',
+        'Digest': '消化',
+        'Foul Nail': '巫婆魔爪',
+        'Geothermal Flatulence': '火山噴發',
+        'Mad Stare': '瘋狂視線',
+        'Mucal Glob': '黏液球',
+        'Seduce': '誘惑',
+        'Sharp Strike': '突然襲擊',
+        'Shuck': '碎殼重擊',
+        'Thick Fog': '濃霧',
+        'Tornadogenesis': '旋風踢',
       },
     },
     {

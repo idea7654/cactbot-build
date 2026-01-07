@@ -27,10 +27,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get towers',
-          de: 'Türme nehmen',
-          fr: 'Prenez les tours',
           ja: '塔へ',
-          cn: '踩塔',
           ko: '타워 밟아요',
         },
       },
@@ -77,10 +74,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Move center when safe',
-          de: 'Geh in die Mitte, wenn es sicher ist',
-          fr: 'Allez au centre quand il est sûr',
           ja: '安置に入る',
-          cn: '安全时去中间',
           ko: '한가운데 안전해지면 들어가요',
         },
       },
@@ -93,10 +87,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get to edge (in circle)',
-          de: 'Geh zum Rand (in den Kreisen)',
-          fr: 'Allez sur le bord (dans le cercle)',
           ja: '外側の隅へ (円の中)',
-          cn: '去边缘 (圆圈中)',
           ko: '구석으로 (동그라미 안으로)',
         },
       },
@@ -145,10 +136,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Behemoths',
-          de: 'Behemoths ausweichen',
-          fr: 'Évitez les Behemoths',
           ja: 'ベヒーモスから離れる',
-          cn: '躲避贝爷',
           ko: '베히모스 피해요',
         },
       },
@@ -162,10 +150,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid line dashes',
-          de: 'Linien Anstürme ausweichen',
-          fr: 'Évitez les ruées en ligne',
           ja: '突進回避',
-          cn: '躲避直线冲锋',
           ko: '돌진 피해요',
         },
       },
@@ -179,10 +164,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Exaflares',
-          de: 'Exaflares ausweichen',
-          fr: 'Évitez les brasiers',
           ja: 'エクサプレア',
-          cn: '躲避地火',
           ko: '엑사플레어 피해요',
         },
       },
@@ -253,7 +235,6 @@ const triggerSet: TriggerSet<Data> = {
     },
     {
       'locale': 'ja',
-      'missingTranslations': true,
       'replaceSync': {
         'Agdistis': 'アグディスティス',
         'Immature Io': 'イマチュア・イーオー',
@@ -300,6 +281,34 @@ const triggerSet: TriggerSet<Data> = {
         'Spark of Life': '生命的光芒',
         'Static Moon': '静电之月',
         'Stymphalian Strike': '怪鸟强袭',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Agdistis': '阿格狄斯提斯',
+        'Immature Io': '未成熟的伊娥',
+        'Immature Stymphalide': '未成熟的鐵爪怪鳥',
+      },
+      'replaceText': {
+        // 'left': '', // FIXME '左'
+        // 'right': '', // FIXME '右'
+        // 'lines': '', // FIXME '直线'
+        // 'triangle': '', // FIXME '三角'
+        'Blades of Attis': '阿提斯的葉刃',
+        'Bough of Attis': '阿提斯的巨枝',
+        'Burst': '爆炸',
+        'Forbidden Fruit': '生命之果',
+        'Hemitheos\'s Aero II': '半神・中勁風',
+        'Hemitheos\'s Aero IV': '半神超勁風',
+        'Hemitheos\'s Glare III': '半神閃灼',
+        'Hemitheos\'s Holy': '半神神聖',
+        'Immortal\'s Obol': '不滅者的導枝',
+        'Shadow of Attis': '阿提斯的光露',
+        'Spark of Life': '生命的光芒',
+        'Static Moon': '靜電之月',
+        'Stymphalian Strike': '怪鳥強襲',
       },
     },
     {

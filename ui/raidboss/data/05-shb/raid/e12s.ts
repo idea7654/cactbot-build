@@ -90,6 +90,7 @@ const primalOutputStrings = {
     ja: '斜め',
     cn: '四角',
     ko: '대각',
+    tc: '四角',
   },
   // Tether combos.
   '008E008F': {
@@ -99,14 +100,16 @@ const primalOutputStrings = {
     ja: '真ん中 + 横へ',
     cn: '正中间两侧',
     ko: '보스 안쪽 + 양옆',
+    tc: '正中間兩側',
   },
   '008E0090': {
     en: 'North/South + Out',
     de: 'Norden/Süden + Raus',
     fr: 'Nord/Sud + Extérieur',
     ja: '北/南 + 外へ',
-    cn: '南北远离',
+    cn: '上/下远离',
     ko: '남/북 + 바깥',
+    tc: '上/下遠離',
   },
   '008E0091': {
     en: 'Under + Intercards',
@@ -115,6 +118,7 @@ const primalOutputStrings = {
     ja: '真ん中 + 斜め',
     cn: '正中间四角',
     ko: '보스 안쪽 + 대각',
+    tc: '正中間四角',
   },
   // Text output.
   'combined': {
@@ -124,6 +128,7 @@ const primalOutputStrings = {
     ja: '${safespot1} + ${safespot2}',
     cn: '${safespot1} + ${safespot2}',
     ko: '${safespot1} + ${safespot2}',
+    tc: '${safespot1} + ${safespot2}',
   },
   'stock': {
     en: 'Stock: ${text}',
@@ -132,6 +137,7 @@ const primalOutputStrings = {
     ja: 'ストック: ${text}',
     cn: '暂存: ${text}',
     ko: '저장: ${text}',
+    tc: '暫存: ${text}',
   },
   'junctionSuffix': {
     en: '${text} (${junction})',
@@ -140,6 +146,7 @@ const primalOutputStrings = {
     ja: '${text} (${junction})',
     cn: '${text} (${junction})',
     ko: '${text} (${junction})',
+    tc: '${text} (${junction})',
   },
   // Junctions.
   'spread': {
@@ -150,6 +157,7 @@ const primalOutputStrings = {
     ja: '散開',
     cn: '散开',
     ko: '산개',
+    tc: '散開',
   },
   'stacks': {
     // Titan healer stacks.
@@ -157,8 +165,9 @@ const primalOutputStrings = {
     de: 'sammeln',
     fr: 'packez-vous',
     ja: 'ヒラ頭割り',
-    cn: '治疗分摊',
+    cn: '双奶分组分摊',
     ko: '그룹 쉐어',
+    tc: '雙奶分組分攤',
   },
   'stack': {
     // Obliterate whole group laser stack.
@@ -166,9 +175,10 @@ const primalOutputStrings = {
     en: 'group stack',
     de: 'In Gruppen sammeln',
     fr: 'package en groupe',
-    ja: '頭割り',
-    cn: '集合',
+    ja: '全体頭割り',
+    cn: '全体分摊',
     ko: '쉐어',
+    tc: '全體分攤',
   },
 };
 
@@ -208,6 +218,7 @@ const intermediateRelativityOutputStringsRaw = {
     ja: 'フレア',
     cn: '核爆',
     ko: '플레어',
+    tc: '核爆',
   },
   stack: {
     en: 'Stack',
@@ -216,6 +227,7 @@ const intermediateRelativityOutputStringsRaw = {
     ja: '頭割り',
     cn: '分摊',
     ko: '쉐어',
+    tc: '分攤',
   },
   shadoweye: {
     en: 'Gaze',
@@ -224,6 +236,7 @@ const intermediateRelativityOutputStringsRaw = {
     ja: 'シャドウアイ',
     cn: '暗黑眼',
     ko: '마안',
+    tc: '暗黑眼',
   },
   eruption: Outputs.spread,
   blizzard: {
@@ -231,16 +244,18 @@ const intermediateRelativityOutputStringsRaw = {
     de: 'Eis',
     fr: 'Glace',
     ja: 'ブリザガ',
-    cn: '冰三',
+    cn: '冰环',
     ko: '블리자가',
+    tc: '冰環',
   },
   aero: {
     en: 'Aero',
     de: 'Wind',
     fr: 'Vent',
     ja: 'エアロガ',
-    cn: '风三',
+    cn: '风击退',
     ko: '에어로가',
+    tc: '風擊退',
   },
 };
 type InterStrings = { [id in keyof typeof intermediateRelativityOutputStringsRaw]: LocaleText };
@@ -311,17 +326,11 @@ const triggerSet: TriggerSet<Data> = {
         output.responseOutputStrings = {
           formlessBusterAndSwap: {
             en: 'Tank Buster + Swap',
-            de: 'Tankbuster + Wechsel',
-            fr: 'Tank buster + Swap',
             ja: 'タンクバスター + スイッチ',
-            cn: '死刑 + 换T',
             ko: '탱버 + 교대',
           },
           formlessBusterBLU: {
             en: 'Buster on YOU (w/${player})',
-            de: 'Tankbuster auf DIR (mit ${player})',
-            fr: 'Tankbuster sur VOUS (avec ${player})',
-            cn: '死刑点名 (与${player})',
             ko: '탱버 대상자 (+${player})',
           },
           formlessBusterOnYOU: Outputs.tankBusterOnYou,
@@ -372,10 +381,7 @@ const triggerSet: TriggerSet<Data> = {
           // The first round has only one blue.
           titanBlueSingular: {
             en: 'Blue Weight',
-            de: 'Blau - Gewicht',
-            fr: 'Poids bleu',
             ja: '青、重圧',
-            cn: '蓝色重压',
             ko: '파랑',
           },
           // The second and two rounds of bombs have a partner.
@@ -388,6 +394,7 @@ const triggerSet: TriggerSet<Data> = {
             ja: '青、重圧 (${player}と)',
             cn: '蓝色重压 (与${player})',
             ko: '파랑 (다른 대상자: ${player})',
+            tc: '藍色重壓 (與${player})',
           },
           titanOrangeStack: {
             en: 'Orange Stack',
@@ -396,6 +403,7 @@ const triggerSet: TriggerSet<Data> = {
             ja: '橙、頭割り',
             cn: '橙色分摊',
             ko: '주황: 집합',
+            tc: '橙色分攤',
           },
           titanYellowSpread: {
             en: 'Yellow Spread',
@@ -404,6 +412,7 @@ const triggerSet: TriggerSet<Data> = {
             ja: '黄、散開',
             cn: '黄色散开',
             ko: '노랑: 산개',
+            tc: '黃色散開',
           },
         };
 
@@ -454,16 +463,10 @@ const triggerSet: TriggerSet<Data> = {
         output.responseOutputStrings = {
           stackOnYou: {
             en: 'Stack on YOU (w/${player})',
-            de: 'Auf DIR sammeln (mit ${player})',
-            fr: 'Package sur VOUS (avec ${player})',
-            cn: '分摊点名 (与${player})',
             ko: '쉐어 대상자 (+${player})',
           },
           stacks: {
             en: 'Stacks: ${players}',
-            de: 'Sammeln: ${players}',
-            fr: 'Package: ${players}',
-            cn: '分摊: ${players}',
             ko: '쉐어: ${players}',
           },
         };
@@ -595,26 +598,17 @@ const triggerSet: TriggerSet<Data> = {
         laser4: Outputs.num4,
         inner: {
           en: '#${num} (Inner)',
-          de: '#${num} (innen)',
-          fr: '#${num} (Intérieur)',
           ja: '#${num} (中)',
-          cn: '#${num} (内)',
           ko: '#${num} (안쪽)',
         },
         outer: {
           en: '#${num} (Outer)',
-          de: '#${num} (außen)',
-          fr: '#${num} (Extérieur)',
           ja: '#${num} (外)',
-          cn: '#${num} (外)',
           ko: '#${num} (바깥쪽)',
         },
         unknown: {
           en: '#${num} (???)',
-          de: '#${num} (???)',
-          fr: '#${num} (???)',
           ja: '#${num} (???)',
-          cn: '#${num} (???)',
           ko: '#${num} (???)',
         },
       },
@@ -628,10 +622,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         knockback: {
           en: 'SE Knockback',
-          de: 'SO Rückstoß',
-          fr: 'SE Poussée',
           ja: '東南ノックバック',
-          cn: '右下（东南）击退',
           ko: '남동쪽(5시)에서 넉백',
         },
       },
@@ -645,10 +636,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         knockback: {
           en: 'SW Knockback',
-          de: 'SW Rückstoß',
-          fr: 'SO Poussée',
           ja: '西南ノックバック',
-          cn: '左下（西南）击退',
           ko: '남서쪽(7시)에서 넉백',
         },
       },
@@ -669,26 +657,17 @@ const triggerSet: TriggerSet<Data> = {
           laser4: Outputs.num4,
           baitInner: {
             en: 'Bait Inner #${num}',
-            de: 'Köder innen #${num}',
-            fr: 'Orientez vers l\'intérieur #${num}',
             ja: '中へ誘導 #${num}',
-            cn: '向内诱导 #${num}',
             ko: '내부 유도 #${num}',
           },
           baitOuter: {
             en: 'Bait Outer #${num}',
-            de: 'Köder außen #${num}',
-            fr: 'Orientez vers l\'extérieur #${num}',
             ja: '外へ誘導 #${num}',
-            cn: '向外诱导 #${num}',
             ko: '외부 유도 #${num}',
           },
           baitUnknown: {
             en: 'Bait #${num}',
-            de: 'Köder #${num}',
-            fr: 'Orientez #${num}',
             ja: '誘導 #${num}',
-            cn: '诱导 #${num}',
             ko: '유도 #${num}',
           },
         };
@@ -740,10 +719,7 @@ const triggerSet: TriggerSet<Data> = {
         output.responseOutputStrings = {
           formlessBusterAndSwap: {
             en: 'Tank Buster + Swap',
-            de: 'Tankbuster + Wechsel',
-            fr: 'Tank buster + Swap',
             ja: 'タンクバスター + スイッチ',
-            cn: '坦克死刑 + 换T',
             ko: '탱버 + 교대',
           },
           tankBusters: Outputs.tankBusters,
@@ -775,26 +751,17 @@ const triggerSet: TriggerSet<Data> = {
           goLeft: Outputs.left,
           goLeftBaitInner: {
             en: 'Left + Bait Inner #1',
-            de: 'Links + Köder innen #1',
-            fr: 'À gauche + Orientez vers l\'intérieur #1',
             ja: '左 + 中へ誘導 #1',
-            cn: '左 + 向内诱导 #1',
             ko: '왼쪽 + 내부 유도 #1',
           },
           goLeftBaitOuter: {
             en: 'Left + Bait Outer #1',
-            de: 'Links + Köder außen #1',
-            fr: 'À gauche + Orientez vers l\'extérieur #1',
             ja: '左 + 外へ誘導 #1',
-            cn: '左 + 向外诱导 #1',
             ko: '왼쪽 + 외부 유도 #1',
           },
           goLeftBaitUnknown: {
             en: 'Left + Bait #1',
-            de: 'Links + Köder #1',
-            fr: 'À gauche + Orientez #1',
             ja: '左 + 誘導 #1',
-            cn: '左 + 诱导 #1',
             ko: '왼쪽 + 유도 #1',
           },
         };
@@ -820,26 +787,17 @@ const triggerSet: TriggerSet<Data> = {
           goRight: Outputs.right,
           goRightBaitInner: {
             en: 'Right + Bait Inner #1',
-            de: 'Rechts + Köder innen #1',
-            fr: 'À droite + Orientez vers l\'intérieur #1',
             ja: '右 + 中へ誘導 #1',
-            cn: '右 + 向内诱导 #1',
             ko: '오른쪽 + 내부 유도 #1',
           },
           goRightBaitOuter: {
             en: 'Right + Bait Outer #1',
-            de: 'Rechts + Köder außen #1',
-            fr: 'À droite + Orientez vers l\'extérieur #1',
             ja: '右 + 外へ誘導 #1',
-            cn: '右 + 向外诱导 #1',
             ko: '오른쪽 + 외부 유도 #1',
           },
           goRightBaitUnknown: {
             en: 'Right + Bait #1',
-            de: 'Rechts + Köder #1',
-            fr: 'À droite + Orientez #1',
             ja: '右 + 誘導 #1',
-            cn: '右 + 诱导 #1',
             ko: '오른쪽 + 유도 #1',
           },
         };
@@ -885,10 +843,7 @@ const triggerSet: TriggerSet<Data> = {
         junctionWithCast: Outputs.spread,
         diamondDust: {
           en: 'Big AOE, Get Middle',
-          de: 'Große AoE, geh in die Mitte',
-          fr: 'Grosse AoE, allez au milieu',
           ja: '大ダメージ、中へ',
-          cn: '超大伤害，去中间',
           ko: '아픈 광뎀, 중앙으로',
         },
       },
@@ -914,20 +869,10 @@ const triggerSet: TriggerSet<Data> = {
         return output.junctionWithCast!();
       },
       outputStrings: {
-        junctionWithCast: {
-          en: 'Healer Stacks',
-          de: 'Heiler-Gruppen',
-          fr: 'Packages sur les Heals',
-          ja: 'ヒラ頭割り',
-          cn: '治疗分摊',
-          ko: '힐러 쉐어',
-        },
+        junctionWithCast: Outputs.healerGroups,
         earthenFury: {
           en: 'Big AOE, Bombs Soon',
-          de: 'Große AoE, bald Bomben',
-          fr: 'Grosse AoE, Bombes bientôt',
           ja: '大ダメージ、まもなく岩落とし',
-          cn: '超大伤害，即将落石',
           ko: '아픈 광뎀, 폭탄 떨어짐',
         },
       },
@@ -1028,38 +973,23 @@ const triggerSet: TriggerSet<Data> = {
         output.responseOutputStrings = {
           lionTetherOnYou: {
             en: 'Lion Tether on YOU',
-            de: 'Löwen-Verbindung auf DIR',
-            fr: 'Lien lion sur VOUS',
             ja: '自分にライオン線',
-            cn: '狮子连线点名',
             ko: '작은 사자 대상자',
           },
           northEastLion: {
             en: 'NE Lion Tether',
-            de: 'NO Löwen-Verbindung',
-            fr: 'NE Lien lion',
-            cn: '右上(东北)狮子连线',
             ko: '1시 사자 연결됨',
           },
           northWestLion: {
             en: 'NW Lion Tether',
-            de: 'NW Löwen-Verbindung',
-            fr: 'NO Lien lion',
-            cn: '左上(西北)狮子连线',
             ko: '11시 사자 연결됨',
           },
           southEastLion: {
             en: 'SE Lion Tether',
-            de: 'SO Löwen-Verbindung',
-            fr: 'SE Lien lion',
-            cn: '右下(东南)狮子连线',
             ko: '5시 사자 연결됨',
           },
           southWestLion: {
             en: 'SW Lion Tether',
-            de: 'SW Löwen-Verbindung',
-            fr: 'SO Lien lion',
-            cn: '左下(西南)狮子连线',
             ko: '7시 사자 연결됨',
           },
         };
@@ -1155,18 +1085,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         partyInTanksOut: {
           en: 'Party In (Tanks Out)',
-          de: 'Gruppe Rein (Tanks Raus)',
-          fr: 'Équipe à l\'intérieur (Tanks à l\'extérieur)',
           ja: 'ボスの足元へ (タンクは離れる)',
-          cn: '小队进 (T出)',
           ko: '본대 안 (탱커 밖)',
         },
         tanksOutPartyIn: {
           en: 'Tanks Out (Party In)',
-          de: 'Tanks Raus (Gruppe Rein)',
-          fr: 'Tanks à l\'extérieur (Équipe à l\'intérieur',
           ja: 'ボスからはなれる (パーティーが内側)',
-          cn: 'T出 (小队进)',
           ko: '탱커 밖 (본대 안)',
         },
       },
@@ -1185,18 +1109,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         partyOutTanksIn: {
           en: 'Party Out (Tanks In)',
-          de: 'Gruppe Raus (Tanks Rein)',
-          fr: 'Équipe à l\'extérieur (Tanks à l\'intérieur)',
           ja: 'ボスから離れる (タンクが内側)',
-          cn: '小队出 (T进)',
           ko: '본대 밖 (탱커 안)',
         },
         tanksInPartyOut: {
           en: 'Tanks In (Party Out)',
-          de: 'Gruppe Rein (Tanks Raus)',
-          fr: 'Tanks à l\'intérieur (Équipe à l\'extérieur',
           ja: 'ボスに足元へ (パーティーは離れる)',
-          cn: 'T进 (小队出)',
           ko: '탱커 안 (본대 밖)',
         },
       },
@@ -1307,49 +1225,31 @@ const triggerSet: TriggerSet<Data> = {
         output.responseOutputStrings = {
           shadoweye: {
             en: 'Eye (w/${player})',
-            de: 'Auge (mit ${player})',
-            fr: 'Œil (avec ${player})',
             ja: '自分に目 (w/${player})', // FIXME
-            cn: '石化眼点名 (与${player})',
             ko: '시선징 (+${player})',
           },
           water: {
             en: 'Stack (w/${player})',
-            de: 'Sammeln (mit ${player})',
-            fr: 'Pack (avec ${player})',
-            cn: '分摊 (与${player})',
             ko: '쉐어징 (+${player})',
           },
           longFire: {
             en: 'Long Fire (w/${player})',
-            de: 'langes Feuer (w/${player})',
-            fr: 'Feu long (avec ${player})',
             ja: 'ファイガ(遅い) (w/${player})', // FIXME
-            cn: '长火 (与${player})',
             ko: '느린 파이가 (+${player})',
           },
           shortFire: {
             en: 'Short Fire (w/${player})',
-            de: 'kurzes Feuer (w/${player})',
-            fr: 'Feu court (avec ${player})',
             ja: 'ファイガ(早い) (w/${player})', // FIXME
-            cn: '短火 (与${player})',
             ko: '빠른 파이가 (+${player})',
           },
           longIce: {
             en: 'Long Ice (w/${player})',
-            de: 'langes Eis (w/${player})',
-            fr: 'Glace longue (avec ${player})',
             ja: 'ブリザガ(遅い) (w/${player})', // FIXME
-            cn: '长冰 (与${player})',
             ko: '느린 블리자가 (+${player})',
           },
           shortIce: {
             en: 'Short Ice (w/${player})',
-            de: 'kurzes Eis (w/${player})',
-            fr: 'Glace courte (avec ${player})',
             ja: 'ブリザガ(早い) (w/${player})', // FIXME
-            cn: '短冰 (与${player})',
             ko: '빠른 블리자가 (+${player})',
           },
           unknown: Outputs.unknown,
@@ -1453,10 +1353,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         comboText: {
           en: '${effect1} > ${effect2} > ${effect3}',
-          de: '${effect1} > ${effect2} > ${effect3}',
-          fr: '${effect1} > ${effect2} > ${effect3}',
           ja: '${effect1} > ${effect2} > ${effect3}',
-          cn: '${effect1} > ${effect2} > ${effect3}',
           ko: '${effect1} > ${effect2} > ${effect3}',
         },
         ...intermediateRelativityOutputStrings,
@@ -1479,10 +1376,7 @@ const triggerSet: TriggerSet<Data> = {
         output.responseOutputStrings = Object.assign({
           moveAway: {
             en: 'Move!',
-            de: 'Bewegen!',
-            fr: 'Bougez !',
-            ja: '避けて！',
-            cn: '快移动！',
+            ja: '次へ！',
             ko: '이동하기!',
           },
         }, intermediateRelativityOutputStrings);
@@ -1525,10 +1419,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         lookAwayFromPlayers: {
           en: 'Look Away from ${player1} and ${player2}',
-          de: 'Schau weg von ${player1} und ${player2}',
-          fr: 'Ne regardez pas ${player1} et ${player2}',
           ja: '${player1}と${player2}を見ない',
-          cn: '背对${player1}和${player2}',
           ko: '${player1}와 ${player2}에게서 뒤돌기',
         },
         lookAwayFromPlayer: Outputs.lookAwayFromPlayer,
@@ -1546,10 +1437,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Look Outside',
-          de: 'Nach draußen schauen',
-          fr: 'Regardez vers l\'extérieur',
           ja: '外に向け',
-          cn: '背对',
           ko: '바깥 보기',
         },
       },
@@ -1576,10 +1464,7 @@ const triggerSet: TriggerSet<Data> = {
         northwest: Outputs.northwest,
         hourglass: {
           en: 'Yellow: ${dir}',
-          de: 'Gelb: ${dir}',
-          fr: 'Jaune : ${dir}',
           ja: '黄色: ${dir}',
-          cn: '黄色: ${dir}',
           ko: '노랑: ${dir}',
         },
       },
@@ -1629,10 +1514,7 @@ const triggerSet: TriggerSet<Data> = {
         northwest: Outputs.northwest,
         hourglass: {
           en: 'Yellow: ${dir1} / ${dir2}',
-          de: 'Gelb: ${dir1} / ${dir2}',
-          fr: 'Jaune : ${dir1} / ${dir2}',
           ja: '黄色: ${dir1} / ${dir2}',
-          cn: '黄色: ${dir1} / ${dir2}',
           ko: '노랑: ${dir1} / ${dir2}',
         },
       },
@@ -1661,32 +1543,22 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         stackGroups: {
           en: 'Stack Groups',
-          de: 'In Gruppen sammeln',
-          fr: 'Packez-vous en groupe',
           ja: '頭割り',
-          cn: '集合',
           ko: '쉐어',
         },
         stacksOn: {
           en: 'Stacks (${player1}, ${player2})',
-          de: 'Sammeln (${player1}, ${player2})',
-          fr: 'Packages (${player1}, ${player2})',
-          cn: '分摊 (${player1}, ${player2})',
+          ja: 'Stacks (${player1}, ${player2})',
           ko: '쉐어 (${player1}, ${player2})',
         },
         knockbackIntoStackGroups: {
           en: 'Knockback Into Stack Groups',
-          de: 'Rückstoß, dann in Gruppen sammeln',
-          fr: 'Poussée puis packez-vous en groupe',
           ja: '頭割り位置に向かってノックバックを',
-          cn: '击退分摊',
           ko: '넉백 후 쉐어',
         },
         knockbackIntoStacksOn: {
           en: 'Knockback => Stacks (${player1}, ${player2})',
-          de: 'Rückstoß => Sammeln (${player1}, ${player2})',
-          fr: 'Poussée => Package (${player1}, ${player2})',
-          cn: '击退 => 分摊 (${player1}, ${player2})',
+          ja: 'Knockback => Stacks (${player1}, ${player2})',
           ko: '넉백 => 쉐어 (${player1}, ${player2})',
         },
       },
@@ -1712,10 +1584,7 @@ const triggerSet: TriggerSet<Data> = {
         spread: Outputs.spread,
         knockbackIntoSpread: {
           en: 'Knockback Into Spread',
-          de: 'Rückstoß dann verteilen',
-          fr: 'Poussée puis dispersez-vous',
           ja: '散開のためノックバックを',
-          cn: '分散击退',
           ko: '넉백 후 산개',
         },
       },
@@ -1744,17 +1613,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         stackGroups: {
           en: 'Stack Groups',
-          de: 'In Gruppen sammeln',
-          fr: 'Packez-vous en groupe',
           ja: '集合',
-          cn: '集合',
           ko: '쉐어',
         },
         stacksOn: {
           en: 'Stacks (${player1}, ${player2})',
-          de: 'Sammeln (${player1}, ${player2})',
-          fr: 'Packages (${player1}, ${player2})',
-          cn: '分摊 (${player1}, ${player2})',
+          ja: 'Stacks (${player1}, ${player2})',
           ko: '쉐어 (${player1}, ${player2})',
         },
       },
@@ -1779,26 +1643,17 @@ const triggerSet: TriggerSet<Data> = {
         output.responseOutputStrings = {
           shadoweye: {
             en: 'Eye (w/${player})',
-            de: 'Auge (mit ${player})',
-            fr: 'Œil(avec ${player})',
-            ja: '自分に目 (w/${player})', // FIXME
-            cn: '石化眼点名 (与${player})',
+            ja: '自分にシャドウアイ (w/${player})',
             ko: '시선징 (+${player})',
           },
           doubleAero: {
             en: 'Double Aero (w/${player})',
-            de: 'Doppel Windga (mit ${player})',
-            fr: 'Double Vent(avec ${player})',
             ja: '自分にエアロガ×2 (w/${player})', // FIXME
-            cn: '双风点名 (与${player})',
             ko: '더블 에어로가 (+${player})',
           },
           spread: {
             en: 'Spread (w/${player1}, ${player2}, ${player3})',
-            de: 'Verteilen (mit ${player1}, ${player2}, ${player3})',
-            fr: 'Dispersion (avec ${player1}, ${player2}, ${player3})',
             ja: '自分に散開 (w/${player1}, ${player2}, ${player3})', // FIXME
-            cn: '分散点名 (与${player1}, ${player2}, ${player3})',
             ko: '산개징 (+${player1}, ${player2}, ${player3})',
           },
           unknown: Outputs.unknown,
@@ -2152,6 +2007,85 @@ const triggerSet: TriggerSet<Data> = {
         'Triple Apocalypse': '三重启示',
         'Under The Weight': '大地的重压',
         'Weight Of The World': '大陆之重',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Beastly Sculpture': '被創造的獅子',
+        'Bomb Boulder': '爆破岩石',
+        'Chiseled Sculpture': '被創造的男性',
+        'Eden\'s Promise': '伊甸之約',
+        'Guardian Of Eden': '伊甸守衛',
+        'Ice Pillar': '冰柱',
+        'Oracle Of Darkness': '暗之巫女',
+        'Sorrow\'s Hourglass': '悲傷的沙漏',
+      },
+      'replaceText': {
+        'Advanced Relativity': '時間壓縮·轉',
+        '(?<! )Apocalypse': '啟示',
+        'Basic Relativity': '時間壓縮·起',
+        'Black Halo': '黑色光環',
+        'Blade Of Flame': '巨兵光炎',
+        'Cast': '釋放',
+        'Cataclysm': '大災變',
+        'Classical Sculpture': '創造巨兵',
+        'Dark Aero III': '黑暗大勁風',
+        'Dark Current': '黑暗奔流',
+        '(?<! )Dark Eruption(?! )': '暗炎噴發',
+        // 'Dark Eruption / Dark Water III': '', // FIXME '暗炎喷发/黑暗狂水'
+        'Dark Fire III': '黑暗大火焰',
+        // 'Dark Water III / Dark Eruption': '', // FIXME '黑暗狂水/暗炎喷发'
+        '(?<! )Dark Water III(?! )': '黑暗大水花',
+        'Darkest Dance': '暗夜舞蹈',
+        'Diamond Dust': '鑽石星塵',
+        'Dual Apocalypse': '雙重啟示',
+        'Earthen Fury': '大地之怒',
+        'Empty Hate': '空無的惡意',
+        'Empty Rage': '空無的惡念',
+        'Force Of The Land': '大地轟鳴',
+        'Formless Judgment': '天罰波動',
+        'Frigid Stone': '冰石',
+        'Hell\'s Judgment': '地獄審判',
+        'Ice Floe': '浮冰',
+        'Ice Pillar': '冰柱',
+        'Impact': '塌方',
+        'Initialize Recall': '回想記憶',
+        'Intermediate Relativity': '時間壓縮·承',
+        'Junction Shiva': '融合：濕婆',
+        'Junction Titan': '融合：泰坦',
+        'Laser Eye': '激射眼',
+        'Lionsblaze': '獅子業火',
+        'Maleficium': '邪法',
+        'Maelstrom': '巨漩渦',
+        'Memory\'s End': '記憶終結',
+        'Obliteration Laser': '滅跡',
+        'Palm Of Temperance': '拒絕之手',
+        'Paradise Lost': '失樂園',
+        'Pillar Pierce': '激突',
+        'Plunging Ice': '落冰衝擊',
+        'Pulse Of The Land': '大地之響',
+        'Quicken': '神速',
+        'Rapturous Reach': '愉悅之手',
+        'Release': '施放',
+        'Return(?! IV)': '回返',
+        'Return IV': '強回返',
+        'Shadoweye': '暗影之眼',
+        'Shell Crusher': '破盾一擊',
+        'Shockwave Pulsar': '脈衝星震波',
+        'Singular Apocalypse': '單一啟示',
+        'Slow': '減速',
+        'Somber Dance': '真夜舞蹈',
+        'Speed': '限速',
+        'Spell-In-Waiting': '延遲詠唱',
+        'Spirit Taker': '碎靈一擊',
+        'Stock': '儲存',
+        'Terminal Relativity': '時間壓縮·合',
+        '(?<!Junction )Titan': '泰坦',
+        'Triple Apocalypse': '三重啟示',
+        'Under The Weight': '大地的重壓',
+        'Weight Of The World': '大陸之重',
       },
     },
     {

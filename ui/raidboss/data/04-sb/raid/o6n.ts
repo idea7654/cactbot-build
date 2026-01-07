@@ -37,9 +37,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away From Boss',
-          de: 'Weg vom Boss',
-          fr: 'Éloignez-vous du boss',
-          cn: '远离BOSS',
+          ja: 'Away From Boss',
           ko: '보스에게서 먼곳으로',
         },
       },
@@ -53,10 +51,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Drop Chasing AOE Away',
-          de: 'AoEs weglocken',
-          fr: 'Déposez les AoEs au loin',
-          ja: '離れてAoEを置く', // FIXME
-          cn: '远离放置追踪AOE',
+          ja: '離れてAoEを置く', // FIXME,
           ko: '연속 추적 장판 버려요',
         },
       },
@@ -172,6 +167,34 @@ const triggerSet: TriggerSet<Data> = {
         'Flash Gale': '闪光风',
         'Materialize': '实体化',
         'Possession': '附身画像',
+        'Release': '附身解除',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Demon Chadarnook': '惡魔查達奴克',
+        'Easterly': '極風',
+        'Haunt': '幻影',
+        'I have claimed the girl in the picture!': '呵哼哼……這個畫作的女人就歸我了……',
+        'Portrayal of Earth': '土之畫作',
+        'Portrayal of Fire': '火之畫作',
+        'Portrayal of Water': '水之畫作',
+      },
+      'replaceText': {
+        'Demonic Howl': '惡魔嘯',
+        'Demonic Pain': '惡魔痛',
+        'Demonic Shear': '惡魔斬',
+        'Demonic Spout': '惡魔噴',
+        'Demonic Stone': '惡魔巨岩',
+        'Demonic Typhoon': '惡魔颱風',
+        'Demonic Wave': '惡魔波',
+        'Earthquake': '大地震',
+        'Featherlance': '羽槍',
+        'Flash Fire': '閃光炎',
+        'Flash Gale': '閃光風',
+        'Materialize': '實體化',
+        'Possession': '附身畫像',
         'Release': '附身解除',
       },
     },

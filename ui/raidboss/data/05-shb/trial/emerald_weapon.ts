@@ -37,10 +37,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Near Tethered Mines',
-          de: 'Nahe den Bomben mit gleicher Polarisierung',
-          fr: 'Allez vers les mines de même polarité',
           ja: '同じ極性の爆雷に近づく',
-          cn: '靠近同级地雷',
           ko: '같은 극인 폭탄쪽으로',
         },
       },
@@ -80,10 +77,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Knockback Arrow on YOU',
-          de: 'Rückstoß-Pfeil auf DIR',
-          fr: 'Flèche-Poussée sur VOUS',
           ja: '自分に吹き飛ばし矢印',
-          cn: '击退箭头点名',
           ko: '내게 넉백 화살표',
         },
       },
@@ -97,10 +91,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go Cardinal With Sword',
-          de: 'Geh mit dem Schwert zu Kardinalen',
-          fr: 'Allez au cardinal avec l\'épée',
           ja: '辺の中心に捨てる',
-          cn: '四边放刀',
           ko: '십자 + 밖으로 (❌)',
         },
       },
@@ -114,10 +105,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go Intercardinal With Sword',
-          de: 'Geh mit dem Schwert zu Interkardinalen',
-          fr: 'Allez à l\'intercardinal avec l\'épée',
           ja: '四隅に捨てる',
-          cn: '四角放刀',
           ko: '비스듬 + 밖으로 (➕)',
         },
       },
@@ -262,6 +250,41 @@ const triggerSet: TriggerSet<Data> = {
         'Split': '分离',
         'Tertius Terminus Est': '恩惠终结：叁',
         'Threefold Formation': '步兵列队',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Black Wolf\'s Image': '蓋烏斯的幻影',
+        'Claw Bit': '手型浮游砲',
+        'Magnetic Mine': '電磁炸雷',
+        'The Emerald Weapon': '綠寶石武器',
+      },
+      'replaceText': {
+        'Bit Plasma': '浮游砲：射出炸彈',
+        'Bit Storm': '浮游砲：圓形射擊',
+        'Disruption Field': '妨礙思念',
+        'Divide Et Impera': '分而治之',
+        'Emerald Beam': '綠寶石光束',
+        'Emerald Crusher': '綠寶石碎擊',
+        'Emerald Shot': '綠寶石射擊',
+        'Explosion': '爆炸',
+        'Fire Away': '掃射命令',
+        'Heat Ray': '熾熱射線',
+        'Heirsbane': '遺禍',
+        'Legio Phantasmatis': '幻影軍團',
+        'Magitek Magnetism': '魔導磁石',
+        'Optimized Ultima': '魔導究極',
+        'Photon Laser': '光子射線',
+        'Primus Terminus Est': '恩惠終結：壹',
+        'Pulse Laser': '波動射線',
+        'Rank And File': '步兵集合',
+        'Secundus Terminus Est': '恩惠終結：貳',
+        'Shots Fired': '全體掃射',
+        'Sidescathe': '側面掃射',
+        'Split': '分離',
+        'Tertius Terminus Est': '恩惠終結：三',
+        'Threefold Formation': '步兵列隊',
       },
     },
     {

@@ -44,10 +44,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bait Super Jump',
-          de: 'Supersprung ködern',
-          fr: 'Attirez le Super saut',
           ja: 'スーパージャンプを誘導',
-          cn: '引导超级跳',
           ko: '슈퍼 점프 유도',
         },
       },
@@ -63,10 +60,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Megabeamu~',
-          de: 'Megalaser~',
-          fr: 'Mégarayon~',
           ja: 'メガビーム～',
-          cn: '巨型光束炮~',
           ko: '메가 빔~',
         },
       },
@@ -79,10 +73,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Megabeamu~!',
-          de: 'Megalaser~!',
-          fr: 'Mégarayon~ !',
           ja: 'メガビーム～',
-          cn: '巨型光束炮~!',
           ko: '메가 빔~!',
         },
       },
@@ -96,10 +87,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Kill Regulators',
-          de: 'Dampfregler besiegen',
-          fr: 'Tuez les Régulateurs',
           ja: 'スチームジャッジを倒す',
-          cn: '击杀小怪',
           ko: '레귤레이터들 잡아요',
         },
       },
@@ -122,10 +110,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get High',
-          de: 'Geh nach Oben',
-          fr: 'Montez',
           ja: '高い床に乗る',
-          cn: '去高地',
           ko: '높은곳으로',
         },
       },
@@ -141,10 +126,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Down',
-          de: 'Geh nach Unten',
-          fr: 'Descendez',
           ja: '低い床に乗る',
-          cn: '去低地',
           ko: '낮은곳으로',
         },
       },
@@ -167,10 +149,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${player}: ${count}',
-          de: '${player}: ${count}',
-          fr: '${player}: ${count}',
           ja: '${player}: ${count}',
-          cn: '${player}: ${count}',
           ko: '${player}: ${count}',
         },
       },
@@ -220,10 +199,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Don\'t Stack! (tank cleave)',
-          de: 'Nicht Sammeln! (Tank Cleave)',
-          fr: 'Ne vous packez pas ! (tank cleave)',
           ja: '集まらない! (タンクへのスラッシュ)',
-          cn: '别去分摊！（坦克顺劈）',
           ko: '뭉치면 안되요! (탱크 쪼개기)',
         },
       },
@@ -251,18 +227,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         superJumpOn: {
           en: 'Super Jump on ${player}',
-          de: 'Supersprung auf ${player}',
-          fr: 'Super saut sur ${player}',
           ja: '${player}にスーパージャンプ',
-          cn: '超级跳点${player}',
           ko: '슈퍼 점프: ${player}',
         },
         superJumpOnYou: {
           en: 'Super Jump on YOU',
-          de: 'Supersprung auf DIR',
-          fr: 'Super saut sur VOUS',
           ja: '自分にスーパージャンプ',
-          cn: '超级跳点名',
           ko: '내게 슈퍼 점프',
         },
       },
@@ -276,10 +246,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Mirage on YOU',
-          de: 'Mirage auf DIR',
-          fr: 'Mirage sur VOUS',
           ja: '自分にミラージュ',
-          cn: '分身点名',
           ko: '내게 미라지',
         },
       },
@@ -293,10 +260,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Ice Missile on YOU',
-          de: 'Eis-Rakete auf DIR',
-          fr: 'Missile de glace sur VOUS',
           ja: '自分にアイスミサイル',
-          cn: '冰点名',
           ko: '내게 얼음 미사일',
         },
       },
@@ -310,10 +274,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Mirage Dashes',
-          de: 'Weiche den Replikant Ansturm aus',
-          fr: 'Évitez la charge de la Réplique',
           ja: 'ミラージュの正面から離れる',
-          cn: '躲避分身冲锋',
           ko: '미라지 돌진 피해요',
         },
       },
@@ -514,6 +475,55 @@ const triggerSet: TriggerSet<Data> = {
         'Super Jump': '超级跳跃',
         'Supercharge': '超突击',
         'Transform': '正义合体',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Blaster Mirage': '爆破者幻象',
+        'Blaster(?! Mirage)': '爆破者',
+        'Brawler': '爭鬥者',
+        'Brute Justice': '殘暴正義號',
+        'Hidden Mine': '地雷爆炸',
+        'Onslaughter': '突擊者',
+        'Steam Regulator B': '蒸氣調整者β',
+        'Swindler': '欺詐者',
+        'Vortexer': '環旋者',
+      },
+      'replaceText': {
+        '--orbs--': '--球--',
+        '--regulator check--': '--調節器檢查--',
+        '100-Megatonze Shock': '億萬噸震盪',
+        'Apocalyptic Ray': '末世宣言',
+        'Attachment': '配件更換',
+        'Ballistic Missile': '導彈發射',
+        'Brute Force': '殘暴鐵拳',
+        'Discoid': '圓盤',
+        'Double Buster': '雙重破壞砲擊',
+        'Double Rocket Punch': '雙重火箭拳擊',
+        'Earth Missile': '大地導彈',
+        'Enumeration': '計數',
+        'Execution': '執行準備',
+        'Flarethrower': '大火炎放射',
+        'Height': '高度算術',
+        'Hydrothermal Missile': '蒸氣導彈',
+        'Ice Missile': '寒冰導彈',
+        'J Kick': '正義飛踢',
+        'Long Needle': '大型導彈',
+        'Magicked Mark': '魔力射擊',
+        'Mega Beam': '巨型光束砲',
+        'Minefield': '地雷散佈',
+        'Mind Blast': '精神衝擊',
+        'Mirage': '幻影系統',
+        'Missile Command': '導彈齊發',
+        'Perpetual Ray': '永恆射線',
+        'Seed of the Sky': '天空之種',
+        'Short Needle': '小型導彈',
+        'Single Buster': '破壞砲擊',
+        'Super Cyclone': '超級颶風',
+        'Super Jump': '超級跳躍',
+        'Supercharge': '超突擊',
+        'Transform': '正義合體',
       },
     },
     {

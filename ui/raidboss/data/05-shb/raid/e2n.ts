@@ -23,10 +23,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Puddles',
-          de: 'Flächen nehmen',
-          fr: 'Allez dans les zones au sol',
           ja: '踏む',
-          cn: '踩圈',
           ko: '장판 밟아요',
         },
       },
@@ -110,10 +107,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Delayed Fire',
-          de: 'Verzögertes Feuer',
-          fr: 'Feu retardé',
           ja: '遅延ファイア',
-          cn: '延迟火',
           ko: '나중에 파이가',
         },
       },
@@ -132,10 +126,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         spreadDontStack: {
           en: 'Spread (don\'t stack!)',
-          de: 'Verteilen (nicht zusammen stehen)',
-          fr: 'Dispersez-vous (ne vous packez pas)',
           ja: '散開 (重ならない)',
-          cn: '分散',
           ko: '흩어져요 (뭉치면 주거요!)',
         },
         spread: Outputs.spread,
@@ -159,10 +150,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Delayed Stack',
-          de: 'Verzögertes sammeln',
-          fr: 'Package retardé',
           ja: '遅延頭割り',
-          cn: '延迟集合',
           ko: '나중에 뭉쳐요',
         },
       },
@@ -198,10 +186,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Delayed Shadoweye',
-          de: 'Verzögertes Schattenauge',
-          fr: 'Œil de l\'ombre retardé',
           ja: '遅延シャドウアイ',
-          cn: '延迟石化眼',
           ko: '나중에 샤도아이',
         },
       },
@@ -226,10 +211,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Eye on YOU',
-          de: 'Auge auf DIR',
-          fr: 'Œil de l\'ombre sur VOUS',
           ja: '自分にシャドウアイ',
-          cn: '石化眼点名',
           ko: '내게 샤도아이',
         },
       },
@@ -317,6 +299,25 @@ const triggerSet: TriggerSet<Data> = {
         'Shadowflame': '暗影炎',
         'Spell-in-Waiting': '延迟咏唱',
         'Unholy Darkness': '黑暗神圣',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'The Hand of Erebos': '厄瑞玻斯的巨腕',
+        'Voidwalker': '虛無行者',
+      },
+      'replaceText': {
+        'Dark Fire III': '黑暗大火焰',
+        'Doomvoid Guillotine': '末日虛無斷',
+        'Doomvoid Slicer': '末日虛無切',
+        'Empty Hate': '空無的惡意',
+        'Entropy': '熵',
+        'Punishing Ray': '懲戒之光',
+        'Shadoweye': '暗影之眼',
+        'Shadowflame': '暗影炎',
+        'Spell-in-Waiting': '延遲詠唱',
+        'Unholy Darkness': '黑暗神聖',
       },
     },
     {

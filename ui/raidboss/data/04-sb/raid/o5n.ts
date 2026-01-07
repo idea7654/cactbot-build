@@ -52,9 +52,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bait ghost into light circle',
-          de: 'Geist in das Licht ködern',
-          fr: 'Attirez le fantôme dans la lumière',
-          cn: '诱导幽灵进光圈',
+          ja: 'Bait ghost into light circle',
           ko: '유령을 빛 장판으로 유도',
         },
       },
@@ -68,10 +66,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Drop Marker Away',
-          de: 'Licht am Rand ablegen',
-          fr: 'Déposez la marque au loin',
-          ja: '魔界の光', // FIXME
-          cn: '远离放置光点名',
+          ja: '魔界の光', // FIXME,
           ko: '빛 장판 버려요',
         },
       },
@@ -92,9 +87,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Touch ghost',
-          de: 'Geist berühren',
-          fr: 'Touchez le fantôme',
-          cn: '撞幽灵',
+          ja: 'Touch ghost',
           ko: '유령 만져요',
         },
       },
@@ -179,7 +172,7 @@ const triggerSet: TriggerSet<Data> = {
       'replaceText': {
         'Acid Rain': '酸雨',
         'Add Wave': '一波小怪',
-        'Crossing Whistle': '交叉汽笛',
+        'Crossing Whistle': '魔界汽笛（直线）',
         'Diabolic Chimney': '魔界喷烟',
         'Diabolic Headlamp': '魔界前照灯',
         'Diabolic Light': '魔界光',
@@ -190,7 +183,30 @@ const triggerSet: TriggerSet<Data> = {
         'Ghosts': '幽灵',
         'Head On': '追尾',
         'Saintly Beam': '圣光射线',
-        'Tether Whistle': '连线汽笛',
+        'Tether Whistle': '魔界汽笛（连线）',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Phantom Train': '魔列車',
+        'Wroth Ghost': '怒靈',
+      },
+      'replaceText': {
+        'Acid Rain': '酸雨',
+        'Add Wave': '一波小怪',
+        'Crossing Whistle': '魔界汽笛',
+        'Diabolic Chimney': '魔界噴煙',
+        'Diabolic Headlamp': '魔界前照燈',
+        'Diabolic Light': '魔界光',
+        'Diabolic Wind': '魔界風',
+        'Doom Strike': '魔靈擊',
+        'Encumber': '擋路',
+        'Ghost Beams': '聖光射線',
+        'Ghosts': '幽靈',
+        'Head On': '追尾',
+        'Saintly Beam': '聖光射線',
+        'Tether Whistle': '魔界汽笛',
       },
     },
     {

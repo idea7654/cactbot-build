@@ -107,10 +107,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Dash Attack',
-          de: 'Ansturm-Angriff ausweichen',
-          fr: 'Évitez l\'attaque Charge',
           ja: '突進回避',
-          cn: '躲避冲锋',
           ko: '돌진 공격 피해요',
         },
       },
@@ -129,10 +126,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack With Partner',
-          de: 'Mit Partner stacken',
-          fr: 'Packez-vous avec votre partenaire',
           ja: '白と黒で重なる',
-          cn: '黑白配',
           ko: '좌와벌: 페어',
         },
       },
@@ -145,10 +139,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bait Quasar Meteors',
-          de: 'Quasar Meteore ködern',
-          fr: 'Attirez les météores du Quasar',
           ja: 'メテオを誘導',
-          cn: '诱导陨石',
           ko: '퀘이사 메테오 유도',
         },
       },
@@ -195,10 +186,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get behind lancer',
-          de: 'Geh hinter dem 3. Demiurg',
-          fr: 'Passez derrière le lancier',
           ja: '三の従者の後ろに',
-          cn: '躲在3号小怪后',
           ko: '제3신도(창) 뒤로 가기',
         },
       },
@@ -216,18 +204,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         infusionOnYou: {
           en: 'Infusion on YOU',
-          de: 'Schneisenschläger auf DIR',
-          fr: 'Infusion sur VOUS',
           ja: '自分に猛突進',
-          cn: '冲锋点名',
           ko: '내게 맹돌진',
         },
         infusionOn: {
           en: 'Infusion on ${player}',
-          de: 'Schneisenschläger auf ${player}',
-          fr: 'Infusion sur ${player}',
           ja: '${player}に猛突進',
-          cn: '冲锋点${player}',
           ko: '맹돌진: ${player}',
         },
       },
@@ -329,10 +311,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid head laser',
-          de: 'Kopflaser ausweichen',
-          fr: 'Évitez le laser de la tête',
           ja: '頭レーザー回避',
-          cn: '躲避人头炮',
           ko: '머리 레이저 피해요',
         },
       },
@@ -369,10 +348,7 @@ const triggerSet: TriggerSet<Data> = {
         southeast: Outputs.southeast,
         multiple: {
           en: '${dir1} / ${dir2}',
-          de: '${dir1} / ${dir2}',
-          fr: '${dir1} / ${dir2}',
           ja: '${dir1} / ${dir2}',
-          cn: '${dir1} / ${dir2}',
           ko: '${dir1} / ${dir2}',
         },
       },
@@ -676,6 +652,43 @@ const triggerSet: TriggerSet<Data> = {
         'Thunder III': '暴雷',
         'Vertical Kenoma': '前后坚守',
         'Zombification': '僵尸',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Aion Teleos': '移湧',
+        'Barbelo': '芭碧蘿',
+        'Sophia': '索菲亞',
+        'The First Demiurge': '信徒其一',
+        'The Second Demiurge': '信徒其二',
+        'The Third Demiurge': '信徒其三',
+      },
+      'replaceText': {
+        '\\?': ' ?',
+        '\\(Meteor Detonate\\)': '(隕石爆炸)',
+        '\\(Snapshot\\)': '(快照)',
+        '\\(Tilt\\)': '(傾斜)',
+        'Aero III': '大勁風',
+        'Arms of Wisdom': '睿智之秤',
+        'Cintamani': '如意寶珠',
+        'Cloudy Heavens': '陰雲天堂',
+        'Dischordant Cleansing': '不平衡之罰',
+        'Divine Spark': '灼熱視線',
+        'Execute': '處決',
+        'Gnosis': '靈知',
+        'Gnostic Spear': '魔槍突刺',
+        'Horizontal Kenoma': '側面堅守',
+        'Light Dew': '光露',
+        'Onrush': '突襲',
+        'Quasar': '類星體',
+        'Ring of Pain': '痛苦環刺',
+        'The Scales Of Wisdom': '睿智之天平',
+        'Thunder II\\/III': '中雷電/大雷電',
+        'Thunder II(?!(?:I|\\/))': '中雷電',
+        'Thunder III': '大雷電',
+        'Vertical Kenoma': '前後堅守',
+        'Zombification': '殭屍',
       },
     },
     {

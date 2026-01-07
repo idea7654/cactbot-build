@@ -1,5 +1,4 @@
 import Conditions from '../../../../../resources/conditions';
-import Outputs from '../../../../../resources/outputs';
 import { Responses } from '../../../../../resources/responses';
 import ZoneId from '../../../../../resources/zone_id';
 import { RaidbossData } from '../../../../../types/data';
@@ -52,10 +51,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Drop Puddles Outside',
-          de: 'Flächen drausen ablegen',
-          fr: 'Déposez les zones au sol à l\'extérieur',
           ja: '散開',
-          cn: '散开',
           ko: '장판을 바깥에',
         },
       },
@@ -76,10 +72,7 @@ const triggerSet: TriggerSet<Data> = {
       id: 'P9N Archaic Demolish',
       type: 'StartsUsing',
       netRegex: { id: '812F', source: 'Kokytos', capture: false },
-      alertText: (_data, _matches, output) => output.healerGroups!(),
-      outputStrings: {
-        healerGroups: Outputs.healerGroups,
-      },
+      response: Responses.healerGroups('alert'),
     },
     {
       id: 'P9N Front Combination + Inside Roundhouse',
@@ -89,10 +82,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Behind and Under',
-          de: 'Geh nach Hinten und Unter den Boss',
-          fr: 'Allez derrière et sous le boss',
           ja: '後ろ => 中へ',
-          cn: '去背后靠近',
           ko: '안쪽 보스 뒤로',
         },
       },
@@ -105,9 +95,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go Front and Under',
-          de: 'Geh nach Vorne und Unter den Boss',
           ja: '前 => 中へ',
-          cn: '去正面靠近',
           ko: '안쪽 보스 앞으로',
         },
       },
@@ -120,10 +108,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Behind and Out',
-          de: 'Geh nach Hinten und Raus',
-          fr: 'Allez derrière et à l\'extérieur',
           ja: '後ろの外側へ',
-          cn: '去背后远离',
           ko: '바깥 보스 뒤로',
         },
       },
@@ -136,10 +121,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go Front and Out',
-          de: 'Geh nach Vorne und Raus',
-          fr: 'Allez devant et à l\'extérieur',
           ja: '前の外側へ',
-          cn: '去正面远离',
           ko: '바깥 보스 앞으로',
         },
       },
@@ -152,10 +134,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Hide behind unbroken meteor',
-          de: 'Hinter einem nicht zerbrochenen Meteor verstecken',
-          fr: 'Cachez-vous derrière le météore intact',
           ja: '壊れていないメテオの後ろへ',
-          cn: '躲在未破碎的陨石后',
           ko: '멀쩡한 돌 뒤에 숨어요',
         },
       },
@@ -180,18 +159,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         tankbusterOnYouStretchTethers: {
           en: 'Tankbuster on YOU -- stretch tether',
-          de: 'Tankbuster auf DIR -- Verbindung strecken',
-          fr: 'Tankbuster sur VOUS -- Étirez le lien',
           ja: 'タン強 -- 離れる',
-          cn: '坦克死刑 -- 远离',
           ko: '내게 탱크버스터 - 줄 늘려요',
         },
         tankbusterOn: {
           en: 'Tankbuster on ${player}',
-          de: 'Tankbuster auf ${player}',
-          fr: 'Tankbuster sur ${player}',
           ja: 'タン強: ${player}',
-          cn: '坦克死刑 ${player}',
           ko: '탱크버스터: ${player}',
         },
       },
@@ -252,7 +225,6 @@ const triggerSet: TriggerSet<Data> = {
     },
     {
       'locale': 'fr',
-      'missingTranslations': true,
       'replaceSync': {
         'Comet': 'Comète',
         'Fire Sphere': 'Sphère de feu',
@@ -293,7 +265,6 @@ const triggerSet: TriggerSet<Data> = {
     },
     {
       'locale': 'ja',
-      'missingTranslations': true,
       'replaceSync': {
         'Comet': 'コメット',
         'Fire Sphere': 'ファイアスフィア',
@@ -374,6 +345,52 @@ const triggerSet: TriggerSet<Data> = {
         'Shockwave': '冲击波',
         'Sphere Shatter': '碎裂',
         'Swinging Kick': '旋身击',
+        'Touchdown': '空降',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Comet': '隕星',
+        'Fire Sphere': '烈火晶球',
+        'Ice Sphere': '冰晶球',
+        'Kokytos': '克邱特斯',
+      },
+      'replaceText': {
+        // '\\(Behemoth\\)': '', // FIXME '(野兽)'
+        // '\\(Fighter\\)': '', // FIXME '(武术家)'
+        // '\\(Mage\\)': '', // FIXME '(魔法师)'
+        // '\\(cast\\)': '', // FIXME '(咏唱)'
+        // '\\(resolve\\)': '', // FIXME '(判定)'
+        'Archaic Demolish': '古式破碎拳',
+        'Archaic Rockbreaker': '古式地烈勁',
+        'Ascendant Fist': '穿升拳',
+        'Beastly Bile': '野獸膽汁',
+        'Beastly Roar': '殘虐咆哮',
+        'Blizzard III': '大暴雪',
+        'Burst': '飛散',
+        'Charybdis': '大漩渦',
+        'Comet': '隕星',
+        'Disgorge': '吐魂',
+        'Dualspell': '雙重詠唱',
+        'Ecliptic Meteor': '黃道隕石',
+        'Explosion': '爆炸',
+        'Fire III': '大火焰',
+        'Front Combination': '前方連轉腳',
+        'Global Spell': '全域詠唱',
+        'Gluttonous Rampage': '暴食狂怒',
+        'Gluttony\'s Augur': '暴食預兆',
+        'Iceflame Summoning': '冰火召喚',
+        'Inside Roundhouse': '內轉腳',
+        'Outside Roundhouse': '外轉腳',
+        'Pulverizing Pounce': '重爪襲',
+        'Ravening': '噬魂',
+        'Ravenous Bite': '極餓咬',
+        'Rear Combination': '後方連轉腳',
+        'Shockwave': '衝擊波',
+        'Sphere Shatter': '碎裂',
+        'Swinging Kick': '旋身擊',
         'Touchdown': '空降',
       },
     },

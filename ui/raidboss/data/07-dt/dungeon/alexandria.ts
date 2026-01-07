@@ -52,6 +52,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         avoid: {
           en: 'Avoid',
+          ja: '避ける',
           ko: '피해요',
         },
         in: Outputs.in,
@@ -76,10 +77,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         combo: {
           en: '${calls}',
+          ja: '${calls}',
           ko: '${calls}',
         },
         separator: {
           en: ' => ',
+          ja: ' => ',
           ko: ' 🔜 ',
         },
       },
@@ -94,6 +97,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         spreadDontStack: {
           en: 'Cleave -- Don\'t stack!',
+          ja: 'タンク強攻撃 -- 散開！',
           ko: '쪼개기 -- 뭉치면 안되요!',
         },
       },
@@ -133,6 +137,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         avoidLightning: {
           en: 'Out of lightning triangle',
+          ja: '雷の三角形から離れる',
           ko: '전기 삼각형 피해요',
         },
       },
@@ -146,6 +151,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         avoidLasers: {
           en: 'Avoid Wall Lasers',
+          ja: '壁のレーザーを避ける',
           ko: '벽 레이저 피해요',
         },
       },
@@ -216,6 +222,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         avoidHand: {
           en: 'Avoid hand laser',
+          ja: '手のレーザーを避ける',
           ko: '손 레이저 피해요',
         },
       },
@@ -229,7 +236,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         underElimbit: {
           en: 'Get under Elimbit',
-          ko: 'Elimbit 아래로',
+          ja: 'エリミネーターの下へ',
+          ko: '엘림비트 아래로',
         },
       },
     },
@@ -284,6 +292,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         dodgeLasers: {
           en: 'Dodge Multiple Lasers',
+          ja: '多重レーザーを避ける',
           ko: '여러 레이저 피하기',
         },
       },
@@ -429,6 +438,11 @@ const triggerSet: TriggerSet<Data> = {
         'Terminate': 'ターミネーション',
         'Ternary Charge': 'トライバースト',
         'Voltburst': 'ボルトバースト',
+        '\\(corners\\)': '(かど)',
+        '\\(front\\)': '(前)',
+        '\\(lasers\\)': '(レーザー)',
+        '\\(sides\\)': '(横)',
+        '\\(triangle\\)': '(三角)',
       },
     },
     {
@@ -475,6 +489,53 @@ const triggerSet: TriggerSet<Data> = {
         '\\(lasers\\)': '(激光)',
         '\\(sides\\)': '(两侧)',
         '\\(triangle\\)': '(三角)',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Amalgam': '軟性融合體',
+        'Antivirus X': '反病毒程式X',
+        'Eliminator': '清除者',
+        'Interferon C': '反病毒程式C',
+        'Interferon R': '反病毒程式R',
+      },
+      'replaceText': {
+        'Amalgamight': '融合威能',
+        'Centralized Current': '集中放電',
+        'Cytolysis': '細胞溶解',
+        'Disassembly': '解體',
+        'Disinfection': '消毒',
+        'Disruption': '崩裂',
+        'Electray': '雷轉質射線',
+        'Electrowave': '雷轉質波動',
+        'Elimination': '清除',
+        'Explosion': '爆炸',
+        'Halo of Destruction': '毀滅光環',
+        'Holo Ark': '末世方舟',
+        'Immune Response': '免疫反應',
+        'Impact': '衝擊',
+        'Light of Devotion': '獻身之光',
+        'Light of Salvation': '救贖之光',
+        'Overexposure': '多重曝光',
+        'Partition': '斷斬',
+        'Pathocircuit Purge': '環狀清除',
+        'Pathocross Purge': '十字清除',
+        'Quarantine': '檢疫',
+        'Split Current': '分裂放電',
+        'Static Spark': '靜電火花',
+        'Subroutine': '副程式',
+        'Superbolt': '超電擊',
+        'Supercell Matrix': '電流矩陣',
+        'Terminate': '終結',
+        'Ternary Charge': '三重放電',
+        'Voltburst': '電擊爆發',
+        // '\\(corners\\)': '', // FIXME '(四角)'
+        // '\\(front\\)': '', // FIXME '(前方)'
+        // '\\(lasers\\)': '', // FIXME '(激光)'
+        // '\\(sides\\)': '', // FIXME '(两侧)'
+        // '\\(triangle\\)': '', // FIXME '(三角)'
       },
     },
     {

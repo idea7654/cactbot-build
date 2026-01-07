@@ -34,10 +34,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Next Spin: In or Out',
-          de: 'Nächste Drehung: Rein oder raus',
-          fr: 'Tour suivant : Intérieur ou Extérieur',
           ja: '次: 中/外',
-          cn: '下一转:内圈/外圈',
           ko: '다음 스핀: 안 또는 밖으로',
         },
       },
@@ -51,10 +48,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Next Spin: Corners',
-          de: 'Nächste Drehung: Ecken',
-          fr: 'Tour suivant : Coins',
           ja: '次: コーナー',
-          cn: '下一转:角落',
           ko: '다음 스핀: 구석',
         },
       },
@@ -74,18 +68,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         getOut: {
           en: 'Get Out',
-          de: 'Raus da',
-          fr: 'Sortez',
           ja: '外へ',
-          cn: '远离',
           ko: '밖으로',
         },
         goToCardinals: {
           en: 'Go To Cardinals',
-          de: 'Geh zu den Kanten',
-          fr: 'Allez sur un point cardinal',
           ja: '横や縦へ',
-          cn: '去正点',
           ko: '십자로',
         },
       },
@@ -104,18 +92,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         getIn: {
           en: 'Get In',
-          de: 'Rein da',
-          fr: 'Passez en dessous',
           ja: '中へ',
-          cn: '靠近',
           ko: '안으로',
         },
         goToCorners: {
           en: 'Go To Corners',
-          de: 'In die Ecken',
-          fr: 'Allez dans les coins',
           ja: '角へ',
-          cn: '去角落',
           ko: '구석으로',
         },
       },
@@ -151,9 +133,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Drop Ice Outside',
-          de: 'Eis draußen ablegen',
-          fr: 'Déposez la glace à l\'extérieur',
-          cn: '把冰放在外面',
+          ja: 'Drop Ice Outside',
           ko: '얼음! 바깥쪽에 버려요',
         },
       },
@@ -286,7 +266,35 @@ const triggerSet: TriggerSet<Data> = {
         '(?<!/)Out': '远离',
         'Northern Cross': '北十字星',
         'Protostar': '原恒星',
-        'Spin': '回转',
+        'Spin': '横转',
+        'Tail End': '煞尾',
+        'Thunderstorm': '雷暴',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Ancient Dragon': '遠古之龍',
+        'Midgardsormr': '幻龍米德加爾特',
+      },
+      'replaceText': {
+        'ready': '準備',
+        'Akh Morn': '死亡輪迴',
+        'Akh Rhai': '天光輪迴',
+        'Cauterize': '灼熱俯衝',
+        'Corners': '角落',
+        'Dry Ice': '冰塵',
+        'Earth Shaker': '大地搖動',
+        'Exaflare': '百京火光',
+        'Flip': '垂直轉',
+        'Frost Breath': '寒霜吐息',
+        'Horrid Roar': '恐懼咆哮',
+        '(?<!\\w)In(?!/)': '靠近',
+        'In/Out': '靠近/遠離',
+        '(?<!/)Out': '遠離',
+        'Northern Cross': '北十字星',
+        'Protostar': '原恆星',
+        'Spin': '橫轉',
         'Tail End': '煞尾',
         'Thunderstorm': '雷暴',
       },

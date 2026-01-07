@@ -21,10 +21,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Hide Behind Meteor',
-          de: 'Hinter Meteor verstecken',
-          fr: 'Cachez-vous derrière le météore',
           ja: 'コメットの後ろへ',
-          cn: '躲在陨石后',
           ko: '메테오 뒤로',
         },
       },
@@ -37,10 +34,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away From Meteor',
-          de: 'Weg vom Meteor',
-          fr: 'Éloignez-vous du météore',
           ja: 'コメットから離れる',
-          cn: '远离陨石',
           ko: '메테오에게서 먼곳으로',
         },
       },
@@ -67,10 +61,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away from Lines',
-          de: 'Weg von den Linien',
-          fr: 'Éloignez-vous des sillons',
           ja: '線から離れる',
-          cn: '远离线',
           ko: '줄 피해요',
         },
       },
@@ -83,10 +74,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get On Lines',
-          de: 'Auf die Linien gehen',
-          fr: 'Allez sur les sillons',
           ja: '線の上へ',
-          cn: '靠近线',
           ko: '줄 올라타요',
         },
       },
@@ -135,10 +123,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Enrage!',
-          de: 'Finalangriff!',
-          fr: 'Enrage !',
           ja: '時間切れ！',
-          cn: '狂暴',
           ko: '곧 다 주거!',
         },
       },
@@ -172,10 +157,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid meteors with laser',
-          de: 'Meteore mit Laser vermeiden',
-          fr: 'Évitez les météores avec votre laser',
           ja: 'レザーを避ける',
-          cn: '躲开激光点名',
           ko: '탱크 레이저 피해요',
         },
       },
@@ -329,6 +311,43 @@ const triggerSet: TriggerSet<Data> = {
         'Burst': '飞散',
         'Mark II Magitek Comet': '魔导彗星II',
         'Bradamante': '布拉达曼特',
+        'Outrage': '震怒',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'The Ruby Weapon': '紅寶石武器',
+        'Raven\'s Image': '奈爾的幻影',
+        'Comet': '隕星',
+      },
+      'replaceText': {
+        // '--cutscene--': '', // FIXME '--过场动画--'
+        'Stamp': '踐踏',
+        'Optimized Ultima': '魔導究極',
+        'Flexiclaw': '潛地爪',
+        'Ravensclaw': '凶鳥爪',
+        'Spike Of Flame': '大火焰柱',
+        // 'Liqu[ei]faction': '', // FIXME '地面液化'
+        'Ruby Ray': '紅寶石射線',
+        'Helicoclaw': '螺旋爪',
+        'High-Powered Homing Lasers': '高功率誘導射線',
+        'Ravensflight': '凶鳥衝',
+        // '(?<! )Homing Lasers': '', // FIXME '诱导射线'
+        'Ruby Dynamics': '紅寶石電圈',
+        'Undermine': '掘地雷',
+        'Meteor Project': '隕石計畫',
+        'Negative Personae': '消極人格',
+        'Meteor Stream': '隕石流',
+        'Ruby Claw': '紅寶石之爪',
+        'Dalamud Impact': '衛月衝擊',
+        '(?<! )Magitek Comet': '魔導隕星',
+        'Landing': '落地',
+        'Magitek Meteor': '魔導隕石',
+        'Burst': '飛散',
+        'Mark II Magitek Comet': '魔導隕星II',
+        'Bradamante': '布拉達曼特',
         'Outrage': '震怒',
       },
     },

@@ -31,6 +31,7 @@ const triggerSet: TriggerSet<Data> = {
           ja: 'イフリート',
           cn: '伊弗利特',
           ko: '이프리트',
+          tc: '伊弗利特',
         };
 
         const raktapaksaLocaleNames = {
@@ -40,6 +41,7 @@ const triggerSet: TriggerSet<Data> = {
           ja: 'ラクタパクシャ',
           cn: '赤翼罗羯坨博叉',
           ko: '락타팍샤',
+          tc: '赤翼罗羯坨博叉',
         };
 
         // select the 4 most recent Ifrit or Raktapaksa's depending on phase
@@ -113,18 +115,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         oneDir: {
           en: '${dir}',
-          de: '${dir}',
-          fr: '${dir}',
           ja: '${dir}へ',
-          cn: '去${dir}',
           ko: '${dir}으로',
         },
         twoDirs: {
           en: '${dir1}${dir2}',
-          de: '${dir1}${dir2}',
-          fr: '${dir1} ${dir2}',
           ja: '${dir1}${dir2}へ',
-          cn: '去${dir2}${dir1}',
           ko: '${dir1}${dir2}으로',
         },
         unknown: Outputs.unknown,
@@ -149,10 +145,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid green nails',
-          de: 'Weiche den grünen Nägeln aus',
-          fr: 'Évitez les griffes',
           ja: '緑の杭に避け',
-          cn: '躲避风刃',
           ko: '초록 발톱 피하기',
         },
       },
@@ -171,18 +164,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         enumerationOnYou: {
           en: 'Enumeration on YOU',
-          de: 'Enumeration aud DIR',
-          fr: 'Énumération sur VOUS',
           ja: '自分にエアーバンプ',
-          cn: '蓝圈分摊点名',
           ko: '2인 장판 대상자',
         },
         enumeration: {
           en: 'Enumeration',
-          de: 'Enumeration',
-          fr: 'Énumération',
           ja: 'エアーバンプ',
-          cn: '蓝圈分摊',
           ko: '2인 장판',
         },
       },
@@ -224,10 +211,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         chargeOnYou: {
           en: 'Charge on YOU',
-          de: 'Ansturm auf DIR',
-          fr: 'Charge sur VOUS',
           ja: '自分に突進',
-          cn: '冲锋点名',
           ko: '나에게 보스 돌진',
         },
         tankSwap: Outputs.tankSwap,
@@ -261,10 +245,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Tether Marker on YOU',
-          de: 'Verbindung auf DIR',
-          fr: 'Marque de lien sur VOUS',
           ja: '自分に線マーカー',
-          cn: '连线点名',
           ko: '선 징 대상자',
         },
       },
@@ -284,10 +265,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Attack Garuda',
-          de: 'Greife Garuda an',
-          fr: 'Attaquez Garuda',
           ja: 'ガルーダに攻撃',
-          cn: '打风神',
           ko: '가루다 공격하기',
         },
       },
@@ -301,10 +279,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Attack Ifrit',
-          de: 'Greife Ifrit an',
-          fr: 'Attaquez Ifrit',
           ja: 'イフリートに攻撃',
-          cn: '打火神',
           ko: '이프리트 공격하기',
         },
       },
@@ -335,10 +310,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'go to spots for chains',
-          de: 'Gehe zu den Stellen für die Kette',
-          fr: 'Positions pour les chaines',
           ja: '安置へ、鎖が繋がれる',
-          cn: '连线站位',
           ko: '대화재 준비',
         },
       },
@@ -357,10 +329,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         tetheredToPlayer: {
           en: 'Tethered to ${player}',
-          de: 'Verbunden mit ${player}',
-          fr: 'Lié à ${player}',
           ja: '${player}と繋がった',
-          cn: '和${player}连线',
           ko: '선 연결 짝: ${player}',
         },
       },
@@ -528,6 +497,46 @@ const triggerSet: TriggerSet<Data> = {
         'Spread Of Fire': '火势蔓延',
         'Conflag Strike': '瞬燃强袭',
         'Blaze': '炎爆',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Garuda': '迦樓羅',
+        'Tumultuous Nexus': '暴風球',
+        'Ifrit': '伊弗利特',
+        'Raktapaksa': '赤翼羅羯坨博叉',
+        'Twisting Blaze': '火焰旋風',
+      },
+      'replaceText': {
+        'Superstorm': '超級風暴',
+        'Occluded Front': '錮囚鋒',
+        'Wind Cutter': '風刃',
+        'Storm Of Fury': '暴怒風暴',
+        'Air Bump': '空氣彈墊',
+        'Ferostorm': '凶猛風暴',
+        'Downburst': '下行突風',
+        'Vacuum Slice': '真空斬',
+        'Irresistible Pull': '吸引力',
+        // 'Explosions?': '', // FIXME '爆炸'
+        'Touchdown': '空降',
+        'Hands Of Flame': '火焰拳',
+        'Eruption': '噴發',
+        'Instant Incineration': '爆裂炎',
+        'Meteor Strike': '流星強擊',
+        'Inferno Howl': '灼熱咆哮',
+        'Hands Of Hell': '業火拳',
+        'Strike Spark': '火花爆',
+        'Call Of The Inferno': '幻影召喚',
+        'Hot Foot': '飛火',
+        'Hated Of Embers/Vortex': '火神的詛咒',
+        'Firestorm': '火焰流',
+        'Heat Burst': '熱波',
+        'Radiant Plume': '光輝炎柱',
+        'Spread Of Fire': '火勢蔓延',
+        'Conflag Strike': '瞬燃強襲',
+        // 'Blaze': '', // FIXME '炎爆'
       },
     },
     {

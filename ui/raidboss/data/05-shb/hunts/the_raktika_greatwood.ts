@@ -13,6 +13,11 @@ const triggerSet: TriggerSet<Data> = {
   zoneId: ZoneId.TheRaktikaGreatwood,
   comments: {
     en: 'A Rank Hunts',
+    de: 'A Rang Hohe Jagd',
+    fr: 'Chasse de rang A',
+    cn: 'A级狩猎怪',
+    ko: 'A급 마물',
+    tc: 'A級狩獵怪',
   },
   triggers: [
     {
@@ -47,9 +52,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'GTFO + Look Away',
-          de: 'Schnell raus + weg schauen',
-          fr: 'Allez vous-en et regardez ailleurs',
-          cn: '快出去 + 看向其他方向',
+          ja: 'GTFO + Look Away',
           ko: '멀리 빠져요 + 보면 안되구요',
         },
       },
@@ -99,9 +102,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Heal to Full',
-          de: 'Voll heilen',
-          fr: 'Soignez au maximum',
-          cn: '奶满全员',
+          ja: 'Heal to Full',
           ko: '만피 채워욧',
         },
       },
@@ -176,6 +177,14 @@ const triggerSet: TriggerSet<Data> = {
         'Grassman': '格拉斯曼',
         'Ixtab': '伊休妲',
         'Supay': '苏帕伊',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Grassman': '格拉斯曼',
+        'Ixtab': '伊休妲',
+        'Supay': '蘇帕伊',
       },
     },
     {

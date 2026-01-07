@@ -77,10 +77,7 @@ const triggerSet: TriggerSet<Data> = {
         tankBuster: Outputs.tankBuster,
         avoidTankBuster: {
           en: 'Avoid tank buster',
-          de: 'Tank buster ausweichen',
-          fr: 'Évitez le tank buster',
           ja: 'タンクバスターを避ける',
-          cn: '远离坦克死刑',
           ko: '탱크버스터 피해요',
         },
       },
@@ -93,10 +90,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go To Narrow Intersection',
-          de: 'Geh zu der nahen Überschneidung',
-          fr: 'Allez sur l\'intersection étroite',
           ja: '狭く重なっている範囲へ',
-          cn: '去窄交叉口',
           ko: '좁게 겹친 곳으로',
         },
       },
@@ -110,10 +104,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Chasing Laser: Get Away',
-          de: 'Verfolgende Laser: Weg gehen',
-          fr: 'Soutien aérien : Éloignez-vous',
           ja: 'レーザー: 外へ',
-          cn: '激光点名：快出去',
           ko: '추적 레이저: 도망가요',
         },
       },
@@ -126,10 +117,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go Left, Behind Wing',
-          de: 'Geh links hinter den Flügel',
-          fr: 'Allez à gauche, derrière l\'aile',
           ja: '翼の左へ',
-          cn: '去左边，翅膀后',
           ko: '왼쪽으로, 날개 사이',
         },
       },
@@ -142,10 +130,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go Right, Behind Wing',
-          de: 'Geh rechts hinter den Flügel',
-          fr: 'Allez à droite, derrière l\'aile',
           ja: '翼の右へ',
-          cn: '去右边，翅膀后',
           ko: '오른쪽으로, 날개 사이',
         },
       },
@@ -168,10 +153,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Dodge into ring gap',
-          de: 'In die Lücke des Ringes ausweichen',
-          fr: 'Esquivez dans les écarts de l\'anneau',
           ja: 'リングの切れ目へ',
-          cn: '躲入环形缺口',
           ko: '링 사이 빈곳으로 피해요',
         },
       },
@@ -257,10 +239,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Fire Puddle on YOU',
-          de: 'Feuer Fläche auf DIR',
-          fr: 'Zone au sol de feu sur VOUS',
           ja: '自分にファイヤ',
-          cn: '火圈点名',
           ko: '내게 불 장판',
         },
       },
@@ -275,10 +254,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Line Stack (Point Outside)',
-          de: 'Auf einer Linie sammeln (nach außen zeigen)',
-          fr: 'Package en ligne (orientez vers l\'extérieur)',
           ja: '直線頭割り (外に向ける)',
-          cn: '直线分摊（指向场外）',
           ko: '한줄 뭉쳐요 (바깥 유도)',
         },
       },
@@ -292,9 +268,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Move to Inside',
-          de: 'Nach Innen bewegen',
-          fr: 'Allez à l\'intérieur',
-          cn: '去里面',
+          ja: 'Move to Inside',
           ko: '안으로',
         },
       },
@@ -308,9 +282,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Move to Outside',
-          de: 'Nach Außen bewegen',
-          fr: 'Allez à l\'extérieur',
-          cn: '去外面',
+          ja: 'Move to Outside',
           ko: '밖으로',
         },
       },
@@ -353,10 +325,7 @@ const triggerSet: TriggerSet<Data> = {
         tankBuster: Outputs.tankBuster,
         avoidTankBuster: {
           en: 'Avoid tank buster',
-          de: 'Tank buster ausweichen',
-          fr: 'Évitez le tank buster',
           ja: 'タンクバスターを避ける',
-          cn: '远离坦克死刑',
           ko: '탱크버스터 피해요',
         },
       },
@@ -423,10 +392,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Outside Upper Laser',
-          de: 'Raus aus dem oberen Laser',
-          fr: 'À l\'extérieur des lasers supérieurs',
           ja: '高いレーザー放射装置の外へ',
-          cn: '躲避远程激光',
           ko: '위쪽 쏘는 레이저의 바깥쪽으로',
         },
       },
@@ -448,10 +414,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Voltage cleave on YOU',
-          de: 'Spannungs-Cleave auf DIR',
-          fr: 'Arcs : Cleave sur VOUS',
           ja: '自分に扇形AoE',
-          cn: '扇形AOE点名',
           ko: '내게 전압 쪼개기',
         },
       },
@@ -472,18 +435,12 @@ const triggerSet: TriggerSet<Data> = {
         output.responseOutputStrings = {
           tankCleaveOnYou: {
             en: 'Tank Laser Cleave on YOU',
-            de: 'Tank Laser cleave auf DIR',
-            fr: 'Tank laser cleave sur VOUS',
             ja: '自分にタンクレーザー',
-            cn: '坦克直线激光点名',
             ko: '내게 탱크 레이저 쪼개기',
           },
           avoidTankCleaves: {
             en: 'Avoid tank laser cleaves',
-            de: 'Tank Laser cleave ausweichen',
-            fr: 'Évitez les Tanks laser cleaves',
             ja: 'タンクレーザーを避ける',
-            cn: '躲避坦克直线激光',
             ko: '탱크 레이저 쪼개기 피해요',
           },
         };
@@ -513,18 +470,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         getOutsideBetweenPods: {
           en: 'Get Outside Between Pods',
-          de: 'Zwischen den Pods raus gehen',
-          fr: 'À l\'extérieur entre les Pods',
           ja: '外へ、二つのポッドの真ん中に',
-          cn: '去场边两个辅助机之间',
           ko: '바깥쪽 포드 사이로',
         },
         getBetweenLasersWatchTethers: {
           en: 'Get Between Lasers (Watch Tethers)',
-          de: 'Zwischen Laser gehen (auf die Verbindungen achten)',
-          fr: 'Allez entre les lasers (regardez les liens)',
           ja: 'レーザーの真ん中に (線を気にして)',
-          cn: '去激光之间（观察直线）',
           ko: '레이저 사이 가운데로 (줄 확인)',
         },
       },
@@ -538,10 +489,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Turn Towers Blue',
-          de: 'Türme zu Blau ändern',
-          fr: 'Changez les tours en bleu',
           ja: '塔を青色に',
-          cn: '多人踩圈至蓝色',
           ko: '타워를 파랗게',
         },
       },
@@ -555,10 +503,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Laser on YOU',
-          de: 'Laser auf DIR',
-          fr: 'Laser sur VOUS',
           ja: '自分にレーザー',
-          cn: '激光点名',
           ko: '내게 레이저',
         },
       },
@@ -675,18 +620,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         jump: {
           en: 'Jump #${num} on YOU',
-          de: 'Sprung #${num} auf DIR',
-          fr: 'Saut #${num} sur VOUS',
           ja: '自分にジャンプ #${num}',
-          cn: '单体跳砍#${num}点名',
           ko: '내게 점프 #${num}번',
         },
         cleave: {
           en: 'Cleave #${num} on YOU',
-          de: 'Cleave #${num} auf DIR',
-          fr: 'Cleave #${num} sur VOUS',
           ja: '自分に直線AoE #${num}',
-          cn: '直线劈砍#${num}点名',
           ko: '내게 쪼개기 #${num}번',
         },
         unknown: Outputs.unknown,
@@ -701,10 +640,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Towers',
-          de: 'Türme nehmen',
-          fr: 'Prenez les tours',
           ja: '塔を踏む',
-          cn: '踩塔',
           ko: '타워 밟아요',
         },
       },
@@ -719,10 +655,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Lasers',
-          de: 'Laser ausweichen',
-          fr: 'Évitez les lasers',
           ja: 'レーザーを避ける',
-          cn: '躲避激光',
           ko: '레이저 피해요',
         },
       },
@@ -738,10 +671,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Under Clone Corner',
-          de: 'Unter den Klon in einer Ecke gehen',
-          fr: 'Allez sous un clone dans un coin ',
           ja: 'コーナーの分裂体の下へ',
-          cn: '去分身脚下',
           ko: '구석에 있는 클론 발밑으로',
         },
       },
@@ -759,10 +689,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Under Cardinal Clone',
-          de: 'Unter den Klon in einer der Himmelsrichtungen gehen',
-          fr: 'Allez sous un clone sur un point cardinal',
           ja: '十字にいる分裂体の下へ',
-          cn: '去真分身脚下',
           ko: '십자로 있는 클론의 발밑으로',
         },
       },
@@ -779,10 +706,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away From Clones',
-          de: 'Weg von den Klonen',
-          fr: 'Éloignez-vous des clones',
           ja: '分裂体から離れる',
-          cn: '远离分身',
           ko: '클론에게서 먼곳으로',
         },
       },
@@ -1167,6 +1091,102 @@ const triggerSet: TriggerSet<Data> = {
         'Surface Missile Impact': '对地导弹命中',
         'Three Parts Disdain': '三连冲击斩',
         'Upper Laser': '上方激光',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        // '724P-Operated Superior Flight Unit \\\\\\(A-Lpha\\\\\\)': '', // FIXME '724P：强化型飞行装置[A-lpha]'
+        // '767P-Operated Superior Flight Unit \\\\\\(B-Eta\\\\\\)': '', // FIXME '767P：强化型飞行装置[B-eta]'
+        // '772P-Operated Superior Flight Unit \\\\\\(C-Hi\\\\\\)': '', // FIXME '772P：强化型飞行装置[C-hi]'
+        '813P-Operated Aegis Unit': '813P：裝備據點防衛裝置',
+        '905P-Operated Heavy Artillery Unit': '905P：裝備重型陸戰裝置',
+        'Compound 2P': '2P：融合體',
+        'Compound Pod': '輔助機：融合體',
+        '(?<!Superior )Flight Unit': '飛行裝置',
+        'Light Artillery Unit': '輕型陸戰裝置',
+        '(?<!Compound )Pod': '輔助機',
+        'Puppet 2P': '2P：分裂體',
+        'The Compound': '融合的人偶群',
+        'The elevated detritus': '殘骸A',
+        'The sunken detritus': '殘骸B',
+        'The launch deck': '發射甲板',
+        'Core Command': '第二司令室',
+        'The passage': '通道',
+      },
+      'replaceText': {
+        // '(?<=\\(|/)Behind(?=\\))': '', // FIXME '后'
+        'Aerial Support: Bombardment': '航空支援：轟炸',
+        'Aerial Support: Swoop': '航空支援：突擊',
+        'Anti-Personnel Missile': '對人導彈',
+        'Apply Shield Protocol': '啟用防禦程式',
+        'Authorization: No Restrictions': '擴展：解除武裝鎖定',
+        'Centrifugal Slice': '全方位斬機',
+        'Chemical Burn': '化合物爆炸',
+        'Chemical Conflagration': '化合物大爆炸',
+        'Compound Pod: R011': '輔助機融合體：R011',
+        'Compound Pod: R012': '輔助機融合體：R012',
+        'Energy Bombardment': '迫擊能量彈',
+        'Energy Compression': '能量凝縮',
+        'Explosion': '爆炸',
+        'Firing Order: Anti-Personnel Laser': '砲擊命令：對人雷射',
+        'Firing Order: High-Powered Laser': '砲擊命令：高功率雷射',
+        'Firing Order: Surface Laser': '砲擊命令：對地雷射',
+        'Flight Path': '突擊機動',
+        'Forced Transfer': '強制傳送',
+        'Formation: Air Raid': '協作：突襲轟炸',
+        'Formation: Sharp Turn': '協作：迴轉斬擊',
+        'Formation: Sliding Swipe': '協作：衝鋒斬擊',
+        'Four Parts Resolve': '四連斷重擊',
+        '(?<! )High-Powered Laser': '高功率雷射',
+        'Homing Missile Impact': '追尾導彈命中',
+        'Incendiary Barrage': '大型燃燼導彈',
+        'Incongruous Spin': '逆斷震迴旋',
+        'Initiate Self-Destruct': '自爆系統啟動',
+        'Lethal Revolution': '旋回斬擊',
+        'Life\'s Last Song': '終焉之歌',
+        'Lower Laser': '下方雷射',
+        'Maneuver: Area Bombardment': '攻擊：導彈亂射',
+        'Maneuver: Beam Cannons': '攻擊：收束粒子砲',
+        'Maneuver: Collider Cannons': '攻擊：旋回粒子砲',
+        'Maneuver: High-Order Explosive Blast': '攻擊：氣浪效果彈頭',
+        'Maneuver: High-Powered Laser': '攻擊：高功率雷射',
+        'Maneuver: Impact Crusher': '攻擊：穿地潰碎',
+        'Maneuver: Incendiary Bombing': '攻擊：燃燼導彈',
+        'Maneuver: Long-Barreled Laser': '攻擊：長砲雷射',
+        'Maneuver: Martial Arm': '攻擊：格鬥機械臂',
+        'Maneuver: Missile Command': '攻擊：導彈全彈發射',
+        'Maneuver: Precision Guided Missile': '攻擊：高性能誘導導彈',
+        'Maneuver: Refraction Cannons': '攻擊：偏向粒子砲',
+        'Maneuver: Revolving Laser': '攻擊：迴旋雷射',
+        'Maneuver: Saturation Bombing': '攻擊：全方位導彈轟炸',
+        'Maneuver: Unconventional Voltage': '攻擊：集束電壓',
+        'Maneuver: Volt Array': '攻擊：擴散電壓',
+        'Mechanical Contusion': '碎機光擊',
+        'Mechanical Decapitation(?!/)': '斬機光擊',
+        // 'Mechanical Decapitation/Dissection': '', // FIXME '斩机光击/断机光击'
+        'Mechanical Dissection(?!/)': '斷機光擊',
+        // 'Mechanical Dissection/Decapitation': '', // FIXME '断机光击/斩机光击'
+        'Mechanical Laceration': '壓制光擊',
+        'Operation: Access Self-Consciousness Data': '通信：21O自我數據',
+        'Operation: Activate Laser Turret': '通信：雷射砲塔',
+        'Operation: Activate Suppressive Unit': '通信：環狀槍擊裝置',
+        'Operation: Pod Program': '通信：輔助機程式',
+        'Operation: Synthesize Compound': '通信：爆炸性化合物',
+        'Prime Blade': '斬機擊：填充',
+        'R010: Laser': 'R010:雷射',
+        'R011: Laser': 'R011：雷射',
+        'R012: Laser': 'R012：雷射',
+        'R030: Hammer': 'R030:重錘',
+        'Relentless Spiral': '渦狀光線奔湧',
+        'Reproduce': '生成分裂體',
+        '(?<!Formation: )Sharp Turn': '迴轉斬擊',
+        '(?<!Formation: )Sliding Swipe': '衝鋒斬擊',
+        'Support: Pod': '支援：輔助機射出',
+        'Surface Missile Impact': '對地導彈命中',
+        'Three Parts Disdain': '三連衝擊斬',
+        'Upper Laser': '上方雷射',
       },
     },
     {

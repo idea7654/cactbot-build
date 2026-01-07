@@ -44,10 +44,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Water Positions',
-          de: 'Wasser Positionen',
-          fr: 'Positions pour l\'eau',
           ja: 'ポジションへ',
-          cn: '水毒',
           ko: '물 타워',
         },
       },
@@ -61,10 +58,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack In Puddles',
-          de: 'In einer Fläche sammeln',
-          fr: 'Packez-vous dans les Flaques d\'eau',
           ja: '水の輪に集合',
-          cn: '水圈集合',
           ko: '물 타워에서 뭉쳐요',
         },
       },
@@ -83,10 +77,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Middle, Shiva Circles',
-          de: 'In die Mitte, Shiva Kreise',
-          fr: 'Allez au milieu, cercles de Shiva',
           ja: 'シヴァの輪っか',
-          cn: '中间集合, 九连环',
           ko: '시바 얼음 장판',
         },
       },
@@ -113,10 +104,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid Roots',
-          de: 'Ranken vermeiden',
-          fr: 'Évitez les Racines',
           ja: '根っこを避ける',
-          cn: '躲避树根',
           ko: '뿌리 피해요',
         },
       },
@@ -160,18 +148,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         groupAddsEastOnMustardseed: {
           en: 'Group Adds East (on Mustardseed)',
-          de: 'Adds im Osten sammeln (bei Senfsamen)',
-          fr: 'Groupe sur l\'Add Est (Pousse-de-moutarde)',
           ja: '東の雑魚 (マスタードシード)',
-          cn: '东边小怪 (芥子)',
           ko: '동쪽 쫄 나와요 (머스터드 씨앗)',
         },
         killMustardseedEast: {
           en: 'Kill Mustardseed (East)',
-          de: 'Senfsamen angreifen (Osten)',
-          fr: 'Tuez Pousse-de-moutarde (Est)',
           ja: '雑魚マスタードシードを倒す (東)',
-          cn: '击杀芥子 (东)',
           ko: '머스터드 씨앗 잡아요 (동쪽)',
         },
       },
@@ -318,6 +300,43 @@ const triggerSet: TriggerSet<Data> = {
         'Puck\'s Caprice': '帕克的随想',
         'Puck\'s Rebuke': '帕克的指责',
         'Pummel': '殴打',
+        'Uplift': '隆起',
+        'War And Pease': '豌豆大爆炸',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Titania': '緹坦妮雅',
+        'Puck': '派克',
+        'Spirit Of Dew': '水精',
+        'Spirit of Flame': '炎精',
+        'Peaseblossom': '豌豆花',
+        'Mustardseed': '芥子',
+      },
+      'replaceText': {
+        'Being Mortal': '終有一死',
+        'Bright Sabbath': '歡快的安息日',
+        'Divination Rune': '魔之符文',
+        'Flame Hammer': '烈火錘',
+        'Flame Rune': '火之符文',
+        'Frost Rune(?! )': '冰之符文',
+        'Frost Rune Middle': '冰之符文',
+        'Gentle Breeze': '青翠柔風',
+        'Growth Rune': '根之符文',
+        'Hard Swipe': '強烈重擊',
+        'Leafstorm': '綠葉風暴',
+        'Love-In-Idleness': '愛懶花',
+        'Midsummer Night\'s Dream': '仲夏夜之夢',
+        'Mist Rune': '水之符文',
+        // '(?<! )Pease(?!\\w)': '', // FIXME '(?<! )爆炸(?!\\w)'
+        'Peasebomb': '豌豆炸彈',
+        'Phantom Rune': '幻之符文',
+        'Puck\'s Breath': '派克的吐息',
+        'Puck\'s Caprice': '派克的隨想',
+        'Puck\'s Rebuke': '派克的指責',
+        'Pummel': '毆打',
         'Uplift': '隆起',
         'War And Pease': '豌豆大爆炸',
       },

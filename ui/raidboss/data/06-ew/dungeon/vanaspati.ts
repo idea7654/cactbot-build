@@ -27,10 +27,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go To Silent Mouth',
-          de: 'Geh zum geschlossenen Mund',
-          fr: 'Allez sur une bouche silencieuse',
           ja: '閉じた口へ',
-          cn: '找闭着的嘴',
           ko: '닫힌 입 쪽으로',
         },
       },
@@ -87,10 +84,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get In Bubble',
-          de: 'Geh in die Blase',
-          fr: 'Allez dans une bulle',
           ja: '泡に入る',
-          cn: '进泡泡',
           ko: '버블 안으로 들어가요',
         },
       },
@@ -128,10 +122,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go To Opposite Color',
-          de: 'Geh zur andere Farbe',
-          fr: 'Allez sur la couleur opposée',
           ja: '反対の色へ',
-          cn: '去异色地板',
           ko: '반대 색 바닥으로',
         },
       },
@@ -270,7 +261,7 @@ const triggerSet: TriggerSet<Data> = {
       },
       'replaceText': {
         '\\(Knockback\\)': '(击退)',
-        '\\(Spread\\)': '(扩散)',
+        '\\(Spread\\)': '(分散)',
         '--meteor': '--陨石',
         'Aether Siphon': '属性吸收',
         'Aether Spray': '属性放出',
@@ -293,6 +284,45 @@ const triggerSet: TriggerSet<Data> = {
         'Wallow': '呜咽',
         'What Is Left': '污秽的左手',
         'What Is Right': '污秽的右手',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Devatagara': '天神寺',
+        'Insight': '村長屋前',
+        'Svarbhanu': '斯伐婆奴',
+        'Terminus Snatcher': '終末的搶奪',
+        'Terminus Twitcher': '終末的抽搐',
+        'Terminus Wrecker': '終末的破壞',
+        'Trnakiya': '森中空地',
+      },
+      'replaceText': {
+        // '\\(Knockback\\)': '', // FIXME '(击退)'
+        // '\\(Spread\\)': '', // FIXME '(分散)'
+        // '--meteor': '', // FIXME '--陨石'
+        'Aether Siphon': '屬性吸收',
+        'Aether Spray': '屬性放出',
+        'Aetherial Disruption': '地脈失控',
+        'Chaotic Pulse': '地脈活性',
+        'Chaotic Undercurrent': '地脈亂流',
+        'Cosmic Kiss': '轟擊',
+        'Crumbling Sky': '召喚流星',
+        'Flames of Decay': '絕望之炎',
+        'Gnashing of Teeth': '啃咬',
+        'Last Gasp': '哀訴',
+        'Lost Hope': '恍惚的叫聲',
+        'Meaningless Destruction': '絕望中的狂亂',
+        'Mouth Off': '空口白話',
+        'Note of Despair': '絕望的叫聲',
+        'Poison Heart': '毒液塊',
+        'Total Wreck': '極盡破壞',
+        'Unholy Water': '水牢彈',
+        'Vitriol': '言出必行',
+        'Wallow': '嗚咽',
+        'What Is Left': '污穢的左手',
+        'What Is Right': '污穢的右手',
       },
     },
     {

@@ -9,8 +9,6 @@ import { TriggerSet } from '../../../../../types/trigger';
 // TODO: something for Charybdis??
 
 export interface Data extends RaidbossData {
-  prsDefm?: number;
-  //
   decOffset?: number;
   dualityBuster: string[];
   lastDualspellId?: string;
@@ -177,11 +175,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Partners + Donut',
-          de: 'Partner + Donut',
-          fr: 'Partenaires + Donut',
           ja: 'ペア + ドーナツ',
-          cn: '双人分摊 + 月环',
-          ko: '페어, 둘이 함께',
+          ko: '파트너 + 도넛',
         },
       },
     },
@@ -195,11 +190,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Protean + Donut',
-          de: 'Himmelsrichtungen + Donut',
-          fr: 'Positions + Donut',
           ja: '基本散会 + ドーナツ',
-          cn: '八方分散 + 月环',
-          ko: '프로틴, 흩어져요',
+          ko: '8방향 산개 + 도넛',
         },
       },
     },
@@ -218,11 +210,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         fireIceOut: {
           en: 'Out + Partners',
-          de: 'Raus + Partner',
-          fr: 'Extérieur + Partenaires',
           ja: '外側へ + ペア',
-          cn: '远离 + 双人分摊',
-          ko: '밖으로 + 페어',
+          ko: '밖으로 + 파트너',
         },
         out: Outputs.out,
       },
@@ -244,19 +233,13 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         fireIceIn: {
           en: 'In + Partners',
-          de: 'Rein + Partner',
-          fr: 'Intérieur + Partenaires',
           ja: '内側へ + ペア',
-          cn: '靠近 + 双人分摊',
-          ko: '안에서 + 페어',
+          ko: '안으로 + 파트너',
         },
         thunderIceIn: {
           en: 'In + Protean',
-          de: 'Rein + Himmelsrichtungen',
-          fr: 'Intérieur + Positions',
           ja: '内側へ + 基本散会',
-          cn: '靠近 + 八方分散',
-          ko: '안에서 + 프로틴',
+          ko: '안으로 + 8방향 산개',
         },
         in: Outputs.in,
       },
@@ -276,11 +259,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         thunderIceOut: {
           en: 'Out + Protean',
-          de: 'Raus + Himmelsrichtungen',
-          fr: 'Extérieur + Positions',
           ja: '外側へ + 基本散会',
-          cn: '远离 + 八方分散',
-          ko: '밖으로 + 프로틴',
+          ko: '밖으로 + 8방향 산개',
         },
         out: Outputs.out,
       },
@@ -299,10 +279,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Knockback into Wall',
-          de: 'Rückstoß in die Wand',
-          fr: 'Poussée sur un mur',
           ja: 'ノックバック',
-          cn: '向墙边击退',
           ko: '벽으로 넉백',
         },
       },
@@ -311,10 +288,7 @@ const triggerSet: TriggerSet<Data> = {
       id: 'P9S Archaic Demolish',
       type: 'StartsUsing',
       netRegex: { id: '816D', source: 'Kokytos', capture: false },
-      alertText: (_data, _matches, output) => output.healerGroups!(),
-      outputStrings: {
-        healerGroups: Outputs.healerGroups,
-      },
+      response: Responses.healerGroups('alert'),
     },
     {
       // Ball of Levin combatants are added ~0.3 seconds after Kokytos finishes using Levinstrike Summoning
@@ -366,7 +340,6 @@ const triggerSet: TriggerSet<Data> = {
       type: 'StartsUsing',
       netRegex: { id: '817D', source: 'Kokytos', capture: false },
       delaySeconds: 1.5, // allow for orb headmarker data to be collected, and delay so as not to collide with player dash order callout
-      durationSeconds: 10,
       infoText: (data, _matches, output) => {
         let firstOrb8Dir;
         let secondOrb8Dir;
@@ -384,7 +357,6 @@ const triggerSet: TriggerSet<Data> = {
         }
         if (firstOrb8Dir === undefined || secondOrb8Dir === undefined)
           return;
-
         const firstOrb8DirStr = Directions.outputFrom8DirNum(firstOrb8Dir);
         if (firstOrb8DirStr === undefined)
           return;
@@ -401,18 +373,14 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'First Orb ${dir} => ${rotation}',
-          de: 'Erster Orb ${dir} => ${rotation}',
-          fr: 'Premier orbe ${dir} => ${rotation}',
           ja: '1回目の玉 ${dir} => ${rotation}',
-          cn: '第一个球 ${dir} => ${rotation}',
-          ko: '[1] 첫 구슬 ${dir} 🔜 ${rotation}',
+          ko: '첫번째 구슬 ${dir} => ${rotation}',
         },
         clockwise: Outputs.clockwise,
         counterclock: Outputs.counterclockwise,
         ...Directions.outputStrings8Dir,
       },
     },
-    // 아니 내꺼랑 비슷해 졌는데 메시지가 계산이 아니고 스태틱이네
     {
       id: 'P9S Limit Cut 1 Player Number',
       type: 'HeadMarker',
@@ -451,35 +419,36 @@ const triggerSet: TriggerSet<Data> = {
           de: '2: 1. Raus, 3. Turm',
           fr: '2: 1er Saut, 3ème tour',
           cn: '2麻 1火3塔',
-          ko: '[2] 돌진#1 🔜 타워 #3',
+          ko: '2: 1돌진, 3기둥',
+          tc: '2麻 1火3塔',
         },
         4: {
           en: '4: Second dash, last tower',
           de: '4: 2. Raus, 4. Turm',
           fr: '4: 2nd Saut, Dernière tour',
           cn: '4麻 2火4塔',
-          ko: '[4] 돌진#2 🔜 타워#4',
+          ko: '4: 2돌진, 4기둥',
+          tc: '4麻 2火4塔',
         },
         6: {
           en: '6: First tower, third dash',
           de: '6: 1. Turm, 3. Raus',
           fr: '6: 1ère Tour, 3ème Saut',
           cn: '6麻 1塔3火',
-          ko: '[6] 타워#1 🔜 돌진#3',
+          ko: '6: 1기둥, 3돌진',
+          tc: '6麻 1塔3火',
         },
         8: {
           en: '8: Second tower, last dash',
           de: '8: 2. Turm, 4. Raus',
           fr: '8: 2ème Tour, Dernier Saut',
           cn: '8麻 2塔4火',
-          ko: '[8] 타워#2 🔜 돌진#4',
+          ko: '8: 2기둥, 4돌진',
+          tc: '8麻 2塔4火',
         },
         tts: {
-          en: '${num}番',
-          de: '${num}',
-          fr: '${num}',
+          en: '${num}',
           ja: '${num}',
-          cn: '${num}',
           ko: '${num}',
         },
       },
@@ -500,10 +469,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         defamationLater: {
           en: 'Defamation on you (later)',
-          de: 'Ehrenstrafe auf dir (später)',
-          fr: 'Diffamation sur vous (après)',
-          cn: '大圈点名 (稍后放置)',
-          ko: '🔵폭탄',
+          ja: 'Defamation on you (later)',
+          ko: '광역 대상자 (나중에)',
         },
       },
     },
@@ -532,11 +499,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         number: {
           en: '${num}',
-          de: '${num}',
-          fr: '${num}',
           ja: '${num}',
-          cn: '${num}',
-          ko: '${num}번',
+          ko: '${num}',
         },
       },
     },
@@ -562,11 +526,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         defamation: {
           en: 'Defamation on YOU',
-          de: 'Ehrenstrafe aud DIR',
-          fr: 'Diffamation sur VOUS',
           ja: '自分の巨大な爆発',
-          cn: '大圈点名',
-          ko: '내게 🔵폭탄!',
+          ko: '광역징 대상자',
         },
       },
     },
@@ -595,19 +556,13 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         dash: {
           en: 'Bait dash',
-          de: 'Sprung ködern',
-          fr: 'Encaissez le saut',
           ja: '突進誘導',
-          cn: '引导BOSS',
-          ko: '돌진 유도!',
+          ko: '돌진 유도',
         },
         soak: {
           en: 'Soak tower',
-          de: 'Im Turm stehen',
-          fr: 'Prenez votre tour',
           ja: '塔踏み',
-          cn: '踩塔',
-          ko: '타워 밟아요!',
+          ko: '기둥 들어가기',
         },
       },
     },
@@ -639,19 +594,13 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         dash: {
           en: 'Bait dash',
-          de: 'Sprung ködern',
-          fr: 'Encaissez le saut',
           ja: '突進誘導',
-          cn: '引导BOSS',
-          ko: '돌진 유도!',
+          ko: '돌진 유도',
         },
         soak: {
           en: 'Soak tower',
-          de: 'Im Turm stehen',
-          fr: 'Prenez votre tour',
           ja: '塔踏み',
-          cn: '踩塔',
-          ko: '타워 밟아요!',
+          ko: '기둥 들어가기',
         },
       },
     },
@@ -660,19 +609,16 @@ const triggerSet: TriggerSet<Data> = {
       type: 'HeadMarker',
       netRegex: {},
       condition: (data, matches) => {
-        /*
         return data.me === matches.target &&
           getHeadmarkerId(data, matches) === headmarkers.defamation;
-        */
-        return getHeadmarkerId(data, matches) === headmarkers.defamation;
       },
-      infoText: (data, matches, output) => {
-        data.prsDefm = (data.prsDefm ?? 0) + 1;
-        if (data.me === matches.target)
-          return output.defamation!();
-      },
+      alarmText: (_data, _matches, output) => output.defamation!(),
       outputStrings: {
-        defamation: Outputs.defamationOnYou,
+        defamation: {
+          en: 'Defamation on YOU',
+          ja: '自分に巨大な爆発',
+          ko: '광역징 대상자',
+        },
       },
     },
     {
@@ -690,11 +636,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Out => Back',
-          de: 'Raus => Hinten',
-          fr: 'Extérieur => Derrière',
           ja: '外側 => 後ろへ',
-          cn: '远离 => 去背后',
-          ko: '바깥쪽 🔜 뒤로',
+          ko: '밖으로 => 뒤로',
         },
       },
     },
@@ -707,11 +650,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'In => Back',
-          de: 'Rein => Hinten',
-          fr: 'Intérieur => Derrière',
           ja: '内側 => 後ろへ',
-          cn: '靠近 => 去背后',
-          ko: '안쪽 🔜 뒤로',
+          ko: '안으로 => 뒤로',
         },
       },
     },
@@ -724,11 +664,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Out => Front',
-          de: 'Raus => Vorne',
-          fr: 'Extérieur => Devant',
           ja: '外側 => 前へ',
-          cn: '远离 => 去面前',
-          ko: '바깥쪽 🔜 앞으로',
+          ko: '밖으로 => 앞으로',
         },
       },
     },
@@ -741,11 +678,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'In => Front',
-          de: 'Rein => Vorne',
-          fr: 'Intérieur => Devant',
           ja: '内側 => 前へ',
-          cn: '靠近 => 去面前',
-          ko: '안쪽 🔜 앞으로',
+          ko: '안으로 => 앞으로',
         },
       },
     },
@@ -781,35 +715,23 @@ const triggerSet: TriggerSet<Data> = {
         in: Outputs.in,
         outAndFront: {
           en: 'Out + Front',
-          de: 'Raus + Vorne',
-          fr: 'Extérieur + Devant',
           ja: '外側 + 前へ',
-          cn: '远离 => 去面前',
-          ko: '바깥쪽 + 앞으로',
+          ko: '밖으로 + 앞으로',
         },
         outAndBack: {
           en: 'Out + Back',
-          de: 'Raus + Hinten',
-          fr: 'Extérieur + Derrière',
           ja: '外側 + 後ろへ',
-          cn: '远离 => 去背后',
-          ko: '바깥쪽 + 뒤로',
+          ko: '밖으로 + 뒤로',
         },
         inAndFront: {
           en: 'In + Front',
-          de: 'Rein + Vorne',
-          fr: 'Intérieur + Devant',
           ja: '内側 + 前へ',
-          cn: '靠近 => 去面前',
-          ko: '안쪽 + 앞으로',
+          ko: '안으로 + 앞으로',
         },
         inAndBack: {
           en: 'In + Back',
-          de: 'Rein + Hinten',
-          fr: 'Intérieur + Derrière',
           ja: '内側 + 後ろへ',
-          cn: '靠近 => 去背后',
-          ko: '안쪽 + 뒤로',
+          ko: '안으로 + 뒤로',
         },
       },
     },
@@ -827,11 +749,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Charge => Stay',
-          de: 'Sprung => Stehen bleiben',
-          fr: 'Saut => Restez',
           ja: '突進 => 止まれ',
-          cn: '突进 => 停',
-          ko: '푹찍쾅 🔜 그대로! 남쪽 바라보게!',
+          ko: '돌진 => 가만히',
         },
       },
     },
@@ -843,11 +762,8 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Charge => Run Through',
-          de: 'Sprung => Geh durch den Boss',
-          fr: 'Saut => Traversez le boss',
           ja: '突進 => 移動',
-          cn: '突进 => 穿',
-          ko: '푹찍쾅 🔜 가로질러! 북쪽 바라보게!',
+          ko: '돌진 => 가로지르기',
         },
       },
     },
@@ -930,7 +846,6 @@ const triggerSet: TriggerSet<Data> = {
     },
     {
       'locale': 'fr',
-      'missingTranslations': true,
       'replaceSync': {
         'Ball of Levin': 'orbe de foudre',
         'Comet': 'Comète',
@@ -982,7 +897,6 @@ const triggerSet: TriggerSet<Data> = {
     },
     {
       'locale': 'ja',
-      'missingTranslations': true,
       'replaceSync': {
         'Ball of Levin': '雷球',
         'Comet': 'コメット',
@@ -1090,6 +1004,67 @@ const triggerSet: TriggerSet<Data> = {
         'Thunder(?!( |bolt))': '闪雷',
         'Thunderbolt': '霹雳',
         'Two Minds': '附魂双击',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Ball of Levin': '雷球',
+        'Comet': '隕星',
+        'Kokytos(?!\')': '克邱特斯',
+        'Kokytos\'s Echo': '克邱特斯的幻影',
+      },
+      'replaceText': {
+        // '\\(Beast': '', // FIXME '(野兽'
+        // '\\(Chimera': '', // FIXME '(合成体'
+        // '\\(Fighter': '', // FIXME '(武术家'
+        // '\\(Final\\)': '', // FIXME '(最终)'
+        // '\\(Mage': '', // FIXME '(魔法师'
+        // '\\(cast\\)': '', // FIXME '(咏唱)'
+        // '\\(resolve\\)': '', // FIXME '(判定)'
+        // '\\(stacks\\)': '', // FIXME '(分摊)'
+        'Aero IV': '超勁風',
+        'Archaic Demolish': '古式破碎拳',
+        'Archaic Rockbreaker': '古式地烈勁',
+        'Ascendant Fist': '穿升拳',
+        'Beastly Bile': '野獸膽汁',
+        'Beastly Fury': '野獸之怒',
+        'Blizzard III': '大暴雪',
+        'Burst': '飛散',
+        'Charybdis': '大漩渦',
+        'Chimeric Succession': '合成體連擊',
+        'Comet': '隕星',
+        'Disgorge': '吐魂',
+        'Disintegration': '崩毀',
+        'Duality of Death': '雙重死亡',
+        'Dualspell': '雙重詠唱',
+        'Ecliptic Meteor': '黃道隕石',
+        'Fire IV': '超火焰',
+        // 'Fire(?!( |m|s))': '', // FIXME '火炎'
+        'Firemeld': '炎魔衝',
+        'Front Combination': '前方連轉腳',
+        'Front Firestrikes': '前方炎連擊',
+        'Gluttony\'s Augur': '暴食預兆',
+        // 'Ice(?!meld)': '', // FIXME '冰结'
+        'Icemeld': '冰魔衝',
+        'Inside Roundhouse': '內轉腳',
+        'Levinstrike Summoning': '雷電召喚',
+        'Outside Roundhouse': '外轉腳',
+        'Pile Pyre': '烈火樁',
+        'Pyremeld': '重炎擊',
+        'Ravening': '噬魂',
+        'Rear Combination': '後方連轉腳',
+        'Rear Firestrikes': '後方炎連擊',
+        'Scrambled Succession': '混亂連擊',
+        'Shock(?!wave)': '放電',
+        'Shockwave': '衝擊波',
+        'Soul Surge': '靈魂湧動',
+        'Swinging Kick': '旋身擊',
+        'Thunder III': '大雷電',
+        // 'Thunder(?!( |bolt))': '', // FIXME '闪雷'
+        'Thunderbolt': '霹靂',
+        'Two Minds': '附魂雙擊',
       },
     },
     {

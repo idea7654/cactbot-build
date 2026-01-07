@@ -34,10 +34,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Avoid side saws',
-          de: 'Weiche den Sägen an der Seite aus',
-          fr: 'Évitez les scies sur le côté',
           ja: '脇のノコギリを避ける',
-          cn: '躲避场边电锯',
           ko: '옆쪽의 톱날 피해요',
         },
       },
@@ -53,10 +50,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Frost Lasers',
-          de: 'Eislaser',
-          fr: 'Lasers de glace',
           ja: '罠: 氷',
-          cn: '冰晶陷阱',
           ko: '함정: 얼음',
         },
       },
@@ -69,10 +63,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Ceiling Weight',
-          de: 'Gewichte von der Decke',
-          fr: 'Poids du plafond',
           ja: '罠: 鉄球',
-          cn: '铁球陷阱',
           ko: '함정: 철퇴',
         },
       },
@@ -120,18 +111,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         target: {
           en: 'Get away--Laser on YOU',
-          de: 'Geh weg--Laser auf DIR',
-          fr: 'Éloignez-vous - Laser sur VOUS',
           ja: '自分にレーザー - 離れて',
-          cn: '出人群，激光点名',
           ko: '내게 레이저 - 멀리 가요',
         },
         avoid: {
           en: 'Avoid Prey Laser',
-          de: 'Weiche dem Markierungs-Laser aus',
-          fr: 'Évitez le laser',
           ja: 'レーザーを避ける',
-          cn: '躲避激光',
           ko: '레이저 피해요',
         },
       },
@@ -263,6 +248,36 @@ const triggerSet: TriggerSet<Data> = {
         'Single Charge': '单发填充',
         'Steam Roller': '蒸汽滚轮',
         'Trap': '启动陷阱',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Blizzard Arrow': '冰箭發射器',
+        'Buzzsaw': '旋轉鏈鋸',
+        'Goblin of Fortune': '傭兵戰士',
+        'Gobpress R-VI': '6號哥布林壓路機',
+        'Lamebrix Strikebocks': '傭兵雷姆普里克斯',
+        'The Excruciationator': '科學萬能處刑場',
+        'Weight of the World': '大陸之重',
+      },
+      'replaceText': {
+        'Bomb Toss': '投彈',
+        'Critical Wrath': '必中決心',
+        'Frostbite': '寒冰箭',
+        'Gobbieboom': '哥布爆炸',
+        'Goblin Rush': '哥布林衝鋒',
+        'Gobrush Rushgob': '哥布流哥布林衝鋒',
+        'Gobslash Slicetops': '哥布流真空斬',
+        'Gobspin Whooshdrops': '哥布流迴旋斬',
+        'Gobsway Rumblerocks': '哥布流大激震',
+        'Gobswipe Conklops': '哥布流亂斬',
+        'Illuminati Hand Cannon': '青藍手砲',
+        'Impact': '衝擊',
+        'Laceration': '斬擊',
+        'Single Charge': '單發填充',
+        'Steam Roller': '蒸氣滾輪',
+        'Trap': '啟動陷阱',
       },
     },
     {

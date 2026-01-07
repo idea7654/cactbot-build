@@ -13,6 +13,11 @@ const triggerSet: TriggerSet<Data> = {
   zoneId: ZoneId.Lakeland,
   comments: {
     en: 'A Rank Hunts',
+    de: 'A Rang Hohe Jagd',
+    fr: 'Chasse de rang A',
+    cn: 'A级狩猎怪',
+    ko: 'A급 마물',
+    tc: 'A級狩獵怪',
   },
   triggers: [
     {
@@ -41,9 +46,6 @@ const triggerSet: TriggerSet<Data> = {
           stackOnYou: Outputs.stackOnYou,
           avoidStack: {
             en: 'Avoid Stack',
-            de: 'Vermeide Sammeln',
-            fr: 'Évitez le package',
-            cn: '远离分摊',
             ko: '뭉치면 안되요',
           },
         };
@@ -78,10 +80,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'GTFO with marker',
-          de: 'Geh raus mit dem Marker',
-          fr: 'Partez avec le marquage',
           ja: 'ボスから離れる',
-          cn: '快躲开标记',
           ko: '나에게 징 멀리 빠지기',
         },
       },
@@ -95,9 +94,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Away from Dash',
-          de: 'Weg vom Anstrum',
-          fr: 'Éloignez-vous du dash',
-          cn: '躲避冲锋',
+          ja: 'Away from Dash',
           ko: '돌진 피해요',
         },
       },
@@ -111,9 +108,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go Back/Right',
-          de: 'Geh nach Hinten/Rechts',
-          fr: 'Allez à l\'arrière/droite',
-          cn: '去背后/右侧',
+          ja: 'Go Back/Right',
           ko: '뒤/오른쪽으로',
         },
       },
@@ -134,9 +129,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Go Back/Left',
-          de: 'Geh nach Hinten/Links',
-          fr: 'Allez à l\'arrière/gauche',
-          cn: '去背后/左侧',
+          ja: 'Go Back/Left',
           ko: '뒤/왼쪽으로',
         },
       },
@@ -197,6 +190,14 @@ const triggerSet: TriggerSet<Data> = {
         'Nariphon': '纳里蓬',
         'Nuckelavee': '纳克拉维',
         'Tyger': '戾虫',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Nariphon': '納里蓬',
+        'Nuckelavee': '納克拉維',
+        'Tyger': '戾蟲',
       },
     },
     {

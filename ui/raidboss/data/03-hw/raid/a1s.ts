@@ -29,10 +29,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Liftoff Soon',
-          de: 'Bald abheben',
-          fr: 'Décollage bientôt',
           ja: '緊急上昇',
-          cn: '即将上天',
           ko: '긴급 상승',
         },
       },
@@ -60,10 +57,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Hydrothermal on You',
-          de: 'Hydrothermales auf DIR',
-          fr: 'Missile hydrothermique sur Vous',
           ja: '自分に蒸気ミサイル',
-          cn: '导弹点名',
           ko: '증기 미사일 대상자',
         },
       },
@@ -81,10 +75,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Hydrothermal on ${players}',
-          de: 'Hydrothermales auf ${players}',
-          fr: 'Missile hydrothermique sur ${players}',
           ja: '${players}に蒸気ミサイル',
-          cn: '导弹点${players}',
           ko: '"${players}" 증기 미사일',
         },
       },
@@ -104,10 +95,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bait Resin Bomb',
-          de: 'Köder Pechbombe',
-          fr: 'Attirez Bombe de résine',
           ja: '粘着弾',
-          cn: '粘着弹',
           ko: '점착탄',
         },
       },
@@ -264,6 +252,35 @@ const triggerSet: TriggerSet<Data> = {
         'Royal Fount': '皇泉射线',
         'Self-Destruct': '自爆',
         'Sturm Doll': '风暴人偶',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        '3000-Tonze Missile': '超大型導彈',
+        'Faust': '浮士德',
+        'Hangar 8': '第8大型機庫',
+        'Machinery Bay 44': '第44機工兵倉庫',
+        'Oppressor(?! 0)': '壓迫者',
+        'Oppressor 0\\\\.5': '壓迫者零號',
+      },
+      'replaceText': {
+        '3000-Tonze Missile': '超大型導彈',
+        'Distress Beacon': '請求救援',
+        'Emergency Deployment': '緊急出擊',
+        'Emergency Liftoff': '緊急上升',
+        'Gunnery Pod': '砲臺散射',
+        'Hydrothermal Missile': '蒸氣導彈',
+        'Hypercompressed Plasma': '超壓縮等離子',
+        'Kaltstrahl': '寒光',
+        'Missile Impact': '導彈攻擊',
+        'Photon Spaser': '光子照射',
+        'Pressure Increase': '蒸氣壓上升',
+        'Quick Landing': '落地',
+        'Resin Bomb': '黏著彈',
+        'Royal Fount': '皇泉射線',
+        'Self-Destruct': '自爆',
+        'Sturm Doll': '風暴人偶',
       },
     },
     {

@@ -22,10 +22,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         startMiddle: {
           en: 'Start Middle',
-          de: 'Starte mittig',
-          fr: 'Commencez au milieu',
           ja: '中央から',
-          cn: '从中间开始',
           ko: '한가운데부터',
         },
       },
@@ -40,10 +37,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         outOfMiddle: {
           en: 'Out Of Middle Soon',
-          de: 'Bald raus aus der Mitte',
-          fr: 'Sortez du milieu bientôt',
           ja: '中央から離れて',
-          cn: '远离中间',
           ko: '곧 바깥으로',
         },
       },
@@ -72,10 +66,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stand on Darkened Fire',
-          de: 'Auf einer Schwarzen Lohe stehen',
-          fr: 'Placez-vous sur une flamme sombre',
           ja: '黒い炎の上へ',
-          cn: '站在黑色火焰',
           ko: '검은 불꽃 위로',
         },
       },
@@ -103,10 +94,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         avoidCharge: {
           en: 'Avoid Charge',
-          de: 'Charge ausweichen',
-          fr: 'Évitez les charges',
           ja: '突進避けて',
-          cn: '躲避冲锋',
           ko: '돌진 피해요',
         },
       },
@@ -124,10 +112,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         tank: {
           en: 'Pull add circles apart',
-          de: 'Zieh die Kreise der Adds auseinander',
-          fr: 'Attaquez les adds séparément',
           ja: '雑魚を離れさせる',
-          cn: '拉开小怪',
           ko: '동그라미 안겹치게 떨어져요',
         },
         text: Outputs.killAdds,
@@ -194,10 +179,7 @@ const triggerSet: TriggerSet<Data> = {
         s: Outputs.south,
         combo: {
           en: '${first} => ${second}',
-          de: '${first} => ${second}',
-          fr: '${first} => ${second}',
           ja: '${first} => ${second}',
-          cn: '${first} => ${second}',
           ko: '${first} 🔜 ${second}',
         },
       },
@@ -212,10 +194,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Split Intercardinals',
-          de: 'Interkardinal aufteilen',
-          fr: 'Dispersez-vous en intercardinal',
           ja: 'フィールド十字分断',
-          cn: '分割场地',
           ko: '비스듬하게 흩어져요',
         },
       },
@@ -355,6 +334,38 @@ const triggerSet: TriggerSet<Data> = {
         'Scorched Exaltation': '灰烬火焰',
         'Searing Breeze': '热喷射',
         'Trail of Condemnation': '狱炎之焰',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Phoinix': '菲尼克斯',
+        'Sparkfledged': '火靈鳥',
+        'Sunbird': '陽炎鳥',
+      },
+      'replaceText': {
+        '--fire expands--': '十字地火',
+        // '--giant fireplume\\?--': '', // FIXME '--巨大火柱?--'
+        'Ashen Eye': '暗之瞳',
+        'Blazing Rain': '炎之雨',
+        'Brightened Fire': '光之炎',
+        '(?<!\\w )Charplume': '暗之劫火焚天',
+        'Darkened Fire': '暗之炎',
+        'Dead Rebirth': '黑暗不死鳥',
+        'Devouring Brand': '十字地火',
+        'Experimental Charplume': '魔力煉成：暗之劫火焚天',
+        'Experimental Fireplume': '魔力煉成：劫火焚天',
+        'Flames of Undeath': '返魂之炎',
+        'Flare of Condemnation': '獄炎火擊',
+        'Fledgling Flight': '群鳥飛翔',
+        'Heat of Condemnation': '獄炎炎擊',
+        'Joint Pyre': '共燃',
+        'Left Cinderwing': '左翼焚燒',
+        'Right Cinderwing': '右翼焚燒',
+        'Scorched Exaltation': '灰燼火焰',
+        'Searing Breeze': '熱噴射',
+        'Trail of Condemnation': '獄炎之焰',
       },
     },
     {

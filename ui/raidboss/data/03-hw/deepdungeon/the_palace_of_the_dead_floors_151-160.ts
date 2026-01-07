@@ -44,10 +44,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stop attacking ${target}',
-          de: 'Stoppe Angriffe auf ${target}',
-          fr: 'N\'attaquez plus ${target}',
           ja: '${target} への攻撃を止めて',
-          cn: '停止攻击 ${target}',
           ko: '${target} 공격 중지',
         },
       },
@@ -63,10 +60,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Knockback into Safe Spot',
-          de: 'Rückstoß zur sicheren Stelle',
-          fr: 'Faites-vous pousser dans une zone sûre',
           ja: '安地へ飛ばされる',
-          cn: '击退到安全区',
           ko: '안전지대로 넉백되기',
         },
       },
@@ -107,6 +101,15 @@ const triggerSet: TriggerSet<Data> = {
         'Deep Palace Devilet': '深宫小恶魔',
         'Deep Palace Pot': '深宫魔力罐',
         'Todesritter': '非生骑士',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Deep Palace Deepeye': '深宮深瞳',
+        'Deep Palace Devilet': '深宮小惡魔',
+        'Deep Palace Pot': '深宮魔力罐',
+        'Todesritter': '非生騎士',
       },
     },
     {

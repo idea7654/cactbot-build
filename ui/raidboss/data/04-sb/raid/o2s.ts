@@ -27,10 +27,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'DPS: Levitate',
-          de: 'DDs hoch',
-          fr: 'DPS : Lévitation',
           ja: 'DPS: 浮上',
-          cn: 'DPS浮空',
           ko: '딜러: 공중부양',
         },
       },
@@ -88,16 +85,10 @@ const triggerSet: TriggerSet<Data> = {
         output.responseOutputStrings = {
           onYou: {
             en: '100Gs on YOU',
-            de: '100Gs auf DIR',
-            fr: 'Gravité 100 sur VOUS',
-            cn: '重力100点名',
             ko: '중력 100 대상자',
           },
           beIn: {
             en: 'Be in 100Gs Circle',
-            de: 'Sei in einem 100Gs Kreis',
-            fr: 'Placez-vous dans le centre de gravité 100',
-            cn: '站在重力100圈内',
             ko: '중력 100 원 안에 있기',
           },
         };
@@ -119,10 +110,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '-100 Gs: Go north/south and look away',
-          de: '-100G: Nach Norden/Süden und wegschauen',
-          fr: 'Gravité -100 : Allez au nord/sud et détournez le regard',
           ja: '-100 G: 北/南へ、ボスを見ないで',
-          cn: '前往南边/北边并背对boss',
           ko: '중력 마이너스 100: 남/북쪽에서 바깥쪽 보기',
         },
       },
@@ -152,26 +140,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         earthquake: {
           en: 'Earthquake',
-          de: 'Erdbeben',
-          fr: 'Grand séisme',
           ja: '地震',
-          cn: '地震',
           ko: '대지진',
         },
         earthquakeLevitate: {
           en: 'Earthquake: Levitate',
-          de: 'Erdbeben: Schweben',
-          fr: 'Grand séisme : Lévitation',
           ja: '地震: 浮上',
-          cn: '地震：漂浮',
           ko: '대지진: 공중부양',
         },
         levitate: {
           en: 'levitate',
-          de: 'schweben',
-          fr: 'Lévitation',
           ja: '浮上',
-          cn: '漂浮',
           ko: '공중부양',
         },
       },
@@ -193,26 +172,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         dpsUpTanksHealersDown: {
           en: 'DPS up, T/H down',
-          de: 'DDs hoch, T/H runter',
-          fr: 'DPS en haut, T/H en bas',
           ja: 'DPS浮上 タンクヒラ降下',
-          cn: 'DPS升起，T奶下降',
           ko: '딜러 공중부양, 탱힐 강하',
         },
         dpsLevitate: {
           en: 'DPS: Levitate',
-          de: 'DDs: Schweben',
-          fr: 'DPS : Lévitation',
           ja: 'DPS: 浮上',
-          cn: 'DPS浮空',
           ko: '딜러: 공중부양',
         },
         dpsUp: {
           en: 'dps up',
-          de: 'dee dees hoch',
-          fr: 'DPS en haut',
           ja: 'DPS浮上',
-          cn: 'DPS升起',
           ko: '딜러 공중부양',
         },
       },
@@ -253,34 +223,22 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         maniacalProbeTanksHealers: {
           en: 'Maniacal Probe: Tanks & Healers',
-          de: 'Tentakeltanz: Tanks & Heiler',
-          fr: 'Farandole de tentacules : Tank et Heals',
           ja: '触手乱舞: タンク/ヒーラー',
-          cn: 'T奶触手',
           ko: '촉수 난무: 탱/힐',
         },
         maniacalProbeDps: {
           en: 'Maniacal Probe: DPS',
-          de: 'Tentakeltanz: DDs',
-          fr: 'Farandole de tentacules : DPS',
           ja: '触手乱舞: DPS',
-          cn: 'DPS触手',
           ko: '촉수 난무: 딜러',
         },
         dpsProbe: {
           en: 'dps probe',
-          de: 'dee dees tentakel',
-          fr: 'DPS tentacules',
           ja: 'dpsに触手乱舞',
-          cn: 'dps触手',
           ko: '딜러 촉수 난무',
         },
         tankHealProbe: {
           en: 'tank heal probe',
-          de: 'tenks heiler tentakel',
-          fr: 'Tank/Heal tentacules',
           ja: 'タンクヒラに触手乱舞',
-          cn: 'T奶触手',
           ko: '탱힐 촉수난무',
         },
       },
@@ -294,9 +252,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Probe on YOU',
-          de: 'Sonde auf DIR',
-          fr: 'Sonde sur VOUS',
-          cn: '触手点名',
+          ja: 'Probe on YOU',
           ko: '촉수 대상자',
         },
       },
@@ -310,9 +266,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Elevate (Unstable Gravity)',
-          de: 'Sei erhöht (Schwerkraftschwankung)',
-          fr: 'Élévation (Gravité instable)',
-          cn: '悬浮 (重力爆发)',
+          ja: 'Elevate (Unstable Gravity)',
           ko: '공중부양하기 (중력 폭발)',
         },
       },
@@ -327,9 +281,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Knocked to Edge',
-          de: 'Zur Kante zurückstoßen lassen',
-          fr: 'Faites-vous pousser au bord',
-          cn: '击退到场边',
+          ja: 'Get Knocked to Edge',
           ko: '가장자리로 넉백되기',
         },
       },
@@ -353,26 +305,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         sixFulmsUnder: {
           en: '6 Fulms Under',
-          de: 'Versinkend',
-          fr: 'Enfoncement',
           ja: '沈下',
-          cn: '下陷',
           ko: '하강',
         },
         sixFulmsUnderLevitate: {
           en: '6 Fulms Under: Levitate',
-          de: 'Versinkend: Schweben',
-          fr: 'Enfoncement : Lévitation',
           ja: '沈下: 浮上',
-          cn: '下陷：悬浮',
           ko: '하강: 공중부양',
         },
         float: {
           en: 'float',
-          de: 'schweben',
-          fr: 'Flottez',
           ja: '浮上',
-          cn: '悬浮',
           ko: '공중부양',
         },
       },
@@ -507,6 +450,37 @@ const triggerSet: TriggerSet<Data> = {
         'Main Quake': '主震',
         'Maniacal Probe': '触手乱舞',
         'Gravitational Collapse': '重力崩坏',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Catastrophe': '災變者',
+        'Fleshy Member': '觸手',
+      },
+      'replaceText': {
+        '\\(T/H\\)': '(坦/補)',
+        '-100 Gs': '重力-100',
+        '(?<!-)100 Gs': '重力100',
+        'Antilight': '暗黑光',
+        'Death\'s Gaze': '死神之瞳',
+        'Double Stack': '二連分攤',
+        'Earthquake': '大地震',
+        'Epicenter': '震源製造',
+        'Evilsphere': '邪球',
+        'Gravitational Distortion': '重力扭曲',
+        'Gravitational Wave': '重力波',
+        'Long Drop': '自由落體',
+        'Paranormal Wave': '詛咒波',
+        'Probes': '引導',
+        'Unstable Gravity': '重力爆發',
+        'Tremblor': '地震',
+        'Gravitational Manipulation': '重力操縱',
+        'Gravitational Explosion': '重力爆發',
+        'Erosion': '侵入',
+        'Main Quake': '主震',
+        'Maniacal Probe': '觸手亂舞',
+        'Gravitational Collapse': '重力崩壞',
       },
     },
     {

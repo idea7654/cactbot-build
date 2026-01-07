@@ -58,18 +58,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         inOutThenWaterPositions: {
           en: 'In/Out, then Water Positions',
-          de: 'Rein/Raus, danach Wasser Positionen',
-          fr: 'Intérieur/Extérieur, puis positions pour l\'eau',
           ja: '中/外避けてポジションへ',
-          cn: '靠近/远离, 水圈站位',
           ko: '안밖 🔜 물 타워로',
         },
         waterPositions: {
           en: 'Water Positions',
-          de: 'Wasser Positionen',
-          fr: 'Positions pour l\'eau',
           ja: 'ポジションへ',
-          cn: '水圈站位',
           ko: '물 타워',
         },
       },
@@ -90,18 +84,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         stackMaybeRotate: {
           en: 'Stack (maybe rotate?)',
-          de: 'Sammeln (evtl rotieren?)',
-          fr: 'Packez-vous (rotation ?)',
           ja: '集合 (多分時計回り?)',
-          cn: '左右集合 (可能旋转?)',
           ko: '뭉쳐요 (아마 돌아야하나?)',
         },
         stackPositions: {
           en: 'Stack Positions',
-          de: 'Sammel-Positionen',
-          fr: 'Packez-vous, positions',
           ja: '頭割り集合',
-          cn: '左右集合',
           ko: '뭉쳐요',
         },
       },
@@ -120,10 +108,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Wait For Tethers In Center',
-          de: 'Auf die Verbindung in der Mitte warten',
-          fr: 'Attendez les liens au centre',
           ja: '中央で待機',
-          cn: '中间集合等待荆棘',
           ko: '한가운데서 줄 기다려요',
         },
       },
@@ -139,8 +124,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         breakTether: {
           en: 'Break Tether (w/${player})',
-          de: 'Verbindungen brechen (mit ${player})',
-          cn: '拉断连线 (与${player})',
+          ja: 'Break Tether (w/${player})',
           ko: '줄 끊어요 (${player})',
         },
       },
@@ -153,10 +137,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Diagonal Knockback Soon',
-          de: 'diagonaler Knockback bald',
-          fr: 'Poussée en diagonale bientôt',
           ja: '対角に飛ぶ',
-          cn: '对角击退准备',
           ko: '곧 비스듬히 넉백',
         },
       },
@@ -182,10 +163,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Middle, Shiva Circles',
-          de: 'In die Mitte, Shiva Kreise',
-          fr: 'Allez au milieu, cercles de Shiva',
           ja: 'シヴァの輪っか',
-          cn: '中间集合, 九连环',
           ko: '시바 얼음 장판',
         },
       },
@@ -212,10 +190,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Roots',
-          de: 'Ranken',
-          fr: 'Racines',
           ja: '根のルーン',
-          cn: '根系生长',
           ko: '뿌리 나와요',
         },
       },
@@ -247,10 +222,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Pummel ${num}',
-          de: 'Deftige Dachtel ${num}',
-          fr: 'Torgnole ${num}',
           ja: '殴打 ${num}',
-          cn: '殴打 ${num}',
           ko: '구타 ${num}',
         },
       },
@@ -300,10 +272,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Initial Thunder Tether',
-          de: 'initiale Blitz Verbindung',
-          fr: 'Lien de foudre initial',
           ja: '線一人目',
-          cn: '初始雷连线',
           ko: '내게 첫 번개',
         },
       },
@@ -318,10 +287,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Thunder ${num}',
-          de: 'Blitz ${num}',
-          fr: 'Foudre ${num}',
           ja: '線${num}人目',
-          cn: '雷连线 #${num}',
           ko: '${num}번째 번개',
         },
       },
@@ -505,6 +471,49 @@ const triggerSet: TriggerSet<Data> = {
         'Chain Of Brambles': '荆棘链',
         'Bright Sabbath': '欢快的安息日',
         'Being Mortal': '终有一死',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Spirit Of Dew': '水精',
+        'Spirit of Flame': '炎精',
+        'Spirit of Wood': '木精',
+        'Titania': '緹坦妮雅',
+        'Puck': '派克',
+        'Peaseblossom': '豌豆花',
+        'Mustardseed': '芥子',
+      },
+      'replaceText': {
+        'Whispering Wind': '細語微風',
+        'War And Pease': '豌豆大爆炸',
+        'Wallop': '打擊',
+        'Uplift': '隆起',
+        'Thunder Rune': '雷之符文',
+        'Pummel': '毆打',
+        'Puck\'s Rebuke': '派克的指責',
+        'Puck\'s Caprice': '派克的隨想',
+        'Puck\'s Breath': '派克的吐息',
+        'Phantom Rune In': '幻之符文',
+        'Phantom Rune Out': '幻之符文',
+        'Phantom Rune(?! )': '幻之符文',
+        'Peasebomb': '豌豆炸彈',
+        '(?<! )Pease(?!\\w)': '豌豆爆炸',
+        'Mist Rune': '水之符文',
+        'Midsummer Night\'s Dream': '仲夏夜之夢',
+        'Love-In-Idleness': '愛懶花',
+        'Leafstorm': '綠葉風暴',
+        'Hard Swipe': '強烈重擊',
+        'Growth Rune': '根之符文',
+        'Gentle Breeze': '青翠柔風',
+        'Frost Rune': '冰之符文',
+        'Flame Rune': '火之符文',
+        'Flame Hammer': '烈火錘',
+        'Fae Light': '妖精光',
+        'Divination Rune': '魔之符文',
+        'Chain Of Brambles': '荊棘鏈',
+        'Bright Sabbath': '歡快的安息日',
+        'Being Mortal': '終有一死',
       },
     },
     {

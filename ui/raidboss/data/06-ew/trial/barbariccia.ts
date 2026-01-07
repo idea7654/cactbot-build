@@ -52,10 +52,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Out and Away',
-          de: 'Raus und Weg',
-          fr: 'Extérieur et loin',
           ja: '外へ',
-          cn: '外侧远离',
           ko: '밖으로 멀리',
         },
       },
@@ -68,10 +65,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Wall',
-          de: 'Wand',
-          fr: 'Mur',
           ja: '壁へ',
-          cn: '去场边',
           ko: '벽으로',
         },
       },
@@ -133,10 +127,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         flareOnYou: {
           en: 'Flare on YOU',
-          de: 'Flare auf DIR',
-          fr: 'Brasier sur VOUS',
           ja: '自分にフレア',
-          cn: '核爆点名',
           ko: '내게 플레어',
         },
       },
@@ -300,6 +291,40 @@ const triggerSet: TriggerSet<Data> = {
         'Void Aero IV': '虚空飙风',
         'Voidstrom': '虚无风暴',
         'Winding Gale': '追命狂风',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Barbariccia': '巴爾巴莉希亞',
+        'Voidwalker': '虛無行者',
+      },
+      'replaceText': {
+        'Blow Away': '重拳激震',
+        'Bold Boulder': '巨岩礫',
+        'Boulder Break': '礫岩碎',
+        'Brush with Death': '咒髮操控',
+        'Brutal Rush': '殘暴衝鋒',
+        'Catabasis': '落獄煞',
+        'Curling Iron': '咒髮武裝',
+        'Deadly Twist': '咒髮刺',
+        'Dry Blows': '拳震',
+        'Fetters': '拘束',
+        'Hair Raid': '咒髮突襲',
+        'Hair Spray': '咒髮針',
+        'Impact': '衝擊',
+        'Knuckle Drum': '怒拳連震',
+        'Savage Barbery': '野蠻剃',
+        'Secret Breeze': '隱秘之風',
+        'Teasing Tangles': '咒髮拘束',
+        'Tornado Chain': '龍捲連風',
+        'Touchdown': '空降',
+        'Trample': '踩踏',
+        'Void Aero(?! )': '虛空勁風',
+        'Void Aero III': '虛空大勁風',
+        'Void Aero IV': '虛空超勁風',
+        'Voidstrom': '虛無風暴',
+        'Winding Gale': '追命狂風',
       },
     },
     {

@@ -23,10 +23,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Tank Tether',
-          de: 'Tank Verbindung',
-          fr: 'Lien tank',
           ja: 'タンク 線を取る',
-          cn: '坦克接线远离人群',
           ko: '탱크가 줄 채요',
         },
       },
@@ -90,18 +87,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         moveLeft: {
           en: 'Move (Left)',
-          de: 'Bewegen (Links)',
-          fr: 'Bougez (À gauche)',
           ja: '動け (左へ)',
-          cn: '去左边',
           ko: '왼쪽으로',
         },
         stayLeft: {
           en: 'Stay (Left)',
-          de: 'Stehenbleiben (Links)',
-          fr: 'Restez (À gauche)',
           ja: 'そのまま (左に)',
-          cn: '呆在左边',
           ko: '왼쪽에 그대로',
         },
       },
@@ -120,18 +111,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         stayRight: {
           en: 'Stay (Right)',
-          de: 'Stehenbleiben (Rechts)',
-          fr: 'Restez (À droite)',
           ja: 'そのまま (右に)',
-          cn: '呆在右边',
           ko: '오른쪽에 그대로',
         },
         moveRight: {
           en: 'Move (Right)',
-          de: 'Bewegen (Rechts)',
-          fr: 'Bougez (À droite)',
           ja: '動け (右へ)',
-          cn: '去右边',
           ko: '오른쪽으로',
         },
       },
@@ -145,9 +130,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Drop Fire Outside',
-          de: 'Feuer draußen ablegen',
-          fr: 'Déposez le feu à l\'extérieur',
-          cn: '把火放在外面',
+          ja: 'Drop Fire Outside',
           ko: '바깥에 불 버려요',
         },
       },
@@ -167,9 +150,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Use duty action on Conductive Focus',
-          de: 'Benutze Spezialkommando auf "Ziel des Blitzstrahls"',
-          fr: 'Utilisez l\'action spéciale sur le Point de convergence électrique',
-          cn: '在雷力投射点上使用任务指令',
+          ja: 'Use duty action on Conductive Focus',
           ko: '듀티 액션 연타',
         },
       },
@@ -288,6 +269,34 @@ const triggerSet: TriggerSet<Data> = {
         'Reset': '初始化',
         'Rush': '突进',
         'Starboard/Larboard Cannon': '右/左舷齐射·波动炮',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Engaging Delta Attack protocol': '認定有必要使用三角攻擊。',
+        'Level Checker': '等級檢測儀',
+        'Omega': '歐米茄',
+        'Program failure detected': '確認到循環程式·阿爾法啟動失敗……',
+        'Rocket Punch': '火箭拳擊',
+      },
+      'replaceText': {
+        'Atomic Ray': '原子射線',
+        'Ballistic Impact': '導彈命中',
+        'Ballistic Missile': '導彈發射',
+        'Blaster': '衝擊波',
+        'Delta Attack': '三角攻擊',
+        'Electric Slide': '歐米茄滑躍',
+        'Executable': '執行程式',
+        'Flamethrower': '火炎放射',
+        'Force Quit': '強制結束',
+        'Mustard Bomb': '芥末炸彈',
+        'Peripheral Synthesis': '生成外設',
+        'Program Loop': '循環程式',
+        'Reformat': '最佳化',
+        'Reset': '初始化',
+        'Rush': '突進',
+        'Starboard/Larboard Cannon': '右/左舷齊射·波動砲',
       },
     },
     {

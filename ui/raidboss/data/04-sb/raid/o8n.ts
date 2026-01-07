@@ -45,10 +45,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Look At Statue',
-          de: 'Statue anschauen',
-          fr: 'Regardez la statue',
           ja: '神々の像を見て',
-          cn: '面对神像',
           ko: '북쪽 봐요 (조각 봐요)',
         },
       },
@@ -61,10 +58,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Look Away From Statue',
-          de: 'Von Statue wegschauen',
-          fr: 'Ne regardez pas la statue',
           ja: '神々の像を見ない',
-          cn: '背对神像',
           ko: '남쪽 봐요 (조각 보면 안되요)',
         },
       },
@@ -77,9 +71,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Get Outside Destination',
-          de: 'Geh aus dem Zielkreis raus',
-          fr: 'Allez à côté du cercle extérieur',
-          cn: '去传送目的地的外圈',
+          ja: 'Get Outside Destination',
           ko: '텔레포트 위치 바깥쪽으로',
         },
       },
@@ -99,10 +91,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'fire on YOU',
-          de: 'Feuer auf DIR',
-          fr: 'Feu sur VOUS',
           ja: '自分にファイガ',
-          cn: '火点名',
           ko: '내게 파이가',
         },
       },
@@ -122,10 +111,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'True Thunder',
-          de: 'Wahrer Blitz',
-          fr: 'Vraie foudre',
           ja: '真サンダガ',
-          cn: '真雷',
           ko: '진짜 선더',
         },
       },
@@ -139,10 +125,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Fake Thunder',
-          de: 'Falscher Blitz',
-          fr: 'Fausse foudre',
           ja: '偽サンダガ',
-          cn: '假雷',
           ko: '가짜 선더가',
         },
       },
@@ -156,10 +139,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Fake Ice: Get out',
-          de: 'Falsches Eis: Rausgehen',
-          fr: 'Fausse glace : Sortez',
           ja: '偽ブリザガ: 外へ',
-          cn: '假冰：远离',
           ko: '가짜 블리자가: 밖으로',
         },
       },
@@ -173,10 +153,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'True Ice: Get in',
-          de: 'Wahre Eis: Reingehen',
-          fr: 'Vraie glace : À l\'intérieur',
           ja: '真ブリザガ: 入る',
-          cn: '真冰：靠近',
           ko: '진실 블리자가: 안으로',
         },
       },
@@ -190,10 +167,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Fake Ice: Get in',
-          de: 'Falsches Eis: Reingehen',
-          fr: 'Fausse glace: À l\'intérieur',
           ja: '偽ブリザガ: 入る',
-          cn: '假冰：靠近',
           ko: '가짜 블리자가: 안으로',
         },
       },
@@ -207,10 +181,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'True Ice: Get out',
-          de: 'Wahres Eis: Rausgehen',
-          fr: 'Vraie glace: Sortez',
           ja: '真ブリザガ: 外へ',
-          cn: '真冰：远离',
           ko: '진짜 블리자가: 밖으로',
         },
       },
@@ -316,6 +287,29 @@ const triggerSet: TriggerSet<Data> = {
         'Timely Teleport': '跳蹦蹦传送',
         'Ultima Upsurge': '扑腾腾究极',
         'Wave Cannon': '波动炮',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Destroy! Destroy! Destroy! I will destroy it all!': '我要破壞一切！破壞！破壞！破壞！',
+        'Graven Image': '眾神之像',
+        'Kefka': '凱夫卡',
+      },
+      'replaceText': {
+        'Aero Assault': '疼颼颼大勁風',
+        'Aero/Ruin': '勁風/毀滅',
+        'Blizzard Blitz': '滴溜溜大暴雪',
+        'Flagrant Fire': '呼啦啦大火焰',
+        'Graven Image': '眾神之像',
+        'Half Arena': '撲殺的神氣',
+        'Hyperdrive': '超驅動',
+        'Shockwave': '衝擊波',
+        'Statue Gaze': '懶惰的神氣',
+        'Thrumming Thunder': '劈啪啪大雷電',
+        'Timely Teleport': '跳蹦蹦傳送',
+        'Ultima Upsurge': '撲騰騰究極',
+        'Wave Cannon': '波動砲',
       },
     },
     {

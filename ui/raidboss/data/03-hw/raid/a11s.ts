@@ -47,10 +47,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Clock',
-          de: 'Uhr',
-          fr: 'Sens horaire',
           ja: '照準 (時針回り)',
-          cn: '九连环',
           ko: '시계방향',
         },
       },
@@ -69,10 +66,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bait Optical Sight',
-          de: 'Köder Visier',
-          fr: 'Attirez la Visée optique',
           ja: '照準AoEを誘導',
-          cn: '诱导AOE',
           ko: '유도 장판',
         },
       },
@@ -104,10 +98,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Kill Add',
-          de: 'Add besiegen',
-          fr: 'Tuez l\'Add',
           ja: 'イーディーディーを倒す',
-          cn: '击杀小怪',
           ko: '쫄 없애기',
         },
       },
@@ -120,10 +111,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Break Pauldron',
-          de: 'Schulterplatte zerstören',
-          fr: 'Brisez la Protection',
           ja: 'アーマーを破壊する',
-          cn: '击破护盾',
           ko: '견갑부 부수기',
         },
       },
@@ -147,18 +135,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         gaOn: {
           en: 'GA-100 on ${player}',
-          de: 'GA-100 on ${player}',
-          fr: 'GA-100 sur ${player}',
           ja: '${player}にGA-100',
-          cn: 'GA-100点${player}',
           ko: '"${player}" GA-100',
         },
         gaOnYou: {
           en: 'GA-100 on YOU',
-          de: 'GA-100 auf DIR',
-          fr: 'GA-100 sur VOUS',
           ja: '自分にGA-100',
-          cn: 'GA-100点名',
           ko: 'GA-100 대상자',
         },
       },
@@ -212,10 +194,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: '${num}',
-          de: '${num}',
-          fr: '${num}',
           ja: '${num}',
-          cn: '${num}',
           ko: '${num}',
         },
       },
@@ -246,26 +225,17 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         knockbackCleave: {
           en: 'Knockback Cleave; Face Outside',
-          de: 'Rückstoß Cleave; nach Außen schauen',
-          fr: 'Poussée Cleave; Regardez vers l\'extérieur',
           ja: 'ノックバック ソード; 外を向く',
-          cn: '击退顺劈; 面向外侧',
           ko: '넉백 소드; 바깥쪽 바라보기',
         },
         knockbackCharge: {
           en: 'Knockback Charge',
-          de: 'Rückstoß Charge',
-          fr: 'Poussée Charge',
           ja: 'ノックバック チャージ',
-          cn: '击退冲锋',
           ko: '넉백 차지',
         },
         facePlayer: {
           en: 'Face ${player}',
-          de: 'Schaue zu ${player}',
-          fr: 'Regardez ${player}',
           ja: '${player} に向かう',
-          cn: '面向${player}',
           ko: '"${player}" 바라보기',
         },
       },
@@ -295,18 +265,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         sharedTankbusterOnYou: {
           en: 'Shared Tankbuster on YOU',
-          de: 'Geteilter Tankbuster auf DIR',
-          fr: 'Tank buster à partager sur VOUS',
           ja: '自分に頭割りタンクバスター',
-          cn: '分摊死刑点名',
           ko: '쉐어 탱버 대상자',
         },
         sharedTankbusterOn: {
           en: 'Shared Tankbuster on ${player}',
-          de: 'Geteilter Tankbuster auf ${player}',
-          fr: 'Tank buster à partager sur ${player}',
           ja: '${player}に頭割りタンクバスター',
-          cn: '分摊死刑点${player}',
           ko: '"${player}" 쉐어 탱버',
         },
       },
@@ -319,10 +283,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Hide Behind Tower',
-          de: 'Hinter dem Tower verstecken',
-          fr: 'Cachez-vous derrière la tour',
           ja: '塔の後ろに',
-          cn: '躲在塔后',
           ko: '타워 뒤에 숨기',
         },
       },
@@ -335,10 +296,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Break Shield From Front',
-          de: 'Schild von vorne zerstören',
-          fr: 'Brisez le Bouclier par l\'avant',
           ja: 'シールドを正面から破壊する',
-          cn: '正面击破护盾',
           ko: '정면에서 방어막 부수기',
         },
       },
@@ -369,18 +327,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         chargeOn: {
           en: 'Charge on ${player}',
-          de: 'Ansturm auf ${player}',
-          fr: 'Charge sur ${player}',
           ja: '${player}にチャージ',
-          cn: '冲锋点${player}',
           ko: '"${player}" 돌진',
         },
         chargeOnYou: {
           en: 'Charge on YOU',
-          de: 'Ansturm auf DIR',
-          fr: 'Charge sur VOUS',
           ja: '自分にチャージ',
-          cn: '冲锋点名',
           ko: '내게 돌진',
         },
       },
@@ -589,6 +541,56 @@ const triggerSet: TriggerSet<Data> = {
         'Super Hawk Blaster': '超级鹰式破坏炮',
         'Transform': '变形',
         'Whirlwind': '龙卷风',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Armored Pauldron': '肩部裝甲',
+        'Claster': '艦載浮游砲',
+        'Cruise Chaser': '巡航驅逐者',
+        'E\\\\.D\\\\.D\\\\.': '護航機甲',
+        'Multifield': '層積科學結界',
+        'Plasma Shield': '等離子護盾',
+        'The Main Generators': '中樞大動力室',
+      },
+      'replaceText': {
+        '(?<! )Sword': '劍 ',
+        '(?<!Super )Hawk Blaster': '鷹式破壞砲',
+        '--invincible--': '--無敵--',
+        '\\(bait\\)': '(誘導)',
+        '\\(clock/out\\)': '(順時針/外)',
+        '\\(everyone\\)': '(全員)',
+        '\\(numbers\\)': '(數字)',
+        '\\(orbs\\)': '(球)',
+        '\\(out/clock\\)': '(外/順時針)',
+        '\\(shield\\)': '(護盾)',
+        '\\?': ' ?',
+        'Assault Cannon': '突擊加農砲',
+        'Blassty Blaster': '摧毀者破壞砲',
+        'Blassty Charge': '摧毀者衝擊',
+        'Blastoff': '準備升空',
+        '(?<!Blassty )Charge': '刺衝',
+        'E\\.D\\.D\\. Add': '護航機甲出現',
+        'E\\.D\\.D\\. Armored Pauldron': '護航機甲肩部裝甲',
+        'Eternal Darkness': '黑暗命運',
+        'GA-100': '百式聚能砲',
+        'Lapis Lazuli': '天青石',
+        'Laser X Sword': '交叉光劍',
+        'Left/Right Laser Sword': '左/右光劍',
+        'Limit Cut': '限制器減檔',
+        'Markers': '標記',
+        'Multifield': '層積科學結界',
+        'Optical Sight': '制導',
+        'Perfect Landing': '掃射著陸',
+        'Photon': '光子砲',
+        'Plasma Shield': '等離子護盾',
+        'Plasmasphere': '等離子球',
+        'Propeller Wind': '螺旋槳強風',
+        'Spin Crusher': '迴旋碎踢',
+        'Super Hawk Blaster': '超級鷹式破壞砲',
+        'Transform': '變形',
+        'Whirlwind': '龍捲風',
       },
     },
     {

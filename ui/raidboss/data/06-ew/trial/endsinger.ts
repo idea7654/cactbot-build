@@ -135,10 +135,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         avoidLasers: {
           en: 'Avoid Head Lasers',
-          de: 'Weiche den Kopflaser aus',
-          fr: 'Évitez les lasers des têtes',
           ja: '顔の直線AoEを避ける',
-          cn: '躲避头部激光',
           ko: '머리 빔 피해요',
         },
       },
@@ -168,18 +165,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         cardinal: {
           en: 'Cardinal edge',
-          de: 'Kardinaler Rand',
-          fr: 'Au bord cardinal',
           ja: '東西南北の端へ',
-          cn: '去四边',
           ko: '십자 방향 모서리 끝으로',
         },
         intercardinal: {
           en: 'Intercardinal edge',
-          de: 'Interkardinaler Rand',
-          fr: 'Au bord intercardinal',
           ja: '斜めの端へ',
-          cn: '去四角',
           ko: '비스듬 방향 구석 끝으로',
         },
       },
@@ -260,10 +251,7 @@ const triggerSet: TriggerSet<Data> = {
         northwest: Outputs.arrowNW,
         direction: {
           en: '${dir1} / ${dir2}',
-          de: '${dir1} / ${dir2}',
-          fr: '${dir1} / ${dir2}',
           ja: '${dir1} / ${dir2}',
-          cn: '${dir1} / ${dir2}',
           ko: '${dir1} 또는 ${dir2}',
         },
       },
@@ -292,10 +280,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Tank LB NOW',
-          de: 'JETZT Tank LB',
-          fr: 'Transcendance Tank maintenant !',
           ja: '今タンクLB',
-          cn: '坦克LB！',
           ko: '지금 탱크 리미트브레이크!',
         },
       },
@@ -417,7 +402,7 @@ const triggerSet: TriggerSet<Data> = {
       },
       'replaceText': {
         '\\(big\\)': '(大)',
-        '\\(cast\\)': '(投掷)',
+        '\\(cast\\)': '(咏唱)',
         '\\(small\\)': '(小)',
         'Aporrhoia': '流溢',
         'Crash': '冲撞',
@@ -440,6 +425,42 @@ const triggerSet: TriggerSet<Data> = {
         'Telomania': '终末狂热',
         'Telos': '终末',
         'Ultimate Fate': '终极命运',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Doomed Stars': '邁向終結的星球',
+        'Kakodaimon': '惡靈魔',
+        'The Endsinger': '謳歌終結之物',
+        'oblivion': '混沌次元',
+      },
+      'replaceText': {
+        // '\\(big\\)': '', // FIXME '(大)'
+        // '\\(cast\\)': '', // FIXME '(咏唱)'
+        // '\\(small\\)': '', // FIXME '(小)'
+        'Aporrhoia': '流溢',
+        'Crash': '衝撞',
+        'Dead Star': '坍縮星',
+        'Death\'s Embrace': '死亡擁抱',
+        'Ekstasis': '恍惚',
+        'Elegeia(?! )': '哀歌',
+        'Elegeia Unforgotten': '哀歌：記錄事件',
+        'Elenchos': '反詰',
+        'Epigonoi': '後裔',
+        'Fatalism': '宿命',
+        'Galaxias': '銀河',
+        'Hubris': '傲慢',
+        'Interstellar': '星際穿越',
+        'Katastrophe': '災祟',
+        'Meteor Outburst': '隕石爆發',
+        'Meteor Radiant': '隕石輻射點',
+        'Nemesis': '復仇',
+        'Planetes': '行邁之星',
+        'Telomania': '終末狂熱',
+        'Telos': '終末',
+        'Ultimate Fate': '終極命運',
       },
     },
     {

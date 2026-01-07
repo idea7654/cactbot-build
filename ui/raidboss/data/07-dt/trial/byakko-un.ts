@@ -70,10 +70,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Provoke Boss',
-          de: 'Boss abspotten',
-          fr: 'Provoquez le Boss',
           ja: '挑発',
-          cn: '挑衅',
           ko: '보스 프로보크',
         },
       },
@@ -88,10 +85,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Provoke Boss',
-          de: 'Boss abspotten',
-          fr: 'Provoquez le Boss',
           ja: '挑発',
-          cn: '挑衅',
           ko: '보스 프로보크',
         },
       },
@@ -119,10 +113,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Tank LB NOW',
-          de: 'JETZT Tank LB',
-          fr: 'Transcendance Tank maintenant !',
           ja: '今タンクLB',
-          cn: '坦克LB',
           ko: '지금 탱크 LB',
         },
       },
@@ -136,10 +127,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Drop bubble outside',
-          de: 'Blase außen ablegen',
-          fr: 'Déposez la bulle à l\'extérieur',
           ja: '外にマーカーを置く',
-          cn: '边缘放点名',
           ko: '바깥에 버블 버려요',
         },
       },
@@ -153,10 +141,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Pink bubble',
-          de: 'Pinke Blase',
-          fr: 'Bulle violette',
           ja: '祟り目',
-          cn: '泡泡',
           ko: '핑크 버블',
         },
       },
@@ -170,10 +155,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Puddles on YOU',
-          de: 'Pfützen auf DIR',
-          fr: 'Zones au sol sur VOUS',
           ja: '自分に床範囲',
-          cn: '点名',
           ko: '내게 장판x3',
         },
       },
@@ -203,10 +185,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Tiger Add',
-          de: 'Tiger Add',
-          fr: 'Add Tigre',
           ja: '虎分離',
-          cn: '虎分离',
           ko: '호랑이 나와요',
         },
       },
@@ -234,10 +213,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack #${num}',
-          de: 'Stack #${num}',
-          fr: 'Packez-vous #${num}',
           ja: '頭割り #${num}',
-          cn: '集合 #${num}',
           ko: '뭉쳐요#${num}',
         },
       },
@@ -377,6 +353,40 @@ const triggerSet: TriggerSet<Data> = {
         'The Voice Of Thunder': '雷声',
         'Unrelenting Anguish': '无间地狱',
         'White Herald': '白帝冲',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Byakko': '白虎',
+        'Hakutei': '白帝',
+        'Twofold is my wrath, twice-cursed my foes!': '半身分離，助我殺敵！向膽敢抵抗的傢伙們露出你的爪牙！',
+      },
+      'replaceText': {
+        '--Hakutei Add--': '--白帝出現--',
+        '--tiger targetable--': '--白帝可選中--',
+        '--tiger untargetable--': '--白帝無法選中--',
+        'Answer On High': '天雷',
+        'Bombogenesis': '炸彈低氣壓',
+        'Clutch': '緊握',
+        'Dance Of The Incomplete': '半獸舞蹈',
+        'Distant Clap': '遠雷',
+        'Fell Swoop': '迅雷風烈波',
+        'Fire And Lightning': '雷火一閃',
+        'Gale Force': '暴風',
+        'Heavenly Strike': '天雷掌',
+        'Highest Stakes': '乾坤一擲',
+        'Hundredfold Havoc': '百雷繚亂',
+        'Imperial Guard': '白帝降臨',
+        'Ominous Wind': '妖風',
+        'State Of Shock': '咒縛雷',
+        'Steel Claw': '鐵爪斬',
+        'Storm Pulse': '風雷波動',
+        'Sweep The Leg': '旋體腳',
+        'The Roar Of Thunder': '雷轟',
+        'The Voice Of Thunder': '雷聲',
+        'Unrelenting Anguish': '無間地獄',
+        'White Herald': '白帝衝',
       },
     },
     {

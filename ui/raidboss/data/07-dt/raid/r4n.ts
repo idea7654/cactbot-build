@@ -29,41 +29,25 @@ const directionOutputStrings = {
   goRight: Outputs.right,
   stay: {
     en: 'Stay',
-    de: 'Bleib stehen',
-    fr: 'Restez',
-    cn: '停',
     ko: '그대로',
   },
   num2: Outputs.num2,
   separator: {
     en: ' => ',
-    de: ' => ',
-    fr: ' => ',
-    ja: ' => ',
-    cn: ' => ',
     ko: ' ',
   },
   intercardStay: {
     en: '${dir} => Stay',
-    de: '${dir} => Bleib stehen',
-    fr: '${dir} => Restez',
-    cn: '${dir} => 停',
     ko: '${dir} 🔜 그대로',
   },
   numHits: {
     en: '${dir} x${num}',
-    de: '${dir} x${num}',
-    fr: '${dir} x${num}',
     ja: '${dir} x${num}',
-    cn: '${dir} x${num}',
     ko: '${dir} x${num}',
   },
   combo: {
     en: '${dirs}',
-    de: '${dirs}',
-    fr: '${dirs}',
     ja: '${dirs}',
-    cn: '${dirs}',
     ko: '안전: ${dirs}',
   },
 } as const;
@@ -451,10 +435,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'East offset safe',
-          de: 'Ost-Offset sicher',
-          fr: 'Offset Est sûr',
           ja: '最東端の床へ',
-          cn: '偏右侧安全',
           ko: '가장 동쪽 바닥으로',
         },
       },
@@ -469,10 +450,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'South offset safe',
-          de: 'Süd-Offset sicher',
-          fr: 'Offset Sud sûr',
           ja: '最南端の床へ',
-          cn: '偏下侧安全',
           ko: '가장 남쪽 바닥으로',
         },
       },
@@ -487,10 +465,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'West offset safe',
-          de: 'West-Offset sicher',
-          fr: 'Offset Ouest sûr',
           ja: '最西端の床へ',
-          cn: '偏左侧安全',
           ko: '가장 서쪽 바닥으로',
         },
       },
@@ -505,10 +480,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'North offset safe',
-          de: 'Nord-Offset sicher',
-          fr: 'Offset Nord sûr',
           ja: '最北端の床へ',
-          cn: '偏上侧安全',
           ko: '가장 북쪽 바닥으로',
         },
       },
@@ -587,18 +559,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         outToIn: {
           en: '${dir}, Out => In',
-          de: '${dir}, Raus => Rein',
-          fr: '${dir}, Extérieur => Intérieur',
           ja: '${dir}, 外側 => 内側',
-          cn: '${dir}, 远离 => 靠近',
           ko: '${dir} 안에 있다 🔜 밖으로',
         },
         inToOut: {
           en: '${dir}, In => Out',
-          de: '${dir}, Rein => Raus',
-          fr: '${dir}, Intérieur => Extérieur',
           ja: '${dir}, 内側 => 外側',
-          cn: '${dir}, 靠近 => 远离',
           ko: '${dir} 밖에 있다 🔜 안으로',
         },
         unknown: Outputs.unknown,
@@ -736,6 +702,40 @@ const triggerSet: TriggerSet<Data> = {
         'Wicked Hypercannon': '狡诡聚能加农炮',
         'Wicked Jolt': '狡诡摇荡',
         'Witch Hunt': '猎杀女巫',
+        'Wrath of Zeus': '宙斯之怒',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        // 'Wicked Replica': '', // FIXME '狡雷的幻影'
+        // 'Wicked Thunder': '', // FIXME '狡雷'
+      },
+      'replaceText': {
+        // 'Left Roll': '', // FIXME '左转'
+        // 'Right Roll': '', // FIXME '右转'
+        // 'west--': '', // FIXME '西--'
+        // '--east': '', // FIXME '--东'
+        // '\\(cast\\)': '', // FIXME '(咏唱)'
+        // '\\(clone\\)': '', // FIXME '(幻影)'
+        // '\\(damage\\)': '', // FIXME '(伤害)'
+        // 'Bewitching Flight': '', // FIXME '魔女回翔'
+        'Burst': '爆炸',
+        // 'Fivefold Blast': '', // FIXME '五重加农炮'
+        // 'Fourfold Blast': '', // FIXME '四重加农炮'
+        // 'Shadows\' Sabbath': '', // FIXME '黑色安息日'
+        // 'Sidewise Spark': '', // FIXME '侧方电火花'
+        // 'Soaring Soulpress': '', // FIXME '碎魂跃'
+        // 'Stampeding Thunder': '', // FIXME '奔雷炮'
+        // 'Threefold Blast': '', // FIXME '三重加农炮'
+        // 'Thunderslam': '', // FIXME '雷炸'
+        'Thunderstorm': '雷暴',
+        // 'Wicked Bolt': '', // FIXME '狡诡落雷'
+        // 'Wicked Cannon': '', // FIXME '狡诡加农炮'
+        // 'Wicked Hypercannon': '', // FIXME '狡诡聚能加农炮'
+        // 'Wicked Jolt': '', // FIXME '狡诡摇荡'
+        'Witch Hunt': '獵殺女巫',
         'Wrath of Zeus': '宙斯之怒',
       },
     },

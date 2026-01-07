@@ -71,19 +71,16 @@ const triggerSet: TriggerSet<Data> = {
         smallCircle: {
           en: 'Outside small circle => in',
           ja: '円内側 外から中',
-          cn: '内环外 => 进',
           ko: '한 칸짜리 펀치',
         },
         midCircle: {
           en: 'Outside mid circle => in',
           ja: '円真ん中 外から中',
-          cn: '中环外 => 进',
           ko: '두 칸짜리 펀치',
         },
         bigCircle: {
           en: 'Outside big circle => in',
           ja: '円外側 外から中',
-          cn: '外环外 => 进',
           ko: '세 칸짜리 펀치',
         },
         unknownCircle: Outputs.unknown,
@@ -104,7 +101,6 @@ const triggerSet: TriggerSet<Data> = {
         avoidCircles: {
           en: 'Avoid radiating circles',
           ja: '放射矢印をよける',
-          cn: '躲避步进圆圈',
           ko: '퍼지는 동글이 피해요',
         },
       },
@@ -154,19 +150,16 @@ const triggerSet: TriggerSet<Data> = {
         shortKnockback: {
           en: 'Knockback (short)',
           ja: '近い ノックバック',
-          cn: '击退 (短距离)',
           ko: '한 칸짜리 넉백',
         },
         midKnockback: {
           en: 'Knockback (mid)',
           ja: '真ん中 ノックバック',
-          cn: '击退 (中距离)',
           ko: '두 칸짜리 넉백',
         },
         bigKnockback: {
           en: 'Knockback (big)',
           ja: '遠い ノックバック',
-          cn: '击退 (长距离)',
           ko: '세 칸짜리 넉백',
         },
         unknownKnockback: Outputs.unknown,
@@ -189,7 +182,6 @@ const triggerSet: TriggerSet<Data> = {
         avoidOrbs: {
           en: 'Avoid exploding orbs',
           ja: '爆発する玉をよける',
-          cn: '躲开即将爆炸的球',
           ko: '폭파 동글이 피해요',
         },
       },
@@ -258,7 +250,6 @@ const triggerSet: TriggerSet<Data> = {
         outAtDirection: {
           en: 'Get out toward ${safeDir}',
           ja: '${safeDir} 安置',
-          cn: '去 ${safeDir} 远离',
           ko: '바깥으로: ${safeDir}',
         },
         dirN: Outputs.north,
@@ -338,7 +329,6 @@ const triggerSet: TriggerSet<Data> = {
         outerFirst: {
           en: 'AoE x10',
           ja: 'AoE 10回',
-          cn: 'AoE (10次)',
           ko: '전체 공격 x10',
         },
       },
@@ -382,13 +372,11 @@ const triggerSet: TriggerSet<Data> = {
         attackAngel: {
           en: 'Attack ${angel}',
           ja: '${angel} を殴る',
-          cn: '攻击 ${angel}',
           ko: '공격: ${angel}',
         },
         unknownAngel: {
           en: 'Attack angel with matching buff',
           ja: 'バフのついた敵を殴る',
-          cn: '攻击对应Buff的Boss',
           ko: '엔젤 공격!',
         },
       },
@@ -462,6 +450,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Behind TT',
+          ja: 'Behind TT',
           ko: '기요틴! TT 뒤로!',
         },
       },
@@ -487,7 +476,6 @@ const triggerSet: TriggerSet<Data> = {
         killShield: {
           en: 'Kill Ark Shield',
           ja: '盾持ちを殴る',
-          cn: '击杀方舟之盾',
           ko: '방패 부셔요!',
         },
       },
@@ -502,7 +490,6 @@ const triggerSet: TriggerSet<Data> = {
         interruptHM: {
           en: 'Interrupt HM',
           ja: 'HMへ中断',
-          cn: '打断方舟天使HM',
           ko: 'HM에게 인터럽트!',
         },
       },
@@ -518,7 +505,6 @@ const triggerSet: TriggerSet<Data> = {
         runFromTether: {
           en: 'Chasing tether -- run away!',
           ja: '線が付いた敵から逃げる',
-          cn: '追踪连线 -- 快跑!',
           ko: '도망쳐요! 줄 달렸네!',
         },
       },
@@ -559,13 +545,11 @@ const triggerSet: TriggerSet<Data> = {
         leftThenRightShadow: {
           en: 'Left => right of shadow',
           ja: '分身 左 => 右',
-          cn: '分身 左 => 右',
           ko: '(그림자) 왼쪽 🔜 오른쪽',
         },
         rightThenLeftShadow: {
           en: 'Right => left of shadow',
           ja: '分身 右 => 左',
-          cn: '分身 右 => 左',
           ko: '(그림자) 오른쪽 🔜 왼쪽',
         },
       },
@@ -613,19 +597,16 @@ const triggerSet: TriggerSet<Data> = {
         none: {
           en: 'Get in circles',
           ja: '円の内側',
-          cn: '去圆圈内',
           ko: '동그라미로',
         },
         close: {
           en: 'In circles + Close to boss',
           ja: '円の内側 + ボスの近く',
-          cn: '圆圈内 + 靠近Boss',
           ko: '동그라미 + 가까운쪽으로',
         },
         away: {
           en: 'In circles + Away from boss',
           ja: '円の内側 + ボスから離れて',
-          cn: '圆圈内 + 远离Boss',
           ko: '동그라미 + 먼곳으로',
         },
       },
@@ -648,19 +629,16 @@ const triggerSet: TriggerSet<Data> = {
         none: {
           en: 'Out of circles',
           ja: '円の外側',
-          cn: '去圆圈外',
           ko: '복도로',
         },
         close: {
           en: 'Out of circles + close to boss',
           ja: '円の外側 + ボスの近く',
-          cn: '圆圈外 + 靠近Boss',
           ko: '복도 + 안쪽으로',
         },
         away: {
           en: 'Out of circles + away from boss',
           ja: '円の外側 + ボスから離れて',
-          cn: '圆圈外 + 远离Boss',
           ko: '복도 + 바깥으로',
         },
       },
@@ -679,13 +657,11 @@ const triggerSet: TriggerSet<Data> = {
         leftAndOut: {
           en: 'Go left + get out',
           ja: '離れて 左',
-          cn: '左 + 远离',
           ko: '왼쪽 + 밖으로',
         },
         rightAndOut: {
           en: 'Go right + get out',
           ja: '離れて 右',
-          cn: '右 + 远离',
           ko: '오른쪽 + 밖으로',
         },
       },
@@ -705,13 +681,11 @@ const triggerSet: TriggerSet<Data> = {
         leftAndOut: {
           en: 'Left of shadow + get out',
           ja: '分身 離れて 左',
-          cn: '分身 左 + 远离',
           ko: '(쫄) 왼쪽 + 밖으로',
         },
         rightAndOut: {
           en: 'Right of shadow + get out',
           ja: '分身 離れて 右',
-          cn: '分身 右 + 远离',
           ko: '(쫄) 오른쪽 + 밖으로',
         },
       },
@@ -768,7 +742,6 @@ const triggerSet: TriggerSet<Data> = {
         sigilDodge: {
           en: 'Dodge puddles 3 to 1',
           ja: '最初の予兆へ駆け込む',
-          cn: '三穿一躲避圆圈',
           ko: '장판 세번째▶첫번째로 피하기',
         },
       },
@@ -798,25 +771,21 @@ const triggerSet: TriggerSet<Data> = {
         rightLeftBack: {
           en: 'Start right => left => back',
           ja: '右 => 左 => 後ろ',
-          cn: '右 => 左 => 后',
           ko: '오른쪽 🔜 왼쪽 🔜 뒤로',
         },
         rightLeftFront: {
           en: 'Start right => left => front',
           ja: '右 => 左 => 前',
-          cn: '右 => 左 => 前',
           ko: '오른쪽 🔜 왼쪽 🔜 앞으로',
         },
         leftRightBack: {
           en: 'Start left => right => back',
           ja: '左 => 右 => 後ろ',
-          cn: '左 => 右 => 后',
           ko: '왼쪽 🔜 오른쪽 🔜 뒤로',
         },
         leftRightFront: {
           en: 'Start left => right => front',
           ja: '左 => 右 => 前',
-          cn: '左 => 右 => 前',
           ko: '왼쪽 🔜 오른쪽 🔜 앞으로',
         },
       },
@@ -968,7 +937,6 @@ const triggerSet: TriggerSet<Data> = {
     },
     {
       'locale': 'fr',
-      'missingTranslations': true,
       'replaceSync': {
         'Aquarius': 'Aquarius',
         'Ark Angel EV': 'Ark Angel EV',
@@ -985,12 +953,46 @@ const triggerSet: TriggerSet<Data> = {
         'Sprinkler': 'Sprinkler',
       },
       'replaceText': {
+        '--all untargetable--': '--Tous non ciblable--',
+        '--Binding Indicator': '--Indicateur de liaison',
+        '--Darters spawn--': '--Apparition des dards--',
+        '--EV \\+ HM center--': '--EV + HM Centre--',
+        '--EV \\+ HM targetable--': '--EV + HM ciblable--',
+        '--EV untargetable--': '--EV non ciblable--',
+        '--HM center--': '--HM Centre--',
+        '--MR center--': '--MR Centre--',
+        '--MR targetable--': '--MR Ciblable--',
+        '--GK targetable--': '--GK Ciblable--',
+        '--MR jump--': '--MR Saut--',
+        '--TT jump--': '--TT Saut--',
+        '\\(add\\)': '(Adds)',
+        '\\(boss\\)': '(Boss)',
+        '\\(cast\\)': '(incante)',
+        '\\(castbar\\)': '(barre d\'incantation)',
+        '\\(circle AoE\\)': '(AoE Circulaire)',
+        '\\(circle indicator\\)': '(Indicateur circulaire)',
+        '\\(circle\\)': '(Cercle)',
+        '\\(exalines\\)': '(Exalignes)',
+        '\\(explode\\)': '(Explostion)',
+        '\\(gaze\\)': '(Regard)',
+        '\\(grid\\)': '(Grille)',
+        '\\(knockback\\)': '(Poussée)',
+        '\\(line AoE\\)': '(AoE en ligne)',
+        '\\(line indicators\\)': '(Indicateur de ligne)',
+        '\\(puddles\\)': '(Puddle)',
+        '\\(raidwide\\)': '(Raidwide)',
+        '\\(raidwides\\)': '(Raidwides)',
+        '\\(rings\\)': '(Anneaux)',
+        '\\(single lines\\)': '(Ligne simple)',
+        '\\(spread\\)': '(Dispersion)',
+        '\\(spreads explode\\)': '(Explosition dispersion)',
+        '\\(stack\\)': '(Package)',
         'Absolute Terror': 'Terreur absolue',
         'Arrogance Incarnate': 'Arrogance incarnée',
         'Asuran Fists': 'Poings d\'Asura',
         'Auroral Uppercut': 'Uppercut auroral',
         'Baleful Breath': 'Souffle maléfique',
-        'Banish(?![\\w| ])': 'Bannissement',
+        'Banish(?!(ga| Storm))': 'Bannissement',
         'Banish Storm': 'Tempête bannissante',
         'Banishga(?! )': 'OmniBannissement',
         'Banishga IV': 'OmniBannissement IV',
@@ -1276,6 +1278,138 @@ const triggerSet: TriggerSet<Data> = {
         'Umbra Smash': '本影爆碎',
         'Unbridled Rage': '无拘暴怒',
         'Utsusemi': '空蝉之术',
+        'Winged Terror': '恐慌之翼',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Aquarius': 'Aquarius',
+        'Ark Angel EV': 'Ark Angel EV',
+        'Ark Angel GK': 'Ark Angel GK',
+        'Ark Angel HM': 'Ark Angel HM',
+        'Ark Angel MR': 'Ark Angel MR',
+        'Ark Angel TT': 'Ark Angel TT',
+        'Despot': 'Despot',
+        'Fafnir The Forgotten': 'Fafnir',
+        'Fafnir the Forgotten': 'Fafnir',
+        'Lordly Shadow': 'Lordly Shadow',
+        'Luminous Remnant': '光流殘滓',
+        'Prishe Of The Distant Chains': '遙遠的咒縛 普利修',
+        'Prishe of the Distant Chains': '遙遠的咒縛 普利修',
+        'Shadow Lord': 'Shadow Lord',
+        'Sprinkler': 'Sprinkler',
+        // 'The Dragon\'s Aery': '', // FIXME '龙巢'
+        // 'The grand dais': '', // FIXME '斗舞台'
+        // 'The La\'loff Amphitheater': '', // FIXME '拉·洛弗剧场'
+        // 'The Throne Room': '', // FIXME '王座大殿'
+      },
+      'replaceText': {
+        // '--all untargetable--': '', // FIXME '--全体不可选中--'
+        // '--Binding Indicator': '', // FIXME '--绑定指示'
+        // '--Darters spawn--': '', // FIXME '--赤蜻生成--'
+        // '--EV \\+ HM center--': '', // FIXME '--EV + HM 中央--'
+        // '--EV \\+ HM targetable--': '', // FIXME '--EV + HM 可选中--'
+        // '--EV untargetable--': '', // FIXME '--EV 不可选中--'
+        // '--HM center--': '', // FIXME '--HM 中央--'
+        // '--MR center--': '', // FIXME '--MR 中央--'
+        // '--MR targetable--': '', // FIXME '--MR 可选中--'
+        // '--GK targetable--': '', // FIXME '--GK 可选中--'
+        // '--MR jump--': '', // FIXME '--MR 跳--'
+        // '--TT jump--': '', // FIXME '--TT 跳--'
+        // '\\(add\\)': '', // FIXME '(小怪)'
+        // '\\(big raidwide\\)': '', // FIXME '(超大全域)'
+        // '\\(boss\\)': '', // FIXME '(BOSS)'
+        // '\\(cast\\)': '', // FIXME '(咏唱)'
+        // '\\(castbar\\)': '', // FIXME '(咏唱栏)'
+        // '\\(circle\\)': '', // FIXME '(圆)'
+        // '\\(circle AoE\\)': '', // FIXME '(圆形AOE)'
+        // '\\(circle indicator\\)': '', // FIXME '(圆形指示)'
+        // '\\(exalines\\)': '', // FIXME '(扩展直线)'
+        // '\\(explode\\)': '', // FIXME '(爆炸)'
+        // '\\(gaze\\)': '', // FIXME '(石化光)'
+        // '\\(grid\\)': '', // FIXME '(网格)'
+        // '\\(knockback\\)': '', // FIXME '(击退)'
+        // '\\(line AoE\\)': '', // FIXME '(直线AOE)'
+        // '\\(line indicators\\)': '', // FIXME '(直线指示)'
+        // '\\(puddles\\)': '', // FIXME '(圈)'
+        // '\\(raidwide\\)': '', // FIXME '(全域)'
+        // '\\(raidwides\\)': '', // FIXME '(全域)'
+        // '\\(rings\\)': '', // FIXME '(环)'
+        // '\\(single lines\\)': '', // FIXME '(单独直线)'
+        // '\\(spread\\)': '', // FIXME '(分散)'
+        // '\\(spreads explode\\)': '', // FIXME '(分散爆炸)'
+        // '\\(stack\\)': '', // FIXME '(集合)'
+        'Absolute Terror': '絕對恐懼',
+        'Arrogance Incarnate': '驕慢化身',
+        'Asuran Fists': '夢想阿修羅拳',
+        'Auroral Uppercut': '羅剎七星拳',
+        'Baleful Breath': '兇惡吐息',
+        // 'Banish(?!(ga| Storm))': '', // FIXME '放逐'
+        'Banish Storm': '放逐風暴',
+        'Banishga(?! )': '強放逐',
+        'Banishga IV': '強放逐IV',
+        'Binding Sigil': '束縛咒',
+        'Brittle Impact': '落地',
+        'Burning Battlements': '暗火燎堞',
+        'Burning Court': '暗火燎庭',
+        'Burning Keep': '暗火燎城',
+        'Burning Moat': '暗火燎壕',
+        'Burst': '爆炸',
+        'Cloudsplitter': '劈雲斬',
+        'Concerted Dissolution': '分解連技',
+        'Critical Reaver': '暴擊分斷',
+        'Critical Strikes': '暴擊威震',
+        'Cross Reaver': '絕雙十悶刃',
+        'Crystalline Thorns': '金剛棘',
+        'Cthonic Fury': '冥界之怒',
+        'Damning Strikes': '詛咒強襲',
+        'Dark Matter Blast': '黑暗物質衝擊',
+        'Dark Nebula': '新星爆發',
+        'Dark Nova': '黑暗新星',
+        'Divine Dominion': '方舟支配',
+        'Dominion Slash': '支配斬',
+        'Doom Arc': '毀滅之弧',
+        'Dragon Breath': '巨龍吐息',
+        'Dragonfall': '亢龍天錘落',
+        'Echoes of Agony': '慘痛的回響',
+        'Explosion': '爆炸',
+        'Flames of Hatred': '憎惡之火',
+        'Giga Slash(?!:)': '十億斬擊',
+        'Giga Slash: Nightfall': '十億斬擊·入夜',
+        'Guillotine': '斷首',
+        'Havoc Spiral': '災亂螺旋',
+        'Holy': '神聖',
+        'Horrid Roar': '恐懼咆哮',
+        'Hurricane Wing': '颶風之翼',
+        '(?<!Brittle )Impact': '衝擊',
+        'Implosion': '向心聚爆',
+        'Knuckle Sandwich': '迎面重拳',
+        'Light\'s Chain': '光連技',
+        'Meikyo Shisui': '明鏡止水',
+        'Meteor': '隕石流星',
+        'Mighty Strikes': '強力衝擊',
+        'Mijin Gakure': '隱於微塵',
+        '(?<! )Nightfall': '入夜',
+        'Nullifying Dropkick': '崑崙八象腳·改',
+        'Offensive Posture': '攻擊姿態',
+        'Proud Palisade': '極致防禦',
+        'Raiton': '雷遁之術',
+        'Rampage': '暴怒',
+        'Shadow Spawn': '影之增殖',
+        'Sharp Spike': '鋒刺',
+        'Soul Binding': '靈魂束縛',
+        'Spike Flail': '刃尾橫掃',
+        'Spiral Finish': '螺旋終結',
+        'Tachi: Gekko': '八之太刀·月光',
+        'Tachi: Kasha': '九之太刀·花車',
+        'Tachi: Yukikaze': '七之太刀·雪風',
+        'Tera Slash': '萬億斬擊',
+        'Touchdown': '空降',
+        'Umbra Smash': '本影爆碎',
+        'Unbridled Rage': '無拘暴怒',
+        'Utsusemi': '空蟬之術',
         'Winged Terror': '恐慌之翼',
       },
     },

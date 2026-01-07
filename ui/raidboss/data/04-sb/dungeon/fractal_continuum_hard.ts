@@ -31,10 +31,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'swipe',
-          de: 'Hieb',
-          fr: 'Fauche',
           ja: 'スワイプ',
-          cn: '去目标背后',
           ko: '스와이프',
         },
       },
@@ -47,10 +44,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'swipe',
-          de: 'Hieb',
-          fr: 'Fauche',
           ja: 'スワイプ',
-          cn: '去目标背后',
           ko: '스와이프',
         },
       },
@@ -63,10 +57,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Swing',
-          de: 'Schwung',
-          fr: 'Swing',
           ja: 'スウィング',
-          cn: '远离目标',
           ko: '스윙 (밖으로)',
         },
       },
@@ -79,10 +70,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Swing',
-          de: 'Schwung',
-          fr: 'Swing',
           ja: 'スウィング',
-          cn: '远离目标',
           ko: '스윙 (밖으로)',
         },
       },
@@ -95,10 +83,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Dragon\'s Voice',
-          de: 'Stimme Des Drachen',
-          fr: 'Voix Du Dragon',
           ja: '雷電の咆哮',
-          cn: '靠近奇美拉',
           ko: '드래곤즈 보이스 (안으로)',
         },
       },
@@ -111,10 +96,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Ram\'s Voice',
-          de: 'Stimme Des Widders',
-          fr: 'Voix Du Bélier',
           ja: '氷結の咆哮',
-          cn: '远离奇美拉',
           ko: '램즈 보이스 (밖으로)',
         },
       },
@@ -127,10 +109,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Ram\'s Voice',
-          de: 'Stimme Des Widders',
-          fr: 'Voix Du Bélier',
           ja: '氷結の咆哮',
-          cn: '远离奇美拉',
           ko: '램즈 보이스 (밖으로)',
         },
       },
@@ -168,10 +147,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Puddle on YOU',
-          de: 'Fläche auf DIR',
-          fr: 'Zone au sol sur VOUS',
           ja: '自分に円範囲',
-          cn: '圈圈点名',
           ko: '내게 장판',
         },
       },
@@ -202,10 +178,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack with ${player}',
-          de: 'Sammeln mit ${player}',
-          fr: 'Packez-vous avec ${player}',
           ja: '${player}と頭割り',
-          cn: '靠近${player}集合',
           ko: '뭉쳐요: ${player}',
         },
       },
@@ -246,18 +219,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         standOnRedCircle: {
           en: 'Stand on red circle',
-          de: 'Im roten Kreis stehen',
-          fr: 'Restez dans le cercle rouge',
           ja: '赤い輪に',
-          cn: '站在红圈',
           ko: '🔴빨간 동그라미 밟아요',
         },
         standOnBlueCircle: {
           en: 'Stand on blue circle',
-          de: 'Im blauen Kreis stehen',
-          fr: 'Restez dans le cercle bleu',
           ja: '青い輪に',
-          cn: '站在蓝圈',
           ko: '🔵파란 동그라미 밟아요',
         },
       },
@@ -471,6 +438,50 @@ const triggerSet: TriggerSet<Data> = {
         'Primordial Aether': '荒蛮以太',
         'Ratzon': '意志',
         'Southern Star': '南极星',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Exhibit level VIII': '第八展示區',
+        'Motherbit': '浮游砲主機板',
+        'Prototype Bit': '原型浮游砲',
+        'Successfully mimicking the Demon Zurvan': '隨著對鬼神祖爾宛力量的應用，',
+        'The Genesis Engine': '啟動試驗室',
+        'The Ultima Beast': '究極神獸',
+        'The Ultima Warrior': '究極戰士',
+        'The reality augmentation bay': '現實增強室',
+        'This humanoid prototype can perfectly replicate': '我們研究出了如何利用鬥神力量的方法！',
+        'Utilizing our data on Sophia': '利用鬥神的力量去征服鬥神！',
+        'Vocal Guidance System': '語音導覽員',
+        'Servomechanical Minotaur': '自控化米諾陶洛斯',
+        'Servomechanical Chimera': '自控化奇美拉',
+        'Proto-Chimera': '原型奇美拉',
+        'Biomanufactured Minotaur': '生化米諾陶洛斯',
+      },
+      'replaceText': {
+        'Aether Bend': '乙太曲折',
+        'Aetherochemical Laser': '魔科學雷射',
+        '(?<! )Aetheroplasm': '乙太爆雷',
+        'Allagan Flare': '亞拉戈火光',
+        'Allagan Gravity': '亞拉戈重力',
+        'Ceruleum Vent': '青磷放射',
+        'Citadel Buster': '攻城砲',
+        'Death Spin': '死亡迴旋',
+        'Demi Ultima': '亞究極',
+        'Diffractive Laser': '擴散雷射',
+        'Dischordant Cleansing': '不平衡之罰',
+        'Electrochemical Transfer': '雷力供給',
+        'Flare Star': '耀星',
+        'Forborn Beast': '後天野獸',
+        'Infinite Fire': '炎之刻印',
+        'Infinite Ice': '冰之刻印',
+        'Light Pillar': '光柱',
+        'Mass Aetheroplasm': '大型乙太爆雷',
+        'Northern Star': '北極星',
+        'Primordial Aether': '荒蠻乙太',
+        'Ratzon': '意志',
+        'Southern Star': '南極星',
       },
     },
     {

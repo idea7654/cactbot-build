@@ -35,18 +35,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         orbsOn: {
           en: 'Orbs on ${player}',
-          de: 'Orbs auf ${player}',
-          fr: 'Orbes sur ${player}',
           ja: '${player}に玉',
-          cn: '球点${player}',
           ko: '"${player}" 구슬',
         },
         orbsOnYou: {
           en: 'Orbs on YOU',
-          de: 'Orbs auf DIR',
-          fr: 'Orbes sur VOUS',
           ja: '自分に玉',
-          cn: '球点名',
           ko: '구슬 대상자',
         },
       },
@@ -61,10 +55,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stun ${name}',
-          de: 'Unterbreche ${name}',
-          fr: 'Étourdissez ${name}',
           ja: 'スタン: ${name}',
-          cn: '眩晕${name}',
           ko: '${name}기절 시키기',
         },
       },
@@ -85,10 +76,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Laser Tethers',
-          de: 'Laser Verbindungen',
-          fr: 'Liens laser',
           ja: 'レーザー線',
-          cn: '激光连线',
           ko: '레이저 선',
         },
       },
@@ -102,10 +90,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Nisi A on YOU',
-          de: 'Nisi A auf DIR',
-          fr: 'Peine A sur VOUS',
           ja: '自分に仮判決α',
-          cn: '蓝BUFF点名',
           ko: '임시 판결 A 대상자',
         },
       },
@@ -119,10 +104,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Nisi B on YOU',
-          de: 'Nisi B auf DIR',
-          fr: 'Peine B sur VOUS',
           ja: '自分に仮判決β',
-          cn: '红BUFF点名',
           ko: '임시 판결 B 대상자',
         },
       },
@@ -213,6 +195,26 @@ const triggerSet: TriggerSet<Data> = {
         'Royal Pentacle': '蒸汽审判',
         'Seed Of The Sky': '天空之种',
         'Straf Doll': '惩罚人偶',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'The Manipulator': '操縱者',
+      },
+      'replaceText': {
+        'Carnage(?! Zero)': '滅絕',
+        'Carnage Zero': '零式滅絕',
+        'Discoid': '圓盤',
+        'Emergency Quarantine': '緊急隔離',
+        'Hydrothermal Missile': '蒸氣導彈',
+        'Jagd Doll': '狩獵人偶',
+        'Judgment Nisi': '非最終審判',
+        'Mortal Revolution': '致命進化',
+        'Perpetual Ray': '永恆射線',
+        'Royal Pentacle': '蒸氣審判',
+        'Seed Of The Sky': '天空之種',
+        'Straf Doll': '懲罰人偶',
       },
     },
     {

@@ -207,10 +207,12 @@ const triggerSet: TriggerSet<Data> = {
       id: 'chasmVollokPriority',
       name: {
         en: 'Chasm Of Vollok Safe Spot Priority',
+        ja: 'ピット・オブ・ヴォロク：安地優先順位',
         ko: '볼로크의 함정 안전지대 우선순위',
       },
       comment: {
         en: 'Select which safe spots have priority during callouts.',
+        ja: 'コール時に優先する安地の位置を選択します。',
         ko: '안전지대 중 호출 우선순위가 높은 곳을 선택하세요.',
       },
       type: 'select',
@@ -220,6 +222,12 @@ const triggerSet: TriggerSet<Data> = {
           'North and South Corner': 'northSouth',
           'North Corner': 'north',
           'South Corner': 'south',
+        },
+        ja: {
+          '内側の床': 'inside',
+          '北と南の隅': 'northSouth',
+          '北の隅': 'north',
+          '南の隅': 'south',
         },
         ko: {
           '중앙': 'inside',
@@ -524,22 +532,27 @@ const triggerSet: TriggerSet<Data> = {
         },
         insideN: {
           en: 'Inner North Diamond - ${lean}',
+          ja: '内側 北の床へ - ${lean}',
           ko: '안쪽칸 🡹위로 (${lean})',
         },
         insideS: {
           en: 'Inner South Diamond - ${lean}',
+          ja: '内側 南の床へ - ${lean}',
           ko: '안쪽칸 🡻아래로 (${lean})',
         },
         cornerNS: {
           en: 'North/South Corner Diamonds - ${lean}',
+          ja: '北/南の隅の床へ - ${lean}',
           ko: '⇅위아래 구석 (${lean})',
         },
         cornerN: {
           en: 'North Corner Diamond - ${lean}',
+          ja: '北の隅の床へ - ${lean}',
           ko: '🡹위쪽 구석 (${lean})',
         },
         cornerS: {
           en: 'South Corner Diamond - ${lean}',
+          ja: '南の隅の床へ - ${lean}',
           ko: '🡻아래쪽 구석 (${lean})',
         },
         leanWest: {
@@ -793,18 +806,22 @@ const triggerSet: TriggerSet<Data> = {
         },
         northwest: {
           en: 'Northwest',
+          ja: 'Northwest',
           ko: '🡼',
         },
         northeast: {
           en: 'Northeast',
+          ja: 'Northeast',
           ko: '🡽',
         },
         southeast: {
           en: 'Southeast',
+          ja: 'Southeast',
           ko: '🡾',
         },
         southwest: {
           en: 'Southwest',
+          ja: 'Southwest',
           ko: '🡿',
         },
         fire: {
@@ -1031,6 +1048,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Stack',
+          ja: 'Stack',
           ko: '연속 AOE 칼질',
         },
       },
@@ -1246,6 +1264,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Donuts and spheres',
+          ja: 'Donuts and spheres',
           ko: '도넛과 동글이 피하기',
         },
       },
@@ -1262,6 +1281,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Line and stacks',
+          ja: 'Line and stacks',
           ko: '빨간줄 한명씩 처리! 북으로!',
         },
       },
@@ -1282,30 +1302,37 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         next1: {
           en: 'H2',
+          ja: 'H2',
           ko: 'H2',
         },
         next2: {
           en: 'D4',
+          ja: 'D4',
           ko: 'D4',
         },
         next3: {
           en: 'D3',
+          ja: 'D3',
           ko: 'D3',
         },
         next4: {
           en: 'D2',
+          ja: 'D2',
           ko: 'D2',
         },
         next5: {
           en: 'D1',
+          ja: 'D1',
           ko: 'D1',
         },
         next6: {
           en: 'ST',
+          ja: 'ST',
           ko: 'ST',
         },
         next7: {
           en: 'MT',
+          ja: 'MT',
           ko: 'MT',
         },
       },
@@ -1470,6 +1497,46 @@ const triggerSet: TriggerSet<Data> = {
         'Sync(?![-h])': '同步',
         '(?<! )Vollok': '无敌刃',
         'Walls Of Vollok': '无敌之圆',
+      },
+    },
+    {
+      'locale': 'tc',
+      'missingTranslations': true,
+      'replaceSync': {
+        'Fang': '雙牙劍',
+        'Zoraal Ja': '佐拉加',
+      },
+      'replaceText': {
+        // '\\(cast\\)': '', // FIXME '(咏唱)'
+        // '\\(damage\\)': '', // FIXME '(伤害)'
+        // '\\(enrage\\)': '', // FIXME '(狂暴)'
+        // '\\(lines drop\\)': '', // FIXME '(放置直线)'
+        'Actualize': '自我實現',
+        'Aero III': '大勁風',
+        'Backward Edge': '後向斬',
+        'Bitter Whirlwind': '憤恨之風',
+        'Blade Warp': '利刃召喚',
+        'Burning Chains': '火焰鏈',
+        'Chasm Of Vollok': '無敵裂斬',
+        'Dawn Of An Age': '新曦世紀',
+        'Drum Of Vollok': '無敵之擊',
+        'Duty\'s Edge': '責任之刃',
+        'Fiery Edge': '烈火刃',
+        'Forged Track': '利刃衝',
+        'Forward Edge': '前向斬',
+        'Greater Gateway': '附魔通路',
+        'Half Circuit': '迴旋半身殘',
+        'Half Full': '半身殘',
+        'Might Of Vollok': '無敵之力',
+        'Multidirectional Divide': '多向斬',
+        'Projection Of Triumph': '情感投射：利刃',
+        'Projection Of Turmoil': '情感投射：爆發',
+        'Regicidal Rage': '弒君之怒行',
+        'Siege Of Vollok': '無敵之環',
+        'Stormy Edge': '暴風刃',
+        'Sync(?![-h])': '同步',
+        '(?<! )Vollok': '無敵刃',
+        'Walls Of Vollok': '無敵之圓',
       },
     },
     {

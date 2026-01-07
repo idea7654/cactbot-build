@@ -82,18 +82,12 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         sizzlebeamOn: {
           en: 'Sizzlebeam on ${player}',
-          de: 'Gobpartikelstrahl auf ${player}',
-          fr: 'Gobrayon sur ${player}',
           ja: '${player}にゴブ式波動砲',
-          cn: '波动炮点${player}',
           ko: '"${player}" 고블린식 파동포',
         },
         sizzlebeamOnYou: {
           en: 'Sizzlebeam on YOU',
-          de: 'Gobpartikelstrahl auf DIR',
-          fr: 'Gobrayon sur VOUS',
           ja: '自分にゴブ式波動砲',
-          cn: '波动炮点名',
           ko: '고블린식 파동포 대상자',
         },
       },
@@ -113,10 +107,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Bomb Spread',
-          de: 'Bomben verteilen',
-          fr: 'Bombe, dispersez-vous',
           ja: '爆弾、散開',
-          cn: '炸弹，散开',
           ko: '폭탄 뿌리기',
         },
       },
@@ -130,10 +121,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Jail Prey',
-          de: 'Gefängnis Markierung',
-          fr: 'Marquage prison',
           ja: '隔離部屋',
-          cn: '监狱点名',
           ko: '감옥 징 대상자',
         },
       },
@@ -150,10 +138,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Jail Tether',
-          de: 'Gefängnis Verbindung',
-          fr: 'Lien prison',
           ja: '隔離部屋線',
-          cn: '监狱连线',
           ko: '감옥 줄 대상자',
         },
       },
@@ -198,10 +183,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Break Padlock',
-          de: 'Schloss zerstören',
-          fr: 'Cassez le cadenas',
           ja: '錠前を破れ',
-          cn: '打破锁',
           ko: '자물쇠 부수기',
         },
       },
@@ -214,10 +196,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Kill Heart',
-          de: 'Herz besiegen',
-          fr: 'Tuez le cœur',
           ja: '真心を倒す',
-          cn: '击杀真心',
           ko: '진심 없애기',
         },
       },
@@ -231,10 +210,7 @@ const triggerSet: TriggerSet<Data> = {
       outputStrings: {
         text: {
           en: 'Searing Wind on YOU',
-          de: 'Versengen auf DIR',
-          fr: 'Fournaise sur VOUS',
           ja: '自分に灼熱',
-          cn: '热风点名',
           ko: '뜨거운 바람 대상자',
         },
       },
@@ -373,6 +349,40 @@ const triggerSet: TriggerSet<Data> = {
         'Small Dolls': '小人偶',
         'Stun Heart': '击晕真心',
         'Uplander Doom': '齐射',
+        'Zoomdoom': '哥布火箭',
+      },
+    },
+    {
+      'locale': 'tc',
+      'replaceSync': {
+        'Bomb': '炸彈',
+        'Boomtype Magitek Gobwalker G-VII': '7號哥布林戰車L型',
+        'Frostbite': '凍傷',
+        'Padlock': '牢門的鎖',
+        'Pyretic': '熱病',
+        'Quickthinx Allthoughts': '萬事通 奎克辛克斯',
+        'Shanoa': '夏諾雅',
+        'Sturm Doll': '風暴人偶',
+        'The electrocution gallery': '公開處刑廣場',
+      },
+      'replaceText': {
+        'Big Doll': '大人偶',
+        'Bomb(?!(s|en))': '炸彈',
+        'Bombs': '炸彈',
+        '(?<! )Doll': '人偶',
+        'Flamethrower': '火焰噴射器',
+        'Hammertime': '懲戒',
+        'Jails': '監獄',
+        'Get Prey': '監獄點名',
+        'Get Tether': '監獄連線',
+        'Kill Heart': '聲援',
+        'Resync': '重新同步',
+        'Sizzlebeam': '哥布式波動砲',
+        'Sizzlespark': '哥布林火花',
+        'Small Doll(?!s)': '小人偶',
+        'Small Dolls': '小人偶',
+        'Stun Heart': '擊暈真心',
+        'Uplander Doom': '齊射',
         'Zoomdoom': '哥布火箭',
       },
     },
