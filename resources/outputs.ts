@@ -658,6 +658,16 @@ export default {
     ja: 'ヒーラー',
     ko: '힐러',
   },
+  melee: {
+    en: 'Melee',
+    ja: '近接',
+    ko: '근접',
+  },
+  ranged: {
+    en: 'Ranged',
+    ja: '遠隔',
+    ko: '원거리',
+  },
   dps: {
     en: 'DPS',
     ja: 'DPS',
@@ -694,6 +704,11 @@ export default {
   num9: numberToOutputString(9),
 
   // 어듬이 추가
+  test: {
+    en: 'test',
+    ja: 'テスト',
+    ko: '테스트',
+  },
   sharedOrInvinTankbusterOnYou: {
     en: 'Share Tank Buster',
     ja: '自分にタンクシェア',
