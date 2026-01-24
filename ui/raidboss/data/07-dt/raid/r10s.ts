@@ -113,15 +113,15 @@ const triggerSet: TriggerSet<Data> = {
       type: 'select',
       options: {
         en: {
-          'Static Callouts (Healer/Melee/Ranged)': 'static',
+          'Role Static (Healer>Melee>Ranged)': 'static',
           'Game 8 Style': 'game8',
         },
         ja: {
-          '固定（ヒーラー/近接/遠隔）': 'static',
+          'ロール固定（ヒーラー＞近接＞遠隔）': 'static',
           'Game 8 指定': 'game8',
         },
         ko: {
-          '고정 (힐러/근접/원거리)': 'static',
+          '역할 고정 (힐러＞근접＞원거리)': 'static',
           'Game 8 스타일': 'game8',
         },
       },
@@ -157,10 +157,10 @@ const triggerSet: TriggerSet<Data> = {
       response: Responses.sharedTankBuster(),
     },
     {
-      id: 'R10S Floater Tethers',
+      id: 'R10S Flame Floater Order',
       type: 'GainsEffect',
       netRegex: { effectId: Object.keys(floaterTetherMap), capture: true },
-      condition: (data, matches) => matches.target === data.me,
+      condition: Conditions.targetIsYou(),
       alertText: (_data, matches, output) => {
         const index = floaterTetherMap[matches.effectId];
         if (index === undefined)
@@ -187,9 +187,9 @@ const triggerSet: TriggerSet<Data> = {
       },
     },
     {
-      id: 'R10S Escape from Fire',
-      // Fire Resistance Down II
+      id: 'R10S when Fire Resistance Down II',
       type: 'GainsEffect',
+      // Fire Resistance Down II
       netRegex: { effectId: 'B79', capture: true },
       condition: Conditions.targetIsYou(),
       infoText: (_data, _matches, output) => output.move!(),
@@ -289,7 +289,7 @@ const triggerSet: TriggerSet<Data> = {
       infoText: (_data, _matches, output) => output.move!(),
       outputStrings: {
         move: {
-          en: 'AOE + Move Away',
+          en: 'AOE + Bait puddles',
           ja: 'みんなでAOE誘導',
           ko: '모여서 장판 유도 x3',
         },
@@ -498,6 +498,7 @@ const triggerSet: TriggerSet<Data> = {
           return;
 
         if (data.snakingCount < 5) {
+          // 어 이거 1번이 물, 2번이 불 고정같은데?
           const [water, fire] = snaking1.elem === 'water'
             ? [snaking1, snaking2]
             : [snaking2, snaking1];
@@ -719,12 +720,12 @@ const triggerSet: TriggerSet<Data> = {
         },
         north: {
           en: 'Bait Hot Aerial North',
-          ja: '🡹北でフレイムエアリアル誘導',
+          ja: '🄰北でフレイムエアリアル誘導',
           ko: '🄰북쪽으로 불장판 유도',
         },
         south: {
           en: 'Bait Hot Aerial South',
-          ja: '🡻南でフレイムエアリアル誘導',
+          ja: '🄲南でフレイムエアリアル誘導',
           ko: '🄲남쪽으로 불장판 유도',
         },
       },
@@ -790,7 +791,7 @@ const triggerSet: TriggerSet<Data> = {
         outOfMiddle: {
           en: 'E/W Groups, Out of Middle',
           ja: '分断、組み合わせて散会',
-          ko: '분단, 팀 단위로 피해요',
+          ko: '분단, 맡은 팀으로',
         },
       },
     },
@@ -807,6 +808,7 @@ const triggerSet: TriggerSet<Data> = {
       'replaceText': {
         'Reverse Alley-oop/Alley-oop Double-dip': 'Reverse Alley-oop/Double-dip',
         'Awesome Splash/Awesome Slab': 'Awesome Splash/Slab',
+        'Blasting Snap/Plunging Snap/Re-entry Blast': 'Blasting/Plunging/Re-entry',
       },
     },
     {
@@ -818,6 +820,66 @@ const triggerSet: TriggerSet<Data> = {
       'replaceText': {
         'Reverse Alley-oop/Alley-oop Double-dip': 'リバース/ダブルディップ',
         'Awesome Splash/Awesome Slab': 'スプラッシュ/スラブ',
+        'Blasting Snap/Plunging Snap/Re-entry Blast': 'ブラスティング/プランジング/リ-エントリー',
+      },
+    },
+    {
+      'locale': 'cn',
+      'replaceSync': {
+        'Deep Blue': '深蓝',
+        'Red Hot': '炽红',
+        'The Xtremes': '极限兄弟',
+        'Watery Grave': '水牢',
+      },
+      'replaceText': {
+        '--add-targetable--': '--小怪可选中--',
+        '--add-untargetable--': '--小怪不可选中--',
+        '--blue east/west--': '--深蓝 东/西--',
+        '--blue targetable--': '--深蓝可选中--',
+        '--blue untargetable--': '--深蓝不可选中--',
+        '--hot jump--': '--炽红 跳--',
+        '--intercardinal--': '--四边中点--',
+        '--red north--': '--炽红 北--',
+        '\\(bait\\)': '(引导)',
+        '\\(big\\)': '(大)',
+        '\\(cone\\)': '(扇形)',
+        '\\(damage': '(伤害',
+        '\\(enrage\\)': '(狂暴)',
+        '\\(line\\)': '(直线)',
+        'stun\\)': '眩晕)',
+        '\\(tower\\)': '(塔)',
+        'Alley-oop Double-dip': '双重旋水',
+        'Alley-oop Inferno': '空中旋火',
+        'Awesome Slab': '浪涛翻涌',
+        'Awesome Splash': '浪花飞溅',
+        'Bailout': '救生',
+        'Blasting Snap': '火浪急转',
+        'Cutback Blaze': '火浪回切',
+        'Deep Aerial': '腾水踏浪',
+        'Deep Impact': '深海冲击',
+        'Deep Varial': '浪尖转体',
+        'Divers\' Dare': '斗志昂扬',
+        'Epic Brotherhood': '兄弟同心',
+        '(?<! )Firesnaking': '火蛇夺浪',
+        'Flame Floater': '浪顶炽火',
+        'Freaky Pyrotation': '异常旋绕巨火',
+        'Hot Aerial': '腾火踏浪',
+        'Hot Impact': '炽焰冲击',
+        'Impact Zone': '浪崩',
+        'Insane Air': '狂浪腾空',
+        'Over the Falls': '无归浪卷',
+        'Plunging Snap': '水浪急转',
+        '(?<! )Pyrotation': '旋绕巨火',
+        'Re-entry Blast': '炽红返场',
+        'Reverse Alley-oop': '交错旋水',
+        'Scathing Steam': '混合爆破',
+        'Sick Swell': '惊涛骇浪',
+        'Sickest Take-off': '破势乘浪',
+        '(?<! )Watersnaking': '水蛇夺浪',
+        'Xtreme Firesnaking': '极限火蛇夺浪',
+        'Xtreme Spectacular': '极限炫技',
+        'Xtreme Watersnaking': '极限水蛇夺浪',
+        'Xtreme Wave': '极限浪波',
       },
     },
   ],

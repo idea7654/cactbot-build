@@ -40,7 +40,7 @@ export default {
   hpTo1Aoe: {
     en: 'HP to 1',
     ja: '体力１!',
-    ko: 'HP 1',
+    ko: '체력이 1이 됐어요',
   },
   tankBuster: {
     en: 'Tank Buster',
@@ -332,7 +332,7 @@ export default {
   goIntoMiddle: {
     en: 'Get Middle',
     ja: '中へ',
-    ko: '가운데로',
+    ko: '한가운데로',
   },
   front: {
     en: 'Front',
@@ -349,10 +349,20 @@ export default {
     ja: '右へ',
     ko: '오른쪽',
   },
+  rightEast: {
+    en: 'Right/East',
+    ja: '右/東へ',
+    ko: '오른쪽/동쪽',
+  },
   left: {
     en: 'Left',
     ja: '左へ',
     ko: '왼쪽',
+  },
+  leftWest: {
+    en: 'Left/West',
+    ja: '左/西へ',
+    ko: '왼쪽/서쪽',
   },
   getLeftAndWest: {
     en: '<= Get Left/West',
