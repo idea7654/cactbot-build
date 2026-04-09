@@ -83,8 +83,8 @@ const dirFromNum = (num: number): DirectionOutput8 => {
 
 // 방향 지정
 const outputNum: number[] = [0, 1, 2, 3, 4, 5, 6, 7];
-const outputNumPlus: number[] = [0, 1, 2, 3];
-const outputNumCross: number[] = [0, 1, 2, 3];
+const outputNumOfPlus: number[] = [0, 2, 4, 6];
+const outputNumOfCross: number[] = [1, 3, 5, 7];
 
 const outputDir: DirectionOutput8[] = [
   'dirN',
@@ -190,7 +190,46 @@ const stringsDirCross: OutputStrings = {
   unknown: Outputs.unknown,
 };
 
-// 어듬이 뱡향 지시
+// 마커 방향
+const stringMarker1A2Dir: OutputStrings = {
+  dirN: Outputs.m1A2N,
+  dirE: Outputs.m1A2E,
+  dirS: Outputs.m1A2S,
+  dirW: Outputs.m1A2W,
+  dirNW: Outputs.m1A2NW,
+  dirNE: Outputs.m1A2NE,
+  dirSE: Outputs.m1A2SE,
+  dirSW: Outputs.m1A2SW,
+  unknown: Outputs.unknown,
+};
+const stringMarker1A2DirPlus: OutputStrings = {
+  dirN: Outputs.m1A2N,
+  dirE: Outputs.m1A2E,
+  dirS: Outputs.m1A2S,
+  dirW: Outputs.m1A2W,
+  unknown: Outputs.unknown,
+};
+const stringMarker1A2DirCross: OutputStrings = {
+  dirNW: Outputs.m1A2NW,
+  dirNE: Outputs.m1A2NE,
+  dirSE: Outputs.m1A2SE,
+  dirSW: Outputs.m1A2SW,
+  unknown: Outputs.unknown,
+};
+
+//
+const alignDirPriorityMap: { [dir: number]: number } = {
+  0: 6,
+  1: 4,
+  2: 1,
+  3: 0,
+  4: 2,
+  5: 3,
+  6: 5,
+  7: 7,
+};
+
+// 어듬이 방향 지시
 export const AutumnDir = {
   posConv8: posConv8,
   posConv4: posConv4,
@@ -204,8 +243,6 @@ export const AutumnDir = {
   dirFromNum: dirFromNum,
 
   outputNum: outputNum,
-  outputNumPlus: outputNumPlus,
-  outputNumCross: outputNumCross,
 
   outputDir: outputDir,
   outputDirPlus: outputDirPlus,
@@ -222,6 +259,41 @@ export const AutumnDir = {
   stringsDir: stringsDir,
   stringsDirPlus: stringsDirPlus,
   stringsDirCross: stringsDirCross,
+
+  stringMarker1A2Dir: stringMarker1A2Dir,
+  stringMarker1A2DirPlus: stringMarker1A2DirPlus,
+  stringMarker1A2DirCross: stringMarker1A2DirCross,
+
+  alignDir: (dir1: number, dir2: number): [number, number] => {
+    const priority = (dir: number): number => alignDirPriorityMap[dir] ?? 0;
+    const p1 = priority(dir1);
+    const p2 = priority(dir2);
+    return p1 >= p2 ? [dir1, dir2] : [dir2, dir1];
+  },
+};
+
+// 방향과 숫자 매핑
+export const AutumnNumDir = {
+  north: 0,
+  northEast: 1,
+  east: 2,
+  southEast: 3,
+  south: 4,
+  southWest: 5,
+  west: 6,
+  northWest: 7,
+
+  N: 0,
+  NE: 1,
+  E: 2,
+  SE: 3,
+  S: 4,
+  SW: 5,
+  W: 6,
+  NW: 7,
+
+  isPlus: (dirNum: number): boolean => outputNumOfPlus.includes(dirNum),
+  isCross: (dirNum: number): boolean => outputNumOfCross.includes(dirNum),
 };
 
 // 파라미터
@@ -240,13 +312,15 @@ const healerBarrierJobs: Job[] = ['SCH', 'SGE'];
 // 몫 이름
 const moksTanks: readonly string[] = ['MT', 'ST'] as const;
 const moksHealers: readonly string[] = ['H1', 'H2'] as const;
-const moksMelees: readonly string[] = ['D1', 'D2'];
-const moksRanges: readonly string[] = ['D3', 'D4'];
-const moksDps: readonly string[] = [...moksMelees, ...moksRanges] as const;
+const moksDpsMelees: readonly string[] = ['D1', 'D2'] as const;
+const moksDpsRanges: readonly string[] = ['D3', 'D4'] as const;
+const moksDps: readonly string[] = [...moksDpsMelees, ...moksDpsRanges] as const;
 const moksTanksAndHealers: readonly string[] = [...moksTanks, ...moksHealers] as const;
+const moksMelee: readonly string[] = [...moksTanks, ...moksDpsMelees] as const;
+const moksRange: readonly string[] = [...moksHealers, ...moksDpsRanges] as const;
 const moksNames: readonly string[] = [...moksTanks, ...moksHealers, ...moksDps] as const;
-const teamMtMoks: readonly string[] = ['MT', 'H1', 'D1', 'D3'];
-const teamStMoks: readonly string[] = ['ST', 'H2', 'D2', 'D4'];
+const moksMainTeam: readonly string[] = ['MT', 'H1', 'D1', 'D3'] as const;
+const moksSubTeam: readonly string[] = ['ST', 'H2', 'D2', 'D4'] as const;
 
 // 몫 타입
 export type AutumnMoks = 'MT' | 'ST' | 'H1' | 'H2' | 'D1' | 'D2' | 'D3' | 'D4' | 'none';
@@ -262,11 +336,13 @@ const Autumn = {
   isHealer: (moksName: string) => moksHealers.includes(moksName),
   isSupport: (moksName: string) => moksTanksAndHealers.includes(moksName),
   isDps: (moksName: string) => moksDps.includes(moksName),
-  isMelee: (moksName: string) => moksMelees.includes(moksName),
-  isRange: (moksName: string) => moksRanges.includes(moksName),
-  inMainTeam: (moksName: string) => teamMtMoks.includes(moksName),
-  inSubTeam: (moksName: string) => teamStMoks.includes(moksName),
-  getTeam: (moks: AutumnMoks): AutumnTeams => teamMtMoks.includes(moks) ? 'MT' : 'ST',
+  isDpsMelee: (moksName: string) => moksDpsMelees.includes(moksName),
+  isDpsRange: (moksName: string) => moksDpsRanges.includes(moksName),
+  inMelee: (moksName: string) => moksMelee.includes(moksName),
+  inRange: (moksName: string) => moksRange.includes(moksName),
+  inMainTeam: (moksName: string) => moksMainTeam.includes(moksName),
+  inSubTeam: (moksName: string) => moksSubTeam.includes(moksName),
+  getTeam: (moks: AutumnMoks): AutumnTeams => moksMainTeam.includes(moks) ? 'MT' : 'ST',
 
   getParams: getParam,
   testParam: testParam,

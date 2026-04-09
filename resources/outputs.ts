@@ -101,7 +101,7 @@ export default {
   avoidTankCleaves: {
     en: 'Avoid Tank Cleaves',
     ja: '範囲攻撃を避けて',
-    ko: '탱크 쪼개기 피해욧',
+    ko: '탱크 쪽으로 가면 안되욧',
   },
   tankCleaveOnYou: {
     en: 'Tank Cleave on YOU',
@@ -136,7 +136,7 @@ export default {
   defamationOnYou: {
     en: 'Defamation on YOU',
     ja: '自分に巨大な爆発',
-    ko: '내게 대폭발',
+    ko: '내게 큰폭발',
   },
   protean: {
     en: 'Protean',
@@ -276,7 +276,7 @@ export default {
   getUnder: {
     en: 'Get Under',
     ja: 'ボスに貼り付く',
-    ko: '바로 밑으로',
+    ko: '보스 밑으로',
   },
   // in is more like "get close but maybe even melee range is fine"
   in: {
@@ -424,7 +424,7 @@ export default {
   awayFromFront: {
     en: 'Away From Front',
     ja: '前方から離れる',
-    ko: '앞쪽은 피해요',
+    ko: '앞쪽에 있으면 안되욧',
   },
   sleepTarget: {
     en: 'Sleep ${name}',
@@ -531,12 +531,12 @@ export default {
   cardinals: {
     en: 'Cardinals',
     ja: '十字回避',
-    ko: '십자로',
+    ko: '십자로➕',
   },
   intercards: {
     en: 'Intercards',
     ja: '斜めへ',
-    ko: '비스듬히',
+    ko: '비스듬히❌',
   },
   north: {
     en: 'North',
@@ -826,6 +826,46 @@ export default {
     en: 'Blue',
     ja: '青',
     ko: '🔵파랑',
+  },
+  m1A2N: {
+    en: '🄰🡹North',
+    ja: '🄰🡹北',
+    ko: '🄰🡹북',
+  },
+  m1A2E: {
+    en: '🄱🡺East',
+    ja: '🄱🡺東',
+    ko: '🄱🡺동',
+  },
+  m1A2S: {
+    en: '🄲🡻South',
+    ja: '🄲🡻南',
+    ko: '🄲🡻남',
+  },
+  m1A2W: {
+    en: '🄳🡸West',
+    ja: '🄳🡸西',
+    ko: '🄳🡸서',
+  },
+  m1A2NW: {
+    en: '➊NW',
+    ja: '➊🡼北西',
+    ko: '➊🡼북서',
+  },
+  m1A2NE: {
+    en: '➋NE',
+    ja: '➋🡽北東',
+    ko: '➋🡽북동',
+  },
+  m1A2SE: {
+    en: '➌SE',
+    ja: '➌🡾南東',
+    ko: '➌🡾남동',
+  },
+  m1A2SW: {
+    en: '➍SW',
+    ja: '➍🡿南西',
+    ko: '➍🡿남서',
   },
   yellow: {
     en: 'Yellow',

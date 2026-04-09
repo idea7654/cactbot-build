@@ -1,12 +1,12 @@
 {
   "name": "cactbot-build",
-  "version": "99.177.0",
+  "version": "99.182.0",
   "license": "Apache-2.0",
   "type": "module",
   "types": "./types",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kshman/cactbot-build"
+    "url": "git+https://github.com/kshman/cactbot-build.git"
   },
   "files": [
     "./ui",
@@ -76,6 +76,7 @@
     "@typescript-eslint/parser": "^7.11.0",
     "@typescript-eslint/utils": "^7.11.0",
     "babel-loader": "^8.2.2",
+    "baseline-browser-mapping": "^2.9.19",
     "chai": "^4.3.6",
     "chalk": "^2.4.2",
     "clean-webpack-plugin": "^4.0.0",
@@ -120,7 +121,7 @@
     "ts-loader": "^9.3.0",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^3.9.0",
-    "typescript": "^5.1.6",
+    "typescript": "^5.5.4",
     "webpack": "^5.76.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.0",
@@ -149,7 +150,7 @@
       "eslint --max-warnings=0 --plugin tsc --rule 'tsc/config: [2, {configFile: \"./tsconfig.eslint.json\"}]'"
     ],
     "*.md": "markdownlint",
-    "ui/(raidboss|oopsyraidsy)/data/**": [
+    "ui/raidboss/data/**": [
       "node --loader=ts-node/esm test/test_data_files.ts"
     ]
   },

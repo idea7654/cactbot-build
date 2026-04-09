@@ -173,7 +173,7 @@ const triggerSet: TriggerSet<Data> = {
       durationSeconds: 5.5,
       suppressSeconds: 1,
       infoText: (data, _matches, output) => {
-        const [dir1, dir2] = data.bats.inner;
+        const [dir1, dir2] = data.bats.inner.sort(Directions.compareDirectionOutput);
 
         return output.away!({
           dir1: output[dir1 ?? 'unknown']!(),
@@ -200,7 +200,7 @@ const triggerSet: TriggerSet<Data> = {
       durationSeconds: 3.4,
       suppressSeconds: 1,
       infoText: (data, _matches, output) => {
-        const [dir1, dir2, dir3] = data.bats.middle;
+        const [dir1, dir2, dir3] = data.bats.middle.sort(Directions.compareDirectionOutput);
 
         return output.away!({
           dir1: output[dir1 ?? 'unknown']!(),
@@ -588,6 +588,7 @@ const triggerSet: TriggerSet<Data> = {
         tower: Outputs.stackInTower,
       },
     },
+    // /////////////
     {
       id: 'R9S Brutal Rain',
       type: 'StartsUsing',
@@ -669,7 +670,6 @@ const triggerSet: TriggerSet<Data> = {
     },
     {
       'locale': 'de',
-      'missingTranslations': true,
       'replaceSync': {
         'Coffinmaker': 'fatal(?:e|er|es|en) Säge',
         'Fatal Flail': 'fatal(?:e|er|es|en) Stachelbombe',
@@ -677,14 +677,16 @@ const triggerSet: TriggerSet<Data> = {
         'Vampette Fatale': 'fatal(?:e|er|es|en) Fledermaus',
       },
       'replaceText': {
-        '--coffinmaker--': '--Säge--',
         '--cell': '--Zelle',
+        '--coffinmaker--': '--Säge--',
         '--flail': '--Stachelbombe',
         '--nail--': '--Blitzableiter--',
+        'Aetherletting': 'Ätherquell',
         'Blast Beat': 'Resonanzwelle',
         'Bloody Bondage': 'Blutige Fesseln',
         'Breakdown Drop': 'Gebrochene Melodie',
         'Breakwing Beat': 'Gebrochener Rhythmus',
+        'Brutal Rain': 'Schreckensherrschaft',
         'Coffinfiller': 'Sägenstich',
         'Crowd Kill': 'Massenmeuchelei',
         'Dead Wake': 'Sägenmarsch',
@@ -697,6 +699,7 @@ const triggerSet: TriggerSet<Data> = {
         'Plummet': 'Abfallen',
         'Pulping Pulse': 'Zermalmender Puls',
         'Sadistic Screech': 'Henkersmahl',
+        'Sanguine Scratch': 'Blutrote Kralle',
         'Ultrasonic Amp': 'Fokusschall',
         'Ultrasonic Spread': 'Streuschall',
         'Undead Deathmatch': 'Fledermaus-Todeskampf',
@@ -713,6 +716,7 @@ const triggerSet: TriggerSet<Data> = {
         'Vampette Fatale': 'chauve-souris fatale',
       },
       'replaceText': {
+        'Aetherletting': 'Libération d\'éther',
         'Blast Beat': 'Vague de résonance',
         'Bloody Bondage': 'Bondage sanglant',
         'Breakdown Drop': 'Fracas dévastateur',
@@ -729,6 +733,7 @@ const triggerSet: TriggerSet<Data> = {
         'Plummet': 'Chute',
         'Pulping Pulse': 'Pulsation pulvérisante',
         'Sadistic Screech': 'Crissement sadique',
+        'Sanguine Scratch': 'Griffure sanguine',
         'Ultrasonic Amp': '',
         'Ultrasonic Spread': '',
         'Undead Deathmatch': 'Chiroptère mortel',
@@ -745,6 +750,8 @@ const triggerSet: TriggerSet<Data> = {
         'Vampette Fatale': 'ファタールバット',
       },
       'replaceText': {
+        'Aetherletting(?! Proteans)': 'エーテルレッティング',
+        'Aetherletting Proteans': 'エーテルレッティング 扇形',
         'Blast Beat': '共振波',
         'Bloody Bondage': 'ブラッディボンテージ',
         'Breakdown Drop': 'ブレイクダウン',
@@ -761,6 +768,7 @@ const triggerSet: TriggerSet<Data> = {
         'Plummet': '落下',
         'Pulping Pulse': 'パルピングパルス',
         'Sadistic Screech': 'サディスティック・スクリーチ',
+        'Sanguine Scratch': 'サングインスクラッチ',
         'Ultrasonic Amp': '',
         'Ultrasonic Spread': '',
         'Undead Deathmatch': 'バット・デスマッチ',
@@ -806,6 +814,47 @@ const triggerSet: TriggerSet<Data> = {
         'Ultrasonic Spread': '音速流散',
         'Undead Deathmatch': '血蝠死斗',
         'Vamp Stomp': '血魅的靴踏音',
+      },
+    },
+    {
+      'locale': 'ko',
+      'replaceSync': {
+        'Charnel Cell': '파탈 감옥',
+        'Coffinmaker': '파탈 톱',
+        'Deadly Doornail': '파탈 지팡이',
+        'Fatal Flail': '파탈 철퇴',
+        'Vamp Fatale': '뱀프 파탈',
+        'Vampette Fatale': '파탈 박쥐',
+      },
+      'replaceText': {
+        '--coffinmaker--': '--파탈 톱--',
+        '--cell': '--감옥',
+        '--flail': '--철퇴',
+        '--nail--': '--지팡이--',
+        'Aetherletting(?! Proteans)': '에테르 해방',
+        'Aetherletting Proteans': '에테르 해방 부채꼴',
+        'Blast Beat': '공진파',
+        'Bloody Bondage': '피의 결박',
+        'Breakdown Drop': '파괴 선율',
+        'Breakwing Beat': '파괴 박자',
+        'Brutal Rain': '잔혹한 비',
+        'Coffinfiller': '톱날 돌출',
+        'Crowd Kill': '생명력 갈취',
+        'Dead Wake': '전진',
+        'Finale Fatale': '파멸적 최후',
+        'Half Moon': '반달차기',
+        'Hardcore': '과격성',
+        'Hell in a Cell': '헬 인 어 셀',
+        'Insatiable Thirst': '채워지지 않는 갈증',
+        'Killer Voice': '뇌쇄적인 목소리',
+        'Plummet': '낙하',
+        'Pulping Pulse': '분쇄 파동',
+        'Sadistic Screech': '가학적인 웃음',
+        'Sanguine Scratch': '붉은 생채기',
+        'Ultrasonic Amp': '집약 음파',
+        'Ultrasonic Spread': '확산 음파',
+        'Undead Deathmatch': '박쥐 데스매치',
+        'Vamp Stomp': '요염한 짓밟기',
       },
     },
   ],
