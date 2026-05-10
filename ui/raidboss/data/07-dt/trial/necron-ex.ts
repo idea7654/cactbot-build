@@ -611,7 +611,6 @@ const triggerSet: TriggerSet<Data> = {
     },
     {
       'locale': 'de',
-      'missingTranslations': true,
       'replaceSync': {
         'Azure Aether': 'azur(?:e|er|es|en) Äther',
         'Beckoning Hands': 'lockend(?:e|er|es|en) Hand',
@@ -619,6 +618,16 @@ const triggerSet: TriggerSet<Data> = {
         'Necron': 'Ewig(?:e|er|es|en) Dunkel',
       },
       'replaceText': {
+        '\\(cast\\)': '(wirken)',
+        '\\(damage\\)': '(Schaden)',
+        '\\(intercards\\)': '(Interkardinal)',
+        '\\(line\\)': '(Linie)',
+        '\\(lines\\)': '(Linien)',
+        '\\(puddle\\)': '(Fläche)',
+        '\\(puddles\\)': '(Flächen)',
+        '\\(spread\\)': '(verteilen)',
+        '\\(tower\\)': '(Turm)',
+        'Add Spawn': 'Add erscheint',
         'Aetherblight': 'Ätherische Verderbnis',
         'Blue Shockwave': 'Blaue Schockwelle',
         'Chilling Fingers': 'Klauen des Todes',
@@ -743,7 +752,6 @@ const triggerSet: TriggerSet<Data> = {
     },
     {
       'locale': 'cn',
-      'missingTranslations': true,
       'replaceSync': {
         'Azure Aether': '青之魂块',
         'Beckoning Hands': '邀死之手',
@@ -760,6 +768,7 @@ const triggerSet: TriggerSet<Data> = {
         '\\(puddles\\)': '(圈)',
         '\\(spread\\)': '(分散)',
         '\\(tower\\)': '(塔)',
+        'Add Spawn': '小怪生成',
         'Aetherblight': '青之波动',
         'Blue Shockwave': '青之冲击',
         'Chilling Fingers': '死缠',
